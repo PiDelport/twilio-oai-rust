@@ -1,0 +1,10 @@
+pub mod fax_v1_fax;
+pub use self::fax_v1_fax::FaxV1Fax;
+pub mod fax_v1_fax_fax_media;
+pub use self::fax_v1_fax_fax_media::FaxV1FaxFaxMedia;
+pub mod list_fax_media_response;
+pub use self::list_fax_media_response::ListFaxMediaResponse;
+pub mod list_fax_response;
+pub use self::list_fax_response::ListFaxResponse;
+pub mod list_fax_response_meta;
+pub use self::list_fax_response_meta::ListFaxResponseMeta;

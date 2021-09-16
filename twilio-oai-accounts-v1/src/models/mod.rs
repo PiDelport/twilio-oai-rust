@@ -1,0 +1,14 @@
+pub mod accounts_v1_auth_token_promotion;
+pub use self::accounts_v1_auth_token_promotion::AccountsV1AuthTokenPromotion;
+pub mod accounts_v1_credential_credential_aws;
+pub use self::accounts_v1_credential_credential_aws::AccountsV1CredentialCredentialAws;
+pub mod accounts_v1_credential_credential_public_key;
+pub use self::accounts_v1_credential_credential_public_key::AccountsV1CredentialCredentialPublicKey;
+pub mod accounts_v1_secondary_auth_token;
+pub use self::accounts_v1_secondary_auth_token::AccountsV1SecondaryAuthToken;
+pub mod list_credential_aws_response;
+pub use self::list_credential_aws_response::ListCredentialAwsResponse;
+pub mod list_credential_aws_response_meta;
+pub use self::list_credential_aws_response_meta::ListCredentialAwsResponseMeta;
+pub mod list_credential_public_key_response;
+pub use self::list_credential_public_key_response::ListCredentialPublicKeyResponse;
