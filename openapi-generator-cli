@@ -1,0 +1,11 @@
+#!/bin/sh -e
+# Run openapi-generator-cli using Docker.
+# Docs: https://github.com/OpenAPITools/openapi-generator#16---docker
+
+docker run --rm \
+    --read-only \
+    --user "$(id -u):$(id -g)" \
+    --volume "$PWD":/run/pwd --workdir /run/pwd \
+    openapitools/openapi-generator-cli \
+    "$@"
+
