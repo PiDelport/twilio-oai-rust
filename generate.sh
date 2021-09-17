@@ -28,6 +28,7 @@ for spec_file in "$@"; do
 
     ./openapi-generator-cli generate \
         --generator-name rust \
+        --template-dir rust-fixed \
         --input-spec "$spec_file" \
         --ignore-file-override '.openapi-generator-ignore' \
         --library 'reqwest' \
