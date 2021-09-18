@@ -1,0 +1,39 @@
+name: Checks
+
+on: push
+
+jobs:
+
+  cargo-check:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        # https://github.com/actions/checkout#readme
+        uses: actions/checkout@v2
+      -
+        # https://github.com/actions-rs/toolchain#readme
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: ${{ matrix.rust }}
+          override: true
+      -
+        # https://github.com/Swatinem/rust-cache#readme
+        uses: Swatinem/rust-cache@v1
+        with:
+          sharedKey: check
+          key: ${{ github.ref }}
+      -
+        # https://github.com/actions-rs/cargo#readme
+        name: cargo check
+        uses: actions-rs/cargo@v1
+        with:
+          command: check
+          args: --all-targets
+    strategy:
+      fail-fast: false
+      matrix:
+        rust:
+          - 1.46.0  # MSRV
+          - stable
+          - nightly
