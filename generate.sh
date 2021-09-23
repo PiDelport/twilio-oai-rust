@@ -7,9 +7,12 @@
 sed_crate_version='
 /version = / s/"1[.]/"0./
 '
+sed_readme_version='
+/Package version: / s/: 1[.]/: 0./
+'
 
 # Post-process script: Trim the default Markdown documentation links from the generated README.
-sed_trim_readme="
+sed_readme_trim_docs="
 /^## Documentation for API Endpoints$/,/^To get access to the crate's generated documentation, use:$/ c \
 ## Documentation\n\
 \n\
@@ -38,5 +41,6 @@ for spec_file in "$@"; do
 
     # Post-process:
     sed --in-place "$sed_crate_version" "${name}/Cargo.toml"
-    sed --in-place "$sed_trim_readme" "${name}/README.md"
+    sed --in-place "$sed_readme_version" "${name}/README.md"
+    sed --in-place "$sed_readme_trim_docs" "${name}/README.md"
 done
