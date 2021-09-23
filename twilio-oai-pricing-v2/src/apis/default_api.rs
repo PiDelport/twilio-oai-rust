@@ -14,14 +14,14 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `fetch_trunking_country`
+/// struct for passing parameters to the method [`fetch_trunking_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrunkingCountryParams {
     /// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the origin-based voice pricing information to fetch.
     pub iso_country: String
 }
 
-/// struct for passing parameters to the method `fetch_trunking_number`
+/// struct for passing parameters to the method [`fetch_trunking_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrunkingNumberParams {
     /// The destination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
@@ -30,14 +30,14 @@ pub struct FetchTrunkingNumberParams {
     pub origination_number: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_voice_country`
+/// struct for passing parameters to the method [`fetch_voice_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVoiceCountryParams {
     /// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the origin-based voice pricing information to fetch.
     pub iso_country: String
 }
 
-/// struct for passing parameters to the method `fetch_voice_number`
+/// struct for passing parameters to the method [`fetch_voice_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVoiceNumberParams {
     /// The destination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
@@ -46,14 +46,14 @@ pub struct FetchVoiceNumberParams {
     pub origination_number: Option<String>
 }
 
-/// struct for passing parameters to the method `list_trunking_country`
+/// struct for passing parameters to the method [`list_trunking_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTrunkingCountryParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_voice_country`
+/// struct for passing parameters to the method [`list_voice_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVoiceCountryParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -61,7 +61,7 @@ pub struct ListVoiceCountryParams {
 }
 
 
-/// struct for typed successes of method `fetch_trunking_country`
+/// struct for typed successes of method [`fetch_trunking_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrunkingCountrySuccess {
@@ -69,7 +69,7 @@ pub enum FetchTrunkingCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_trunking_number`
+/// struct for typed successes of method [`fetch_trunking_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrunkingNumberSuccess {
@@ -77,7 +77,7 @@ pub enum FetchTrunkingNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_voice_country`
+/// struct for typed successes of method [`fetch_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceCountrySuccess {
@@ -85,7 +85,7 @@ pub enum FetchVoiceCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_voice_number`
+/// struct for typed successes of method [`fetch_voice_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceNumberSuccess {
@@ -93,7 +93,7 @@ pub enum FetchVoiceNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_trunking_country`
+/// struct for typed successes of method [`list_trunking_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrunkingCountrySuccess {
@@ -101,7 +101,7 @@ pub enum ListTrunkingCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_voice_country`
+/// struct for typed successes of method [`list_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVoiceCountrySuccess {
@@ -109,42 +109,42 @@ pub enum ListVoiceCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trunking_country`
+/// struct for typed errors of method [`fetch_trunking_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrunkingCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trunking_number`
+/// struct for typed errors of method [`fetch_trunking_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrunkingNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_voice_country`
+/// struct for typed errors of method [`fetch_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_voice_number`
+/// struct for typed errors of method [`fetch_voice_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_trunking_country`
+/// struct for typed errors of method [`list_trunking_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrunkingCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_voice_country`
+/// struct for typed errors of method [`list_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVoiceCountryError {

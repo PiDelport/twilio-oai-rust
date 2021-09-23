@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_document`
+/// struct for passing parameters to the method [`create_document`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateDocumentParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Document resource in.
@@ -27,7 +27,7 @@ pub struct CreateDocumentParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// Whether token identities in the Service must be granted access to Sync objects by using the [Permissions](https://www.twilio.com/docs/sync/api/sync-permissions) resource.
@@ -46,7 +46,7 @@ pub struct CreateServiceParams {
     pub webhooks_from_rest_enabled: Option<bool>
 }
 
-/// struct for passing parameters to the method `create_stream_message`
+/// struct for passing parameters to the method [`create_stream_message`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateStreamMessageParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Stream Message in.
@@ -57,7 +57,7 @@ pub struct CreateStreamMessageParams {
     pub data: serde_json::Value
 }
 
-/// struct for passing parameters to the method `create_sync_list`
+/// struct for passing parameters to the method [`create_sync_list`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSyncListParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Sync List in.
@@ -70,7 +70,7 @@ pub struct CreateSyncListParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_sync_list_item`
+/// struct for passing parameters to the method [`create_sync_list_item`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSyncListItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new List Item in.
@@ -87,7 +87,7 @@ pub struct CreateSyncListItemParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_sync_map`
+/// struct for passing parameters to the method [`create_sync_map`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSyncMapParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Sync Map in.
@@ -100,7 +100,7 @@ pub struct CreateSyncMapParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_sync_map_item`
+/// struct for passing parameters to the method [`create_sync_map_item`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSyncMapItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Map Item in.
@@ -119,7 +119,7 @@ pub struct CreateSyncMapItemParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_sync_stream`
+/// struct for passing parameters to the method [`create_sync_stream`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSyncStreamParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Stream in.
@@ -130,7 +130,7 @@ pub struct CreateSyncStreamParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_document`
+/// struct for passing parameters to the method [`delete_document`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteDocumentParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to delete.
@@ -139,7 +139,7 @@ pub struct DeleteDocumentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_document_permission`
+/// struct for passing parameters to the method [`delete_document_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteDocumentPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to delete.
@@ -150,14 +150,14 @@ pub struct DeleteDocumentPermissionParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// The SID of the Service resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sync_list`
+/// struct for passing parameters to the method [`delete_sync_list`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncListParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List resource to delete.
@@ -166,7 +166,7 @@ pub struct DeleteSyncListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sync_list_item`
+/// struct for passing parameters to the method [`delete_sync_list_item`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncListItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to delete.
@@ -179,7 +179,7 @@ pub struct DeleteSyncListItemParams {
     pub if_match: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_sync_list_permission`
+/// struct for passing parameters to the method [`delete_sync_list_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncListPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to delete.
@@ -190,7 +190,7 @@ pub struct DeleteSyncListPermissionParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `delete_sync_map`
+/// struct for passing parameters to the method [`delete_sync_map`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncMapParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to delete.
@@ -199,7 +199,7 @@ pub struct DeleteSyncMapParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sync_map_item`
+/// struct for passing parameters to the method [`delete_sync_map_item`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncMapItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to delete.
@@ -212,7 +212,7 @@ pub struct DeleteSyncMapItemParams {
     pub if_match: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_sync_map_permission`
+/// struct for passing parameters to the method [`delete_sync_map_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncMapPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to delete. Can be the Service's `sid` value or `default`.
@@ -223,7 +223,7 @@ pub struct DeleteSyncMapPermissionParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `delete_sync_stream`
+/// struct for passing parameters to the method [`delete_sync_stream`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSyncStreamParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Stream resource to delete.
@@ -232,7 +232,7 @@ pub struct DeleteSyncStreamParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_document`
+/// struct for passing parameters to the method [`fetch_document`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDocumentParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to fetch.
@@ -241,7 +241,7 @@ pub struct FetchDocumentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_document_permission`
+/// struct for passing parameters to the method [`fetch_document_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDocumentPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to fetch.
@@ -252,14 +252,14 @@ pub struct FetchDocumentPermissionParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// The SID of the Service resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sync_list`
+/// struct for passing parameters to the method [`fetch_sync_list`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncListParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List resource to fetch.
@@ -268,7 +268,7 @@ pub struct FetchSyncListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sync_list_item`
+/// struct for passing parameters to the method [`fetch_sync_list_item`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncListItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to fetch.
@@ -279,7 +279,7 @@ pub struct FetchSyncListItemParams {
     pub index: i32
 }
 
-/// struct for passing parameters to the method `fetch_sync_list_permission`
+/// struct for passing parameters to the method [`fetch_sync_list_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncListPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to fetch.
@@ -290,7 +290,7 @@ pub struct FetchSyncListPermissionParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `fetch_sync_map`
+/// struct for passing parameters to the method [`fetch_sync_map`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncMapParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to fetch.
@@ -299,7 +299,7 @@ pub struct FetchSyncMapParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sync_map_item`
+/// struct for passing parameters to the method [`fetch_sync_map_item`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncMapItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to fetch.
@@ -310,7 +310,7 @@ pub struct FetchSyncMapItemParams {
     pub key: String
 }
 
-/// struct for passing parameters to the method `fetch_sync_map_permission`
+/// struct for passing parameters to the method [`fetch_sync_map_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncMapPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to fetch. Can be the Service's `sid` value or `default`.
@@ -321,7 +321,7 @@ pub struct FetchSyncMapPermissionParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `fetch_sync_stream`
+/// struct for passing parameters to the method [`fetch_sync_stream`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSyncStreamParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Stream resource to fetch.
@@ -330,7 +330,7 @@ pub struct FetchSyncStreamParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_document`
+/// struct for passing parameters to the method [`list_document`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDocumentParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resources to read.
@@ -339,7 +339,7 @@ pub struct ListDocumentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_document_permission`
+/// struct for passing parameters to the method [`list_document_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDocumentPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resources to read.
@@ -350,14 +350,14 @@ pub struct ListDocumentPermissionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_list`
+/// struct for passing parameters to the method [`list_sync_list`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncListParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List resources to read.
@@ -366,7 +366,7 @@ pub struct ListSyncListParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_list_item`
+/// struct for passing parameters to the method [`list_sync_list_item`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncListItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the List Item resources to read.
@@ -383,7 +383,7 @@ pub struct ListSyncListItemParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_list_permission`
+/// struct for passing parameters to the method [`list_sync_list_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncListPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resources to read.
@@ -394,7 +394,7 @@ pub struct ListSyncListPermissionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_map`
+/// struct for passing parameters to the method [`list_sync_map`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncMapParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resources to read.
@@ -403,7 +403,7 @@ pub struct ListSyncMapParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_map_item`
+/// struct for passing parameters to the method [`list_sync_map_item`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncMapItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Map Item resources to read.
@@ -420,7 +420,7 @@ pub struct ListSyncMapItemParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_map_permission`
+/// struct for passing parameters to the method [`list_sync_map_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncMapPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resources to read. Can be the Service's `sid` value or `default`.
@@ -431,7 +431,7 @@ pub struct ListSyncMapPermissionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sync_stream`
+/// struct for passing parameters to the method [`list_sync_stream`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSyncStreamParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Stream resources to read.
@@ -440,7 +440,7 @@ pub struct ListSyncStreamParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_document`
+/// struct for passing parameters to the method [`update_document`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateDocumentParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to update.
@@ -455,7 +455,7 @@ pub struct UpdateDocumentParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_document_permission`
+/// struct for passing parameters to the method [`update_document_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateDocumentPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to update.
@@ -472,7 +472,7 @@ pub struct UpdateDocumentPermissionParams {
     pub write: bool
 }
 
-/// struct for passing parameters to the method `update_service`
+/// struct for passing parameters to the method [`update_service`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceParams {
     /// The SID of the Service resource to update.
@@ -493,7 +493,7 @@ pub struct UpdateServiceParams {
     pub webhooks_from_rest_enabled: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_sync_list`
+/// struct for passing parameters to the method [`update_sync_list`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncListParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List resource to update.
@@ -506,7 +506,7 @@ pub struct UpdateSyncListParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_sync_list_item`
+/// struct for passing parameters to the method [`update_sync_list_item`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncListItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to update.
@@ -527,7 +527,7 @@ pub struct UpdateSyncListItemParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_sync_list_permission`
+/// struct for passing parameters to the method [`update_sync_list_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncListPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to update.
@@ -544,7 +544,7 @@ pub struct UpdateSyncListPermissionParams {
     pub write: bool
 }
 
-/// struct for passing parameters to the method `update_sync_map`
+/// struct for passing parameters to the method [`update_sync_map`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncMapParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to update.
@@ -557,7 +557,7 @@ pub struct UpdateSyncMapParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_sync_map_item`
+/// struct for passing parameters to the method [`update_sync_map_item`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncMapItemParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to update.
@@ -578,7 +578,7 @@ pub struct UpdateSyncMapItemParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_sync_map_permission`
+/// struct for passing parameters to the method [`update_sync_map_permission`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncMapPermissionParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to update. Can be the Service's `sid` value or `default`.
@@ -595,7 +595,7 @@ pub struct UpdateSyncMapPermissionParams {
     pub write: bool
 }
 
-/// struct for passing parameters to the method `update_sync_stream`
+/// struct for passing parameters to the method [`update_sync_stream`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSyncStreamParams {
     /// The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Stream resource to update.
@@ -607,7 +607,7 @@ pub struct UpdateSyncStreamParams {
 }
 
 
-/// struct for typed successes of method `create_document`
+/// struct for typed successes of method [`create_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateDocumentSuccess {
@@ -615,7 +615,7 @@ pub enum CreateDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -623,7 +623,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_stream_message`
+/// struct for typed successes of method [`create_stream_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateStreamMessageSuccess {
@@ -631,7 +631,7 @@ pub enum CreateStreamMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sync_list`
+/// struct for typed successes of method [`create_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncListSuccess {
@@ -639,7 +639,7 @@ pub enum CreateSyncListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sync_list_item`
+/// struct for typed successes of method [`create_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncListItemSuccess {
@@ -647,7 +647,7 @@ pub enum CreateSyncListItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sync_map`
+/// struct for typed successes of method [`create_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncMapSuccess {
@@ -655,7 +655,7 @@ pub enum CreateSyncMapSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sync_map_item`
+/// struct for typed successes of method [`create_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncMapItemSuccess {
@@ -663,7 +663,7 @@ pub enum CreateSyncMapItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sync_stream`
+/// struct for typed successes of method [`create_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncStreamSuccess {
@@ -671,7 +671,7 @@ pub enum CreateSyncStreamSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_document`
+/// struct for typed successes of method [`delete_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteDocumentSuccess {
@@ -679,7 +679,7 @@ pub enum DeleteDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_document_permission`
+/// struct for typed successes of method [`delete_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteDocumentPermissionSuccess {
@@ -687,7 +687,7 @@ pub enum DeleteDocumentPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -695,7 +695,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_list`
+/// struct for typed successes of method [`delete_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncListSuccess {
@@ -703,7 +703,7 @@ pub enum DeleteSyncListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_list_item`
+/// struct for typed successes of method [`delete_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncListItemSuccess {
@@ -711,7 +711,7 @@ pub enum DeleteSyncListItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_list_permission`
+/// struct for typed successes of method [`delete_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncListPermissionSuccess {
@@ -719,7 +719,7 @@ pub enum DeleteSyncListPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_map`
+/// struct for typed successes of method [`delete_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncMapSuccess {
@@ -727,7 +727,7 @@ pub enum DeleteSyncMapSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_map_item`
+/// struct for typed successes of method [`delete_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncMapItemSuccess {
@@ -735,7 +735,7 @@ pub enum DeleteSyncMapItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_map_permission`
+/// struct for typed successes of method [`delete_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncMapPermissionSuccess {
@@ -743,7 +743,7 @@ pub enum DeleteSyncMapPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sync_stream`
+/// struct for typed successes of method [`delete_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncStreamSuccess {
@@ -751,7 +751,7 @@ pub enum DeleteSyncStreamSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_document`
+/// struct for typed successes of method [`fetch_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDocumentSuccess {
@@ -759,7 +759,7 @@ pub enum FetchDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_document_permission`
+/// struct for typed successes of method [`fetch_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDocumentPermissionSuccess {
@@ -767,7 +767,7 @@ pub enum FetchDocumentPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -775,7 +775,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_list`
+/// struct for typed successes of method [`fetch_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncListSuccess {
@@ -783,7 +783,7 @@ pub enum FetchSyncListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_list_item`
+/// struct for typed successes of method [`fetch_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncListItemSuccess {
@@ -791,7 +791,7 @@ pub enum FetchSyncListItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_list_permission`
+/// struct for typed successes of method [`fetch_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncListPermissionSuccess {
@@ -799,7 +799,7 @@ pub enum FetchSyncListPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_map`
+/// struct for typed successes of method [`fetch_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncMapSuccess {
@@ -807,7 +807,7 @@ pub enum FetchSyncMapSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_map_item`
+/// struct for typed successes of method [`fetch_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncMapItemSuccess {
@@ -815,7 +815,7 @@ pub enum FetchSyncMapItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_map_permission`
+/// struct for typed successes of method [`fetch_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncMapPermissionSuccess {
@@ -823,7 +823,7 @@ pub enum FetchSyncMapPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sync_stream`
+/// struct for typed successes of method [`fetch_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncStreamSuccess {
@@ -831,7 +831,7 @@ pub enum FetchSyncStreamSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_document`
+/// struct for typed successes of method [`list_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDocumentSuccess {
@@ -839,7 +839,7 @@ pub enum ListDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_document_permission`
+/// struct for typed successes of method [`list_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDocumentPermissionSuccess {
@@ -847,7 +847,7 @@ pub enum ListDocumentPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -855,7 +855,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_list`
+/// struct for typed successes of method [`list_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncListSuccess {
@@ -863,7 +863,7 @@ pub enum ListSyncListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_list_item`
+/// struct for typed successes of method [`list_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncListItemSuccess {
@@ -871,7 +871,7 @@ pub enum ListSyncListItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_list_permission`
+/// struct for typed successes of method [`list_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncListPermissionSuccess {
@@ -879,7 +879,7 @@ pub enum ListSyncListPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_map`
+/// struct for typed successes of method [`list_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncMapSuccess {
@@ -887,7 +887,7 @@ pub enum ListSyncMapSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_map_item`
+/// struct for typed successes of method [`list_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncMapItemSuccess {
@@ -895,7 +895,7 @@ pub enum ListSyncMapItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_map_permission`
+/// struct for typed successes of method [`list_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncMapPermissionSuccess {
@@ -903,7 +903,7 @@ pub enum ListSyncMapPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sync_stream`
+/// struct for typed successes of method [`list_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncStreamSuccess {
@@ -911,7 +911,7 @@ pub enum ListSyncStreamSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_document`
+/// struct for typed successes of method [`update_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDocumentSuccess {
@@ -919,7 +919,7 @@ pub enum UpdateDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_document_permission`
+/// struct for typed successes of method [`update_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDocumentPermissionSuccess {
@@ -927,7 +927,7 @@ pub enum UpdateDocumentPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service`
+/// struct for typed successes of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceSuccess {
@@ -935,7 +935,7 @@ pub enum UpdateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_list`
+/// struct for typed successes of method [`update_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncListSuccess {
@@ -943,7 +943,7 @@ pub enum UpdateSyncListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_list_item`
+/// struct for typed successes of method [`update_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncListItemSuccess {
@@ -951,7 +951,7 @@ pub enum UpdateSyncListItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_list_permission`
+/// struct for typed successes of method [`update_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncListPermissionSuccess {
@@ -959,7 +959,7 @@ pub enum UpdateSyncListPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_map`
+/// struct for typed successes of method [`update_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncMapSuccess {
@@ -967,7 +967,7 @@ pub enum UpdateSyncMapSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_map_item`
+/// struct for typed successes of method [`update_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncMapItemSuccess {
@@ -975,7 +975,7 @@ pub enum UpdateSyncMapItemSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_map_permission`
+/// struct for typed successes of method [`update_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncMapPermissionSuccess {
@@ -983,7 +983,7 @@ pub enum UpdateSyncMapPermissionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sync_stream`
+/// struct for typed successes of method [`update_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncStreamSuccess {
@@ -991,336 +991,336 @@ pub enum UpdateSyncStreamSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_document`
+/// struct for typed errors of method [`create_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_stream_message`
+/// struct for typed errors of method [`create_stream_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateStreamMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sync_list`
+/// struct for typed errors of method [`create_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sync_list_item`
+/// struct for typed errors of method [`create_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncListItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sync_map`
+/// struct for typed errors of method [`create_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncMapError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sync_map_item`
+/// struct for typed errors of method [`create_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncMapItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sync_stream`
+/// struct for typed errors of method [`create_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSyncStreamError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_document`
+/// struct for typed errors of method [`delete_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_document_permission`
+/// struct for typed errors of method [`delete_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteDocumentPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_list`
+/// struct for typed errors of method [`delete_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_list_item`
+/// struct for typed errors of method [`delete_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncListItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_list_permission`
+/// struct for typed errors of method [`delete_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncListPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_map`
+/// struct for typed errors of method [`delete_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncMapError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_map_item`
+/// struct for typed errors of method [`delete_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncMapItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_map_permission`
+/// struct for typed errors of method [`delete_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncMapPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sync_stream`
+/// struct for typed errors of method [`delete_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSyncStreamError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_document`
+/// struct for typed errors of method [`fetch_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_document_permission`
+/// struct for typed errors of method [`fetch_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDocumentPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_list`
+/// struct for typed errors of method [`fetch_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_list_item`
+/// struct for typed errors of method [`fetch_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncListItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_list_permission`
+/// struct for typed errors of method [`fetch_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncListPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_map`
+/// struct for typed errors of method [`fetch_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncMapError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_map_item`
+/// struct for typed errors of method [`fetch_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncMapItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_map_permission`
+/// struct for typed errors of method [`fetch_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncMapPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sync_stream`
+/// struct for typed errors of method [`fetch_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSyncStreamError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_document`
+/// struct for typed errors of method [`list_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_document_permission`
+/// struct for typed errors of method [`list_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDocumentPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_list`
+/// struct for typed errors of method [`list_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_list_item`
+/// struct for typed errors of method [`list_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncListItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_list_permission`
+/// struct for typed errors of method [`list_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncListPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_map`
+/// struct for typed errors of method [`list_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncMapError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_map_item`
+/// struct for typed errors of method [`list_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncMapItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_map_permission`
+/// struct for typed errors of method [`list_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncMapPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sync_stream`
+/// struct for typed errors of method [`list_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSyncStreamError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_document`
+/// struct for typed errors of method [`update_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_document_permission`
+/// struct for typed errors of method [`update_document_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDocumentPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service`
+/// struct for typed errors of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_list`
+/// struct for typed errors of method [`update_sync_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_list_item`
+/// struct for typed errors of method [`update_sync_list_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncListItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_list_permission`
+/// struct for typed errors of method [`update_sync_list_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncListPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_map`
+/// struct for typed errors of method [`update_sync_map`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncMapError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_map_item`
+/// struct for typed errors of method [`update_sync_map_item`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncMapItemError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_map_permission`
+/// struct for typed errors of method [`update_sync_map_permission`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncMapPermissionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sync_stream`
+/// struct for typed errors of method [`update_sync_stream`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSyncStreamError {

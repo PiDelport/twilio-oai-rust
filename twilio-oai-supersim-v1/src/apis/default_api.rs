@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_command`
+/// struct for passing parameters to the method [`create_command`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCommandParams {
     /// The message body of the command.
@@ -27,7 +27,7 @@ pub struct CreateCommandParams {
     pub callback_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_fleet`
+/// struct for passing parameters to the method [`create_fleet`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFleetParams {
     /// The SID or unique name of the Network Access Profile that will control which cellular networks the Fleet's SIMs can connect to.
@@ -52,7 +52,7 @@ pub struct CreateFleetParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_network_access_profile`
+/// struct for passing parameters to the method [`create_network_access_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNetworkAccessProfileParams {
     /// List of Network SIDs that this Network Access Profile will allow connections to.
@@ -61,7 +61,7 @@ pub struct CreateNetworkAccessProfileParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_network_access_profile_network`
+/// struct for passing parameters to the method [`create_network_access_profile_network`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNetworkAccessProfileNetworkParams {
     /// The unique string that identifies the Network Access Profile resource.
@@ -70,7 +70,7 @@ pub struct CreateNetworkAccessProfileNetworkParams {
     pub network: String
 }
 
-/// struct for passing parameters to the method `create_sim`
+/// struct for passing parameters to the method [`create_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSimParams {
     /// The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) of the Super SIM to be added to your Account.
@@ -79,7 +79,7 @@ pub struct CreateSimParams {
     pub registration_code: String
 }
 
-/// struct for passing parameters to the method `create_sms_command`
+/// struct for passing parameters to the method [`create_sms_command`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSmsCommandParams {
     /// The message body of the SMS Command.
@@ -92,7 +92,7 @@ pub struct CreateSmsCommandParams {
     pub callback_url: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_network_access_profile_network`
+/// struct for passing parameters to the method [`delete_network_access_profile_network`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteNetworkAccessProfileNetworkParams {
     /// The unique string that identifies the Network Access Profile resource.
@@ -101,35 +101,35 @@ pub struct DeleteNetworkAccessProfileNetworkParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_command`
+/// struct for passing parameters to the method [`fetch_command`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCommandParams {
     /// The SID of the Command resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_fleet`
+/// struct for passing parameters to the method [`fetch_fleet`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFleetParams {
     /// The SID of the Fleet resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_network`
+/// struct for passing parameters to the method [`fetch_network`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchNetworkParams {
     /// The SID of the Network resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_network_access_profile`
+/// struct for passing parameters to the method [`fetch_network_access_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchNetworkAccessProfileParams {
     /// The SID of the Network Access Profile resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_network_access_profile_network`
+/// struct for passing parameters to the method [`fetch_network_access_profile_network`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchNetworkAccessProfileNetworkParams {
     /// The unique string that identifies the Network Access Profile resource.
@@ -138,21 +138,21 @@ pub struct FetchNetworkAccessProfileNetworkParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sim`
+/// struct for passing parameters to the method [`fetch_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSimParams {
     /// The SID of the Sim resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sms_command`
+/// struct for passing parameters to the method [`fetch_sms_command`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSmsCommandParams {
     /// The SID of the SMS Command resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_billing_period`
+/// struct for passing parameters to the method [`list_billing_period`]
 #[derive(Clone, Debug, Default)]
 pub struct ListBillingPeriodParams {
     /// The SID of the Super SIM to list Billing Periods for.
@@ -161,7 +161,7 @@ pub struct ListBillingPeriodParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_command`
+/// struct for passing parameters to the method [`list_command`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCommandParams {
     /// The SID or unique name of the Sim that Command was sent to or from.
@@ -174,7 +174,7 @@ pub struct ListCommandParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_fleet`
+/// struct for passing parameters to the method [`list_fleet`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFleetParams {
     /// The SID or unique name of the Network Access Profile that controls which cellular networks the Fleet's SIMs can connect to.
@@ -183,7 +183,7 @@ pub struct ListFleetParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_network`
+/// struct for passing parameters to the method [`list_network`]
 #[derive(Clone, Debug, Default)]
 pub struct ListNetworkParams {
     /// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Network resources to read.
@@ -196,14 +196,14 @@ pub struct ListNetworkParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_network_access_profile`
+/// struct for passing parameters to the method [`list_network_access_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct ListNetworkAccessProfileParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_network_access_profile_network`
+/// struct for passing parameters to the method [`list_network_access_profile_network`]
 #[derive(Clone, Debug, Default)]
 pub struct ListNetworkAccessProfileNetworkParams {
     /// The unique string that identifies the Network Access Profile resource.
@@ -212,7 +212,7 @@ pub struct ListNetworkAccessProfileNetworkParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sim`
+/// struct for passing parameters to the method [`list_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSimParams {
     /// The status of the Sim resources to read. Can be `new`, `ready`, `active`, `inactive`, or `scheduled`.
@@ -225,7 +225,7 @@ pub struct ListSimParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sms_command`
+/// struct for passing parameters to the method [`list_sms_command`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSmsCommandParams {
     /// The SID or unique name of the Sim resource that SMS Command was sent to or from.
@@ -238,7 +238,7 @@ pub struct ListSmsCommandParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record`
+/// struct for passing parameters to the method [`list_usage_record`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordParams {
     /// SID or unique name of a Sim resource. Only show UsageRecords representing usage incurred by this Super SIM.
@@ -261,7 +261,7 @@ pub struct ListUsageRecordParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_fleet`
+/// struct for passing parameters to the method [`update_fleet`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFleetParams {
     /// The SID of the Fleet resource to update.
@@ -280,7 +280,7 @@ pub struct UpdateFleetParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_network_access_profile`
+/// struct for passing parameters to the method [`update_network_access_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateNetworkAccessProfileParams {
     /// The SID of the Network Access Profile to update.
@@ -289,7 +289,7 @@ pub struct UpdateNetworkAccessProfileParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_sim`
+/// struct for passing parameters to the method [`update_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSimParams {
     /// The SID of the Sim resource to update.
@@ -309,7 +309,7 @@ pub struct UpdateSimParams {
 }
 
 
-/// struct for typed successes of method `create_command`
+/// struct for typed successes of method [`create_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCommandSuccess {
@@ -317,7 +317,7 @@ pub enum CreateCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_fleet`
+/// struct for typed successes of method [`create_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFleetSuccess {
@@ -325,7 +325,7 @@ pub enum CreateFleetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_network_access_profile`
+/// struct for typed successes of method [`create_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNetworkAccessProfileSuccess {
@@ -333,7 +333,7 @@ pub enum CreateNetworkAccessProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_network_access_profile_network`
+/// struct for typed successes of method [`create_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNetworkAccessProfileNetworkSuccess {
@@ -341,7 +341,7 @@ pub enum CreateNetworkAccessProfileNetworkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sim`
+/// struct for typed successes of method [`create_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSimSuccess {
@@ -349,7 +349,7 @@ pub enum CreateSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sms_command`
+/// struct for typed successes of method [`create_sms_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSmsCommandSuccess {
@@ -357,7 +357,7 @@ pub enum CreateSmsCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_network_access_profile_network`
+/// struct for typed successes of method [`delete_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteNetworkAccessProfileNetworkSuccess {
@@ -365,7 +365,7 @@ pub enum DeleteNetworkAccessProfileNetworkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_command`
+/// struct for typed successes of method [`fetch_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCommandSuccess {
@@ -373,7 +373,7 @@ pub enum FetchCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_fleet`
+/// struct for typed successes of method [`fetch_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFleetSuccess {
@@ -381,7 +381,7 @@ pub enum FetchFleetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_network`
+/// struct for typed successes of method [`fetch_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNetworkSuccess {
@@ -389,7 +389,7 @@ pub enum FetchNetworkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_network_access_profile`
+/// struct for typed successes of method [`fetch_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNetworkAccessProfileSuccess {
@@ -397,7 +397,7 @@ pub enum FetchNetworkAccessProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_network_access_profile_network`
+/// struct for typed successes of method [`fetch_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNetworkAccessProfileNetworkSuccess {
@@ -405,7 +405,7 @@ pub enum FetchNetworkAccessProfileNetworkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sim`
+/// struct for typed successes of method [`fetch_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSimSuccess {
@@ -413,7 +413,7 @@ pub enum FetchSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sms_command`
+/// struct for typed successes of method [`fetch_sms_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSmsCommandSuccess {
@@ -421,7 +421,7 @@ pub enum FetchSmsCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_billing_period`
+/// struct for typed successes of method [`list_billing_period`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBillingPeriodSuccess {
@@ -429,7 +429,7 @@ pub enum ListBillingPeriodSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_command`
+/// struct for typed successes of method [`list_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCommandSuccess {
@@ -437,7 +437,7 @@ pub enum ListCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_fleet`
+/// struct for typed successes of method [`list_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFleetSuccess {
@@ -445,7 +445,7 @@ pub enum ListFleetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_network`
+/// struct for typed successes of method [`list_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNetworkSuccess {
@@ -453,7 +453,7 @@ pub enum ListNetworkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_network_access_profile`
+/// struct for typed successes of method [`list_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNetworkAccessProfileSuccess {
@@ -461,7 +461,7 @@ pub enum ListNetworkAccessProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_network_access_profile_network`
+/// struct for typed successes of method [`list_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNetworkAccessProfileNetworkSuccess {
@@ -469,7 +469,7 @@ pub enum ListNetworkAccessProfileNetworkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sim`
+/// struct for typed successes of method [`list_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSimSuccess {
@@ -477,7 +477,7 @@ pub enum ListSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sms_command`
+/// struct for typed successes of method [`list_sms_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSmsCommandSuccess {
@@ -485,7 +485,7 @@ pub enum ListSmsCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record`
+/// struct for typed successes of method [`list_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordSuccess {
@@ -493,7 +493,7 @@ pub enum ListUsageRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_fleet`
+/// struct for typed successes of method [`update_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFleetSuccess {
@@ -501,7 +501,7 @@ pub enum UpdateFleetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_network_access_profile`
+/// struct for typed successes of method [`update_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateNetworkAccessProfileSuccess {
@@ -509,7 +509,7 @@ pub enum UpdateNetworkAccessProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sim`
+/// struct for typed successes of method [`update_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSimSuccess {
@@ -518,182 +518,182 @@ pub enum UpdateSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_command`
+/// struct for typed errors of method [`create_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_fleet`
+/// struct for typed errors of method [`create_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFleetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_network_access_profile`
+/// struct for typed errors of method [`create_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNetworkAccessProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_network_access_profile_network`
+/// struct for typed errors of method [`create_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNetworkAccessProfileNetworkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sim`
+/// struct for typed errors of method [`create_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSimError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sms_command`
+/// struct for typed errors of method [`create_sms_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSmsCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_network_access_profile_network`
+/// struct for typed errors of method [`delete_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteNetworkAccessProfileNetworkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_command`
+/// struct for typed errors of method [`fetch_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_fleet`
+/// struct for typed errors of method [`fetch_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFleetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_network`
+/// struct for typed errors of method [`fetch_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNetworkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_network_access_profile`
+/// struct for typed errors of method [`fetch_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNetworkAccessProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_network_access_profile_network`
+/// struct for typed errors of method [`fetch_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNetworkAccessProfileNetworkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sim`
+/// struct for typed errors of method [`fetch_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSimError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sms_command`
+/// struct for typed errors of method [`fetch_sms_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSmsCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_billing_period`
+/// struct for typed errors of method [`list_billing_period`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBillingPeriodError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_command`
+/// struct for typed errors of method [`list_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_fleet`
+/// struct for typed errors of method [`list_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFleetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_network`
+/// struct for typed errors of method [`list_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNetworkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_network_access_profile`
+/// struct for typed errors of method [`list_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNetworkAccessProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_network_access_profile_network`
+/// struct for typed errors of method [`list_network_access_profile_network`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNetworkAccessProfileNetworkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sim`
+/// struct for typed errors of method [`list_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSimError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sms_command`
+/// struct for typed errors of method [`list_sms_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSmsCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record`
+/// struct for typed errors of method [`list_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_fleet`
+/// struct for typed errors of method [`update_fleet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFleetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_network_access_profile`
+/// struct for typed errors of method [`update_network_access_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateNetworkAccessProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sim`
+/// struct for typed errors of method [`update_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSimError {

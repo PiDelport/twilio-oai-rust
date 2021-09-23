@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_byoc_trunk`
+/// struct for passing parameters to the method [`create_byoc_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateByocTrunkParams {
     /// Whether Caller ID Name (CNAM) lookup is enabled for the trunk. If enabled, all inbound calls to the BYOC Trunk from the United States and Canada automatically perform a CNAM Lookup and display Caller ID data on your phone. See [CNAM Lookups](https://www.twilio.com/docs/sip-trunking#CNAM) for more information.
@@ -39,14 +39,14 @@ pub struct CreateByocTrunkParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_connection_policy`
+/// struct for passing parameters to the method [`create_connection_policy`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateConnectionPolicyParams {
     /// A descriptive string that you create to describe the resource. It is not unique and can be up to 255 characters long.
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_connection_policy_target`
+/// struct for passing parameters to the method [`create_connection_policy_target`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateConnectionPolicyTargetParams {
     /// The SID of the Connection Policy that owns the Target.
@@ -63,14 +63,14 @@ pub struct CreateConnectionPolicyTargetParams {
     pub weight: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_dialing_permissions_country_bulk_update`
+/// struct for passing parameters to the method [`create_dialing_permissions_country_bulk_update`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateDialingPermissionsCountryBulkUpdateParams {
     /// URL encoded JSON array of update objects. example : `[ { \\\"iso_code\\\": \\\"GB\\\", \\\"low_risk_numbers_enabled\\\": \\\"true\\\", \\\"high_risk_special_numbers_enabled\\\":\\\"true\\\", \\\"high_risk_tollfraud_numbers_enabled\\\": \\\"false\\\" } ]`
     pub update_request: String
 }
 
-/// struct for passing parameters to the method `create_ip_record`
+/// struct for passing parameters to the method [`create_ip_record`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIpRecordParams {
     /// An IP address in dotted decimal notation, IPv4 only.
@@ -81,7 +81,7 @@ pub struct CreateIpRecordParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_source_ip_mapping`
+/// struct for passing parameters to the method [`create_source_ip_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSourceIpMappingParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to map from.
@@ -90,21 +90,21 @@ pub struct CreateSourceIpMappingParams {
     pub sip_domain_sid: String
 }
 
-/// struct for passing parameters to the method `delete_byoc_trunk`
+/// struct for passing parameters to the method [`delete_byoc_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteByocTrunkParams {
     /// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_connection_policy`
+/// struct for passing parameters to the method [`delete_connection_policy`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConnectionPolicyParams {
     /// The unique string that we created to identify the Connection Policy resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_connection_policy_target`
+/// struct for passing parameters to the method [`delete_connection_policy_target`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConnectionPolicyTargetParams {
     /// The SID of the Connection Policy that owns the Target.
@@ -113,35 +113,35 @@ pub struct DeleteConnectionPolicyTargetParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_ip_record`
+/// struct for passing parameters to the method [`delete_ip_record`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteIpRecordParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_source_ip_mapping`
+/// struct for passing parameters to the method [`delete_source_ip_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSourceIpMappingParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_byoc_trunk`
+/// struct for passing parameters to the method [`fetch_byoc_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchByocTrunkParams {
     /// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_connection_policy`
+/// struct for passing parameters to the method [`fetch_connection_policy`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConnectionPolicyParams {
     /// The unique string that we created to identify the Connection Policy resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_connection_policy_target`
+/// struct for passing parameters to the method [`fetch_connection_policy_target`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConnectionPolicyTargetParams {
     /// The SID of the Connection Policy that owns the Target.
@@ -150,42 +150,42 @@ pub struct FetchConnectionPolicyTargetParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_dialing_permissions_country`
+/// struct for passing parameters to the method [`fetch_dialing_permissions_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDialingPermissionsCountryParams {
     /// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the DialingPermissions Country resource to fetch
     pub iso_code: String
 }
 
-/// struct for passing parameters to the method `fetch_ip_record`
+/// struct for passing parameters to the method [`fetch_ip_record`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchIpRecordParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_source_ip_mapping`
+/// struct for passing parameters to the method [`fetch_source_ip_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSourceIpMappingParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_byoc_trunk`
+/// struct for passing parameters to the method [`list_byoc_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct ListByocTrunkParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_connection_policy`
+/// struct for passing parameters to the method [`list_connection_policy`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConnectionPolicyParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_connection_policy_target`
+/// struct for passing parameters to the method [`list_connection_policy_target`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConnectionPolicyTargetParams {
     /// The SID of the Connection Policy from which to read the Targets.
@@ -194,7 +194,7 @@ pub struct ListConnectionPolicyTargetParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_dialing_permissions_country`
+/// struct for passing parameters to the method [`list_dialing_permissions_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDialingPermissionsCountryParams {
     /// Filter to retrieve the country permissions by specifying the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
@@ -213,7 +213,7 @@ pub struct ListDialingPermissionsCountryParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_dialing_permissions_hrs_prefixes`
+/// struct for passing parameters to the method [`list_dialing_permissions_hrs_prefixes`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDialingPermissionsHrsPrefixesParams {
     /// The [ISO 3166-1 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) to identify the country permissions from which high-risk special service number prefixes are fetched
@@ -222,21 +222,21 @@ pub struct ListDialingPermissionsHrsPrefixesParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_ip_record`
+/// struct for passing parameters to the method [`list_ip_record`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIpRecordParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_source_ip_mapping`
+/// struct for passing parameters to the method [`list_source_ip_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSourceIpMappingParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_byoc_trunk`
+/// struct for passing parameters to the method [`update_byoc_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateByocTrunkParams {
     /// The Twilio-provided string that uniquely identifies the BYOC Trunk resource to update.
@@ -263,7 +263,7 @@ pub struct UpdateByocTrunkParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_connection_policy`
+/// struct for passing parameters to the method [`update_connection_policy`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConnectionPolicyParams {
     /// The unique string that we created to identify the Connection Policy resource to update.
@@ -272,7 +272,7 @@ pub struct UpdateConnectionPolicyParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_connection_policy_target`
+/// struct for passing parameters to the method [`update_connection_policy_target`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConnectionPolicyTargetParams {
     /// The SID of the Connection Policy that owns the Target.
@@ -291,14 +291,14 @@ pub struct UpdateConnectionPolicyTargetParams {
     pub weight: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_dialing_permissions_settings`
+/// struct for passing parameters to the method [`update_dialing_permissions_settings`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateDialingPermissionsSettingsParams {
     /// `true` for the sub-account to inherit voice dialing permissions from the Master Project; otherwise `false`.
     pub dialing_permissions_inheritance: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_ip_record`
+/// struct for passing parameters to the method [`update_ip_record`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateIpRecordParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to update.
@@ -307,7 +307,7 @@ pub struct UpdateIpRecordParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_source_ip_mapping`
+/// struct for passing parameters to the method [`update_source_ip_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSourceIpMappingParams {
     /// The Twilio-provided string that uniquely identifies the IP Record resource to update.
@@ -317,7 +317,7 @@ pub struct UpdateSourceIpMappingParams {
 }
 
 
-/// struct for typed successes of method `create_byoc_trunk`
+/// struct for typed successes of method [`create_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateByocTrunkSuccess {
@@ -325,7 +325,7 @@ pub enum CreateByocTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_connection_policy`
+/// struct for typed successes of method [`create_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConnectionPolicySuccess {
@@ -333,7 +333,7 @@ pub enum CreateConnectionPolicySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_connection_policy_target`
+/// struct for typed successes of method [`create_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConnectionPolicyTargetSuccess {
@@ -341,7 +341,7 @@ pub enum CreateConnectionPolicyTargetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_dialing_permissions_country_bulk_update`
+/// struct for typed successes of method [`create_dialing_permissions_country_bulk_update`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateDialingPermissionsCountryBulkUpdateSuccess {
@@ -349,7 +349,7 @@ pub enum CreateDialingPermissionsCountryBulkUpdateSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_ip_record`
+/// struct for typed successes of method [`create_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIpRecordSuccess {
@@ -357,7 +357,7 @@ pub enum CreateIpRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_source_ip_mapping`
+/// struct for typed successes of method [`create_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSourceIpMappingSuccess {
@@ -365,7 +365,7 @@ pub enum CreateSourceIpMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_byoc_trunk`
+/// struct for typed successes of method [`delete_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteByocTrunkSuccess {
@@ -373,7 +373,7 @@ pub enum DeleteByocTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_connection_policy`
+/// struct for typed successes of method [`delete_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConnectionPolicySuccess {
@@ -381,7 +381,7 @@ pub enum DeleteConnectionPolicySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_connection_policy_target`
+/// struct for typed successes of method [`delete_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConnectionPolicyTargetSuccess {
@@ -389,7 +389,7 @@ pub enum DeleteConnectionPolicyTargetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_ip_record`
+/// struct for typed successes of method [`delete_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIpRecordSuccess {
@@ -397,7 +397,7 @@ pub enum DeleteIpRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_source_ip_mapping`
+/// struct for typed successes of method [`delete_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSourceIpMappingSuccess {
@@ -405,7 +405,7 @@ pub enum DeleteSourceIpMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_byoc_trunk`
+/// struct for typed successes of method [`fetch_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchByocTrunkSuccess {
@@ -413,7 +413,7 @@ pub enum FetchByocTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_connection_policy`
+/// struct for typed successes of method [`fetch_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConnectionPolicySuccess {
@@ -421,7 +421,7 @@ pub enum FetchConnectionPolicySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_connection_policy_target`
+/// struct for typed successes of method [`fetch_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConnectionPolicyTargetSuccess {
@@ -429,7 +429,7 @@ pub enum FetchConnectionPolicyTargetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_dialing_permissions_country`
+/// struct for typed successes of method [`fetch_dialing_permissions_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDialingPermissionsCountrySuccess {
@@ -437,7 +437,7 @@ pub enum FetchDialingPermissionsCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_dialing_permissions_settings`
+/// struct for typed successes of method [`fetch_dialing_permissions_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDialingPermissionsSettingsSuccess {
@@ -445,7 +445,7 @@ pub enum FetchDialingPermissionsSettingsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_ip_record`
+/// struct for typed successes of method [`fetch_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIpRecordSuccess {
@@ -453,7 +453,7 @@ pub enum FetchIpRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_source_ip_mapping`
+/// struct for typed successes of method [`fetch_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSourceIpMappingSuccess {
@@ -461,7 +461,7 @@ pub enum FetchSourceIpMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_byoc_trunk`
+/// struct for typed successes of method [`list_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListByocTrunkSuccess {
@@ -469,7 +469,7 @@ pub enum ListByocTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_connection_policy`
+/// struct for typed successes of method [`list_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConnectionPolicySuccess {
@@ -477,7 +477,7 @@ pub enum ListConnectionPolicySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_connection_policy_target`
+/// struct for typed successes of method [`list_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConnectionPolicyTargetSuccess {
@@ -485,7 +485,7 @@ pub enum ListConnectionPolicyTargetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_dialing_permissions_country`
+/// struct for typed successes of method [`list_dialing_permissions_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDialingPermissionsCountrySuccess {
@@ -493,7 +493,7 @@ pub enum ListDialingPermissionsCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_dialing_permissions_hrs_prefixes`
+/// struct for typed successes of method [`list_dialing_permissions_hrs_prefixes`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDialingPermissionsHrsPrefixesSuccess {
@@ -501,7 +501,7 @@ pub enum ListDialingPermissionsHrsPrefixesSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_ip_record`
+/// struct for typed successes of method [`list_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIpRecordSuccess {
@@ -509,7 +509,7 @@ pub enum ListIpRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_source_ip_mapping`
+/// struct for typed successes of method [`list_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSourceIpMappingSuccess {
@@ -517,7 +517,7 @@ pub enum ListSourceIpMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_byoc_trunk`
+/// struct for typed successes of method [`update_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateByocTrunkSuccess {
@@ -525,7 +525,7 @@ pub enum UpdateByocTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_connection_policy`
+/// struct for typed successes of method [`update_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConnectionPolicySuccess {
@@ -533,7 +533,7 @@ pub enum UpdateConnectionPolicySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_connection_policy_target`
+/// struct for typed successes of method [`update_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConnectionPolicyTargetSuccess {
@@ -541,7 +541,7 @@ pub enum UpdateConnectionPolicyTargetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_dialing_permissions_settings`
+/// struct for typed successes of method [`update_dialing_permissions_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDialingPermissionsSettingsSuccess {
@@ -549,7 +549,7 @@ pub enum UpdateDialingPermissionsSettingsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_ip_record`
+/// struct for typed successes of method [`update_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateIpRecordSuccess {
@@ -557,7 +557,7 @@ pub enum UpdateIpRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_source_ip_mapping`
+/// struct for typed successes of method [`update_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSourceIpMappingSuccess {
@@ -565,217 +565,217 @@ pub enum UpdateSourceIpMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_byoc_trunk`
+/// struct for typed errors of method [`create_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateByocTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_connection_policy`
+/// struct for typed errors of method [`create_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConnectionPolicyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_connection_policy_target`
+/// struct for typed errors of method [`create_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConnectionPolicyTargetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_dialing_permissions_country_bulk_update`
+/// struct for typed errors of method [`create_dialing_permissions_country_bulk_update`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateDialingPermissionsCountryBulkUpdateError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_ip_record`
+/// struct for typed errors of method [`create_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIpRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_source_ip_mapping`
+/// struct for typed errors of method [`create_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSourceIpMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_byoc_trunk`
+/// struct for typed errors of method [`delete_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteByocTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_connection_policy`
+/// struct for typed errors of method [`delete_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConnectionPolicyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_connection_policy_target`
+/// struct for typed errors of method [`delete_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConnectionPolicyTargetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_ip_record`
+/// struct for typed errors of method [`delete_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIpRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_source_ip_mapping`
+/// struct for typed errors of method [`delete_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSourceIpMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_byoc_trunk`
+/// struct for typed errors of method [`fetch_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchByocTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_connection_policy`
+/// struct for typed errors of method [`fetch_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConnectionPolicyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_connection_policy_target`
+/// struct for typed errors of method [`fetch_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConnectionPolicyTargetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_dialing_permissions_country`
+/// struct for typed errors of method [`fetch_dialing_permissions_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDialingPermissionsCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_dialing_permissions_settings`
+/// struct for typed errors of method [`fetch_dialing_permissions_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDialingPermissionsSettingsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_ip_record`
+/// struct for typed errors of method [`fetch_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIpRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_source_ip_mapping`
+/// struct for typed errors of method [`fetch_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSourceIpMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_byoc_trunk`
+/// struct for typed errors of method [`list_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListByocTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_connection_policy`
+/// struct for typed errors of method [`list_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConnectionPolicyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_connection_policy_target`
+/// struct for typed errors of method [`list_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConnectionPolicyTargetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_dialing_permissions_country`
+/// struct for typed errors of method [`list_dialing_permissions_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDialingPermissionsCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_dialing_permissions_hrs_prefixes`
+/// struct for typed errors of method [`list_dialing_permissions_hrs_prefixes`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDialingPermissionsHrsPrefixesError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_ip_record`
+/// struct for typed errors of method [`list_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIpRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_source_ip_mapping`
+/// struct for typed errors of method [`list_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSourceIpMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_byoc_trunk`
+/// struct for typed errors of method [`update_byoc_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateByocTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_connection_policy`
+/// struct for typed errors of method [`update_connection_policy`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConnectionPolicyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_connection_policy_target`
+/// struct for typed errors of method [`update_connection_policy_target`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConnectionPolicyTargetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_dialing_permissions_settings`
+/// struct for typed errors of method [`update_dialing_permissions_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDialingPermissionsSettingsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_ip_record`
+/// struct for typed errors of method [`update_ip_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateIpRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_source_ip_mapping`
+/// struct for typed errors of method [`update_source_ip_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSourceIpMappingError {

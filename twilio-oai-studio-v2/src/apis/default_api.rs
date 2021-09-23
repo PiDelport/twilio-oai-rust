@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_execution`
+/// struct for passing parameters to the method [`create_execution`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateExecutionParams {
     /// The SID of the Excecution's Flow.
@@ -27,7 +27,7 @@ pub struct CreateExecutionParams {
     pub parameters: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_flow`
+/// struct for passing parameters to the method [`create_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFlowParams {
     /// JSON representation of flow definition.
@@ -40,7 +40,7 @@ pub struct CreateFlowParams {
     pub commit_message: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_execution`
+/// struct for passing parameters to the method [`delete_execution`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteExecutionParams {
     /// The SID of the Flow with the Execution resources to delete.
@@ -49,14 +49,14 @@ pub struct DeleteExecutionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_flow`
+/// struct for passing parameters to the method [`delete_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFlowParams {
     /// The SID of the Flow resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_execution`
+/// struct for passing parameters to the method [`fetch_execution`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchExecutionParams {
     /// The SID of the Flow with the Execution resource to fetch
@@ -65,7 +65,7 @@ pub struct FetchExecutionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_execution_context`
+/// struct for passing parameters to the method [`fetch_execution_context`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchExecutionContextParams {
     /// The SID of the Flow with the Execution context to fetch.
@@ -74,7 +74,7 @@ pub struct FetchExecutionContextParams {
     pub execution_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_execution_step`
+/// struct for passing parameters to the method [`fetch_execution_step`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchExecutionStepParams {
     /// The SID of the Flow with the Step to fetch.
@@ -85,7 +85,7 @@ pub struct FetchExecutionStepParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_execution_step_context`
+/// struct for passing parameters to the method [`fetch_execution_step_context`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchExecutionStepContextParams {
     /// The SID of the Flow with the Step to fetch.
@@ -96,14 +96,14 @@ pub struct FetchExecutionStepContextParams {
     pub step_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_flow`
+/// struct for passing parameters to the method [`fetch_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFlowParams {
     /// The SID of the Flow resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_flow_revision`
+/// struct for passing parameters to the method [`fetch_flow_revision`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFlowRevisionParams {
     /// The SID of the Flow resource to fetch.
@@ -112,14 +112,14 @@ pub struct FetchFlowRevisionParams {
     pub revision: String
 }
 
-/// struct for passing parameters to the method `fetch_test_user`
+/// struct for passing parameters to the method [`fetch_test_user`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTestUserParams {
     /// Unique identifier of the flow.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_execution`
+/// struct for passing parameters to the method [`list_execution`]
 #[derive(Clone, Debug, Default)]
 pub struct ListExecutionParams {
     /// The SID of the Flow with the Execution resources to read.
@@ -132,7 +132,7 @@ pub struct ListExecutionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_execution_step`
+/// struct for passing parameters to the method [`list_execution_step`]
 #[derive(Clone, Debug, Default)]
 pub struct ListExecutionStepParams {
     /// The SID of the Flow with the Steps to read.
@@ -143,14 +143,14 @@ pub struct ListExecutionStepParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_flow`
+/// struct for passing parameters to the method [`list_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFlowParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_flow_revision`
+/// struct for passing parameters to the method [`list_flow_revision`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFlowRevisionParams {
     /// The SID of the Flow resource to fetch.
@@ -159,7 +159,7 @@ pub struct ListFlowRevisionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_execution`
+/// struct for passing parameters to the method [`update_execution`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateExecutionParams {
     /// The SID of the Flow with the Execution resources to update.
@@ -170,7 +170,7 @@ pub struct UpdateExecutionParams {
     pub status: String
 }
 
-/// struct for passing parameters to the method `update_flow`
+/// struct for passing parameters to the method [`update_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFlowParams {
     /// The SID of the Flow resource to fetch.
@@ -185,7 +185,7 @@ pub struct UpdateFlowParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_flow_validate`
+/// struct for passing parameters to the method [`update_flow_validate`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFlowValidateParams {
     /// JSON representation of flow definition.
@@ -198,7 +198,7 @@ pub struct UpdateFlowValidateParams {
     pub commit_message: Option<String>
 }
 
-/// struct for passing parameters to the method `update_test_user`
+/// struct for passing parameters to the method [`update_test_user`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTestUserParams {
     /// Unique identifier of the flow.
@@ -208,7 +208,7 @@ pub struct UpdateTestUserParams {
 }
 
 
-/// struct for typed successes of method `create_execution`
+/// struct for typed successes of method [`create_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateExecutionSuccess {
@@ -216,7 +216,7 @@ pub enum CreateExecutionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_flow`
+/// struct for typed successes of method [`create_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFlowSuccess {
@@ -224,7 +224,7 @@ pub enum CreateFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_execution`
+/// struct for typed successes of method [`delete_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteExecutionSuccess {
@@ -232,7 +232,7 @@ pub enum DeleteExecutionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_flow`
+/// struct for typed successes of method [`delete_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFlowSuccess {
@@ -240,7 +240,7 @@ pub enum DeleteFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_execution`
+/// struct for typed successes of method [`fetch_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionSuccess {
@@ -248,7 +248,7 @@ pub enum FetchExecutionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_execution_context`
+/// struct for typed successes of method [`fetch_execution_context`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionContextSuccess {
@@ -256,7 +256,7 @@ pub enum FetchExecutionContextSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_execution_step`
+/// struct for typed successes of method [`fetch_execution_step`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionStepSuccess {
@@ -264,7 +264,7 @@ pub enum FetchExecutionStepSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_execution_step_context`
+/// struct for typed successes of method [`fetch_execution_step_context`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionStepContextSuccess {
@@ -272,7 +272,7 @@ pub enum FetchExecutionStepContextSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_flow`
+/// struct for typed successes of method [`fetch_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFlowSuccess {
@@ -280,7 +280,7 @@ pub enum FetchFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_flow_revision`
+/// struct for typed successes of method [`fetch_flow_revision`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFlowRevisionSuccess {
@@ -288,7 +288,7 @@ pub enum FetchFlowRevisionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_test_user`
+/// struct for typed successes of method [`fetch_test_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTestUserSuccess {
@@ -296,7 +296,7 @@ pub enum FetchTestUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_execution`
+/// struct for typed successes of method [`list_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListExecutionSuccess {
@@ -304,7 +304,7 @@ pub enum ListExecutionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_execution_step`
+/// struct for typed successes of method [`list_execution_step`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListExecutionStepSuccess {
@@ -312,7 +312,7 @@ pub enum ListExecutionStepSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_flow`
+/// struct for typed successes of method [`list_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFlowSuccess {
@@ -320,7 +320,7 @@ pub enum ListFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_flow_revision`
+/// struct for typed successes of method [`list_flow_revision`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFlowRevisionSuccess {
@@ -328,7 +328,7 @@ pub enum ListFlowRevisionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_execution`
+/// struct for typed successes of method [`update_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateExecutionSuccess {
@@ -336,7 +336,7 @@ pub enum UpdateExecutionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_flow`
+/// struct for typed successes of method [`update_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFlowSuccess {
@@ -344,7 +344,7 @@ pub enum UpdateFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_flow_validate`
+/// struct for typed successes of method [`update_flow_validate`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFlowValidateSuccess {
@@ -352,7 +352,7 @@ pub enum UpdateFlowValidateSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_test_user`
+/// struct for typed successes of method [`update_test_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTestUserSuccess {
@@ -360,133 +360,133 @@ pub enum UpdateTestUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_execution`
+/// struct for typed errors of method [`create_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateExecutionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_flow`
+/// struct for typed errors of method [`create_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_execution`
+/// struct for typed errors of method [`delete_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteExecutionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_flow`
+/// struct for typed errors of method [`delete_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_execution`
+/// struct for typed errors of method [`fetch_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_execution_context`
+/// struct for typed errors of method [`fetch_execution_context`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionContextError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_execution_step`
+/// struct for typed errors of method [`fetch_execution_step`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionStepError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_execution_step_context`
+/// struct for typed errors of method [`fetch_execution_step_context`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExecutionStepContextError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_flow`
+/// struct for typed errors of method [`fetch_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_flow_revision`
+/// struct for typed errors of method [`fetch_flow_revision`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFlowRevisionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_test_user`
+/// struct for typed errors of method [`fetch_test_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTestUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_execution`
+/// struct for typed errors of method [`list_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListExecutionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_execution_step`
+/// struct for typed errors of method [`list_execution_step`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListExecutionStepError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_flow`
+/// struct for typed errors of method [`list_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_flow_revision`
+/// struct for typed errors of method [`list_flow_revision`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFlowRevisionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_execution`
+/// struct for typed errors of method [`update_execution`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateExecutionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_flow`
+/// struct for typed errors of method [`update_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_flow_validate`
+/// struct for typed errors of method [`update_flow_validate`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFlowValidateError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_test_user`
+/// struct for typed errors of method [`update_test_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTestUserError {

@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_credential_aws`
+/// struct for passing parameters to the method [`create_credential_aws`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialAwsParams {
     /// A string that contains the AWS access credentials in the format `<AWS_ACCESS_KEY_ID>:<AWS_SECRET_ACCESS_KEY>`. For example, `AKIAIOSFODNN7EXAMPLE:wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`
@@ -25,7 +25,7 @@ pub struct CreateCredentialAwsParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_credential_public_key`
+/// struct for passing parameters to the method [`create_credential_public_key`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialPublicKeyParams {
     /// A URL encoded representation of the public key. For example, `-----BEGIN PUBLIC KEY-----MIIBIjANB.pa9xQIDAQAB-----END PUBLIC KEY-----`
@@ -36,49 +36,49 @@ pub struct CreateCredentialPublicKeyParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_credential_aws`
+/// struct for passing parameters to the method [`delete_credential_aws`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCredentialAwsParams {
     /// The Twilio-provided string that uniquely identifies the AWS resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_credential_public_key`
+/// struct for passing parameters to the method [`delete_credential_public_key`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCredentialPublicKeyParams {
     /// The Twilio-provided string that uniquely identifies the PublicKey resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_credential_aws`
+/// struct for passing parameters to the method [`fetch_credential_aws`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCredentialAwsParams {
     /// The Twilio-provided string that uniquely identifies the AWS resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_credential_public_key`
+/// struct for passing parameters to the method [`fetch_credential_public_key`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCredentialPublicKeyParams {
     /// The Twilio-provided string that uniquely identifies the PublicKey resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_credential_aws`
+/// struct for passing parameters to the method [`list_credential_aws`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCredentialAwsParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_credential_public_key`
+/// struct for passing parameters to the method [`list_credential_public_key`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCredentialPublicKeyParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_credential_aws`
+/// struct for passing parameters to the method [`update_credential_aws`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCredentialAwsParams {
     /// The Twilio-provided string that uniquely identifies the AWS resource to update.
@@ -87,7 +87,7 @@ pub struct UpdateCredentialAwsParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_credential_public_key`
+/// struct for passing parameters to the method [`update_credential_public_key`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCredentialPublicKeyParams {
     /// The Twilio-provided string that uniquely identifies the PublicKey resource to update.
@@ -97,7 +97,7 @@ pub struct UpdateCredentialPublicKeyParams {
 }
 
 
-/// struct for typed successes of method `create_credential_aws`
+/// struct for typed successes of method [`create_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialAwsSuccess {
@@ -105,7 +105,7 @@ pub enum CreateCredentialAwsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_credential_public_key`
+/// struct for typed successes of method [`create_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialPublicKeySuccess {
@@ -113,7 +113,7 @@ pub enum CreateCredentialPublicKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_secondary_auth_token`
+/// struct for typed successes of method [`create_secondary_auth_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSecondaryAuthTokenSuccess {
@@ -121,7 +121,7 @@ pub enum CreateSecondaryAuthTokenSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_credential_aws`
+/// struct for typed successes of method [`delete_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialAwsSuccess {
@@ -129,7 +129,7 @@ pub enum DeleteCredentialAwsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_credential_public_key`
+/// struct for typed successes of method [`delete_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialPublicKeySuccess {
@@ -137,7 +137,7 @@ pub enum DeleteCredentialPublicKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_secondary_auth_token`
+/// struct for typed successes of method [`delete_secondary_auth_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSecondaryAuthTokenSuccess {
@@ -145,7 +145,7 @@ pub enum DeleteSecondaryAuthTokenSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_credential_aws`
+/// struct for typed successes of method [`fetch_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialAwsSuccess {
@@ -153,7 +153,7 @@ pub enum FetchCredentialAwsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_credential_public_key`
+/// struct for typed successes of method [`fetch_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialPublicKeySuccess {
@@ -161,7 +161,7 @@ pub enum FetchCredentialPublicKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_credential_aws`
+/// struct for typed successes of method [`list_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialAwsSuccess {
@@ -169,7 +169,7 @@ pub enum ListCredentialAwsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_credential_public_key`
+/// struct for typed successes of method [`list_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialPublicKeySuccess {
@@ -177,7 +177,7 @@ pub enum ListCredentialPublicKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_auth_token_promotion`
+/// struct for typed successes of method [`update_auth_token_promotion`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAuthTokenPromotionSuccess {
@@ -185,7 +185,7 @@ pub enum UpdateAuthTokenPromotionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_credential_aws`
+/// struct for typed successes of method [`update_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialAwsSuccess {
@@ -193,7 +193,7 @@ pub enum UpdateCredentialAwsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_credential_public_key`
+/// struct for typed successes of method [`update_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialPublicKeySuccess {
@@ -201,91 +201,91 @@ pub enum UpdateCredentialPublicKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_credential_aws`
+/// struct for typed errors of method [`create_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialAwsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_credential_public_key`
+/// struct for typed errors of method [`create_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialPublicKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_secondary_auth_token`
+/// struct for typed errors of method [`create_secondary_auth_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSecondaryAuthTokenError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_credential_aws`
+/// struct for typed errors of method [`delete_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialAwsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_credential_public_key`
+/// struct for typed errors of method [`delete_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialPublicKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_secondary_auth_token`
+/// struct for typed errors of method [`delete_secondary_auth_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSecondaryAuthTokenError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_credential_aws`
+/// struct for typed errors of method [`fetch_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialAwsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_credential_public_key`
+/// struct for typed errors of method [`fetch_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialPublicKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_credential_aws`
+/// struct for typed errors of method [`list_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialAwsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_credential_public_key`
+/// struct for typed errors of method [`list_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialPublicKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_auth_token_promotion`
+/// struct for typed errors of method [`update_auth_token_promotion`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAuthTokenPromotionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_credential_aws`
+/// struct for typed errors of method [`update_credential_aws`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialAwsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_credential_public_key`
+/// struct for typed errors of method [`update_credential_public_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialPublicKeyError {

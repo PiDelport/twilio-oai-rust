@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_binding`
+/// struct for passing parameters to the method [`create_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateBindingParams {
     /// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to create the resource under.
@@ -35,7 +35,7 @@ pub struct CreateBindingParams {
     pub tag: Option<Vec<String>>
 }
 
-/// struct for passing parameters to the method `create_credential`
+/// struct for passing parameters to the method [`create_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialParams {
     /// The Credential type. Can be: `gcm`, `fcm`, or `apn`.
@@ -54,7 +54,7 @@ pub struct CreateCredentialParams {
     pub secret: Option<String>
 }
 
-/// struct for passing parameters to the method `create_notification`
+/// struct for passing parameters to the method [`create_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNotificationParams {
     /// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to create the resource under.
@@ -97,7 +97,7 @@ pub struct CreateNotificationParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// Deprecated.
@@ -130,7 +130,7 @@ pub struct CreateServiceParams {
     pub messaging_service_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_binding`
+/// struct for passing parameters to the method [`delete_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteBindingParams {
     /// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to delete the resource from.
@@ -139,21 +139,21 @@ pub struct DeleteBindingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_credential`
+/// struct for passing parameters to the method [`delete_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCredentialParams {
     /// The Twilio-provided string that uniquely identifies the Credential resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_binding`
+/// struct for passing parameters to the method [`fetch_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBindingParams {
     /// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to fetch the resource from.
@@ -162,21 +162,21 @@ pub struct FetchBindingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_credential`
+/// struct for passing parameters to the method [`fetch_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCredentialParams {
     /// The Twilio-provided string that uniquely identifies the Credential resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_binding`
+/// struct for passing parameters to the method [`list_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct ListBindingParams {
     /// The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to read the resource from.
@@ -193,14 +193,14 @@ pub struct ListBindingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_credential`
+/// struct for passing parameters to the method [`list_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCredentialParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// The string that identifies the Service resources to read.
@@ -209,7 +209,7 @@ pub struct ListServiceParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_credential`
+/// struct for passing parameters to the method [`update_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCredentialParams {
     /// The Twilio-provided string that uniquely identifies the Credential resource to update.
@@ -228,7 +228,7 @@ pub struct UpdateCredentialParams {
     pub secret: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service`
+/// struct for passing parameters to the method [`update_service`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to update.
@@ -264,7 +264,7 @@ pub struct UpdateServiceParams {
 }
 
 
-/// struct for typed successes of method `create_binding`
+/// struct for typed successes of method [`create_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBindingSuccess {
@@ -272,7 +272,7 @@ pub enum CreateBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_credential`
+/// struct for typed successes of method [`create_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialSuccess {
@@ -280,7 +280,7 @@ pub enum CreateCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_notification`
+/// struct for typed successes of method [`create_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNotificationSuccess {
@@ -288,7 +288,7 @@ pub enum CreateNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -296,7 +296,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_binding`
+/// struct for typed successes of method [`delete_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBindingSuccess {
@@ -304,7 +304,7 @@ pub enum DeleteBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_credential`
+/// struct for typed successes of method [`delete_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialSuccess {
@@ -312,7 +312,7 @@ pub enum DeleteCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -320,7 +320,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_binding`
+/// struct for typed successes of method [`fetch_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBindingSuccess {
@@ -328,7 +328,7 @@ pub enum FetchBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_credential`
+/// struct for typed successes of method [`fetch_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialSuccess {
@@ -336,7 +336,7 @@ pub enum FetchCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -344,7 +344,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_binding`
+/// struct for typed successes of method [`list_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBindingSuccess {
@@ -352,7 +352,7 @@ pub enum ListBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_credential`
+/// struct for typed successes of method [`list_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialSuccess {
@@ -360,7 +360,7 @@ pub enum ListCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -368,7 +368,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_credential`
+/// struct for typed successes of method [`update_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialSuccess {
@@ -376,7 +376,7 @@ pub enum UpdateCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service`
+/// struct for typed successes of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceSuccess {
@@ -384,105 +384,105 @@ pub enum UpdateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_binding`
+/// struct for typed errors of method [`create_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_credential`
+/// struct for typed errors of method [`create_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_notification`
+/// struct for typed errors of method [`create_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_binding`
+/// struct for typed errors of method [`delete_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_credential`
+/// struct for typed errors of method [`delete_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_binding`
+/// struct for typed errors of method [`fetch_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_credential`
+/// struct for typed errors of method [`fetch_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_binding`
+/// struct for typed errors of method [`list_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_credential`
+/// struct for typed errors of method [`list_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_credential`
+/// struct for typed errors of method [`update_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service`
+/// struct for typed errors of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceError {

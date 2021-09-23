@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_command`
+/// struct for passing parameters to the method [`create_command`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCommandParams {
     /// The message body of the Command. Can be plain text in text mode or a Base64 encoded byte string in binary mode.
@@ -33,7 +33,7 @@ pub struct CreateCommandParams {
     pub sim: Option<String>
 }
 
-/// struct for passing parameters to the method `create_rate_plan`
+/// struct for passing parameters to the method [`create_rate_plan`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateRatePlanParams {
     /// Whether SIMs can use GPRS/3G/4G/LTE data connectivity.
@@ -60,49 +60,49 @@ pub struct CreateRatePlanParams {
     pub voice_enabled: Option<bool>
 }
 
-/// struct for passing parameters to the method `delete_command`
+/// struct for passing parameters to the method [`delete_command`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCommandParams {
     /// The SID of the Command resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_rate_plan`
+/// struct for passing parameters to the method [`delete_rate_plan`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRatePlanParams {
     /// The SID of the RatePlan resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sim`
+/// struct for passing parameters to the method [`delete_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSimParams {
     /// The SID or the `unique_name` of the Sim resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_command`
+/// struct for passing parameters to the method [`fetch_command`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCommandParams {
     /// The SID of the Command resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_rate_plan`
+/// struct for passing parameters to the method [`fetch_rate_plan`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRatePlanParams {
     /// The SID of the RatePlan resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sim`
+/// struct for passing parameters to the method [`fetch_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSimParams {
     /// The SID or the `unique_name` of the Sim resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_account_usage_record`
+/// struct for passing parameters to the method [`list_account_usage_record`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAccountUsageRecordParams {
     /// Only include usage that has occurred on or before this date. Format is [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
@@ -115,7 +115,7 @@ pub struct ListAccountUsageRecordParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_command`
+/// struct for passing parameters to the method [`list_command`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCommandParams {
     /// The `sid` or `unique_name` of the [Sim resources](https://www.twilio.com/docs/wireless/api/sim-resource) to read.
@@ -130,7 +130,7 @@ pub struct ListCommandParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_data_session`
+/// struct for passing parameters to the method [`list_data_session`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDataSessionParams {
     /// The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource) with the Data Sessions to read.
@@ -139,14 +139,14 @@ pub struct ListDataSessionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_rate_plan`
+/// struct for passing parameters to the method [`list_rate_plan`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRatePlanParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sim`
+/// struct for passing parameters to the method [`list_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSimParams {
     /// Only return Sim resources with this status.
@@ -163,7 +163,7 @@ pub struct ListSimParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record`
+/// struct for passing parameters to the method [`list_usage_record`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordParams {
     /// The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource)  to read the usage from.
@@ -178,7 +178,7 @@ pub struct ListUsageRecordParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_rate_plan`
+/// struct for passing parameters to the method [`update_rate_plan`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRatePlanParams {
     /// The SID of the RatePlan resource to update.
@@ -189,7 +189,7 @@ pub struct UpdateRatePlanParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_sim`
+/// struct for passing parameters to the method [`update_sim`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSimParams {
     /// The SID or the `unique_name` of the Sim resource to update.
@@ -233,7 +233,7 @@ pub struct UpdateSimParams {
 }
 
 
-/// struct for typed successes of method `create_command`
+/// struct for typed successes of method [`create_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCommandSuccess {
@@ -241,7 +241,7 @@ pub enum CreateCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_rate_plan`
+/// struct for typed successes of method [`create_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRatePlanSuccess {
@@ -249,7 +249,7 @@ pub enum CreateRatePlanSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_command`
+/// struct for typed successes of method [`delete_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCommandSuccess {
@@ -257,7 +257,7 @@ pub enum DeleteCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_rate_plan`
+/// struct for typed successes of method [`delete_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRatePlanSuccess {
@@ -265,7 +265,7 @@ pub enum DeleteRatePlanSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sim`
+/// struct for typed successes of method [`delete_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSimSuccess {
@@ -273,7 +273,7 @@ pub enum DeleteSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_command`
+/// struct for typed successes of method [`fetch_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCommandSuccess {
@@ -281,7 +281,7 @@ pub enum FetchCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_rate_plan`
+/// struct for typed successes of method [`fetch_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRatePlanSuccess {
@@ -289,7 +289,7 @@ pub enum FetchRatePlanSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sim`
+/// struct for typed successes of method [`fetch_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSimSuccess {
@@ -297,7 +297,7 @@ pub enum FetchSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_account_usage_record`
+/// struct for typed successes of method [`list_account_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAccountUsageRecordSuccess {
@@ -305,7 +305,7 @@ pub enum ListAccountUsageRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_command`
+/// struct for typed successes of method [`list_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCommandSuccess {
@@ -313,7 +313,7 @@ pub enum ListCommandSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_data_session`
+/// struct for typed successes of method [`list_data_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDataSessionSuccess {
@@ -321,7 +321,7 @@ pub enum ListDataSessionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_rate_plan`
+/// struct for typed successes of method [`list_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRatePlanSuccess {
@@ -329,7 +329,7 @@ pub enum ListRatePlanSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sim`
+/// struct for typed successes of method [`list_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSimSuccess {
@@ -337,7 +337,7 @@ pub enum ListSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record`
+/// struct for typed successes of method [`list_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordSuccess {
@@ -345,7 +345,7 @@ pub enum ListUsageRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_rate_plan`
+/// struct for typed successes of method [`update_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRatePlanSuccess {
@@ -353,7 +353,7 @@ pub enum UpdateRatePlanSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sim`
+/// struct for typed successes of method [`update_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSimSuccess {
@@ -361,112 +361,112 @@ pub enum UpdateSimSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_command`
+/// struct for typed errors of method [`create_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_rate_plan`
+/// struct for typed errors of method [`create_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRatePlanError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_command`
+/// struct for typed errors of method [`delete_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_rate_plan`
+/// struct for typed errors of method [`delete_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRatePlanError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sim`
+/// struct for typed errors of method [`delete_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSimError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_command`
+/// struct for typed errors of method [`fetch_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_rate_plan`
+/// struct for typed errors of method [`fetch_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRatePlanError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sim`
+/// struct for typed errors of method [`fetch_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSimError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_account_usage_record`
+/// struct for typed errors of method [`list_account_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAccountUsageRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_command`
+/// struct for typed errors of method [`list_command`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCommandError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_data_session`
+/// struct for typed errors of method [`list_data_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDataSessionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_rate_plan`
+/// struct for typed errors of method [`list_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRatePlanError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sim`
+/// struct for typed errors of method [`list_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSimError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record`
+/// struct for typed errors of method [`list_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_rate_plan`
+/// struct for typed errors of method [`update_rate_plan`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRatePlanError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sim`
+/// struct for typed errors of method [`update_sim`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSimError {

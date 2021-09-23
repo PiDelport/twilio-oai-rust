@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_access_token`
+/// struct for passing parameters to the method [`create_access_token`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateAccessTokenParams {
     /// The unique SID identifier of the Service.
@@ -25,7 +25,7 @@ pub struct CreateAccessTokenParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `create_bucket`
+/// struct for passing parameters to the method [`create_bucket`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateBucketParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -38,7 +38,7 @@ pub struct CreateBucketParams {
     pub max: i32
 }
 
-/// struct for passing parameters to the method `create_challenge`
+/// struct for passing parameters to the method [`create_challenge`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateChallengeParams {
     /// The unique SID identifier of the Service.
@@ -59,7 +59,7 @@ pub struct CreateChallengeParams {
     pub hidden_details: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_entity`
+/// struct for passing parameters to the method [`create_entity`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateEntityParams {
     /// The unique SID identifier of the Service.
@@ -68,7 +68,7 @@ pub struct CreateEntityParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `create_messaging_configuration`
+/// struct for passing parameters to the method [`create_messaging_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateMessagingConfigurationParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
@@ -79,7 +79,7 @@ pub struct CreateMessagingConfigurationParams {
     pub messaging_service_sid: String
 }
 
-/// struct for passing parameters to the method `create_new_factor`
+/// struct for passing parameters to the method [`create_new_factor`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNewFactorParams {
     /// The unique SID identifier of the Service.
@@ -114,7 +114,7 @@ pub struct CreateNewFactorParams {
     pub config_time_step: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_notification`
+/// struct for passing parameters to the method [`create_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNotificationParams {
     /// The unique SID identifier of the Service.
@@ -127,7 +127,7 @@ pub struct CreateNotificationParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_rate_limit`
+/// struct for passing parameters to the method [`create_rate_limit`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateRateLimitParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -138,7 +138,7 @@ pub struct CreateRateLimitParams {
     pub description: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// A descriptive string that you create to describe the verification service. It can be up to 30 characters long. **This value should not contain PII.**
@@ -175,7 +175,7 @@ pub struct CreateServiceParams {
     pub tts_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_verification`
+/// struct for passing parameters to the method [`create_verification`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateVerificationParams {
     /// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to create the resource under.
@@ -206,7 +206,7 @@ pub struct CreateVerificationParams {
     pub send_digits: Option<String>
 }
 
-/// struct for passing parameters to the method `create_verification_check`
+/// struct for passing parameters to the method [`create_verification_check`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateVerificationCheckParams {
     /// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to create the resource under.
@@ -223,7 +223,7 @@ pub struct CreateVerificationCheckParams {
     pub verification_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_webhook`
+/// struct for passing parameters to the method [`create_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateWebhookParams {
     /// The unique SID identifier of the Service.
@@ -240,7 +240,7 @@ pub struct CreateWebhookParams {
     pub version: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_bucket`
+/// struct for passing parameters to the method [`delete_bucket`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteBucketParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -251,7 +251,7 @@ pub struct DeleteBucketParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_entity`
+/// struct for passing parameters to the method [`delete_entity`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteEntityParams {
     /// The unique SID identifier of the Service.
@@ -260,7 +260,7 @@ pub struct DeleteEntityParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `delete_factor`
+/// struct for passing parameters to the method [`delete_factor`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFactorParams {
     /// The unique SID identifier of the Service.
@@ -271,7 +271,7 @@ pub struct DeleteFactorParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_messaging_configuration`
+/// struct for passing parameters to the method [`delete_messaging_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteMessagingConfigurationParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
@@ -280,7 +280,7 @@ pub struct DeleteMessagingConfigurationParams {
     pub country: String
 }
 
-/// struct for passing parameters to the method `delete_rate_limit`
+/// struct for passing parameters to the method [`delete_rate_limit`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRateLimitParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -289,14 +289,14 @@ pub struct DeleteRateLimitParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// The Twilio-provided string that uniquely identifies the Verification Service resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_webhook`
+/// struct for passing parameters to the method [`delete_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteWebhookParams {
     /// The unique SID identifier of the Service.
@@ -305,7 +305,7 @@ pub struct DeleteWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_bucket`
+/// struct for passing parameters to the method [`fetch_bucket`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBucketParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -316,7 +316,7 @@ pub struct FetchBucketParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_challenge`
+/// struct for passing parameters to the method [`fetch_challenge`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchChallengeParams {
     /// The unique SID identifier of the Service.
@@ -327,7 +327,7 @@ pub struct FetchChallengeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_entity`
+/// struct for passing parameters to the method [`fetch_entity`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEntityParams {
     /// The unique SID identifier of the Service.
@@ -336,7 +336,7 @@ pub struct FetchEntityParams {
     pub identity: String
 }
 
-/// struct for passing parameters to the method `fetch_factor`
+/// struct for passing parameters to the method [`fetch_factor`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFactorParams {
     /// The unique SID identifier of the Service.
@@ -347,14 +347,14 @@ pub struct FetchFactorParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_form`
+/// struct for passing parameters to the method [`fetch_form`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFormParams {
     /// The Type of this Form. Currently only `form-push` is supported.
     pub form_type: String
 }
 
-/// struct for passing parameters to the method `fetch_messaging_configuration`
+/// struct for passing parameters to the method [`fetch_messaging_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchMessagingConfigurationParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
@@ -363,7 +363,7 @@ pub struct FetchMessagingConfigurationParams {
     pub country: String
 }
 
-/// struct for passing parameters to the method `fetch_rate_limit`
+/// struct for passing parameters to the method [`fetch_rate_limit`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRateLimitParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -372,14 +372,14 @@ pub struct FetchRateLimitParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// The Twilio-provided string that uniquely identifies the Verification Service resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_verification`
+/// struct for passing parameters to the method [`fetch_verification`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVerificationParams {
     /// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to fetch the resource from.
@@ -388,14 +388,14 @@ pub struct FetchVerificationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_verification_attempt`
+/// struct for passing parameters to the method [`fetch_verification_attempt`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVerificationAttemptParams {
     /// The unique SID identifier of a Verification Attempt
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_webhook`
+/// struct for passing parameters to the method [`fetch_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWebhookParams {
     /// The unique SID identifier of the Service.
@@ -404,7 +404,7 @@ pub struct FetchWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_bucket`
+/// struct for passing parameters to the method [`list_bucket`]
 #[derive(Clone, Debug, Default)]
 pub struct ListBucketParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -415,7 +415,7 @@ pub struct ListBucketParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_challenge`
+/// struct for passing parameters to the method [`list_challenge`]
 #[derive(Clone, Debug, Default)]
 pub struct ListChallengeParams {
     /// The unique SID identifier of the Service.
@@ -432,7 +432,7 @@ pub struct ListChallengeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_entity`
+/// struct for passing parameters to the method [`list_entity`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEntityParams {
     /// The unique SID identifier of the Service.
@@ -441,7 +441,7 @@ pub struct ListEntityParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_factor`
+/// struct for passing parameters to the method [`list_factor`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFactorParams {
     /// The unique SID identifier of the Service.
@@ -452,7 +452,7 @@ pub struct ListFactorParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_messaging_configuration`
+/// struct for passing parameters to the method [`list_messaging_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMessagingConfigurationParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
@@ -461,7 +461,7 @@ pub struct ListMessagingConfigurationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_rate_limit`
+/// struct for passing parameters to the method [`list_rate_limit`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRateLimitParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -470,14 +470,14 @@ pub struct ListRateLimitParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_verification_attempt`
+/// struct for passing parameters to the method [`list_verification_attempt`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVerificationAttemptParams {
     /// Datetime filter used to query Verification Attempts created after this datetime.
@@ -490,7 +490,7 @@ pub struct ListVerificationAttemptParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_verification_template`
+/// struct for passing parameters to the method [`list_verification_template`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVerificationTemplateParams {
     /// String filter used to query templates with a given friendly name
@@ -499,7 +499,7 @@ pub struct ListVerificationTemplateParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_webhook`
+/// struct for passing parameters to the method [`list_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWebhookParams {
     /// The unique SID identifier of the Service.
@@ -508,7 +508,7 @@ pub struct ListWebhookParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_bucket`
+/// struct for passing parameters to the method [`update_bucket`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateBucketParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -523,7 +523,7 @@ pub struct UpdateBucketParams {
     pub max: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_challenge`
+/// struct for passing parameters to the method [`update_challenge`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateChallengeParams {
     /// The unique SID identifier of the Service.
@@ -536,7 +536,7 @@ pub struct UpdateChallengeParams {
     pub auth_payload: Option<String>
 }
 
-/// struct for passing parameters to the method `update_factor`
+/// struct for passing parameters to the method [`update_factor`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFactorParams {
     /// The unique SID identifier of the Service.
@@ -563,7 +563,7 @@ pub struct UpdateFactorParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_messaging_configuration`
+/// struct for passing parameters to the method [`update_messaging_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateMessagingConfigurationParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
@@ -574,7 +574,7 @@ pub struct UpdateMessagingConfigurationParams {
     pub messaging_service_sid: String
 }
 
-/// struct for passing parameters to the method `update_rate_limit`
+/// struct for passing parameters to the method [`update_rate_limit`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRateLimitParams {
     /// The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
@@ -585,7 +585,7 @@ pub struct UpdateRateLimitParams {
     pub description: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service`
+/// struct for passing parameters to the method [`update_service`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to update.
@@ -624,7 +624,7 @@ pub struct UpdateServiceParams {
     pub tts_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_verification`
+/// struct for passing parameters to the method [`update_verification`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateVerificationParams {
     /// The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to update the resource from.
@@ -635,7 +635,7 @@ pub struct UpdateVerificationParams {
     pub status: String
 }
 
-/// struct for passing parameters to the method `update_webhook`
+/// struct for passing parameters to the method [`update_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWebhookParams {
     /// The unique SID identifier of the Service.
@@ -655,7 +655,7 @@ pub struct UpdateWebhookParams {
 }
 
 
-/// struct for typed successes of method `create_access_token`
+/// struct for typed successes of method [`create_access_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAccessTokenSuccess {
@@ -663,7 +663,7 @@ pub enum CreateAccessTokenSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_bucket`
+/// struct for typed successes of method [`create_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBucketSuccess {
@@ -671,7 +671,7 @@ pub enum CreateBucketSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_challenge`
+/// struct for typed successes of method [`create_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateChallengeSuccess {
@@ -679,7 +679,7 @@ pub enum CreateChallengeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_entity`
+/// struct for typed successes of method [`create_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEntitySuccess {
@@ -687,7 +687,7 @@ pub enum CreateEntitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_messaging_configuration`
+/// struct for typed successes of method [`create_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessagingConfigurationSuccess {
@@ -695,7 +695,7 @@ pub enum CreateMessagingConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_new_factor`
+/// struct for typed successes of method [`create_new_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNewFactorSuccess {
@@ -703,7 +703,7 @@ pub enum CreateNewFactorSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_notification`
+/// struct for typed successes of method [`create_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNotificationSuccess {
@@ -711,7 +711,7 @@ pub enum CreateNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_rate_limit`
+/// struct for typed successes of method [`create_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRateLimitSuccess {
@@ -719,7 +719,7 @@ pub enum CreateRateLimitSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -727,7 +727,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_verification`
+/// struct for typed successes of method [`create_verification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateVerificationSuccess {
@@ -735,7 +735,7 @@ pub enum CreateVerificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_verification_check`
+/// struct for typed successes of method [`create_verification_check`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateVerificationCheckSuccess {
@@ -743,7 +743,7 @@ pub enum CreateVerificationCheckSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_webhook`
+/// struct for typed successes of method [`create_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWebhookSuccess {
@@ -751,7 +751,7 @@ pub enum CreateWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_bucket`
+/// struct for typed successes of method [`delete_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBucketSuccess {
@@ -759,7 +759,7 @@ pub enum DeleteBucketSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_entity`
+/// struct for typed successes of method [`delete_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEntitySuccess {
@@ -767,7 +767,7 @@ pub enum DeleteEntitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_factor`
+/// struct for typed successes of method [`delete_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFactorSuccess {
@@ -775,7 +775,7 @@ pub enum DeleteFactorSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_messaging_configuration`
+/// struct for typed successes of method [`delete_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteMessagingConfigurationSuccess {
@@ -783,7 +783,7 @@ pub enum DeleteMessagingConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_rate_limit`
+/// struct for typed successes of method [`delete_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRateLimitSuccess {
@@ -791,7 +791,7 @@ pub enum DeleteRateLimitSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -799,7 +799,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_webhook`
+/// struct for typed successes of method [`delete_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWebhookSuccess {
@@ -807,7 +807,7 @@ pub enum DeleteWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_bucket`
+/// struct for typed successes of method [`fetch_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBucketSuccess {
@@ -815,7 +815,7 @@ pub enum FetchBucketSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_challenge`
+/// struct for typed successes of method [`fetch_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchChallengeSuccess {
@@ -823,7 +823,7 @@ pub enum FetchChallengeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_entity`
+/// struct for typed successes of method [`fetch_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEntitySuccess {
@@ -831,7 +831,7 @@ pub enum FetchEntitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_factor`
+/// struct for typed successes of method [`fetch_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFactorSuccess {
@@ -839,7 +839,7 @@ pub enum FetchFactorSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_form`
+/// struct for typed successes of method [`fetch_form`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFormSuccess {
@@ -847,7 +847,7 @@ pub enum FetchFormSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_messaging_configuration`
+/// struct for typed successes of method [`fetch_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessagingConfigurationSuccess {
@@ -855,7 +855,7 @@ pub enum FetchMessagingConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_rate_limit`
+/// struct for typed successes of method [`fetch_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRateLimitSuccess {
@@ -863,7 +863,7 @@ pub enum FetchRateLimitSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -871,7 +871,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_verification`
+/// struct for typed successes of method [`fetch_verification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVerificationSuccess {
@@ -879,7 +879,7 @@ pub enum FetchVerificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_verification_attempt`
+/// struct for typed successes of method [`fetch_verification_attempt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVerificationAttemptSuccess {
@@ -887,7 +887,7 @@ pub enum FetchVerificationAttemptSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_webhook`
+/// struct for typed successes of method [`fetch_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWebhookSuccess {
@@ -895,7 +895,7 @@ pub enum FetchWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_bucket`
+/// struct for typed successes of method [`list_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBucketSuccess {
@@ -903,7 +903,7 @@ pub enum ListBucketSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_challenge`
+/// struct for typed successes of method [`list_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListChallengeSuccess {
@@ -911,7 +911,7 @@ pub enum ListChallengeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_entity`
+/// struct for typed successes of method [`list_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEntitySuccess {
@@ -919,7 +919,7 @@ pub enum ListEntitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_factor`
+/// struct for typed successes of method [`list_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFactorSuccess {
@@ -927,7 +927,7 @@ pub enum ListFactorSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_messaging_configuration`
+/// struct for typed successes of method [`list_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessagingConfigurationSuccess {
@@ -935,7 +935,7 @@ pub enum ListMessagingConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_rate_limit`
+/// struct for typed successes of method [`list_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRateLimitSuccess {
@@ -943,7 +943,7 @@ pub enum ListRateLimitSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -951,7 +951,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_verification_attempt`
+/// struct for typed successes of method [`list_verification_attempt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVerificationAttemptSuccess {
@@ -959,7 +959,7 @@ pub enum ListVerificationAttemptSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_verification_template`
+/// struct for typed successes of method [`list_verification_template`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVerificationTemplateSuccess {
@@ -967,7 +967,7 @@ pub enum ListVerificationTemplateSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_webhook`
+/// struct for typed successes of method [`list_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWebhookSuccess {
@@ -975,7 +975,7 @@ pub enum ListWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_bucket`
+/// struct for typed successes of method [`update_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateBucketSuccess {
@@ -983,7 +983,7 @@ pub enum UpdateBucketSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_challenge`
+/// struct for typed successes of method [`update_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateChallengeSuccess {
@@ -991,7 +991,7 @@ pub enum UpdateChallengeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_factor`
+/// struct for typed successes of method [`update_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFactorSuccess {
@@ -999,7 +999,7 @@ pub enum UpdateFactorSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_messaging_configuration`
+/// struct for typed successes of method [`update_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateMessagingConfigurationSuccess {
@@ -1007,7 +1007,7 @@ pub enum UpdateMessagingConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_rate_limit`
+/// struct for typed successes of method [`update_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRateLimitSuccess {
@@ -1015,7 +1015,7 @@ pub enum UpdateRateLimitSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service`
+/// struct for typed successes of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceSuccess {
@@ -1023,7 +1023,7 @@ pub enum UpdateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_verification`
+/// struct for typed successes of method [`update_verification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateVerificationSuccess {
@@ -1031,7 +1031,7 @@ pub enum UpdateVerificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_webhook`
+/// struct for typed successes of method [`update_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWebhookSuccess {
@@ -1039,336 +1039,336 @@ pub enum UpdateWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_access_token`
+/// struct for typed errors of method [`create_access_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAccessTokenError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_bucket`
+/// struct for typed errors of method [`create_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBucketError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_challenge`
+/// struct for typed errors of method [`create_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateChallengeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_entity`
+/// struct for typed errors of method [`create_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEntityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_messaging_configuration`
+/// struct for typed errors of method [`create_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessagingConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_new_factor`
+/// struct for typed errors of method [`create_new_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNewFactorError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_notification`
+/// struct for typed errors of method [`create_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_rate_limit`
+/// struct for typed errors of method [`create_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRateLimitError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_verification`
+/// struct for typed errors of method [`create_verification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateVerificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_verification_check`
+/// struct for typed errors of method [`create_verification_check`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateVerificationCheckError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_webhook`
+/// struct for typed errors of method [`create_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_bucket`
+/// struct for typed errors of method [`delete_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBucketError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_entity`
+/// struct for typed errors of method [`delete_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEntityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_factor`
+/// struct for typed errors of method [`delete_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFactorError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_messaging_configuration`
+/// struct for typed errors of method [`delete_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteMessagingConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_rate_limit`
+/// struct for typed errors of method [`delete_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRateLimitError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_webhook`
+/// struct for typed errors of method [`delete_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_bucket`
+/// struct for typed errors of method [`fetch_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBucketError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_challenge`
+/// struct for typed errors of method [`fetch_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchChallengeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_entity`
+/// struct for typed errors of method [`fetch_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEntityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_factor`
+/// struct for typed errors of method [`fetch_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFactorError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_form`
+/// struct for typed errors of method [`fetch_form`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFormError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_messaging_configuration`
+/// struct for typed errors of method [`fetch_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessagingConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_rate_limit`
+/// struct for typed errors of method [`fetch_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRateLimitError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_verification`
+/// struct for typed errors of method [`fetch_verification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVerificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_verification_attempt`
+/// struct for typed errors of method [`fetch_verification_attempt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVerificationAttemptError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_webhook`
+/// struct for typed errors of method [`fetch_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_bucket`
+/// struct for typed errors of method [`list_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBucketError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_challenge`
+/// struct for typed errors of method [`list_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListChallengeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_entity`
+/// struct for typed errors of method [`list_entity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEntityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_factor`
+/// struct for typed errors of method [`list_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFactorError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_messaging_configuration`
+/// struct for typed errors of method [`list_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessagingConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_rate_limit`
+/// struct for typed errors of method [`list_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRateLimitError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_verification_attempt`
+/// struct for typed errors of method [`list_verification_attempt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVerificationAttemptError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_verification_template`
+/// struct for typed errors of method [`list_verification_template`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVerificationTemplateError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_webhook`
+/// struct for typed errors of method [`list_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_bucket`
+/// struct for typed errors of method [`update_bucket`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateBucketError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_challenge`
+/// struct for typed errors of method [`update_challenge`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateChallengeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_factor`
+/// struct for typed errors of method [`update_factor`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFactorError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_messaging_configuration`
+/// struct for typed errors of method [`update_messaging_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateMessagingConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_rate_limit`
+/// struct for typed errors of method [`update_rate_limit`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRateLimitError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service`
+/// struct for typed errors of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_verification`
+/// struct for typed errors of method [`update_verification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateVerificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_webhook`
+/// struct for typed errors of method [`update_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWebhookError {

@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_activity`
+/// struct for passing parameters to the method [`create_activity`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateActivityParams {
     /// The SID of the Workspace that the new Activity belongs to.
@@ -25,7 +25,7 @@ pub struct CreateActivityParams {
     pub available: Option<bool>
 }
 
-/// struct for passing parameters to the method `create_task`
+/// struct for passing parameters to the method [`create_task`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTaskParams {
     /// The SID of the Workspace that the new Task belongs to.
@@ -42,7 +42,7 @@ pub struct CreateTaskParams {
     pub workflow_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_task_channel`
+/// struct for passing parameters to the method [`create_task_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTaskChannelParams {
     /// The SID of the Workspace that the new Task Channel belongs to.
@@ -55,7 +55,7 @@ pub struct CreateTaskChannelParams {
     pub channel_optimized_routing: Option<bool>
 }
 
-/// struct for passing parameters to the method `create_task_queue`
+/// struct for passing parameters to the method [`create_task_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTaskQueueParams {
     /// The SID of the Workspace that the new TaskQueue belongs to.
@@ -74,7 +74,7 @@ pub struct CreateTaskQueueParams {
     pub task_order: Option<String>
 }
 
-/// struct for passing parameters to the method `create_worker`
+/// struct for passing parameters to the method [`create_worker`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateWorkerParams {
     /// The SID of the Workspace that the new Worker belongs to.
@@ -87,7 +87,7 @@ pub struct CreateWorkerParams {
     pub attributes: Option<String>
 }
 
-/// struct for passing parameters to the method `create_workflow`
+/// struct for passing parameters to the method [`create_workflow`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateWorkflowParams {
     /// The SID of the Workspace that the new Workflow to create belongs to.
@@ -104,7 +104,7 @@ pub struct CreateWorkflowParams {
     pub task_reservation_timeout: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_workspace`
+/// struct for passing parameters to the method [`create_workspace`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateWorkspaceParams {
     /// A descriptive string that you create to describe the Workspace resource. It can be up to 64 characters long. For example: `Customer Support` or `2014 Election Campaign`.
@@ -121,7 +121,7 @@ pub struct CreateWorkspaceParams {
     pub template: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_activity`
+/// struct for passing parameters to the method [`delete_activity`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteActivityParams {
     /// The SID of the Workspace with the Activity resources to delete.
@@ -130,7 +130,7 @@ pub struct DeleteActivityParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_task`
+/// struct for passing parameters to the method [`delete_task`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTaskParams {
     /// The SID of the Workspace with the Task to delete.
@@ -141,7 +141,7 @@ pub struct DeleteTaskParams {
     pub if_match: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_task_channel`
+/// struct for passing parameters to the method [`delete_task_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTaskChannelParams {
     /// The SID of the Workspace with the Task Channel to delete.
@@ -150,7 +150,7 @@ pub struct DeleteTaskChannelParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_task_queue`
+/// struct for passing parameters to the method [`delete_task_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTaskQueueParams {
     /// The SID of the Workspace with the TaskQueue to delete.
@@ -159,7 +159,7 @@ pub struct DeleteTaskQueueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_worker`
+/// struct for passing parameters to the method [`delete_worker`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteWorkerParams {
     /// The SID of the Workspace with the Worker to delete.
@@ -168,7 +168,7 @@ pub struct DeleteWorkerParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_workflow`
+/// struct for passing parameters to the method [`delete_workflow`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteWorkflowParams {
     /// The SID of the Workspace with the Workflow to delete.
@@ -177,14 +177,14 @@ pub struct DeleteWorkflowParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_workspace`
+/// struct for passing parameters to the method [`delete_workspace`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteWorkspaceParams {
     /// The SID of the Workspace resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_activity`
+/// struct for passing parameters to the method [`fetch_activity`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchActivityParams {
     /// The SID of the Workspace with the Activity resources to fetch.
@@ -193,7 +193,7 @@ pub struct FetchActivityParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_event`
+/// struct for passing parameters to the method [`fetch_event`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEventParams {
     /// The SID of the Workspace with the Event to fetch.
@@ -202,7 +202,7 @@ pub struct FetchEventParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task`
+/// struct for passing parameters to the method [`fetch_task`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskParams {
     /// The SID of the Workspace with the Task to fetch.
@@ -211,7 +211,7 @@ pub struct FetchTaskParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task_channel`
+/// struct for passing parameters to the method [`fetch_task_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskChannelParams {
     /// The SID of the Workspace with the Task Channel to fetch.
@@ -220,7 +220,7 @@ pub struct FetchTaskChannelParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task_queue`
+/// struct for passing parameters to the method [`fetch_task_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskQueueParams {
     /// The SID of the Workspace with the TaskQueue to fetch.
@@ -229,7 +229,7 @@ pub struct FetchTaskQueueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task_queue_cumulative_statistics`
+/// struct for passing parameters to the method [`fetch_task_queue_cumulative_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskQueueCumulativeStatisticsParams {
     /// The SID of the Workspace with the TaskQueue to fetch.
@@ -248,7 +248,7 @@ pub struct FetchTaskQueueCumulativeStatisticsParams {
     pub split_by_wait_time: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_task_queue_real_time_statistics`
+/// struct for passing parameters to the method [`fetch_task_queue_real_time_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskQueueRealTimeStatisticsParams {
     /// The SID of the Workspace with the TaskQueue to fetch.
@@ -259,7 +259,7 @@ pub struct FetchTaskQueueRealTimeStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_task_queue_statistics`
+/// struct for passing parameters to the method [`fetch_task_queue_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskQueueStatisticsParams {
     /// The SID of the Workspace with the TaskQueue to fetch.
@@ -278,7 +278,7 @@ pub struct FetchTaskQueueStatisticsParams {
     pub split_by_wait_time: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_task_reservation`
+/// struct for passing parameters to the method [`fetch_task_reservation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskReservationParams {
     /// The SID of the Workspace with the TaskReservation resource to fetch.
@@ -289,7 +289,7 @@ pub struct FetchTaskReservationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_worker`
+/// struct for passing parameters to the method [`fetch_worker`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkerParams {
     /// The SID of the Workspace with the Worker to fetch.
@@ -298,7 +298,7 @@ pub struct FetchWorkerParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_worker_channel`
+/// struct for passing parameters to the method [`fetch_worker_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkerChannelParams {
     /// The SID of the Workspace with the WorkerChannel to fetch.
@@ -309,7 +309,7 @@ pub struct FetchWorkerChannelParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_worker_instance_statistics`
+/// struct for passing parameters to the method [`fetch_worker_instance_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkerInstanceStatisticsParams {
     /// The SID of the Workspace with the WorkerChannel to fetch.
@@ -326,7 +326,7 @@ pub struct FetchWorkerInstanceStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_worker_reservation`
+/// struct for passing parameters to the method [`fetch_worker_reservation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkerReservationParams {
     /// The SID of the Workspace with the WorkerReservation resource to fetch.
@@ -337,7 +337,7 @@ pub struct FetchWorkerReservationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_worker_statistics`
+/// struct for passing parameters to the method [`fetch_worker_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkerStatisticsParams {
     /// The SID of the Workspace with the Worker to fetch.
@@ -358,7 +358,7 @@ pub struct FetchWorkerStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workers_cumulative_statistics`
+/// struct for passing parameters to the method [`fetch_workers_cumulative_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkersCumulativeStatisticsParams {
     /// The SID of the Workspace with the resource to fetch.
@@ -373,7 +373,7 @@ pub struct FetchWorkersCumulativeStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workers_real_time_statistics`
+/// struct for passing parameters to the method [`fetch_workers_real_time_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkersRealTimeStatisticsParams {
     /// The SID of the Workspace with the resource to fetch.
@@ -382,7 +382,7 @@ pub struct FetchWorkersRealTimeStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workflow`
+/// struct for passing parameters to the method [`fetch_workflow`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkflowParams {
     /// The SID of the Workspace with the Workflow to fetch.
@@ -391,7 +391,7 @@ pub struct FetchWorkflowParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_workflow_cumulative_statistics`
+/// struct for passing parameters to the method [`fetch_workflow_cumulative_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkflowCumulativeStatisticsParams {
     /// The SID of the Workspace with the resource to fetch.
@@ -410,7 +410,7 @@ pub struct FetchWorkflowCumulativeStatisticsParams {
     pub split_by_wait_time: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workflow_real_time_statistics`
+/// struct for passing parameters to the method [`fetch_workflow_real_time_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkflowRealTimeStatisticsParams {
     /// The SID of the Workspace with the Workflow to fetch.
@@ -421,7 +421,7 @@ pub struct FetchWorkflowRealTimeStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workflow_statistics`
+/// struct for passing parameters to the method [`fetch_workflow_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkflowStatisticsParams {
     /// The SID of the Workspace with the Workflow to fetch.
@@ -440,14 +440,14 @@ pub struct FetchWorkflowStatisticsParams {
     pub split_by_wait_time: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workspace`
+/// struct for passing parameters to the method [`fetch_workspace`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkspaceParams {
     /// The SID of the Workspace resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_workspace_cumulative_statistics`
+/// struct for passing parameters to the method [`fetch_workspace_cumulative_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkspaceCumulativeStatisticsParams {
     /// The SID of the Workspace to fetch.
@@ -464,7 +464,7 @@ pub struct FetchWorkspaceCumulativeStatisticsParams {
     pub split_by_wait_time: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workspace_real_time_statistics`
+/// struct for passing parameters to the method [`fetch_workspace_real_time_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkspaceRealTimeStatisticsParams {
     /// The SID of the Workspace to fetch.
@@ -473,7 +473,7 @@ pub struct FetchWorkspaceRealTimeStatisticsParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_workspace_statistics`
+/// struct for passing parameters to the method [`fetch_workspace_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWorkspaceStatisticsParams {
     /// The SID of the Workspace to fetch.
@@ -490,7 +490,7 @@ pub struct FetchWorkspaceStatisticsParams {
     pub split_by_wait_time: Option<String>
 }
 
-/// struct for passing parameters to the method `list_activity`
+/// struct for passing parameters to the method [`list_activity`]
 #[derive(Clone, Debug, Default)]
 pub struct ListActivityParams {
     /// The SID of the Workspace with the Activity resources to read.
@@ -503,7 +503,7 @@ pub struct ListActivityParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_event`
+/// struct for passing parameters to the method [`list_event`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEventParams {
     /// The SID of the Workspace with the Events to read. Returns only the Events that pertain to the specified Workspace.
@@ -534,7 +534,7 @@ pub struct ListEventParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_task`
+/// struct for passing parameters to the method [`list_task`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTaskParams {
     /// The SID of the Workspace with the Tasks to read.
@@ -561,7 +561,7 @@ pub struct ListTaskParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_task_channel`
+/// struct for passing parameters to the method [`list_task_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTaskChannelParams {
     /// The SID of the Workspace with the Task Channel to read.
@@ -570,7 +570,7 @@ pub struct ListTaskChannelParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_task_queue`
+/// struct for passing parameters to the method [`list_task_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTaskQueueParams {
     /// The SID of the Workspace with the TaskQueue to read.
@@ -585,7 +585,7 @@ pub struct ListTaskQueueParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_task_queues_statistics`
+/// struct for passing parameters to the method [`list_task_queues_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTaskQueuesStatisticsParams {
     /// The SID of the Workspace with the TaskQueues to read.
@@ -606,7 +606,7 @@ pub struct ListTaskQueuesStatisticsParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_task_reservation`
+/// struct for passing parameters to the method [`list_task_reservation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTaskReservationParams {
     /// The SID of the Workspace with the TaskReservation resources to read.
@@ -619,7 +619,7 @@ pub struct ListTaskReservationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_worker`
+/// struct for passing parameters to the method [`list_worker`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWorkerParams {
     /// The SID of the Workspace with the Workers to read.
@@ -642,7 +642,7 @@ pub struct ListWorkerParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_worker_channel`
+/// struct for passing parameters to the method [`list_worker_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWorkerChannelParams {
     /// The SID of the Workspace with the WorkerChannels to read.
@@ -653,7 +653,7 @@ pub struct ListWorkerChannelParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_worker_reservation`
+/// struct for passing parameters to the method [`list_worker_reservation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWorkerReservationParams {
     /// The SID of the Workspace with the WorkerReservation resources to read.
@@ -666,7 +666,7 @@ pub struct ListWorkerReservationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_workflow`
+/// struct for passing parameters to the method [`list_workflow`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWorkflowParams {
     /// The SID of the Workspace with the Workflow to read.
@@ -677,7 +677,7 @@ pub struct ListWorkflowParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_workspace`
+/// struct for passing parameters to the method [`list_workspace`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWorkspaceParams {
     /// The `friendly_name` of the Workspace resources to read. For example `Customer Support` or `2014 Election Campaign`.
@@ -686,7 +686,7 @@ pub struct ListWorkspaceParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_activity`
+/// struct for passing parameters to the method [`update_activity`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateActivityParams {
     /// The SID of the Workspace with the Activity resources to update.
@@ -697,7 +697,7 @@ pub struct UpdateActivityParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_task`
+/// struct for passing parameters to the method [`update_task`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTaskParams {
     /// The SID of the Workspace with the Task to update.
@@ -718,7 +718,7 @@ pub struct UpdateTaskParams {
     pub task_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `update_task_channel`
+/// struct for passing parameters to the method [`update_task_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTaskChannelParams {
     /// The SID of the Workspace with the Task Channel to update.
@@ -731,7 +731,7 @@ pub struct UpdateTaskChannelParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_task_queue`
+/// struct for passing parameters to the method [`update_task_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTaskQueueParams {
     /// The SID of the Workspace with the TaskQueue to update.
@@ -752,7 +752,7 @@ pub struct UpdateTaskQueueParams {
     pub task_order: Option<String>
 }
 
-/// struct for passing parameters to the method `update_task_reservation`
+/// struct for passing parameters to the method [`update_task_reservation`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTaskReservationParams {
     /// The SID of the Workspace with the TaskReservation resources to update.
@@ -869,7 +869,7 @@ pub struct UpdateTaskReservationParams {
     pub worker_activity_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_worker`
+/// struct for passing parameters to the method [`update_worker`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWorkerParams {
     /// The SID of the Workspace with the Worker to update.
@@ -886,7 +886,7 @@ pub struct UpdateWorkerParams {
     pub reject_pending_reservations: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_worker_channel`
+/// struct for passing parameters to the method [`update_worker_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWorkerChannelParams {
     /// The SID of the Workspace with the WorkerChannel to update.
@@ -901,7 +901,7 @@ pub struct UpdateWorkerChannelParams {
     pub capacity: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_worker_reservation`
+/// struct for passing parameters to the method [`update_worker_reservation`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWorkerReservationParams {
     /// The SID of the Workspace with the WorkerReservation resources to update.
@@ -1014,7 +1014,7 @@ pub struct UpdateWorkerReservationParams {
     pub worker_activity_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_workflow`
+/// struct for passing parameters to the method [`update_workflow`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWorkflowParams {
     /// The SID of the Workspace with the Workflow to update.
@@ -1035,7 +1035,7 @@ pub struct UpdateWorkflowParams {
     pub task_reservation_timeout: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_workspace`
+/// struct for passing parameters to the method [`update_workspace`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWorkspaceParams {
     /// The SID of the Workspace resource to update.
@@ -1057,7 +1057,7 @@ pub struct UpdateWorkspaceParams {
 }
 
 
-/// struct for typed successes of method `create_activity`
+/// struct for typed successes of method [`create_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateActivitySuccess {
@@ -1065,7 +1065,7 @@ pub enum CreateActivitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_task`
+/// struct for typed successes of method [`create_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskSuccess {
@@ -1073,7 +1073,7 @@ pub enum CreateTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_task_channel`
+/// struct for typed successes of method [`create_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskChannelSuccess {
@@ -1081,7 +1081,7 @@ pub enum CreateTaskChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_task_queue`
+/// struct for typed successes of method [`create_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskQueueSuccess {
@@ -1089,7 +1089,7 @@ pub enum CreateTaskQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_worker`
+/// struct for typed successes of method [`create_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWorkerSuccess {
@@ -1097,7 +1097,7 @@ pub enum CreateWorkerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_workflow`
+/// struct for typed successes of method [`create_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWorkflowSuccess {
@@ -1105,7 +1105,7 @@ pub enum CreateWorkflowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_workspace`
+/// struct for typed successes of method [`create_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWorkspaceSuccess {
@@ -1113,7 +1113,7 @@ pub enum CreateWorkspaceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_activity`
+/// struct for typed successes of method [`delete_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteActivitySuccess {
@@ -1121,7 +1121,7 @@ pub enum DeleteActivitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_task`
+/// struct for typed successes of method [`delete_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskSuccess {
@@ -1129,7 +1129,7 @@ pub enum DeleteTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_task_channel`
+/// struct for typed successes of method [`delete_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskChannelSuccess {
@@ -1137,7 +1137,7 @@ pub enum DeleteTaskChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_task_queue`
+/// struct for typed successes of method [`delete_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskQueueSuccess {
@@ -1145,7 +1145,7 @@ pub enum DeleteTaskQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_worker`
+/// struct for typed successes of method [`delete_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWorkerSuccess {
@@ -1153,7 +1153,7 @@ pub enum DeleteWorkerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_workflow`
+/// struct for typed successes of method [`delete_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWorkflowSuccess {
@@ -1161,7 +1161,7 @@ pub enum DeleteWorkflowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_workspace`
+/// struct for typed successes of method [`delete_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWorkspaceSuccess {
@@ -1169,7 +1169,7 @@ pub enum DeleteWorkspaceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_activity`
+/// struct for typed successes of method [`fetch_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchActivitySuccess {
@@ -1177,7 +1177,7 @@ pub enum FetchActivitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_event`
+/// struct for typed successes of method [`fetch_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEventSuccess {
@@ -1185,7 +1185,7 @@ pub enum FetchEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task`
+/// struct for typed successes of method [`fetch_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskSuccess {
@@ -1193,7 +1193,7 @@ pub enum FetchTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_channel`
+/// struct for typed successes of method [`fetch_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskChannelSuccess {
@@ -1201,7 +1201,7 @@ pub enum FetchTaskChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_queue`
+/// struct for typed successes of method [`fetch_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueSuccess {
@@ -1209,7 +1209,7 @@ pub enum FetchTaskQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_queue_cumulative_statistics`
+/// struct for typed successes of method [`fetch_task_queue_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueCumulativeStatisticsSuccess {
@@ -1217,7 +1217,7 @@ pub enum FetchTaskQueueCumulativeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_queue_real_time_statistics`
+/// struct for typed successes of method [`fetch_task_queue_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueRealTimeStatisticsSuccess {
@@ -1225,7 +1225,7 @@ pub enum FetchTaskQueueRealTimeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_queue_statistics`
+/// struct for typed successes of method [`fetch_task_queue_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueStatisticsSuccess {
@@ -1233,7 +1233,7 @@ pub enum FetchTaskQueueStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_reservation`
+/// struct for typed successes of method [`fetch_task_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskReservationSuccess {
@@ -1241,7 +1241,7 @@ pub enum FetchTaskReservationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_worker`
+/// struct for typed successes of method [`fetch_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerSuccess {
@@ -1249,7 +1249,7 @@ pub enum FetchWorkerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_worker_channel`
+/// struct for typed successes of method [`fetch_worker_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerChannelSuccess {
@@ -1257,7 +1257,7 @@ pub enum FetchWorkerChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_worker_instance_statistics`
+/// struct for typed successes of method [`fetch_worker_instance_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerInstanceStatisticsSuccess {
@@ -1265,7 +1265,7 @@ pub enum FetchWorkerInstanceStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_worker_reservation`
+/// struct for typed successes of method [`fetch_worker_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerReservationSuccess {
@@ -1273,7 +1273,7 @@ pub enum FetchWorkerReservationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_worker_statistics`
+/// struct for typed successes of method [`fetch_worker_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerStatisticsSuccess {
@@ -1281,7 +1281,7 @@ pub enum FetchWorkerStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workers_cumulative_statistics`
+/// struct for typed successes of method [`fetch_workers_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkersCumulativeStatisticsSuccess {
@@ -1289,7 +1289,7 @@ pub enum FetchWorkersCumulativeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workers_real_time_statistics`
+/// struct for typed successes of method [`fetch_workers_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkersRealTimeStatisticsSuccess {
@@ -1297,7 +1297,7 @@ pub enum FetchWorkersRealTimeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workflow`
+/// struct for typed successes of method [`fetch_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowSuccess {
@@ -1305,7 +1305,7 @@ pub enum FetchWorkflowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workflow_cumulative_statistics`
+/// struct for typed successes of method [`fetch_workflow_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowCumulativeStatisticsSuccess {
@@ -1313,7 +1313,7 @@ pub enum FetchWorkflowCumulativeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workflow_real_time_statistics`
+/// struct for typed successes of method [`fetch_workflow_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowRealTimeStatisticsSuccess {
@@ -1321,7 +1321,7 @@ pub enum FetchWorkflowRealTimeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workflow_statistics`
+/// struct for typed successes of method [`fetch_workflow_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowStatisticsSuccess {
@@ -1329,7 +1329,7 @@ pub enum FetchWorkflowStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workspace`
+/// struct for typed successes of method [`fetch_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceSuccess {
@@ -1337,7 +1337,7 @@ pub enum FetchWorkspaceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workspace_cumulative_statistics`
+/// struct for typed successes of method [`fetch_workspace_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceCumulativeStatisticsSuccess {
@@ -1345,7 +1345,7 @@ pub enum FetchWorkspaceCumulativeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workspace_real_time_statistics`
+/// struct for typed successes of method [`fetch_workspace_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceRealTimeStatisticsSuccess {
@@ -1353,7 +1353,7 @@ pub enum FetchWorkspaceRealTimeStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_workspace_statistics`
+/// struct for typed successes of method [`fetch_workspace_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceStatisticsSuccess {
@@ -1361,7 +1361,7 @@ pub enum FetchWorkspaceStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_activity`
+/// struct for typed successes of method [`list_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListActivitySuccess {
@@ -1369,7 +1369,7 @@ pub enum ListActivitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_event`
+/// struct for typed successes of method [`list_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventSuccess {
@@ -1377,7 +1377,7 @@ pub enum ListEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_task`
+/// struct for typed successes of method [`list_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskSuccess {
@@ -1385,7 +1385,7 @@ pub enum ListTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_task_channel`
+/// struct for typed successes of method [`list_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskChannelSuccess {
@@ -1393,7 +1393,7 @@ pub enum ListTaskChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_task_queue`
+/// struct for typed successes of method [`list_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskQueueSuccess {
@@ -1401,7 +1401,7 @@ pub enum ListTaskQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_task_queues_statistics`
+/// struct for typed successes of method [`list_task_queues_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskQueuesStatisticsSuccess {
@@ -1409,7 +1409,7 @@ pub enum ListTaskQueuesStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_task_reservation`
+/// struct for typed successes of method [`list_task_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskReservationSuccess {
@@ -1417,7 +1417,7 @@ pub enum ListTaskReservationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_worker`
+/// struct for typed successes of method [`list_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkerSuccess {
@@ -1425,7 +1425,7 @@ pub enum ListWorkerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_worker_channel`
+/// struct for typed successes of method [`list_worker_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkerChannelSuccess {
@@ -1433,7 +1433,7 @@ pub enum ListWorkerChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_worker_reservation`
+/// struct for typed successes of method [`list_worker_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkerReservationSuccess {
@@ -1441,7 +1441,7 @@ pub enum ListWorkerReservationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_workflow`
+/// struct for typed successes of method [`list_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkflowSuccess {
@@ -1449,7 +1449,7 @@ pub enum ListWorkflowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_workspace`
+/// struct for typed successes of method [`list_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkspaceSuccess {
@@ -1457,7 +1457,7 @@ pub enum ListWorkspaceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_activity`
+/// struct for typed successes of method [`update_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateActivitySuccess {
@@ -1465,7 +1465,7 @@ pub enum UpdateActivitySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_task`
+/// struct for typed successes of method [`update_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskSuccess {
@@ -1473,7 +1473,7 @@ pub enum UpdateTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_task_channel`
+/// struct for typed successes of method [`update_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskChannelSuccess {
@@ -1481,7 +1481,7 @@ pub enum UpdateTaskChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_task_queue`
+/// struct for typed successes of method [`update_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskQueueSuccess {
@@ -1489,7 +1489,7 @@ pub enum UpdateTaskQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_task_reservation`
+/// struct for typed successes of method [`update_task_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskReservationSuccess {
@@ -1497,7 +1497,7 @@ pub enum UpdateTaskReservationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_worker`
+/// struct for typed successes of method [`update_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkerSuccess {
@@ -1505,7 +1505,7 @@ pub enum UpdateWorkerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_worker_channel`
+/// struct for typed successes of method [`update_worker_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkerChannelSuccess {
@@ -1513,7 +1513,7 @@ pub enum UpdateWorkerChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_worker_reservation`
+/// struct for typed successes of method [`update_worker_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkerReservationSuccess {
@@ -1521,7 +1521,7 @@ pub enum UpdateWorkerReservationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_workflow`
+/// struct for typed successes of method [`update_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkflowSuccess {
@@ -1529,7 +1529,7 @@ pub enum UpdateWorkflowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_workspace`
+/// struct for typed successes of method [`update_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkspaceSuccess {
@@ -1537,420 +1537,420 @@ pub enum UpdateWorkspaceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_activity`
+/// struct for typed errors of method [`create_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateActivityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_task`
+/// struct for typed errors of method [`create_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_task_channel`
+/// struct for typed errors of method [`create_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_task_queue`
+/// struct for typed errors of method [`create_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_worker`
+/// struct for typed errors of method [`create_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWorkerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_workflow`
+/// struct for typed errors of method [`create_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWorkflowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_workspace`
+/// struct for typed errors of method [`create_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWorkspaceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_activity`
+/// struct for typed errors of method [`delete_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteActivityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_task`
+/// struct for typed errors of method [`delete_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_task_channel`
+/// struct for typed errors of method [`delete_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_task_queue`
+/// struct for typed errors of method [`delete_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_worker`
+/// struct for typed errors of method [`delete_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWorkerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_workflow`
+/// struct for typed errors of method [`delete_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWorkflowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_workspace`
+/// struct for typed errors of method [`delete_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWorkspaceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_activity`
+/// struct for typed errors of method [`fetch_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchActivityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_event`
+/// struct for typed errors of method [`fetch_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task`
+/// struct for typed errors of method [`fetch_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_channel`
+/// struct for typed errors of method [`fetch_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_queue`
+/// struct for typed errors of method [`fetch_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_queue_cumulative_statistics`
+/// struct for typed errors of method [`fetch_task_queue_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueCumulativeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_queue_real_time_statistics`
+/// struct for typed errors of method [`fetch_task_queue_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueRealTimeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_queue_statistics`
+/// struct for typed errors of method [`fetch_task_queue_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskQueueStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_reservation`
+/// struct for typed errors of method [`fetch_task_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskReservationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_worker`
+/// struct for typed errors of method [`fetch_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_worker_channel`
+/// struct for typed errors of method [`fetch_worker_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_worker_instance_statistics`
+/// struct for typed errors of method [`fetch_worker_instance_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerInstanceStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_worker_reservation`
+/// struct for typed errors of method [`fetch_worker_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerReservationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_worker_statistics`
+/// struct for typed errors of method [`fetch_worker_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkerStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workers_cumulative_statistics`
+/// struct for typed errors of method [`fetch_workers_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkersCumulativeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workers_real_time_statistics`
+/// struct for typed errors of method [`fetch_workers_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkersRealTimeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workflow`
+/// struct for typed errors of method [`fetch_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workflow_cumulative_statistics`
+/// struct for typed errors of method [`fetch_workflow_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowCumulativeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workflow_real_time_statistics`
+/// struct for typed errors of method [`fetch_workflow_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowRealTimeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workflow_statistics`
+/// struct for typed errors of method [`fetch_workflow_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkflowStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workspace`
+/// struct for typed errors of method [`fetch_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workspace_cumulative_statistics`
+/// struct for typed errors of method [`fetch_workspace_cumulative_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceCumulativeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workspace_real_time_statistics`
+/// struct for typed errors of method [`fetch_workspace_real_time_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceRealTimeStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_workspace_statistics`
+/// struct for typed errors of method [`fetch_workspace_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWorkspaceStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_activity`
+/// struct for typed errors of method [`list_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListActivityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_event`
+/// struct for typed errors of method [`list_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_task`
+/// struct for typed errors of method [`list_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_task_channel`
+/// struct for typed errors of method [`list_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_task_queue`
+/// struct for typed errors of method [`list_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_task_queues_statistics`
+/// struct for typed errors of method [`list_task_queues_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskQueuesStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_task_reservation`
+/// struct for typed errors of method [`list_task_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskReservationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_worker`
+/// struct for typed errors of method [`list_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_worker_channel`
+/// struct for typed errors of method [`list_worker_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkerChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_worker_reservation`
+/// struct for typed errors of method [`list_worker_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkerReservationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_workflow`
+/// struct for typed errors of method [`list_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkflowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_workspace`
+/// struct for typed errors of method [`list_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWorkspaceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_activity`
+/// struct for typed errors of method [`update_activity`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateActivityError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_task`
+/// struct for typed errors of method [`update_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_task_channel`
+/// struct for typed errors of method [`update_task_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_task_queue`
+/// struct for typed errors of method [`update_task_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_task_reservation`
+/// struct for typed errors of method [`update_task_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskReservationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_worker`
+/// struct for typed errors of method [`update_worker`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_worker_channel`
+/// struct for typed errors of method [`update_worker_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkerChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_worker_reservation`
+/// struct for typed errors of method [`update_worker_reservation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkerReservationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_workflow`
+/// struct for typed errors of method [`update_workflow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkflowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_workspace`
+/// struct for typed errors of method [`update_workspace`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWorkspaceError {

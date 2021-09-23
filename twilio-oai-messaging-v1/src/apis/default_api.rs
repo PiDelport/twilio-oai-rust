@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_alpha_sender`
+/// struct for passing parameters to the method [`create_alpha_sender`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateAlphaSenderParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
@@ -23,7 +23,7 @@ pub struct CreateAlphaSenderParams {
     pub alpha_sender: String
 }
 
-/// struct for passing parameters to the method `create_brand_registrations`
+/// struct for passing parameters to the method [`create_brand_registrations`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateBrandRegistrationsParams {
     /// A2P Messaging Profile Bundle Sid.
@@ -36,7 +36,7 @@ pub struct CreateBrandRegistrationsParams {
     pub mock: Option<bool>
 }
 
-/// struct for passing parameters to the method `create_external_campaign`
+/// struct for passing parameters to the method [`create_external_campaign`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateExternalCampaignParams {
     /// ID of the preregistered campaign.
@@ -45,7 +45,7 @@ pub struct CreateExternalCampaignParams {
     pub messaging_service_sid: String
 }
 
-/// struct for passing parameters to the method `create_phone_number`
+/// struct for passing parameters to the method [`create_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct CreatePhoneNumberParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
@@ -54,7 +54,7 @@ pub struct CreatePhoneNumberParams {
     pub phone_number_sid: String
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// A descriptive string that you create to describe the resource. It can be up to 64 characters long.
@@ -89,7 +89,7 @@ pub struct CreateServiceParams {
     pub validity_period: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_short_code`
+/// struct for passing parameters to the method [`create_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateShortCodeParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
@@ -98,7 +98,7 @@ pub struct CreateShortCodeParams {
     pub short_code_sid: String
 }
 
-/// struct for passing parameters to the method `create_us_app_to_person`
+/// struct for passing parameters to the method [`create_us_app_to_person`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateUsAppToPersonParams {
     /// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to create the resources from.
@@ -117,7 +117,7 @@ pub struct CreateUsAppToPersonParams {
     pub us_app_to_person_usecase: String
 }
 
-/// struct for passing parameters to the method `delete_alpha_sender`
+/// struct for passing parameters to the method [`delete_alpha_sender`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteAlphaSenderParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
@@ -126,7 +126,7 @@ pub struct DeleteAlphaSenderParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_phone_number`
+/// struct for passing parameters to the method [`delete_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct DeletePhoneNumberParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
@@ -135,14 +135,14 @@ pub struct DeletePhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// The SID of the Service resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_short_code`
+/// struct for passing parameters to the method [`delete_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteShortCodeParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
@@ -151,7 +151,7 @@ pub struct DeleteShortCodeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_us_app_to_person`
+/// struct for passing parameters to the method [`delete_us_app_to_person`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteUsAppToPersonParams {
     /// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to delete the resource from.
@@ -160,7 +160,7 @@ pub struct DeleteUsAppToPersonParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_alpha_sender`
+/// struct for passing parameters to the method [`fetch_alpha_sender`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAlphaSenderParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from.
@@ -169,21 +169,21 @@ pub struct FetchAlphaSenderParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_brand_registrations`
+/// struct for passing parameters to the method [`fetch_brand_registrations`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBrandRegistrationsParams {
     /// The SID of the Brand Registration resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_deactivation`
+/// struct for passing parameters to the method [`fetch_deactivation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDeactivationParams {
     /// The request will return a list of all United States Phone Numbers that were deactivated on the day specified by this parameter. This date should be specified in YYYY-MM-DD format.
     pub date: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_phone_number`
+/// struct for passing parameters to the method [`fetch_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchPhoneNumberParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from.
@@ -192,14 +192,14 @@ pub struct FetchPhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// The SID of the Service resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_short_code`
+/// struct for passing parameters to the method [`fetch_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchShortCodeParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from.
@@ -208,7 +208,7 @@ pub struct FetchShortCodeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_us_app_to_person`
+/// struct for passing parameters to the method [`fetch_us_app_to_person`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchUsAppToPersonParams {
     /// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
@@ -217,7 +217,7 @@ pub struct FetchUsAppToPersonParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_us_app_to_person_usecase`
+/// struct for passing parameters to the method [`fetch_us_app_to_person_usecase`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchUsAppToPersonUsecaseParams {
     /// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
@@ -226,7 +226,7 @@ pub struct FetchUsAppToPersonUsecaseParams {
     pub brand_registration_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `list_alpha_sender`
+/// struct for passing parameters to the method [`list_alpha_sender`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAlphaSenderParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from.
@@ -235,14 +235,14 @@ pub struct ListAlphaSenderParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_brand_registrations`
+/// struct for passing parameters to the method [`list_brand_registrations`]
 #[derive(Clone, Debug, Default)]
 pub struct ListBrandRegistrationsParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_phone_number`
+/// struct for passing parameters to the method [`list_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct ListPhoneNumberParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from.
@@ -251,14 +251,14 @@ pub struct ListPhoneNumberParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_short_code`
+/// struct for passing parameters to the method [`list_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct ListShortCodeParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from.
@@ -267,7 +267,7 @@ pub struct ListShortCodeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_us_app_to_person`
+/// struct for passing parameters to the method [`list_us_app_to_person`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsAppToPersonParams {
     /// The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
@@ -276,7 +276,7 @@ pub struct ListUsAppToPersonParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_service`
+/// struct for passing parameters to the method [`update_service`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceParams {
     /// The SID of the Service resource to update.
@@ -314,7 +314,7 @@ pub struct UpdateServiceParams {
 }
 
 
-/// struct for typed successes of method `create_alpha_sender`
+/// struct for typed successes of method [`create_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAlphaSenderSuccess {
@@ -322,7 +322,7 @@ pub enum CreateAlphaSenderSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_brand_registrations`
+/// struct for typed successes of method [`create_brand_registrations`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBrandRegistrationsSuccess {
@@ -330,7 +330,7 @@ pub enum CreateBrandRegistrationsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_external_campaign`
+/// struct for typed successes of method [`create_external_campaign`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateExternalCampaignSuccess {
@@ -338,7 +338,7 @@ pub enum CreateExternalCampaignSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_phone_number`
+/// struct for typed successes of method [`create_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePhoneNumberSuccess {
@@ -346,7 +346,7 @@ pub enum CreatePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -354,7 +354,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_short_code`
+/// struct for typed successes of method [`create_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateShortCodeSuccess {
@@ -362,7 +362,7 @@ pub enum CreateShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_us_app_to_person`
+/// struct for typed successes of method [`create_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateUsAppToPersonSuccess {
@@ -370,7 +370,7 @@ pub enum CreateUsAppToPersonSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_alpha_sender`
+/// struct for typed successes of method [`delete_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAlphaSenderSuccess {
@@ -378,7 +378,7 @@ pub enum DeleteAlphaSenderSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_phone_number`
+/// struct for typed successes of method [`delete_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeletePhoneNumberSuccess {
@@ -386,7 +386,7 @@ pub enum DeletePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -394,7 +394,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_short_code`
+/// struct for typed successes of method [`delete_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteShortCodeSuccess {
@@ -402,7 +402,7 @@ pub enum DeleteShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_us_app_to_person`
+/// struct for typed successes of method [`delete_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUsAppToPersonSuccess {
@@ -410,7 +410,7 @@ pub enum DeleteUsAppToPersonSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_alpha_sender`
+/// struct for typed successes of method [`fetch_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAlphaSenderSuccess {
@@ -418,7 +418,7 @@ pub enum FetchAlphaSenderSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_brand_registrations`
+/// struct for typed successes of method [`fetch_brand_registrations`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBrandRegistrationsSuccess {
@@ -426,7 +426,7 @@ pub enum FetchBrandRegistrationsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_deactivation`
+/// struct for typed successes of method [`fetch_deactivation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDeactivationSuccess {
@@ -434,7 +434,7 @@ pub enum FetchDeactivationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_phone_number`
+/// struct for typed successes of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberSuccess {
@@ -442,7 +442,7 @@ pub enum FetchPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -450,7 +450,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_short_code`
+/// struct for typed successes of method [`fetch_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchShortCodeSuccess {
@@ -458,7 +458,7 @@ pub enum FetchShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_us_app_to_person`
+/// struct for typed successes of method [`fetch_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsAppToPersonSuccess {
@@ -466,7 +466,7 @@ pub enum FetchUsAppToPersonSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_us_app_to_person_usecase`
+/// struct for typed successes of method [`fetch_us_app_to_person_usecase`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsAppToPersonUsecaseSuccess {
@@ -474,7 +474,7 @@ pub enum FetchUsAppToPersonUsecaseSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_usecase`
+/// struct for typed successes of method [`fetch_usecase`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsecaseSuccess {
@@ -482,7 +482,7 @@ pub enum FetchUsecaseSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_alpha_sender`
+/// struct for typed successes of method [`list_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAlphaSenderSuccess {
@@ -490,7 +490,7 @@ pub enum ListAlphaSenderSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_brand_registrations`
+/// struct for typed successes of method [`list_brand_registrations`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBrandRegistrationsSuccess {
@@ -498,7 +498,7 @@ pub enum ListBrandRegistrationsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_phone_number`
+/// struct for typed successes of method [`list_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberSuccess {
@@ -506,7 +506,7 @@ pub enum ListPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -514,7 +514,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_short_code`
+/// struct for typed successes of method [`list_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListShortCodeSuccess {
@@ -522,7 +522,7 @@ pub enum ListShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_us_app_to_person`
+/// struct for typed successes of method [`list_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsAppToPersonSuccess {
@@ -530,7 +530,7 @@ pub enum ListUsAppToPersonSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service`
+/// struct for typed successes of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceSuccess {
@@ -538,196 +538,196 @@ pub enum UpdateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_alpha_sender`
+/// struct for typed errors of method [`create_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAlphaSenderError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_brand_registrations`
+/// struct for typed errors of method [`create_brand_registrations`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBrandRegistrationsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_external_campaign`
+/// struct for typed errors of method [`create_external_campaign`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateExternalCampaignError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_phone_number`
+/// struct for typed errors of method [`create_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_short_code`
+/// struct for typed errors of method [`create_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_us_app_to_person`
+/// struct for typed errors of method [`create_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateUsAppToPersonError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_alpha_sender`
+/// struct for typed errors of method [`delete_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAlphaSenderError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_phone_number`
+/// struct for typed errors of method [`delete_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeletePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_short_code`
+/// struct for typed errors of method [`delete_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_us_app_to_person`
+/// struct for typed errors of method [`delete_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUsAppToPersonError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_alpha_sender`
+/// struct for typed errors of method [`fetch_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAlphaSenderError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_brand_registrations`
+/// struct for typed errors of method [`fetch_brand_registrations`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBrandRegistrationsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_deactivation`
+/// struct for typed errors of method [`fetch_deactivation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDeactivationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_phone_number`
+/// struct for typed errors of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_short_code`
+/// struct for typed errors of method [`fetch_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_us_app_to_person`
+/// struct for typed errors of method [`fetch_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsAppToPersonError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_us_app_to_person_usecase`
+/// struct for typed errors of method [`fetch_us_app_to_person_usecase`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsAppToPersonUsecaseError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_usecase`
+/// struct for typed errors of method [`fetch_usecase`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsecaseError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_alpha_sender`
+/// struct for typed errors of method [`list_alpha_sender`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAlphaSenderError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_brand_registrations`
+/// struct for typed errors of method [`list_brand_registrations`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBrandRegistrationsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_phone_number`
+/// struct for typed errors of method [`list_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_short_code`
+/// struct for typed errors of method [`list_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_us_app_to_person`
+/// struct for typed errors of method [`list_us_app_to_person`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsAppToPersonError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service`
+/// struct for typed errors of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceError {

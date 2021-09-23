@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_conversation`
+/// struct for passing parameters to the method [`create_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateConversationParams {
     /// The X-Twilio-Webhook-Enabled HTTP request header
@@ -39,7 +39,7 @@ pub struct CreateConversationParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_conversation_message`
+/// struct for passing parameters to the method [`create_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateConversationMessageParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -60,7 +60,7 @@ pub struct CreateConversationMessageParams {
     pub media_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_conversation_participant`
+/// struct for passing parameters to the method [`create_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateConversationParticipantParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
@@ -85,7 +85,7 @@ pub struct CreateConversationParticipantParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`create_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateConversationScopedWebhookParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
@@ -106,7 +106,7 @@ pub struct CreateConversationScopedWebhookParams {
     pub configuration_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_credential`
+/// struct for passing parameters to the method [`create_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialParams {
     /// The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.
@@ -125,7 +125,7 @@ pub struct CreateCredentialParams {
     pub secret: Option<String>
 }
 
-/// struct for passing parameters to the method `create_role`
+/// struct for passing parameters to the method [`create_role`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateRoleParams {
     /// A descriptive string that you create to describe the new resource. It can be up to 64 characters long.
@@ -136,14 +136,14 @@ pub struct CreateRoleParams {
     pub _type: String
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// The human-readable name of this service, limited to 256 characters. Optional.
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `create_service_conversation`
+/// struct for passing parameters to the method [`create_service_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -170,7 +170,7 @@ pub struct CreateServiceConversationParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service_conversation_message`
+/// struct for passing parameters to the method [`create_service_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceConversationMessageParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -193,7 +193,7 @@ pub struct CreateServiceConversationMessageParams {
     pub media_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service_conversation_participant`
+/// struct for passing parameters to the method [`create_service_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceConversationParticipantParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -220,7 +220,7 @@ pub struct CreateServiceConversationParticipantParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`create_service_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceConversationScopedWebhookParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -243,7 +243,7 @@ pub struct CreateServiceConversationScopedWebhookParams {
     pub configuration_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service_role`
+/// struct for passing parameters to the method [`create_service_role`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceRoleParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to create the Role resource under.
@@ -256,7 +256,7 @@ pub struct CreateServiceRoleParams {
     pub _type: String
 }
 
-/// struct for passing parameters to the method `create_service_user`
+/// struct for passing parameters to the method [`create_service_user`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceUserParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the User resource is associated with.
@@ -273,7 +273,7 @@ pub struct CreateServiceUserParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_user`
+/// struct for passing parameters to the method [`create_user`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateUserParams {
     /// The application-defined string that uniquely identifies the resource's User within the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource). This value is often a username or an email address, and is case-sensitive.
@@ -288,7 +288,7 @@ pub struct CreateUserParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_conversation`
+/// struct for passing parameters to the method [`delete_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConversationParams {
     /// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
@@ -297,7 +297,7 @@ pub struct DeleteConversationParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_conversation_message`
+/// struct for passing parameters to the method [`delete_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConversationMessageParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -308,7 +308,7 @@ pub struct DeleteConversationMessageParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_conversation_participant`
+/// struct for passing parameters to the method [`delete_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConversationParticipantParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
@@ -319,7 +319,7 @@ pub struct DeleteConversationParticipantParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`delete_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConversationScopedWebhookParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
@@ -328,28 +328,28 @@ pub struct DeleteConversationScopedWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_credential`
+/// struct for passing parameters to the method [`delete_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCredentialParams {
     /// A 34 character string that uniquely identifies this resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_role`
+/// struct for passing parameters to the method [`delete_role`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRoleParams {
     /// The SID of the Role resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// A 34 character string that uniquely identifies this resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service_binding`
+/// struct for passing parameters to the method [`delete_service_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceBindingParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to delete the Binding resource from.
@@ -358,7 +358,7 @@ pub struct DeleteServiceBindingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service_conversation`
+/// struct for passing parameters to the method [`delete_service_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -369,7 +369,7 @@ pub struct DeleteServiceConversationParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_service_conversation_message`
+/// struct for passing parameters to the method [`delete_service_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceConversationMessageParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -382,7 +382,7 @@ pub struct DeleteServiceConversationMessageParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_service_conversation_participant`
+/// struct for passing parameters to the method [`delete_service_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceConversationParticipantParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -395,7 +395,7 @@ pub struct DeleteServiceConversationParticipantParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_service_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`delete_service_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceConversationScopedWebhookParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -406,7 +406,7 @@ pub struct DeleteServiceConversationScopedWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service_role`
+/// struct for passing parameters to the method [`delete_service_role`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceRoleParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to delete the Role resource from.
@@ -415,7 +415,7 @@ pub struct DeleteServiceRoleParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service_user`
+/// struct for passing parameters to the method [`delete_service_user`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceUserParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to delete the User resource from.
@@ -426,7 +426,7 @@ pub struct DeleteServiceUserParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_service_user_conversation`
+/// struct for passing parameters to the method [`delete_service_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceUserConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -437,7 +437,7 @@ pub struct DeleteServiceUserConversationParams {
     pub conversation_sid: String
 }
 
-/// struct for passing parameters to the method `delete_user`
+/// struct for passing parameters to the method [`delete_user`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteUserParams {
     /// The SID of the User resource to delete. This value can be either the `sid` or the `identity` of the User resource to delete.
@@ -446,7 +446,7 @@ pub struct DeleteUserParams {
     pub x_twilio_webhook_enabled: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_user_conversation`
+/// struct for passing parameters to the method [`delete_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteUserConversationParams {
     /// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
@@ -455,14 +455,14 @@ pub struct DeleteUserConversationParams {
     pub conversation_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conversation`
+/// struct for passing parameters to the method [`fetch_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConversationParams {
     /// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conversation_message`
+/// struct for passing parameters to the method [`fetch_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConversationMessageParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -471,7 +471,7 @@ pub struct FetchConversationMessageParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conversation_message_receipt`
+/// struct for passing parameters to the method [`fetch_conversation_message_receipt`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConversationMessageReceiptParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -482,7 +482,7 @@ pub struct FetchConversationMessageReceiptParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conversation_participant`
+/// struct for passing parameters to the method [`fetch_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConversationParticipantParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
@@ -491,7 +491,7 @@ pub struct FetchConversationParticipantParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`fetch_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConversationScopedWebhookParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
@@ -500,28 +500,28 @@ pub struct FetchConversationScopedWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_credential`
+/// struct for passing parameters to the method [`fetch_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCredentialParams {
     /// A 34 character string that uniquely identifies this resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_role`
+/// struct for passing parameters to the method [`fetch_role`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoleParams {
     /// The SID of the Role resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// A 34 character string that uniquely identifies this resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_binding`
+/// struct for passing parameters to the method [`fetch_service_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceBindingParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Binding resource is associated with.
@@ -530,14 +530,14 @@ pub struct FetchServiceBindingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_configuration`
+/// struct for passing parameters to the method [`fetch_service_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceConfigurationParams {
     /// The SID of the Service configuration resource to fetch.
     pub chat_service_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_conversation`
+/// struct for passing parameters to the method [`fetch_service_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -546,7 +546,7 @@ pub struct FetchServiceConversationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_conversation_message`
+/// struct for passing parameters to the method [`fetch_service_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceConversationMessageParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -557,7 +557,7 @@ pub struct FetchServiceConversationMessageParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_conversation_message_receipt`
+/// struct for passing parameters to the method [`fetch_service_conversation_message_receipt`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceConversationMessageReceiptParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Message resource is associated with.
@@ -570,7 +570,7 @@ pub struct FetchServiceConversationMessageReceiptParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_conversation_participant`
+/// struct for passing parameters to the method [`fetch_service_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceConversationParticipantParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -581,7 +581,7 @@ pub struct FetchServiceConversationParticipantParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`fetch_service_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceConversationScopedWebhookParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -592,14 +592,14 @@ pub struct FetchServiceConversationScopedWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_notification`
+/// struct for passing parameters to the method [`fetch_service_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceNotificationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
     pub chat_service_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_role`
+/// struct for passing parameters to the method [`fetch_service_role`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceRoleParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to fetch the Role resource from.
@@ -608,7 +608,7 @@ pub struct FetchServiceRoleParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_user`
+/// struct for passing parameters to the method [`fetch_service_user`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceUserParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to fetch the User resource from.
@@ -617,7 +617,7 @@ pub struct FetchServiceUserParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service_user_conversation`
+/// struct for passing parameters to the method [`fetch_service_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceUserConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -628,14 +628,14 @@ pub struct FetchServiceUserConversationParams {
     pub conversation_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_user`
+/// struct for passing parameters to the method [`fetch_user`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchUserParams {
     /// The SID of the User resource to fetch. This value can be either the `sid` or the `identity` of the User resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_user_conversation`
+/// struct for passing parameters to the method [`fetch_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchUserConversationParams {
     /// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
@@ -644,14 +644,14 @@ pub struct FetchUserConversationParams {
     pub conversation_sid: String
 }
 
-/// struct for passing parameters to the method `list_conversation`
+/// struct for passing parameters to the method [`list_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConversationParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_conversation_message`
+/// struct for passing parameters to the method [`list_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConversationMessageParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for messages.
@@ -662,7 +662,7 @@ pub struct ListConversationMessageParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_conversation_message_receipt`
+/// struct for passing parameters to the method [`list_conversation_message_receipt`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConversationMessageReceiptParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -673,7 +673,7 @@ pub struct ListConversationMessageReceiptParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_conversation_participant`
+/// struct for passing parameters to the method [`list_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConversationParticipantParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for participants.
@@ -682,7 +682,7 @@ pub struct ListConversationParticipantParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`list_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConversationScopedWebhookParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
@@ -691,14 +691,14 @@ pub struct ListConversationScopedWebhookParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_credential`
+/// struct for passing parameters to the method [`list_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCredentialParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_participant_conversation`
+/// struct for passing parameters to the method [`list_participant_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListParticipantConversationParams {
     /// A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.
@@ -709,21 +709,21 @@ pub struct ListParticipantConversationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_role`
+/// struct for passing parameters to the method [`list_role`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRoleParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_binding`
+/// struct for passing parameters to the method [`list_service_binding`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceBindingParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Binding resource is associated with.
@@ -736,7 +736,7 @@ pub struct ListServiceBindingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_conversation`
+/// struct for passing parameters to the method [`list_service_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -745,7 +745,7 @@ pub struct ListServiceConversationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_conversation_message`
+/// struct for passing parameters to the method [`list_service_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceConversationMessageParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -758,7 +758,7 @@ pub struct ListServiceConversationMessageParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_conversation_message_receipt`
+/// struct for passing parameters to the method [`list_service_conversation_message_receipt`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceConversationMessageReceiptParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Message resource is associated with.
@@ -771,7 +771,7 @@ pub struct ListServiceConversationMessageReceiptParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_conversation_participant`
+/// struct for passing parameters to the method [`list_service_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceConversationParticipantParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -782,7 +782,7 @@ pub struct ListServiceConversationParticipantParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`list_service_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceConversationScopedWebhookParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -793,7 +793,7 @@ pub struct ListServiceConversationScopedWebhookParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_participant_conversation`
+/// struct for passing parameters to the method [`list_service_participant_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParticipantConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant Conversations resource is associated with.
@@ -806,7 +806,7 @@ pub struct ListServiceParticipantConversationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_role`
+/// struct for passing parameters to the method [`list_service_role`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceRoleParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to read the Role resources from.
@@ -815,7 +815,7 @@ pub struct ListServiceRoleParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_user`
+/// struct for passing parameters to the method [`list_service_user`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceUserParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to read the User resources from.
@@ -824,7 +824,7 @@ pub struct ListServiceUserParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service_user_conversation`
+/// struct for passing parameters to the method [`list_service_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceUserConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -835,14 +835,14 @@ pub struct ListServiceUserConversationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_user`
+/// struct for passing parameters to the method [`list_user`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUserParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_user_conversation`
+/// struct for passing parameters to the method [`list_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUserConversationParams {
     /// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
@@ -851,7 +851,7 @@ pub struct ListUserConversationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_configuration`
+/// struct for passing parameters to the method [`update_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConfigurationParams {
     /// The SID of the default [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to use when creating a conversation.
@@ -864,7 +864,7 @@ pub struct UpdateConfigurationParams {
     pub default_messaging_service_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_configuration_webhook`
+/// struct for passing parameters to the method [`update_configuration_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConfigurationWebhookParams {
     /// The list of webhook event triggers that are enabled for this Service: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`, `onConversationRemoved`, `onParticipantAdded`, `onParticipantUpdated`, `onParticipantRemoved`
@@ -879,7 +879,7 @@ pub struct UpdateConfigurationWebhookParams {
     pub target: Option<String>
 }
 
-/// struct for passing parameters to the method `update_conversation`
+/// struct for passing parameters to the method [`update_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConversationParams {
     /// A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
@@ -906,7 +906,7 @@ pub struct UpdateConversationParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_conversation_message`
+/// struct for passing parameters to the method [`update_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConversationMessageParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
@@ -927,7 +927,7 @@ pub struct UpdateConversationMessageParams {
     pub date_updated: Option<String>
 }
 
-/// struct for passing parameters to the method `update_conversation_participant`
+/// struct for passing parameters to the method [`update_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConversationParticipantParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
@@ -956,7 +956,7 @@ pub struct UpdateConversationParticipantParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`update_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConversationScopedWebhookParams {
     /// The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
@@ -975,7 +975,7 @@ pub struct UpdateConversationScopedWebhookParams {
     pub configuration_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_credential`
+/// struct for passing parameters to the method [`update_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCredentialParams {
     /// A 34 character string that uniquely identifies this resource.
@@ -996,7 +996,7 @@ pub struct UpdateCredentialParams {
     pub _type: Option<String>
 }
 
-/// struct for passing parameters to the method `update_role`
+/// struct for passing parameters to the method [`update_role`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRoleParams {
     /// The SID of the Role resource to update.
@@ -1005,7 +1005,7 @@ pub struct UpdateRoleParams {
     pub permission: Vec<String>
 }
 
-/// struct for passing parameters to the method `update_service_configuration`
+/// struct for passing parameters to the method [`update_service_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceConfigurationParams {
     /// The SID of the Service configuration resource to update.
@@ -1020,7 +1020,7 @@ pub struct UpdateServiceConfigurationParams {
     pub reachability_enabled: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_service_conversation`
+/// struct for passing parameters to the method [`update_service_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -1049,7 +1049,7 @@ pub struct UpdateServiceConversationParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service_conversation_message`
+/// struct for passing parameters to the method [`update_service_conversation_message`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceConversationMessageParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -1072,7 +1072,7 @@ pub struct UpdateServiceConversationMessageParams {
     pub date_updated: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service_conversation_participant`
+/// struct for passing parameters to the method [`update_service_conversation_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceConversationParticipantParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -1103,7 +1103,7 @@ pub struct UpdateServiceConversationParticipantParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service_conversation_scoped_webhook`
+/// struct for passing parameters to the method [`update_service_conversation_scoped_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceConversationScopedWebhookParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
@@ -1124,7 +1124,7 @@ pub struct UpdateServiceConversationScopedWebhookParams {
     pub configuration_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service_notification`
+/// struct for passing parameters to the method [`update_service_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceNotificationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
@@ -1153,7 +1153,7 @@ pub struct UpdateServiceNotificationParams {
     pub removed_from_conversation_template: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service_role`
+/// struct for passing parameters to the method [`update_service_role`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceRoleParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to update the Role resource in.
@@ -1164,7 +1164,7 @@ pub struct UpdateServiceRoleParams {
     pub permission: Vec<String>
 }
 
-/// struct for passing parameters to the method `update_service_user`
+/// struct for passing parameters to the method [`update_service_user`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceUserParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the User resource is associated with.
@@ -1181,7 +1181,7 @@ pub struct UpdateServiceUserParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_service_user_conversation`
+/// struct for passing parameters to the method [`update_service_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceUserConversationParams {
     /// The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
@@ -1198,7 +1198,7 @@ pub struct UpdateServiceUserConversationParams {
     pub notification_level: Option<String>
 }
 
-/// struct for passing parameters to the method `update_user`
+/// struct for passing parameters to the method [`update_user`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateUserParams {
     /// The SID of the User resource to update. This value can be either the `sid` or the `identity` of the User resource to update.
@@ -1213,7 +1213,7 @@ pub struct UpdateUserParams {
     pub role_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `update_user_conversation`
+/// struct for passing parameters to the method [`update_user_conversation`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateUserConversationParams {
     /// The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
@@ -1229,7 +1229,7 @@ pub struct UpdateUserConversationParams {
 }
 
 
-/// struct for typed successes of method `create_conversation`
+/// struct for typed successes of method [`create_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationSuccess {
@@ -1237,7 +1237,7 @@ pub enum CreateConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_conversation_message`
+/// struct for typed successes of method [`create_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationMessageSuccess {
@@ -1245,7 +1245,7 @@ pub enum CreateConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_conversation_participant`
+/// struct for typed successes of method [`create_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationParticipantSuccess {
@@ -1253,7 +1253,7 @@ pub enum CreateConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_conversation_scoped_webhook`
+/// struct for typed successes of method [`create_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationScopedWebhookSuccess {
@@ -1261,7 +1261,7 @@ pub enum CreateConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_credential`
+/// struct for typed successes of method [`create_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialSuccess {
@@ -1269,7 +1269,7 @@ pub enum CreateCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_role`
+/// struct for typed successes of method [`create_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRoleSuccess {
@@ -1277,7 +1277,7 @@ pub enum CreateRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -1285,7 +1285,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service_conversation`
+/// struct for typed successes of method [`create_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationSuccess {
@@ -1293,7 +1293,7 @@ pub enum CreateServiceConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service_conversation_message`
+/// struct for typed successes of method [`create_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationMessageSuccess {
@@ -1301,7 +1301,7 @@ pub enum CreateServiceConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service_conversation_participant`
+/// struct for typed successes of method [`create_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationParticipantSuccess {
@@ -1309,7 +1309,7 @@ pub enum CreateServiceConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service_conversation_scoped_webhook`
+/// struct for typed successes of method [`create_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationScopedWebhookSuccess {
@@ -1317,7 +1317,7 @@ pub enum CreateServiceConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service_role`
+/// struct for typed successes of method [`create_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceRoleSuccess {
@@ -1325,7 +1325,7 @@ pub enum CreateServiceRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service_user`
+/// struct for typed successes of method [`create_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceUserSuccess {
@@ -1333,7 +1333,7 @@ pub enum CreateServiceUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_user`
+/// struct for typed successes of method [`create_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateUserSuccess {
@@ -1341,7 +1341,7 @@ pub enum CreateUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_conversation`
+/// struct for typed successes of method [`delete_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationSuccess {
@@ -1349,7 +1349,7 @@ pub enum DeleteConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_conversation_message`
+/// struct for typed successes of method [`delete_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationMessageSuccess {
@@ -1357,7 +1357,7 @@ pub enum DeleteConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_conversation_participant`
+/// struct for typed successes of method [`delete_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationParticipantSuccess {
@@ -1365,7 +1365,7 @@ pub enum DeleteConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_conversation_scoped_webhook`
+/// struct for typed successes of method [`delete_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationScopedWebhookSuccess {
@@ -1373,7 +1373,7 @@ pub enum DeleteConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_credential`
+/// struct for typed successes of method [`delete_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialSuccess {
@@ -1381,7 +1381,7 @@ pub enum DeleteCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_role`
+/// struct for typed successes of method [`delete_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRoleSuccess {
@@ -1389,7 +1389,7 @@ pub enum DeleteRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -1397,7 +1397,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_binding`
+/// struct for typed successes of method [`delete_service_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceBindingSuccess {
@@ -1405,7 +1405,7 @@ pub enum DeleteServiceBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_conversation`
+/// struct for typed successes of method [`delete_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationSuccess {
@@ -1413,7 +1413,7 @@ pub enum DeleteServiceConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_conversation_message`
+/// struct for typed successes of method [`delete_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationMessageSuccess {
@@ -1421,7 +1421,7 @@ pub enum DeleteServiceConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_conversation_participant`
+/// struct for typed successes of method [`delete_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationParticipantSuccess {
@@ -1429,7 +1429,7 @@ pub enum DeleteServiceConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_conversation_scoped_webhook`
+/// struct for typed successes of method [`delete_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationScopedWebhookSuccess {
@@ -1437,7 +1437,7 @@ pub enum DeleteServiceConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_role`
+/// struct for typed successes of method [`delete_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceRoleSuccess {
@@ -1445,7 +1445,7 @@ pub enum DeleteServiceRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_user`
+/// struct for typed successes of method [`delete_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceUserSuccess {
@@ -1453,7 +1453,7 @@ pub enum DeleteServiceUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service_user_conversation`
+/// struct for typed successes of method [`delete_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceUserConversationSuccess {
@@ -1461,7 +1461,7 @@ pub enum DeleteServiceUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_user`
+/// struct for typed successes of method [`delete_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUserSuccess {
@@ -1469,7 +1469,7 @@ pub enum DeleteUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_user_conversation`
+/// struct for typed successes of method [`delete_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUserConversationSuccess {
@@ -1477,7 +1477,7 @@ pub enum DeleteUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_configuration`
+/// struct for typed successes of method [`fetch_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConfigurationSuccess {
@@ -1485,7 +1485,7 @@ pub enum FetchConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_configuration_webhook`
+/// struct for typed successes of method [`fetch_configuration_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConfigurationWebhookSuccess {
@@ -1493,7 +1493,7 @@ pub enum FetchConfigurationWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conversation`
+/// struct for typed successes of method [`fetch_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationSuccess {
@@ -1501,7 +1501,7 @@ pub enum FetchConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conversation_message`
+/// struct for typed successes of method [`fetch_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationMessageSuccess {
@@ -1509,7 +1509,7 @@ pub enum FetchConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conversation_message_receipt`
+/// struct for typed successes of method [`fetch_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationMessageReceiptSuccess {
@@ -1517,7 +1517,7 @@ pub enum FetchConversationMessageReceiptSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conversation_participant`
+/// struct for typed successes of method [`fetch_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationParticipantSuccess {
@@ -1525,7 +1525,7 @@ pub enum FetchConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conversation_scoped_webhook`
+/// struct for typed successes of method [`fetch_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationScopedWebhookSuccess {
@@ -1533,7 +1533,7 @@ pub enum FetchConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_credential`
+/// struct for typed successes of method [`fetch_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialSuccess {
@@ -1541,7 +1541,7 @@ pub enum FetchCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_role`
+/// struct for typed successes of method [`fetch_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoleSuccess {
@@ -1549,7 +1549,7 @@ pub enum FetchRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -1557,7 +1557,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_binding`
+/// struct for typed successes of method [`fetch_service_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceBindingSuccess {
@@ -1565,7 +1565,7 @@ pub enum FetchServiceBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_configuration`
+/// struct for typed successes of method [`fetch_service_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConfigurationSuccess {
@@ -1573,7 +1573,7 @@ pub enum FetchServiceConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_conversation`
+/// struct for typed successes of method [`fetch_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationSuccess {
@@ -1581,7 +1581,7 @@ pub enum FetchServiceConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_conversation_message`
+/// struct for typed successes of method [`fetch_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationMessageSuccess {
@@ -1589,7 +1589,7 @@ pub enum FetchServiceConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_conversation_message_receipt`
+/// struct for typed successes of method [`fetch_service_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationMessageReceiptSuccess {
@@ -1597,7 +1597,7 @@ pub enum FetchServiceConversationMessageReceiptSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_conversation_participant`
+/// struct for typed successes of method [`fetch_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationParticipantSuccess {
@@ -1605,7 +1605,7 @@ pub enum FetchServiceConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_conversation_scoped_webhook`
+/// struct for typed successes of method [`fetch_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationScopedWebhookSuccess {
@@ -1613,7 +1613,7 @@ pub enum FetchServiceConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_notification`
+/// struct for typed successes of method [`fetch_service_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceNotificationSuccess {
@@ -1621,7 +1621,7 @@ pub enum FetchServiceNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_role`
+/// struct for typed successes of method [`fetch_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceRoleSuccess {
@@ -1629,7 +1629,7 @@ pub enum FetchServiceRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_user`
+/// struct for typed successes of method [`fetch_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceUserSuccess {
@@ -1637,7 +1637,7 @@ pub enum FetchServiceUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service_user_conversation`
+/// struct for typed successes of method [`fetch_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceUserConversationSuccess {
@@ -1645,7 +1645,7 @@ pub enum FetchServiceUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_user`
+/// struct for typed successes of method [`fetch_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUserSuccess {
@@ -1653,7 +1653,7 @@ pub enum FetchUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_user_conversation`
+/// struct for typed successes of method [`fetch_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUserConversationSuccess {
@@ -1661,7 +1661,7 @@ pub enum FetchUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conversation`
+/// struct for typed successes of method [`list_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationSuccess {
@@ -1669,7 +1669,7 @@ pub enum ListConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conversation_message`
+/// struct for typed successes of method [`list_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationMessageSuccess {
@@ -1677,7 +1677,7 @@ pub enum ListConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conversation_message_receipt`
+/// struct for typed successes of method [`list_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationMessageReceiptSuccess {
@@ -1685,7 +1685,7 @@ pub enum ListConversationMessageReceiptSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conversation_participant`
+/// struct for typed successes of method [`list_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationParticipantSuccess {
@@ -1693,7 +1693,7 @@ pub enum ListConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conversation_scoped_webhook`
+/// struct for typed successes of method [`list_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationScopedWebhookSuccess {
@@ -1701,7 +1701,7 @@ pub enum ListConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_credential`
+/// struct for typed successes of method [`list_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialSuccess {
@@ -1709,7 +1709,7 @@ pub enum ListCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_participant_conversation`
+/// struct for typed successes of method [`list_participant_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListParticipantConversationSuccess {
@@ -1717,7 +1717,7 @@ pub enum ListParticipantConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_role`
+/// struct for typed successes of method [`list_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoleSuccess {
@@ -1725,7 +1725,7 @@ pub enum ListRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -1733,7 +1733,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_binding`
+/// struct for typed successes of method [`list_service_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceBindingSuccess {
@@ -1741,7 +1741,7 @@ pub enum ListServiceBindingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_conversation`
+/// struct for typed successes of method [`list_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationSuccess {
@@ -1749,7 +1749,7 @@ pub enum ListServiceConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_conversation_message`
+/// struct for typed successes of method [`list_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationMessageSuccess {
@@ -1757,7 +1757,7 @@ pub enum ListServiceConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_conversation_message_receipt`
+/// struct for typed successes of method [`list_service_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationMessageReceiptSuccess {
@@ -1765,7 +1765,7 @@ pub enum ListServiceConversationMessageReceiptSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_conversation_participant`
+/// struct for typed successes of method [`list_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationParticipantSuccess {
@@ -1773,7 +1773,7 @@ pub enum ListServiceConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_conversation_scoped_webhook`
+/// struct for typed successes of method [`list_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationScopedWebhookSuccess {
@@ -1781,7 +1781,7 @@ pub enum ListServiceConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_participant_conversation`
+/// struct for typed successes of method [`list_service_participant_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceParticipantConversationSuccess {
@@ -1789,7 +1789,7 @@ pub enum ListServiceParticipantConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_role`
+/// struct for typed successes of method [`list_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceRoleSuccess {
@@ -1797,7 +1797,7 @@ pub enum ListServiceRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_user`
+/// struct for typed successes of method [`list_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceUserSuccess {
@@ -1805,7 +1805,7 @@ pub enum ListServiceUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service_user_conversation`
+/// struct for typed successes of method [`list_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceUserConversationSuccess {
@@ -1813,7 +1813,7 @@ pub enum ListServiceUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_user`
+/// struct for typed successes of method [`list_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUserSuccess {
@@ -1821,7 +1821,7 @@ pub enum ListUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_user_conversation`
+/// struct for typed successes of method [`list_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUserConversationSuccess {
@@ -1829,7 +1829,7 @@ pub enum ListUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_configuration`
+/// struct for typed successes of method [`update_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConfigurationSuccess {
@@ -1837,7 +1837,7 @@ pub enum UpdateConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_configuration_webhook`
+/// struct for typed successes of method [`update_configuration_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConfigurationWebhookSuccess {
@@ -1845,7 +1845,7 @@ pub enum UpdateConfigurationWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_conversation`
+/// struct for typed successes of method [`update_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationSuccess {
@@ -1853,7 +1853,7 @@ pub enum UpdateConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_conversation_message`
+/// struct for typed successes of method [`update_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationMessageSuccess {
@@ -1861,7 +1861,7 @@ pub enum UpdateConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_conversation_participant`
+/// struct for typed successes of method [`update_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationParticipantSuccess {
@@ -1869,7 +1869,7 @@ pub enum UpdateConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_conversation_scoped_webhook`
+/// struct for typed successes of method [`update_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationScopedWebhookSuccess {
@@ -1877,7 +1877,7 @@ pub enum UpdateConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_credential`
+/// struct for typed successes of method [`update_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialSuccess {
@@ -1885,7 +1885,7 @@ pub enum UpdateCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_role`
+/// struct for typed successes of method [`update_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoleSuccess {
@@ -1893,7 +1893,7 @@ pub enum UpdateRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_configuration`
+/// struct for typed successes of method [`update_service_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConfigurationSuccess {
@@ -1901,7 +1901,7 @@ pub enum UpdateServiceConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_conversation`
+/// struct for typed successes of method [`update_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationSuccess {
@@ -1909,7 +1909,7 @@ pub enum UpdateServiceConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_conversation_message`
+/// struct for typed successes of method [`update_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationMessageSuccess {
@@ -1917,7 +1917,7 @@ pub enum UpdateServiceConversationMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_conversation_participant`
+/// struct for typed successes of method [`update_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationParticipantSuccess {
@@ -1925,7 +1925,7 @@ pub enum UpdateServiceConversationParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_conversation_scoped_webhook`
+/// struct for typed successes of method [`update_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationScopedWebhookSuccess {
@@ -1933,7 +1933,7 @@ pub enum UpdateServiceConversationScopedWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_notification`
+/// struct for typed successes of method [`update_service_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceNotificationSuccess {
@@ -1941,7 +1941,7 @@ pub enum UpdateServiceNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_role`
+/// struct for typed successes of method [`update_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceRoleSuccess {
@@ -1949,7 +1949,7 @@ pub enum UpdateServiceRoleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_user`
+/// struct for typed successes of method [`update_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceUserSuccess {
@@ -1957,7 +1957,7 @@ pub enum UpdateServiceUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service_user_conversation`
+/// struct for typed successes of method [`update_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceUserConversationSuccess {
@@ -1965,7 +1965,7 @@ pub enum UpdateServiceUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_user`
+/// struct for typed successes of method [`update_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUserSuccess {
@@ -1973,7 +1973,7 @@ pub enum UpdateUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_user_conversation`
+/// struct for typed successes of method [`update_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUserConversationSuccess {
@@ -1981,658 +1981,658 @@ pub enum UpdateUserConversationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_conversation`
+/// struct for typed errors of method [`create_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_conversation_message`
+/// struct for typed errors of method [`create_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_conversation_participant`
+/// struct for typed errors of method [`create_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_conversation_scoped_webhook`
+/// struct for typed errors of method [`create_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_credential`
+/// struct for typed errors of method [`create_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_role`
+/// struct for typed errors of method [`create_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service_conversation`
+/// struct for typed errors of method [`create_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service_conversation_message`
+/// struct for typed errors of method [`create_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service_conversation_participant`
+/// struct for typed errors of method [`create_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service_conversation_scoped_webhook`
+/// struct for typed errors of method [`create_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service_role`
+/// struct for typed errors of method [`create_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service_user`
+/// struct for typed errors of method [`create_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_user`
+/// struct for typed errors of method [`create_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_conversation`
+/// struct for typed errors of method [`delete_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_conversation_message`
+/// struct for typed errors of method [`delete_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_conversation_participant`
+/// struct for typed errors of method [`delete_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_conversation_scoped_webhook`
+/// struct for typed errors of method [`delete_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_credential`
+/// struct for typed errors of method [`delete_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_role`
+/// struct for typed errors of method [`delete_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_binding`
+/// struct for typed errors of method [`delete_service_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_conversation`
+/// struct for typed errors of method [`delete_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_conversation_message`
+/// struct for typed errors of method [`delete_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_conversation_participant`
+/// struct for typed errors of method [`delete_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_conversation_scoped_webhook`
+/// struct for typed errors of method [`delete_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_role`
+/// struct for typed errors of method [`delete_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_user`
+/// struct for typed errors of method [`delete_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service_user_conversation`
+/// struct for typed errors of method [`delete_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_user`
+/// struct for typed errors of method [`delete_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_user_conversation`
+/// struct for typed errors of method [`delete_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_configuration`
+/// struct for typed errors of method [`fetch_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_configuration_webhook`
+/// struct for typed errors of method [`fetch_configuration_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConfigurationWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conversation`
+/// struct for typed errors of method [`fetch_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conversation_message`
+/// struct for typed errors of method [`fetch_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conversation_message_receipt`
+/// struct for typed errors of method [`fetch_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationMessageReceiptError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conversation_participant`
+/// struct for typed errors of method [`fetch_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conversation_scoped_webhook`
+/// struct for typed errors of method [`fetch_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_credential`
+/// struct for typed errors of method [`fetch_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_role`
+/// struct for typed errors of method [`fetch_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_binding`
+/// struct for typed errors of method [`fetch_service_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_configuration`
+/// struct for typed errors of method [`fetch_service_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_conversation`
+/// struct for typed errors of method [`fetch_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_conversation_message`
+/// struct for typed errors of method [`fetch_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_conversation_message_receipt`
+/// struct for typed errors of method [`fetch_service_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationMessageReceiptError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_conversation_participant`
+/// struct for typed errors of method [`fetch_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_conversation_scoped_webhook`
+/// struct for typed errors of method [`fetch_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_notification`
+/// struct for typed errors of method [`fetch_service_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_role`
+/// struct for typed errors of method [`fetch_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_user`
+/// struct for typed errors of method [`fetch_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service_user_conversation`
+/// struct for typed errors of method [`fetch_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_user`
+/// struct for typed errors of method [`fetch_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_user_conversation`
+/// struct for typed errors of method [`fetch_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conversation`
+/// struct for typed errors of method [`list_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conversation_message`
+/// struct for typed errors of method [`list_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conversation_message_receipt`
+/// struct for typed errors of method [`list_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationMessageReceiptError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conversation_participant`
+/// struct for typed errors of method [`list_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conversation_scoped_webhook`
+/// struct for typed errors of method [`list_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_credential`
+/// struct for typed errors of method [`list_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_participant_conversation`
+/// struct for typed errors of method [`list_participant_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListParticipantConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_role`
+/// struct for typed errors of method [`list_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_binding`
+/// struct for typed errors of method [`list_service_binding`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceBindingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_conversation`
+/// struct for typed errors of method [`list_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_conversation_message`
+/// struct for typed errors of method [`list_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_conversation_message_receipt`
+/// struct for typed errors of method [`list_service_conversation_message_receipt`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationMessageReceiptError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_conversation_participant`
+/// struct for typed errors of method [`list_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_conversation_scoped_webhook`
+/// struct for typed errors of method [`list_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_participant_conversation`
+/// struct for typed errors of method [`list_service_participant_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceParticipantConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_role`
+/// struct for typed errors of method [`list_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_user`
+/// struct for typed errors of method [`list_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service_user_conversation`
+/// struct for typed errors of method [`list_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_user`
+/// struct for typed errors of method [`list_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_user_conversation`
+/// struct for typed errors of method [`list_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_configuration`
+/// struct for typed errors of method [`update_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_configuration_webhook`
+/// struct for typed errors of method [`update_configuration_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConfigurationWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_conversation`
+/// struct for typed errors of method [`update_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_conversation_message`
+/// struct for typed errors of method [`update_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_conversation_participant`
+/// struct for typed errors of method [`update_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_conversation_scoped_webhook`
+/// struct for typed errors of method [`update_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_credential`
+/// struct for typed errors of method [`update_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_role`
+/// struct for typed errors of method [`update_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_configuration`
+/// struct for typed errors of method [`update_service_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_conversation`
+/// struct for typed errors of method [`update_service_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_conversation_message`
+/// struct for typed errors of method [`update_service_conversation_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_conversation_participant`
+/// struct for typed errors of method [`update_service_conversation_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_conversation_scoped_webhook`
+/// struct for typed errors of method [`update_service_conversation_scoped_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceConversationScopedWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_notification`
+/// struct for typed errors of method [`update_service_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_role`
+/// struct for typed errors of method [`update_service_role`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceRoleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_user`
+/// struct for typed errors of method [`update_service_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service_user_conversation`
+/// struct for typed errors of method [`update_service_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceUserConversationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_user`
+/// struct for typed errors of method [`update_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_user_conversation`
+/// struct for typed errors of method [`update_user_conversation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUserConversationError {

@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_fax`
+/// struct for passing parameters to the method [`create_fax`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFaxParams {
     /// The URL of the PDF that contains the fax. See our [security](https://www.twilio.com/docs/usage/security) page for information on how to ensure the request for your media comes from Twilio.
@@ -37,14 +37,14 @@ pub struct CreateFaxParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `delete_fax`
+/// struct for passing parameters to the method [`delete_fax`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFaxParams {
     /// The Twilio-provided string that uniquely identifies the Fax resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_fax_media`
+/// struct for passing parameters to the method [`delete_fax_media`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFaxMediaParams {
     /// The SID of the fax with the FaxMedia resource to delete.
@@ -53,14 +53,14 @@ pub struct DeleteFaxMediaParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_fax`
+/// struct for passing parameters to the method [`fetch_fax`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFaxParams {
     /// The Twilio-provided string that uniquely identifies the Fax resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_fax_media`
+/// struct for passing parameters to the method [`fetch_fax_media`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFaxMediaParams {
     /// The SID of the fax with the FaxMedia resource to fetch.
@@ -69,7 +69,7 @@ pub struct FetchFaxMediaParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_fax`
+/// struct for passing parameters to the method [`list_fax`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFaxParams {
     /// Retrieve only those faxes sent from this phone number, specified in [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
@@ -84,7 +84,7 @@ pub struct ListFaxParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_fax_media`
+/// struct for passing parameters to the method [`list_fax_media`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFaxMediaParams {
     /// The SID of the fax with the FaxMedia resources to read.
@@ -93,7 +93,7 @@ pub struct ListFaxMediaParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_fax`
+/// struct for passing parameters to the method [`update_fax`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFaxParams {
     /// The Twilio-provided string that uniquely identifies the Fax resource to update.
@@ -103,7 +103,7 @@ pub struct UpdateFaxParams {
 }
 
 
-/// struct for typed successes of method `create_fax`
+/// struct for typed successes of method [`create_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFaxSuccess {
@@ -111,7 +111,7 @@ pub enum CreateFaxSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_fax`
+/// struct for typed successes of method [`delete_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFaxSuccess {
@@ -119,7 +119,7 @@ pub enum DeleteFaxSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_fax_media`
+/// struct for typed successes of method [`delete_fax_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFaxMediaSuccess {
@@ -127,7 +127,7 @@ pub enum DeleteFaxMediaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_fax`
+/// struct for typed successes of method [`fetch_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFaxSuccess {
@@ -135,7 +135,7 @@ pub enum FetchFaxSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_fax_media`
+/// struct for typed successes of method [`fetch_fax_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFaxMediaSuccess {
@@ -143,7 +143,7 @@ pub enum FetchFaxMediaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_fax`
+/// struct for typed successes of method [`list_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFaxSuccess {
@@ -151,7 +151,7 @@ pub enum ListFaxSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_fax_media`
+/// struct for typed successes of method [`list_fax_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFaxMediaSuccess {
@@ -159,7 +159,7 @@ pub enum ListFaxMediaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_fax`
+/// struct for typed successes of method [`update_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFaxSuccess {
@@ -167,56 +167,56 @@ pub enum UpdateFaxSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_fax`
+/// struct for typed errors of method [`create_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFaxError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_fax`
+/// struct for typed errors of method [`delete_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFaxError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_fax_media`
+/// struct for typed errors of method [`delete_fax_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFaxMediaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_fax`
+/// struct for typed errors of method [`fetch_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFaxError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_fax_media`
+/// struct for typed errors of method [`fetch_fax_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFaxMediaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_fax`
+/// struct for typed errors of method [`list_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFaxError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_fax_media`
+/// struct for typed errors of method [`list_fax_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFaxMediaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_fax`
+/// struct for typed errors of method [`update_fax`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFaxError {

@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_credential_list`
+/// struct for passing parameters to the method [`create_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialListParams {
     /// The SID of the Trunk to associate the credential list with.
@@ -23,7 +23,7 @@ pub struct CreateCredentialListParams {
     pub credential_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_ip_access_control_list`
+/// struct for passing parameters to the method [`create_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIpAccessControlListParams {
     /// The SID of the Trunk to associate the IP Access Control List with.
@@ -32,7 +32,7 @@ pub struct CreateIpAccessControlListParams {
     pub ip_access_control_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_origination_url`
+/// struct for passing parameters to the method [`create_origination_url`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateOriginationUrlParams {
     /// The SID of the Trunk to associate the resource with.
@@ -49,7 +49,7 @@ pub struct CreateOriginationUrlParams {
     pub weight: i32
 }
 
-/// struct for passing parameters to the method `create_phone_number`
+/// struct for passing parameters to the method [`create_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct CreatePhoneNumberParams {
     /// The SID of the Trunk to associate the phone number with.
@@ -58,7 +58,7 @@ pub struct CreatePhoneNumberParams {
     pub phone_number_sid: String
 }
 
-/// struct for passing parameters to the method `create_trunk`
+/// struct for passing parameters to the method [`create_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTrunkParams {
     /// Whether Caller ID Name (CNAM) lookup should be enabled for the trunk. If enabled, all inbound calls to the SIP Trunk from the United States and Canada automatically perform a CNAM Lookup and display Caller ID data on your phone. See [CNAM Lookups](https://www.twilio.com/docs/sip-trunking#CNAM) for more information.
@@ -77,7 +77,7 @@ pub struct CreateTrunkParams {
     pub transfer_mode: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_credential_list`
+/// struct for passing parameters to the method [`delete_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCredentialListParams {
     /// The SID of the Trunk from which to delete the credential list.
@@ -86,7 +86,7 @@ pub struct DeleteCredentialListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_ip_access_control_list`
+/// struct for passing parameters to the method [`delete_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteIpAccessControlListParams {
     /// The SID of the Trunk from which to delete the IP Access Control List.
@@ -95,7 +95,7 @@ pub struct DeleteIpAccessControlListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_origination_url`
+/// struct for passing parameters to the method [`delete_origination_url`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteOriginationUrlParams {
     /// The SID of the Trunk from which to delete the OriginationUrl.
@@ -104,7 +104,7 @@ pub struct DeleteOriginationUrlParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_phone_number`
+/// struct for passing parameters to the method [`delete_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct DeletePhoneNumberParams {
     /// The SID of the Trunk from which to delete the PhoneNumber resource.
@@ -113,14 +113,14 @@ pub struct DeletePhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_trunk`
+/// struct for passing parameters to the method [`delete_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTrunkParams {
     /// The unique string that we created to identify the Trunk resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_credential_list`
+/// struct for passing parameters to the method [`fetch_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCredentialListParams {
     /// The SID of the Trunk from which to fetch the credential list.
@@ -129,7 +129,7 @@ pub struct FetchCredentialListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_ip_access_control_list`
+/// struct for passing parameters to the method [`fetch_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchIpAccessControlListParams {
     /// The SID of the Trunk from which to fetch the IP Access Control List.
@@ -138,7 +138,7 @@ pub struct FetchIpAccessControlListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_origination_url`
+/// struct for passing parameters to the method [`fetch_origination_url`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchOriginationUrlParams {
     /// The SID of the Trunk from which to fetch the OriginationUrl.
@@ -147,7 +147,7 @@ pub struct FetchOriginationUrlParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_phone_number`
+/// struct for passing parameters to the method [`fetch_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchPhoneNumberParams {
     /// The SID of the Trunk from which to fetch the PhoneNumber resource.
@@ -156,21 +156,21 @@ pub struct FetchPhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_recording`
+/// struct for passing parameters to the method [`fetch_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRecordingParams {
     /// The SID of the Trunk from which to fetch the recording settings.
     pub trunk_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_trunk`
+/// struct for passing parameters to the method [`fetch_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrunkParams {
     /// The unique string that we created to identify the Trunk resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_credential_list`
+/// struct for passing parameters to the method [`list_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCredentialListParams {
     /// The SID of the Trunk from which to read the credential lists.
@@ -179,7 +179,7 @@ pub struct ListCredentialListParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_ip_access_control_list`
+/// struct for passing parameters to the method [`list_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIpAccessControlListParams {
     /// The SID of the Trunk from which to read the IP Access Control Lists.
@@ -188,7 +188,7 @@ pub struct ListIpAccessControlListParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_origination_url`
+/// struct for passing parameters to the method [`list_origination_url`]
 #[derive(Clone, Debug, Default)]
 pub struct ListOriginationUrlParams {
     /// The SID of the Trunk from which to read the OriginationUrl.
@@ -197,7 +197,7 @@ pub struct ListOriginationUrlParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_phone_number`
+/// struct for passing parameters to the method [`list_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct ListPhoneNumberParams {
     /// The SID of the Trunk from which to read the PhoneNumber resources.
@@ -206,14 +206,14 @@ pub struct ListPhoneNumberParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_trunk`
+/// struct for passing parameters to the method [`list_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTrunkParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_origination_url`
+/// struct for passing parameters to the method [`update_origination_url`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateOriginationUrlParams {
     /// The SID of the Trunk from which to update the OriginationUrl.
@@ -232,7 +232,7 @@ pub struct UpdateOriginationUrlParams {
     pub weight: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_recording`
+/// struct for passing parameters to the method [`update_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRecordingParams {
     /// The SID of the Trunk that will have its recording settings updated.
@@ -243,7 +243,7 @@ pub struct UpdateRecordingParams {
     pub trim: Option<String>
 }
 
-/// struct for passing parameters to the method `update_trunk`
+/// struct for passing parameters to the method [`update_trunk`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTrunkParams {
     /// The unique string that we created to identify the OriginationUrl resource to update.
@@ -265,7 +265,7 @@ pub struct UpdateTrunkParams {
 }
 
 
-/// struct for typed successes of method `create_credential_list`
+/// struct for typed successes of method [`create_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialListSuccess {
@@ -273,7 +273,7 @@ pub enum CreateCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_ip_access_control_list`
+/// struct for typed successes of method [`create_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIpAccessControlListSuccess {
@@ -281,7 +281,7 @@ pub enum CreateIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_origination_url`
+/// struct for typed successes of method [`create_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateOriginationUrlSuccess {
@@ -289,7 +289,7 @@ pub enum CreateOriginationUrlSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_phone_number`
+/// struct for typed successes of method [`create_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePhoneNumberSuccess {
@@ -297,7 +297,7 @@ pub enum CreatePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_trunk`
+/// struct for typed successes of method [`create_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrunkSuccess {
@@ -305,7 +305,7 @@ pub enum CreateTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_credential_list`
+/// struct for typed successes of method [`delete_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialListSuccess {
@@ -313,7 +313,7 @@ pub enum DeleteCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_ip_access_control_list`
+/// struct for typed successes of method [`delete_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIpAccessControlListSuccess {
@@ -321,7 +321,7 @@ pub enum DeleteIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_origination_url`
+/// struct for typed successes of method [`delete_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteOriginationUrlSuccess {
@@ -329,7 +329,7 @@ pub enum DeleteOriginationUrlSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_phone_number`
+/// struct for typed successes of method [`delete_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeletePhoneNumberSuccess {
@@ -337,7 +337,7 @@ pub enum DeletePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_trunk`
+/// struct for typed successes of method [`delete_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrunkSuccess {
@@ -345,7 +345,7 @@ pub enum DeleteTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_credential_list`
+/// struct for typed successes of method [`fetch_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialListSuccess {
@@ -353,7 +353,7 @@ pub enum FetchCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_ip_access_control_list`
+/// struct for typed successes of method [`fetch_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIpAccessControlListSuccess {
@@ -361,7 +361,7 @@ pub enum FetchIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_origination_url`
+/// struct for typed successes of method [`fetch_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchOriginationUrlSuccess {
@@ -369,7 +369,7 @@ pub enum FetchOriginationUrlSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_phone_number`
+/// struct for typed successes of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberSuccess {
@@ -377,7 +377,7 @@ pub enum FetchPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording`
+/// struct for typed successes of method [`fetch_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingSuccess {
@@ -385,7 +385,7 @@ pub enum FetchRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_trunk`
+/// struct for typed successes of method [`fetch_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrunkSuccess {
@@ -393,7 +393,7 @@ pub enum FetchTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_credential_list`
+/// struct for typed successes of method [`list_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialListSuccess {
@@ -401,7 +401,7 @@ pub enum ListCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_ip_access_control_list`
+/// struct for typed successes of method [`list_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIpAccessControlListSuccess {
@@ -409,7 +409,7 @@ pub enum ListIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_origination_url`
+/// struct for typed successes of method [`list_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListOriginationUrlSuccess {
@@ -417,7 +417,7 @@ pub enum ListOriginationUrlSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_phone_number`
+/// struct for typed successes of method [`list_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberSuccess {
@@ -425,7 +425,7 @@ pub enum ListPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_trunk`
+/// struct for typed successes of method [`list_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrunkSuccess {
@@ -433,7 +433,7 @@ pub enum ListTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_origination_url`
+/// struct for typed successes of method [`update_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateOriginationUrlSuccess {
@@ -441,7 +441,7 @@ pub enum UpdateOriginationUrlSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_recording`
+/// struct for typed successes of method [`update_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRecordingSuccess {
@@ -449,7 +449,7 @@ pub enum UpdateRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_trunk`
+/// struct for typed successes of method [`update_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTrunkSuccess {
@@ -457,168 +457,168 @@ pub enum UpdateTrunkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_credential_list`
+/// struct for typed errors of method [`create_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_ip_access_control_list`
+/// struct for typed errors of method [`create_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_origination_url`
+/// struct for typed errors of method [`create_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateOriginationUrlError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_phone_number`
+/// struct for typed errors of method [`create_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_trunk`
+/// struct for typed errors of method [`create_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_credential_list`
+/// struct for typed errors of method [`delete_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_ip_access_control_list`
+/// struct for typed errors of method [`delete_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_origination_url`
+/// struct for typed errors of method [`delete_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteOriginationUrlError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_phone_number`
+/// struct for typed errors of method [`delete_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeletePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_trunk`
+/// struct for typed errors of method [`delete_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_credential_list`
+/// struct for typed errors of method [`fetch_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_ip_access_control_list`
+/// struct for typed errors of method [`fetch_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_origination_url`
+/// struct for typed errors of method [`fetch_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchOriginationUrlError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_phone_number`
+/// struct for typed errors of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording`
+/// struct for typed errors of method [`fetch_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trunk`
+/// struct for typed errors of method [`fetch_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_credential_list`
+/// struct for typed errors of method [`list_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_ip_access_control_list`
+/// struct for typed errors of method [`list_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_origination_url`
+/// struct for typed errors of method [`list_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListOriginationUrlError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_phone_number`
+/// struct for typed errors of method [`list_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_trunk`
+/// struct for typed errors of method [`list_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrunkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_origination_url`
+/// struct for typed errors of method [`update_origination_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateOriginationUrlError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_recording`
+/// struct for typed errors of method [`update_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_trunk`
+/// struct for typed errors of method [`update_trunk`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTrunkError {

@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_message_interaction`
+/// struct for passing parameters to the method [`create_message_interaction`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateMessageInteractionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
@@ -29,7 +29,7 @@ pub struct CreateMessageInteractionParams {
     pub media_url: Option<Vec<String>>
 }
 
-/// struct for passing parameters to the method `create_participant`
+/// struct for passing parameters to the method [`create_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateParticipantParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
@@ -48,7 +48,7 @@ pub struct CreateParticipantParams {
     pub proxy_identifier_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_phone_number`
+/// struct for passing parameters to the method [`create_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct CreatePhoneNumberParams {
     /// The SID parent [Service](https://www.twilio.com/docs/proxy/api/service) resource of the new PhoneNumber resource.
@@ -61,7 +61,7 @@ pub struct CreatePhoneNumberParams {
     pub sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. **This value should not have PII.**
@@ -82,7 +82,7 @@ pub struct CreateServiceParams {
     pub out_of_session_callback_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_session`
+/// struct for passing parameters to the method [`create_session`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSessionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
@@ -103,7 +103,7 @@ pub struct CreateSessionParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_short_code`
+/// struct for passing parameters to the method [`create_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateShortCodeParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
@@ -112,7 +112,7 @@ pub struct CreateShortCodeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_interaction`
+/// struct for passing parameters to the method [`delete_interaction`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteInteractionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to delete.
@@ -123,7 +123,7 @@ pub struct DeleteInteractionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_participant`
+/// struct for passing parameters to the method [`delete_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteParticipantParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to delete.
@@ -134,7 +134,7 @@ pub struct DeleteParticipantParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_phone_number`
+/// struct for passing parameters to the method [`delete_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct DeletePhoneNumberParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to delete.
@@ -143,14 +143,14 @@ pub struct DeletePhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_session`
+/// struct for passing parameters to the method [`delete_session`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSessionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to delete.
@@ -159,7 +159,7 @@ pub struct DeleteSessionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_short_code`
+/// struct for passing parameters to the method [`delete_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteShortCodeParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource to delete the ShortCode resource from.
@@ -168,7 +168,7 @@ pub struct DeleteShortCodeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_interaction`
+/// struct for passing parameters to the method [`fetch_interaction`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchInteractionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
@@ -179,7 +179,7 @@ pub struct FetchInteractionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_message_interaction`
+/// struct for passing parameters to the method [`fetch_message_interaction`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchMessageInteractionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
@@ -192,7 +192,7 @@ pub struct FetchMessageInteractionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_participant`
+/// struct for passing parameters to the method [`fetch_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchParticipantParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
@@ -203,7 +203,7 @@ pub struct FetchParticipantParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_phone_number`
+/// struct for passing parameters to the method [`fetch_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchPhoneNumberParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to fetch.
@@ -212,14 +212,14 @@ pub struct FetchPhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_session`
+/// struct for passing parameters to the method [`fetch_session`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSessionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
@@ -228,7 +228,7 @@ pub struct FetchSessionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_short_code`
+/// struct for passing parameters to the method [`fetch_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchShortCodeParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) to fetch the resource from.
@@ -237,7 +237,7 @@ pub struct FetchShortCodeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_interaction`
+/// struct for passing parameters to the method [`list_interaction`]
 #[derive(Clone, Debug, Default)]
 pub struct ListInteractionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) to read the resources from.
@@ -248,7 +248,7 @@ pub struct ListInteractionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_message_interaction`
+/// struct for passing parameters to the method [`list_message_interaction`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMessageInteractionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) to read the resources from.
@@ -261,7 +261,7 @@ pub struct ListMessageInteractionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_participant`
+/// struct for passing parameters to the method [`list_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct ListParticipantParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resources to read.
@@ -272,7 +272,7 @@ pub struct ListParticipantParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_phone_number`
+/// struct for passing parameters to the method [`list_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct ListPhoneNumberParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resources to read.
@@ -281,14 +281,14 @@ pub struct ListPhoneNumberParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_session`
+/// struct for passing parameters to the method [`list_session`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSessionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to read.
@@ -297,7 +297,7 @@ pub struct ListSessionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_short_code`
+/// struct for passing parameters to the method [`list_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct ListShortCodeParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) to read the resources from.
@@ -306,7 +306,7 @@ pub struct ListShortCodeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_phone_number`
+/// struct for passing parameters to the method [`update_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdatePhoneNumberParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to update.
@@ -317,7 +317,7 @@ pub struct UpdatePhoneNumberParams {
     pub is_reserved: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_service`
+/// struct for passing parameters to the method [`update_service`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceParams {
     /// The Twilio-provided string that uniquely identifies the Service resource to update.
@@ -340,7 +340,7 @@ pub struct UpdateServiceParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_session`
+/// struct for passing parameters to the method [`update_session`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSessionParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to update.
@@ -357,7 +357,7 @@ pub struct UpdateSessionParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_short_code`
+/// struct for passing parameters to the method [`update_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateShortCodeParams {
     /// The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to update.
@@ -369,7 +369,7 @@ pub struct UpdateShortCodeParams {
 }
 
 
-/// struct for typed successes of method `create_message_interaction`
+/// struct for typed successes of method [`create_message_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessageInteractionSuccess {
@@ -377,7 +377,7 @@ pub enum CreateMessageInteractionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_participant`
+/// struct for typed successes of method [`create_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateParticipantSuccess {
@@ -385,7 +385,7 @@ pub enum CreateParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_phone_number`
+/// struct for typed successes of method [`create_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePhoneNumberSuccess {
@@ -393,7 +393,7 @@ pub enum CreatePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -401,7 +401,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_session`
+/// struct for typed successes of method [`create_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSessionSuccess {
@@ -409,7 +409,7 @@ pub enum CreateSessionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_short_code`
+/// struct for typed successes of method [`create_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateShortCodeSuccess {
@@ -417,7 +417,7 @@ pub enum CreateShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_interaction`
+/// struct for typed successes of method [`delete_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteInteractionSuccess {
@@ -425,7 +425,7 @@ pub enum DeleteInteractionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_participant`
+/// struct for typed successes of method [`delete_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteParticipantSuccess {
@@ -433,7 +433,7 @@ pub enum DeleteParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_phone_number`
+/// struct for typed successes of method [`delete_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeletePhoneNumberSuccess {
@@ -441,7 +441,7 @@ pub enum DeletePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -449,7 +449,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_session`
+/// struct for typed successes of method [`delete_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSessionSuccess {
@@ -457,7 +457,7 @@ pub enum DeleteSessionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_short_code`
+/// struct for typed successes of method [`delete_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteShortCodeSuccess {
@@ -465,7 +465,7 @@ pub enum DeleteShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_interaction`
+/// struct for typed successes of method [`fetch_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchInteractionSuccess {
@@ -473,7 +473,7 @@ pub enum FetchInteractionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_message_interaction`
+/// struct for typed successes of method [`fetch_message_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessageInteractionSuccess {
@@ -481,7 +481,7 @@ pub enum FetchMessageInteractionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_participant`
+/// struct for typed successes of method [`fetch_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchParticipantSuccess {
@@ -489,7 +489,7 @@ pub enum FetchParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_phone_number`
+/// struct for typed successes of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberSuccess {
@@ -497,7 +497,7 @@ pub enum FetchPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -505,7 +505,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_session`
+/// struct for typed successes of method [`fetch_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSessionSuccess {
@@ -513,7 +513,7 @@ pub enum FetchSessionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_short_code`
+/// struct for typed successes of method [`fetch_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchShortCodeSuccess {
@@ -521,7 +521,7 @@ pub enum FetchShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_interaction`
+/// struct for typed successes of method [`list_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListInteractionSuccess {
@@ -529,7 +529,7 @@ pub enum ListInteractionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_message_interaction`
+/// struct for typed successes of method [`list_message_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessageInteractionSuccess {
@@ -537,7 +537,7 @@ pub enum ListMessageInteractionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_participant`
+/// struct for typed successes of method [`list_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListParticipantSuccess {
@@ -545,7 +545,7 @@ pub enum ListParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_phone_number`
+/// struct for typed successes of method [`list_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberSuccess {
@@ -553,7 +553,7 @@ pub enum ListPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -561,7 +561,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_session`
+/// struct for typed successes of method [`list_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSessionSuccess {
@@ -569,7 +569,7 @@ pub enum ListSessionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_short_code`
+/// struct for typed successes of method [`list_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListShortCodeSuccess {
@@ -577,7 +577,7 @@ pub enum ListShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_phone_number`
+/// struct for typed successes of method [`update_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdatePhoneNumberSuccess {
@@ -585,7 +585,7 @@ pub enum UpdatePhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service`
+/// struct for typed successes of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceSuccess {
@@ -593,7 +593,7 @@ pub enum UpdateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_session`
+/// struct for typed successes of method [`update_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSessionSuccess {
@@ -601,7 +601,7 @@ pub enum UpdateSessionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_short_code`
+/// struct for typed successes of method [`update_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateShortCodeSuccess {
@@ -609,210 +609,210 @@ pub enum UpdateShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_message_interaction`
+/// struct for typed errors of method [`create_message_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessageInteractionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_participant`
+/// struct for typed errors of method [`create_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_phone_number`
+/// struct for typed errors of method [`create_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_session`
+/// struct for typed errors of method [`create_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSessionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_short_code`
+/// struct for typed errors of method [`create_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_interaction`
+/// struct for typed errors of method [`delete_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteInteractionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_participant`
+/// struct for typed errors of method [`delete_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_phone_number`
+/// struct for typed errors of method [`delete_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeletePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_session`
+/// struct for typed errors of method [`delete_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSessionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_short_code`
+/// struct for typed errors of method [`delete_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_interaction`
+/// struct for typed errors of method [`fetch_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchInteractionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_message_interaction`
+/// struct for typed errors of method [`fetch_message_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessageInteractionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_participant`
+/// struct for typed errors of method [`fetch_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_phone_number`
+/// struct for typed errors of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_session`
+/// struct for typed errors of method [`fetch_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSessionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_short_code`
+/// struct for typed errors of method [`fetch_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_interaction`
+/// struct for typed errors of method [`list_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListInteractionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_message_interaction`
+/// struct for typed errors of method [`list_message_interaction`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessageInteractionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_participant`
+/// struct for typed errors of method [`list_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_phone_number`
+/// struct for typed errors of method [`list_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_session`
+/// struct for typed errors of method [`list_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSessionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_short_code`
+/// struct for typed errors of method [`list_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_phone_number`
+/// struct for typed errors of method [`update_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdatePhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service`
+/// struct for typed errors of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_session`
+/// struct for typed errors of method [`update_session`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSessionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_short_code`
+/// struct for typed errors of method [`update_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateShortCodeError {
