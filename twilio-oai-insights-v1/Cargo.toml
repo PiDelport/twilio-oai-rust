@@ -1,6 +1,6 @@
 [package]
 name = "twilio-oai-insights-v1"
-version = "0.20.2"
+version = "0.20.3"
 authors = ["OpenAPI Generator team and contributors"]
 edition = "2018"
 
