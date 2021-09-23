@@ -1,0 +1,7 @@
+# https://openapi-generator.tech/docs/customization/#ignore-file-format
+
+*/.gitignore
+*/.openapi-generator-ignore
+*/.travis.yml
+*/docs/
+*/git_push.sh

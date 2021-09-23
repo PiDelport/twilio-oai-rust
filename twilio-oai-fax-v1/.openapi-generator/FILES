@@ -1,0 +1,12 @@
+Cargo.toml
+README.md
+src/apis/configuration.rs
+src/apis/default_api.rs
+src/apis/mod.rs
+src/lib.rs
+src/models/fax_v1_fax.rs
+src/models/fax_v1_fax_fax_media.rs
+src/models/list_fax_media_response.rs
+src/models/list_fax_response.rs
+src/models/list_fax_response_meta.rs
+src/models/mod.rs
