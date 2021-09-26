@@ -31,6 +31,7 @@ for spec_file in "$@"; do
 
     ./openapi-generator-cli generate \
         --generator-name rust \
+        --reserved-words-mappings 'type=type_' \
         --input-spec "$spec_file" \
         --ignore-file-override '.openapi-generator-ignore' \
         --library 'reqwest' \
