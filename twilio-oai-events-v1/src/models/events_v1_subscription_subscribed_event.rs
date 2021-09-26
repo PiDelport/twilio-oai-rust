@@ -21,7 +21,7 @@ pub struct EventsV1SubscriptionSubscribedEvent {
     pub subscription_sid: Option<String>,
     /// Type of event being subscribed to.
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// The URL of this resource.
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -33,7 +33,7 @@ impl EventsV1SubscriptionSubscribedEvent {
             account_sid: None,
             schema_version: None,
             subscription_sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

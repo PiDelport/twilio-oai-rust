@@ -37,7 +37,7 @@ pub struct IpMessagingV2ServiceChannelMessage {
     #[serde(rename = "to", skip_serializing_if = "Option::is_none")]
     pub to: Option<String>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
     #[serde(rename = "was_edited", skip_serializing_if = "Option::is_none")]
@@ -60,7 +60,7 @@ impl IpMessagingV2ServiceChannelMessage {
             service_sid: None,
             sid: None,
             to: None,
-            _type: None,
+            type_: None,
             url: None,
             was_edited: None,
         }

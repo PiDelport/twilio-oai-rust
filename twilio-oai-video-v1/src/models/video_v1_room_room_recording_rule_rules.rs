@@ -19,7 +19,7 @@ pub struct VideoV1RoomRoomRecordingRuleRules {
     #[serde(rename = "track", skip_serializing_if = "Option::is_none")]
     pub track: Option<String>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
 }
 
 impl VideoV1RoomRoomRecordingRuleRules {
@@ -29,7 +29,7 @@ impl VideoV1RoomRoomRecordingRuleRules {
             kind: None,
             publisher: None,
             track: None,
-            _type: None,
+            type_: None,
         }
     }
 }

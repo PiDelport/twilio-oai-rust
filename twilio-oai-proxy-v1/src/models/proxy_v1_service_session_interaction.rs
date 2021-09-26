@@ -93,7 +93,7 @@ pub struct ProxyV1ServiceSessionInteraction {
     pub sid: Option<String>,
     /// The Type of the Interaction
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// The absolute URL of the Interaction resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -119,7 +119,7 @@ impl ProxyV1ServiceSessionInteraction {
             service_sid: None,
             session_sid: None,
             sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

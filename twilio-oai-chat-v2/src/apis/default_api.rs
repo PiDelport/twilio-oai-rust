@@ -31,7 +31,7 @@ pub struct CreateChannelParams {
     /// A descriptive string that you create to describe the new resource. It can be up to 64 characters long.
     pub friendly_name: Option<String>,
     /// The visibility of the channel. Can be: `public` or `private` and defaults to `public`.
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the Channel resource's `sid` in the URL. This value must be 64 characters or less in length and be unique within the Service.
     pub unique_name: Option<String>,
 }
@@ -44,7 +44,7 @@ pub struct CreateChannelWebhookParams {
     /// The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Channel Webhook resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
     pub channel_sid: String,
     /// The type of webhook. Can be: `webhook`, `studio`, or `trigger`.
-    pub _type: String,
+    pub type_: String,
     /// The events that cause us to call the Channel Webhook. Used when `type` is `webhook`. This parameter takes only one event. To specify more than one event, repeat this parameter for each event. For the list of possible events, see [Webhook Event Triggers](https://www.twilio.com/docs/chat/webhook-events#webhook-event-trigger).
     pub configuration_filters: Option<Vec<String>>,
     /// The SID of the Studio [Flow](https://www.twilio.com/docs/studio/rest-api/flow) to call when an event in `configuration.filters` occurs. Used only when `type` is `studio`.
@@ -63,7 +63,7 @@ pub struct CreateChannelWebhookParams {
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialParams {
     /// The type of push-notification service the credential is for. Can be: `gcm`, `fcm`, or `apn`.
-    pub _type: String,
+    pub type_: String,
     /// [GCM only] The API key for the project that was obtained from the Google Developer console for your GCM Service application credential.
     pub api_key: Option<String>,
     /// [APN only] The URL encoded representation of the certificate. For example,  `-----BEGIN CERTIFICATE----- MIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEF.....A== -----END CERTIFICATE-----`
@@ -151,7 +151,7 @@ pub struct CreateRoleParams {
     /// A permission that you grant to the new role. Only one permission can be granted per parameter. To assign more than one permission, repeat this parameter for each permission value. The values for this parameter depend on the role's `type`.
     pub permission: Vec<String>,
     /// The type of role. Can be: `channel` for [Channel](https://www.twilio.com/docs/chat/channels) roles or `deployment` for [Service](https://www.twilio.com/docs/chat/rest/service-resource) roles.
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`create_service`]
@@ -435,7 +435,7 @@ pub struct ListChannelParams {
     /// The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the Channel resources from.
     pub service_sid: String,
     /// The visibility of the Channels to read. Can be: `public` or `private` and defaults to `public`.
-    pub _type: Option<Vec<String>>,
+    pub type_: Option<Vec<String>>,
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>,
 }
@@ -1599,7 +1599,7 @@ pub async fn create_channel(
     let date_created = params.date_created;
     let date_updated = params.date_updated;
     let friendly_name = params.friendly_name;
-    let _type = params._type;
+    let type_ = params.type_;
     let unique_name = params.unique_name;
 
     let local_var_client = &local_var_configuration.client;
@@ -1644,7 +1644,7 @@ pub async fn create_channel(
     if let Some(local_var_param_value) = friendly_name {
         local_var_form_params.insert("FriendlyName", local_var_param_value.to_string());
     }
-    if let Some(local_var_param_value) = _type {
+    if let Some(local_var_param_value) = type_ {
         local_var_form_params.insert("Type", local_var_param_value.to_string());
     }
     if let Some(local_var_param_value) = unique_name {
@@ -1688,7 +1688,7 @@ pub async fn create_channel_webhook(
     // unbox the parameters
     let service_sid = params.service_sid;
     let channel_sid = params.channel_sid;
-    let _type = params._type;
+    let type_ = params.type_;
     let configuration_filters = params.configuration_filters;
     let configuration_flow_sid = params.configuration_flow_sid;
     let configuration_method = params.configuration_method;
@@ -1755,7 +1755,7 @@ pub async fn create_channel_webhook(
     if let Some(local_var_param_value) = configuration_url {
         local_var_form_params.insert("Configuration.Url", local_var_param_value.to_string());
     }
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -1792,7 +1792,7 @@ pub async fn create_credential(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let _type = params._type;
+    let type_ = params.type_;
     let api_key = params.api_key;
     let certificate = params.certificate;
     let friendly_name = params.friendly_name;
@@ -1835,7 +1835,7 @@ pub async fn create_credential(
     if let Some(local_var_param_value) = secret {
         local_var_form_params.insert("Secret", local_var_param_value.to_string());
     }
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -2138,7 +2138,7 @@ pub async fn create_role(
     let service_sid = params.service_sid;
     let friendly_name = params.friendly_name;
     let permission = params.permission;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -2171,7 +2171,7 @@ pub async fn create_role(
             .join(",")
             .to_string(),
     );
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -3885,7 +3885,7 @@ pub async fn list_channel(
 
     // unbox the parameters
     let service_sid = params.service_sid;
-    let _type = params._type;
+    let type_ = params.type_;
     let page_size = params.page_size;
 
     let local_var_client = &local_var_configuration.client;
@@ -3898,7 +3898,7 @@ pub async fn list_channel(
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
-    if let Some(ref local_var_str) = _type {
+    if let Some(ref local_var_str) = type_ {
         local_var_req_builder = local_var_req_builder.query(&[(
             "Type",
             &local_var_str

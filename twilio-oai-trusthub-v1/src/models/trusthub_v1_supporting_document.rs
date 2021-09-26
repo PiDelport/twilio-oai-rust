@@ -36,7 +36,7 @@ pub struct TrusthubV1SupportingDocument {
     pub status: Option<Status>,
     /// The type of the Supporting Document
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// The absolute URL of the Supporting Document resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -53,7 +53,7 @@ impl TrusthubV1SupportingDocument {
             mime_type: None,
             sid: None,
             status: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

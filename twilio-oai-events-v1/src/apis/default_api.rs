@@ -46,7 +46,7 @@ pub struct CreateSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
     pub subscription_sid: String,
     /// Type of event being subscribed to.
-    pub _type: String,
+    pub type_: String,
     /// The schema version that the subscription should use.
     pub schema_version: Option<i32>,
 }
@@ -75,7 +75,7 @@ pub struct DeleteSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
     pub subscription_sid: String,
     /// Type of event being subscribed to.
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`delete_subscription`]
@@ -89,7 +89,7 @@ pub struct DeleteSubscriptionParams {
 #[derive(Clone, Debug, Default)]
 pub struct FetchEventTypeParams {
     /// A string that uniquely identifies this Event Type.
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`fetch_schema`]
@@ -121,7 +121,7 @@ pub struct FetchSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
     pub subscription_sid: String,
     /// Type of event being subscribed to.
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`fetch_subscription`]
@@ -193,7 +193,7 @@ pub struct UpdateSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
     pub subscription_sid: String,
     /// Type of event being subscribed to.
-    pub _type: String,
+    pub type_: String,
     /// The schema version that the subscription should use.
     pub schema_version: Option<i32>,
 }
@@ -729,7 +729,7 @@ pub async fn create_subscribed_event(
 
     // unbox the parameters
     let subscription_sid = params.subscription_sid;
-    let _type = params._type;
+    let type_ = params.type_;
     let schema_version = params.schema_version;
 
     let local_var_client = &local_var_configuration.client;
@@ -756,7 +756,7 @@ pub async fn create_subscribed_event(
     if let Some(local_var_param_value) = schema_version {
         local_var_form_params.insert("SchemaVersion", local_var_param_value.to_string());
     }
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -922,7 +922,7 @@ pub async fn delete_subscribed_event(
 
     // unbox the parameters
     let subscription_sid = params.subscription_sid;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -930,7 +930,7 @@ pub async fn delete_subscribed_event(
         "{}/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}",
         local_var_configuration.base_path,
         SubscriptionSid = crate::apis::urlencode(subscription_sid),
-        Type = crate::apis::urlencode(_type)
+        Type = crate::apis::urlencode(type_)
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
@@ -1039,14 +1039,14 @@ pub async fn fetch_event_type(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
     let local_var_uri_str = format!(
         "{}/v1/Types/{Type}",
         local_var_configuration.base_path,
-        Type = crate::apis::urlencode(_type)
+        Type = crate::apis::urlencode(type_)
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
@@ -1274,7 +1274,7 @@ pub async fn fetch_subscribed_event(
 
     // unbox the parameters
     let subscription_sid = params.subscription_sid;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -1282,7 +1282,7 @@ pub async fn fetch_subscribed_event(
         "{}/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}",
         local_var_configuration.base_path,
         SubscriptionSid = crate::apis::urlencode(subscription_sid),
-        Type = crate::apis::urlencode(_type)
+        Type = crate::apis::urlencode(type_)
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
@@ -1773,7 +1773,7 @@ pub async fn update_subscribed_event(
 
     // unbox the parameters
     let subscription_sid = params.subscription_sid;
-    let _type = params._type;
+    let type_ = params.type_;
     let schema_version = params.schema_version;
 
     let local_var_client = &local_var_configuration.client;
@@ -1782,7 +1782,7 @@ pub async fn update_subscribed_event(
         "{}/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}",
         local_var_configuration.base_path,
         SubscriptionSid = crate::apis::urlencode(subscription_sid),
-        Type = crate::apis::urlencode(_type)
+        Type = crate::apis::urlencode(type_)
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());

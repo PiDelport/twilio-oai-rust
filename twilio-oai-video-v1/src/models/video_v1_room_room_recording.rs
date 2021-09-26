@@ -54,7 +54,7 @@ pub struct VideoV1RoomRoomRecording {
     pub track_name: Option<String>,
     /// The recording's media type
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// The absolute URL of the resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -77,7 +77,7 @@ impl VideoV1RoomRoomRecording {
             source_sid: None,
             status: None,
             track_name: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

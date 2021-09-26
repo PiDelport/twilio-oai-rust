@@ -25,7 +25,7 @@ pub struct IpMessagingV2ServiceRole {
     #[serde(rename = "sid", skip_serializing_if = "Option::is_none")]
     pub sid: Option<String>,
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
 }
@@ -40,7 +40,7 @@ impl IpMessagingV2ServiceRole {
             permissions: None,
             service_sid: None,
             sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }
