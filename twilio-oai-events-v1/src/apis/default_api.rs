@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_sink`
+/// struct for passing parameters to the method [`create_sink`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSinkParams {
     /// A human readable description for the Sink **This value should not contain PII.**
@@ -25,14 +25,14 @@ pub struct CreateSinkParams {
     pub sink_type: String
 }
 
-/// struct for passing parameters to the method `create_sink_test`
+/// struct for passing parameters to the method [`create_sink_test`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSinkTestParams {
     /// A 34 character string that uniquely identifies the Sink to be Tested.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `create_sink_validate`
+/// struct for passing parameters to the method [`create_sink_validate`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSinkValidateParams {
     /// A 34 character string that uniquely identifies the Sink being validated.
@@ -41,7 +41,7 @@ pub struct CreateSinkValidateParams {
     pub test_id: String
 }
 
-/// struct for passing parameters to the method `create_subscribed_event`
+/// struct for passing parameters to the method [`create_subscribed_event`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
@@ -52,7 +52,7 @@ pub struct CreateSubscribedEventParams {
     pub schema_version: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_subscription`
+/// struct for passing parameters to the method [`create_subscription`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSubscriptionParams {
     /// A human readable description for the Subscription **This value should not contain PII.**
@@ -63,14 +63,14 @@ pub struct CreateSubscriptionParams {
     pub types: Vec<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `delete_sink`
+/// struct for passing parameters to the method [`delete_sink`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSinkParams {
     /// A 34 character string that uniquely identifies this Sink.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_subscribed_event`
+/// struct for passing parameters to the method [`delete_subscribed_event`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
@@ -79,28 +79,28 @@ pub struct DeleteSubscribedEventParams {
     pub _type: String
 }
 
-/// struct for passing parameters to the method `delete_subscription`
+/// struct for passing parameters to the method [`delete_subscription`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSubscriptionParams {
     /// A 34 character string that uniquely identifies this Subscription.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_event_type`
+/// struct for passing parameters to the method [`fetch_event_type`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEventTypeParams {
     /// A string that uniquely identifies this Event Type.
     pub _type: String
 }
 
-/// struct for passing parameters to the method `fetch_schema`
+/// struct for passing parameters to the method [`fetch_schema`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSchemaParams {
     /// The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
     pub id: String
 }
 
-/// struct for passing parameters to the method `fetch_schema_version`
+/// struct for passing parameters to the method [`fetch_schema_version`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSchemaVersionParams {
     /// The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
@@ -109,14 +109,14 @@ pub struct FetchSchemaVersionParams {
     pub schema_version: i32
 }
 
-/// struct for passing parameters to the method `fetch_sink`
+/// struct for passing parameters to the method [`fetch_sink`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSinkParams {
     /// A 34 character string that uniquely identifies this Sink.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_subscribed_event`
+/// struct for passing parameters to the method [`fetch_subscribed_event`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
@@ -125,14 +125,14 @@ pub struct FetchSubscribedEventParams {
     pub _type: String
 }
 
-/// struct for passing parameters to the method `fetch_subscription`
+/// struct for passing parameters to the method [`fetch_subscription`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSubscriptionParams {
     /// A 34 character string that uniquely identifies this Subscription.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_event_type`
+/// struct for passing parameters to the method [`list_event_type`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEventTypeParams {
     /// A string parameter filtering the results to return only the Event Types using a given schema.
@@ -141,7 +141,7 @@ pub struct ListEventTypeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_schema_version`
+/// struct for passing parameters to the method [`list_schema_version`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSchemaVersionParams {
     /// The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
@@ -150,7 +150,7 @@ pub struct ListSchemaVersionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sink`
+/// struct for passing parameters to the method [`list_sink`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSinkParams {
     /// A boolean query parameter filtering the results to return sinks used/not used by a subscription.
@@ -161,7 +161,7 @@ pub struct ListSinkParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_subscribed_event`
+/// struct for passing parameters to the method [`list_subscribed_event`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
@@ -170,7 +170,7 @@ pub struct ListSubscribedEventParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_subscription`
+/// struct for passing parameters to the method [`list_subscription`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSubscriptionParams {
     /// The SID of the sink that the list of Subscriptions should be filtered by.
@@ -179,7 +179,7 @@ pub struct ListSubscriptionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_sink`
+/// struct for passing parameters to the method [`update_sink`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSinkParams {
     /// A 34 character string that uniquely identifies this Sink.
@@ -188,7 +188,7 @@ pub struct UpdateSinkParams {
     pub description: String
 }
 
-/// struct for passing parameters to the method `update_subscribed_event`
+/// struct for passing parameters to the method [`update_subscribed_event`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSubscribedEventParams {
     /// The unique SID identifier of the Subscription.
@@ -199,7 +199,7 @@ pub struct UpdateSubscribedEventParams {
     pub schema_version: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_subscription`
+/// struct for passing parameters to the method [`update_subscription`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSubscriptionParams {
     /// A 34 character string that uniquely identifies this Subscription.
@@ -211,7 +211,7 @@ pub struct UpdateSubscriptionParams {
 }
 
 
-/// struct for typed successes of method `create_sink`
+/// struct for typed successes of method [`create_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSinkSuccess {
@@ -219,7 +219,7 @@ pub enum CreateSinkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sink_test`
+/// struct for typed successes of method [`create_sink_test`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSinkTestSuccess {
@@ -227,7 +227,7 @@ pub enum CreateSinkTestSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sink_validate`
+/// struct for typed successes of method [`create_sink_validate`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSinkValidateSuccess {
@@ -235,7 +235,7 @@ pub enum CreateSinkValidateSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_subscribed_event`
+/// struct for typed successes of method [`create_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSubscribedEventSuccess {
@@ -243,7 +243,7 @@ pub enum CreateSubscribedEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_subscription`
+/// struct for typed successes of method [`create_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSubscriptionSuccess {
@@ -251,7 +251,7 @@ pub enum CreateSubscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sink`
+/// struct for typed successes of method [`delete_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSinkSuccess {
@@ -259,7 +259,7 @@ pub enum DeleteSinkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_subscribed_event`
+/// struct for typed successes of method [`delete_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSubscribedEventSuccess {
@@ -267,7 +267,7 @@ pub enum DeleteSubscribedEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_subscription`
+/// struct for typed successes of method [`delete_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSubscriptionSuccess {
@@ -275,7 +275,7 @@ pub enum DeleteSubscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_event_type`
+/// struct for typed successes of method [`fetch_event_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEventTypeSuccess {
@@ -283,7 +283,7 @@ pub enum FetchEventTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_schema`
+/// struct for typed successes of method [`fetch_schema`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSchemaSuccess {
@@ -291,7 +291,7 @@ pub enum FetchSchemaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_schema_version`
+/// struct for typed successes of method [`fetch_schema_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSchemaVersionSuccess {
@@ -299,7 +299,7 @@ pub enum FetchSchemaVersionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sink`
+/// struct for typed successes of method [`fetch_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSinkSuccess {
@@ -307,7 +307,7 @@ pub enum FetchSinkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_subscribed_event`
+/// struct for typed successes of method [`fetch_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSubscribedEventSuccess {
@@ -315,7 +315,7 @@ pub enum FetchSubscribedEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_subscription`
+/// struct for typed successes of method [`fetch_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSubscriptionSuccess {
@@ -323,7 +323,7 @@ pub enum FetchSubscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_event_type`
+/// struct for typed successes of method [`list_event_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventTypeSuccess {
@@ -331,7 +331,7 @@ pub enum ListEventTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_schema_version`
+/// struct for typed successes of method [`list_schema_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSchemaVersionSuccess {
@@ -339,7 +339,7 @@ pub enum ListSchemaVersionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sink`
+/// struct for typed successes of method [`list_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSinkSuccess {
@@ -347,7 +347,7 @@ pub enum ListSinkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_subscribed_event`
+/// struct for typed successes of method [`list_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSubscribedEventSuccess {
@@ -355,7 +355,7 @@ pub enum ListSubscribedEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_subscription`
+/// struct for typed successes of method [`list_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSubscriptionSuccess {
@@ -363,7 +363,7 @@ pub enum ListSubscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sink`
+/// struct for typed successes of method [`update_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSinkSuccess {
@@ -371,7 +371,7 @@ pub enum UpdateSinkSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_subscribed_event`
+/// struct for typed successes of method [`update_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSubscribedEventSuccess {
@@ -379,7 +379,7 @@ pub enum UpdateSubscribedEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_subscription`
+/// struct for typed successes of method [`update_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSubscriptionSuccess {
@@ -387,154 +387,154 @@ pub enum UpdateSubscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sink`
+/// struct for typed errors of method [`create_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSinkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sink_test`
+/// struct for typed errors of method [`create_sink_test`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSinkTestError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sink_validate`
+/// struct for typed errors of method [`create_sink_validate`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSinkValidateError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_subscribed_event`
+/// struct for typed errors of method [`create_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSubscribedEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_subscription`
+/// struct for typed errors of method [`create_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSubscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sink`
+/// struct for typed errors of method [`delete_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSinkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_subscribed_event`
+/// struct for typed errors of method [`delete_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSubscribedEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_subscription`
+/// struct for typed errors of method [`delete_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSubscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_event_type`
+/// struct for typed errors of method [`fetch_event_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEventTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_schema`
+/// struct for typed errors of method [`fetch_schema`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSchemaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_schema_version`
+/// struct for typed errors of method [`fetch_schema_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSchemaVersionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sink`
+/// struct for typed errors of method [`fetch_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSinkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_subscribed_event`
+/// struct for typed errors of method [`fetch_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSubscribedEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_subscription`
+/// struct for typed errors of method [`fetch_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSubscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_event_type`
+/// struct for typed errors of method [`list_event_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_schema_version`
+/// struct for typed errors of method [`list_schema_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSchemaVersionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sink`
+/// struct for typed errors of method [`list_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSinkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_subscribed_event`
+/// struct for typed errors of method [`list_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSubscribedEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_subscription`
+/// struct for typed errors of method [`list_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSubscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sink`
+/// struct for typed errors of method [`update_sink`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSinkError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_subscribed_event`
+/// struct for typed errors of method [`update_subscribed_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSubscribedEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_subscription`
+/// struct for typed errors of method [`update_subscription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSubscriptionError {

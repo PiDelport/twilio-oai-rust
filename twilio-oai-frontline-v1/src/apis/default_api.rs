@@ -14,14 +14,14 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `fetch_user`
+/// struct for passing parameters to the method [`fetch_user`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchUserParams {
     /// The SID of the User resource to fetch. This value can be either the `sid` or the `identity` of the User resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `update_user`
+/// struct for passing parameters to the method [`update_user`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateUserParams {
     /// The SID of the User resource to update. This value can be either the `sid` or the `identity` of the User resource to update.
@@ -35,7 +35,7 @@ pub struct UpdateUserParams {
 }
 
 
-/// struct for typed successes of method `fetch_user`
+/// struct for typed successes of method [`fetch_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUserSuccess {
@@ -43,7 +43,7 @@ pub enum FetchUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_user`
+/// struct for typed successes of method [`update_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUserSuccess {
@@ -51,14 +51,14 @@ pub enum UpdateUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_user`
+/// struct for typed errors of method [`fetch_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_user`
+/// struct for typed errors of method [`update_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUserError {

@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_export_custom_job`
+/// struct for passing parameters to the method [`create_export_custom_job`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateExportCustomJobParams {
     /// The type of communication – Messages or Calls, Conferences, and Participants
@@ -33,14 +33,14 @@ pub struct CreateExportCustomJobParams {
     pub webhook_url: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_job`
+/// struct for passing parameters to the method [`delete_job`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteJobParams {
     /// The unique string that that we created to identify the Bulk Export job
     pub job_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_day`
+/// struct for passing parameters to the method [`fetch_day`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDayParams {
     /// The type of communication – Messages, Calls, Conferences, and Participants
@@ -49,28 +49,28 @@ pub struct FetchDayParams {
     pub day: String
 }
 
-/// struct for passing parameters to the method `fetch_export`
+/// struct for passing parameters to the method [`fetch_export`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchExportParams {
     /// The type of communication – Messages, Calls, Conferences, and Participants
     pub resource_type: String
 }
 
-/// struct for passing parameters to the method `fetch_export_configuration`
+/// struct for passing parameters to the method [`fetch_export_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchExportConfigurationParams {
     /// The type of communication – Messages, Calls, Conferences, and Participants
     pub resource_type: String
 }
 
-/// struct for passing parameters to the method `fetch_job`
+/// struct for passing parameters to the method [`fetch_job`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchJobParams {
     /// The unique string that that we created to identify the Bulk Export job
     pub job_sid: String
 }
 
-/// struct for passing parameters to the method `list_day`
+/// struct for passing parameters to the method [`list_day`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDayParams {
     /// The type of communication – Messages, Calls, Conferences, and Participants
@@ -79,7 +79,7 @@ pub struct ListDayParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_export_custom_job`
+/// struct for passing parameters to the method [`list_export_custom_job`]
 #[derive(Clone, Debug, Default)]
 pub struct ListExportCustomJobParams {
     /// The type of communication – Messages, Calls, Conferences, and Participants
@@ -88,7 +88,7 @@ pub struct ListExportCustomJobParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_export_configuration`
+/// struct for passing parameters to the method [`update_export_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateExportConfigurationParams {
     /// The type of communication – Messages, Calls, Conferences, and Participants
@@ -102,7 +102,7 @@ pub struct UpdateExportConfigurationParams {
 }
 
 
-/// struct for typed successes of method `create_export_custom_job`
+/// struct for typed successes of method [`create_export_custom_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateExportCustomJobSuccess {
@@ -110,7 +110,7 @@ pub enum CreateExportCustomJobSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_job`
+/// struct for typed successes of method [`delete_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteJobSuccess {
@@ -118,7 +118,7 @@ pub enum DeleteJobSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_day`
+/// struct for typed successes of method [`fetch_day`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDaySuccess {
@@ -126,7 +126,7 @@ pub enum FetchDaySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_export`
+/// struct for typed successes of method [`fetch_export`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExportSuccess {
@@ -134,7 +134,7 @@ pub enum FetchExportSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_export_configuration`
+/// struct for typed successes of method [`fetch_export_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExportConfigurationSuccess {
@@ -142,7 +142,7 @@ pub enum FetchExportConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_job`
+/// struct for typed successes of method [`fetch_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchJobSuccess {
@@ -150,7 +150,7 @@ pub enum FetchJobSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_day`
+/// struct for typed successes of method [`list_day`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDaySuccess {
@@ -158,7 +158,7 @@ pub enum ListDaySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_export_custom_job`
+/// struct for typed successes of method [`list_export_custom_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListExportCustomJobSuccess {
@@ -166,7 +166,7 @@ pub enum ListExportCustomJobSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_export_configuration`
+/// struct for typed successes of method [`update_export_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateExportConfigurationSuccess {
@@ -174,63 +174,63 @@ pub enum UpdateExportConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_export_custom_job`
+/// struct for typed errors of method [`create_export_custom_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateExportCustomJobError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_job`
+/// struct for typed errors of method [`delete_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteJobError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_day`
+/// struct for typed errors of method [`fetch_day`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDayError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_export`
+/// struct for typed errors of method [`fetch_export`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExportError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_export_configuration`
+/// struct for typed errors of method [`fetch_export_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchExportConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_job`
+/// struct for typed errors of method [`fetch_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchJobError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_day`
+/// struct for typed errors of method [`list_day`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDayError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_export_custom_job`
+/// struct for typed errors of method [`list_export_custom_job`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListExportCustomJobError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_export_configuration`
+/// struct for typed errors of method [`update_export_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateExportConfigurationError {

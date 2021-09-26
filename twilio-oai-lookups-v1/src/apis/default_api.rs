@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `fetch_phone_number`
+/// struct for passing parameters to the method [`fetch_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchPhoneNumberParams {
     /// The phone number to lookup in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.
@@ -30,7 +30,7 @@ pub struct FetchPhoneNumberParams {
 }
 
 
-/// struct for typed successes of method `fetch_phone_number`
+/// struct for typed successes of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberSuccess {
@@ -38,7 +38,7 @@ pub enum FetchPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_phone_number`
+/// struct for typed errors of method [`fetch_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberError {

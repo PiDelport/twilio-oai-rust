@@ -14,20 +14,20 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `fetch_call`
+/// struct for passing parameters to the method [`fetch_call`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCallParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_summary`
+/// struct for passing parameters to the method [`fetch_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSummaryParams {
     pub call_sid: String,
     pub processing_state: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_video_participant_summary`
+/// struct for passing parameters to the method [`fetch_video_participant_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVideoParticipantSummaryParams {
     /// The SID of the Room resource.
@@ -36,14 +36,14 @@ pub struct FetchVideoParticipantSummaryParams {
     pub participant_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_video_room_summary`
+/// struct for passing parameters to the method [`fetch_video_room_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVideoRoomSummaryParams {
     /// The SID of the Room resource.
     pub room_sid: String
 }
 
-/// struct for passing parameters to the method `list_call_summaries`
+/// struct for passing parameters to the method [`list_call_summaries`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCallSummariesParams {
     pub from: Option<Vec<String>>,
@@ -68,7 +68,7 @@ pub struct ListCallSummariesParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_event`
+/// struct for passing parameters to the method [`list_event`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEventParams {
     pub call_sid: String,
@@ -77,7 +77,7 @@ pub struct ListEventParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_metric`
+/// struct for passing parameters to the method [`list_metric`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMetricParams {
     pub call_sid: String,
@@ -87,7 +87,7 @@ pub struct ListMetricParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_video_participant_summary`
+/// struct for passing parameters to the method [`list_video_participant_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVideoParticipantSummaryParams {
     /// The SID of the Room resource.
@@ -96,7 +96,7 @@ pub struct ListVideoParticipantSummaryParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_video_room_summary`
+/// struct for passing parameters to the method [`list_video_room_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVideoRoomSummaryParams {
     /// Type of room. Can be `go`, `peer_to_peer`, `group`, or `group_small`.
@@ -114,7 +114,7 @@ pub struct ListVideoRoomSummaryParams {
 }
 
 
-/// struct for typed successes of method `fetch_call`
+/// struct for typed successes of method [`fetch_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallSuccess {
@@ -122,7 +122,7 @@ pub enum FetchCallSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_summary`
+/// struct for typed successes of method [`fetch_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSummarySuccess {
@@ -130,7 +130,7 @@ pub enum FetchSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_video_participant_summary`
+/// struct for typed successes of method [`fetch_video_participant_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVideoParticipantSummarySuccess {
@@ -138,7 +138,7 @@ pub enum FetchVideoParticipantSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_video_room_summary`
+/// struct for typed successes of method [`fetch_video_room_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVideoRoomSummarySuccess {
@@ -146,7 +146,7 @@ pub enum FetchVideoRoomSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_call_summaries`
+/// struct for typed successes of method [`list_call_summaries`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallSummariesSuccess {
@@ -154,7 +154,7 @@ pub enum ListCallSummariesSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_event`
+/// struct for typed successes of method [`list_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventSuccess {
@@ -162,7 +162,7 @@ pub enum ListEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_metric`
+/// struct for typed successes of method [`list_metric`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMetricSuccess {
@@ -170,7 +170,7 @@ pub enum ListMetricSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_video_participant_summary`
+/// struct for typed successes of method [`list_video_participant_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVideoParticipantSummarySuccess {
@@ -178,7 +178,7 @@ pub enum ListVideoParticipantSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_video_room_summary`
+/// struct for typed successes of method [`list_video_room_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVideoRoomSummarySuccess {
@@ -186,63 +186,63 @@ pub enum ListVideoRoomSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_call`
+/// struct for typed errors of method [`fetch_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_summary`
+/// struct for typed errors of method [`fetch_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_video_participant_summary`
+/// struct for typed errors of method [`fetch_video_participant_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVideoParticipantSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_video_room_summary`
+/// struct for typed errors of method [`fetch_video_room_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVideoRoomSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_call_summaries`
+/// struct for typed errors of method [`list_call_summaries`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallSummariesError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_event`
+/// struct for typed errors of method [`list_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_metric`
+/// struct for typed errors of method [`list_metric`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMetricError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_video_participant_summary`
+/// struct for typed errors of method [`list_video_participant_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVideoParticipantSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_video_room_summary`
+/// struct for typed errors of method [`list_video_room_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVideoRoomSummaryError {

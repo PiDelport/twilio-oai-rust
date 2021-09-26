@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_composition`
+/// struct for passing parameters to the method [`create_composition`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCompositionParams {
     /// The SID of the Group Room with the media tracks to be used as composition sources.
@@ -37,7 +37,7 @@ pub struct CreateCompositionParams {
     pub video_layout: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_composition_hook`
+/// struct for passing parameters to the method [`create_composition_hook`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCompositionHookParams {
     /// A descriptive string that you create to describe the resource. It can be up to  100 characters long and it must be unique within the account.
@@ -62,7 +62,7 @@ pub struct CreateCompositionHookParams {
     pub video_layout: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_composition_settings`
+/// struct for passing parameters to the method [`create_composition_settings`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCompositionSettingsParams {
     /// A descriptive string that you create to describe the resource and show to the user in the console
@@ -79,7 +79,7 @@ pub struct CreateCompositionSettingsParams {
     pub encryption_key_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_recording_settings`
+/// struct for passing parameters to the method [`create_recording_settings`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateRecordingSettingsParams {
     /// A descriptive string that you create to describe the resource and be shown to users in the console
@@ -96,7 +96,7 @@ pub struct CreateRecordingSettingsParams {
     pub encryption_key_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_room`
+/// struct for passing parameters to the method [`create_room`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateRoomParams {
     /// Deprecated, now always considered to be true.
@@ -121,28 +121,28 @@ pub struct CreateRoomParams {
     pub video_codecs: Option<Vec<String>>
 }
 
-/// struct for passing parameters to the method `delete_composition`
+/// struct for passing parameters to the method [`delete_composition`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCompositionParams {
     /// The SID of the Composition resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_composition_hook`
+/// struct for passing parameters to the method [`delete_composition_hook`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCompositionHookParams {
     /// The SID of the CompositionHook resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_recording`
+/// struct for passing parameters to the method [`delete_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRecordingParams {
     /// The SID of the Recording resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_room_recording`
+/// struct for passing parameters to the method [`delete_room_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRoomRecordingParams {
     /// The SID of the room with the RoomRecording resource to delete.
@@ -151,35 +151,35 @@ pub struct DeleteRoomRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_composition`
+/// struct for passing parameters to the method [`fetch_composition`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCompositionParams {
     /// The SID of the Composition resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_composition_hook`
+/// struct for passing parameters to the method [`fetch_composition_hook`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCompositionHookParams {
     /// The SID of the CompositionHook resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_recording`
+/// struct for passing parameters to the method [`fetch_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRecordingParams {
     /// The SID of the Recording resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room`
+/// struct for passing parameters to the method [`fetch_room`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomParams {
     /// The SID of the Room resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room_participant`
+/// struct for passing parameters to the method [`fetch_room_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomParticipantParams {
     /// The SID of the room with the Participant resource to fetch.
@@ -188,7 +188,7 @@ pub struct FetchRoomParticipantParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room_participant_published_track`
+/// struct for passing parameters to the method [`fetch_room_participant_published_track`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomParticipantPublishedTrackParams {
     /// The SID of the Room resource where the Track resource to fetch is published.
@@ -199,7 +199,7 @@ pub struct FetchRoomParticipantPublishedTrackParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room_participant_subscribe_rule`
+/// struct for passing parameters to the method [`fetch_room_participant_subscribe_rule`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomParticipantSubscribeRuleParams {
     /// The SID of the Room resource where the subscribe rules to fetch apply.
@@ -208,7 +208,7 @@ pub struct FetchRoomParticipantSubscribeRuleParams {
     pub participant_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room_participant_subscribed_track`
+/// struct for passing parameters to the method [`fetch_room_participant_subscribed_track`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomParticipantSubscribedTrackParams {
     /// The SID of the Room where the Track resource to fetch is subscribed.
@@ -219,7 +219,7 @@ pub struct FetchRoomParticipantSubscribedTrackParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room_recording`
+/// struct for passing parameters to the method [`fetch_room_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomRecordingParams {
     /// The SID of the Room resource with the recording to fetch.
@@ -228,14 +228,14 @@ pub struct FetchRoomRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_room_recording_rule`
+/// struct for passing parameters to the method [`fetch_room_recording_rule`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRoomRecordingRuleParams {
     /// The SID of the Room resource where the recording rules to fetch apply.
     pub room_sid: String
 }
 
-/// struct for passing parameters to the method `list_composition`
+/// struct for passing parameters to the method [`list_composition`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCompositionParams {
     /// Read only Composition resources with this status. Can be: `enqueued`, `processing`, `completed`, `deleted`, or `failed`.
@@ -250,7 +250,7 @@ pub struct ListCompositionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_composition_hook`
+/// struct for passing parameters to the method [`list_composition_hook`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCompositionHookParams {
     /// Read only CompositionHook resources with an `enabled` value that matches this parameter.
@@ -265,7 +265,7 @@ pub struct ListCompositionHookParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_recording`
+/// struct for passing parameters to the method [`list_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRecordingParams {
     /// Read only the recordings that have this status. Can be: `processing`, `completed`, or `deleted`.
@@ -284,7 +284,7 @@ pub struct ListRecordingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_room`
+/// struct for passing parameters to the method [`list_room`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRoomParams {
     /// Read only the rooms with this status. Can be: `in-progress` (default) or `completed`
@@ -299,7 +299,7 @@ pub struct ListRoomParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_room_participant`
+/// struct for passing parameters to the method [`list_room_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRoomParticipantParams {
     /// The SID of the room with the Participant resources to read.
@@ -316,7 +316,7 @@ pub struct ListRoomParticipantParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_room_participant_published_track`
+/// struct for passing parameters to the method [`list_room_participant_published_track`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRoomParticipantPublishedTrackParams {
     /// The SID of the Room resource where the Track resources to read are published.
@@ -327,7 +327,7 @@ pub struct ListRoomParticipantPublishedTrackParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_room_participant_subscribed_track`
+/// struct for passing parameters to the method [`list_room_participant_subscribed_track`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRoomParticipantSubscribedTrackParams {
     /// The SID of the Room resource with the Track resources to read.
@@ -338,7 +338,7 @@ pub struct ListRoomParticipantSubscribedTrackParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_room_recording`
+/// struct for passing parameters to the method [`list_room_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRoomRecordingParams {
     /// The SID of the room with the RoomRecording resources to read.
@@ -355,7 +355,7 @@ pub struct ListRoomRecordingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_composition_hook`
+/// struct for passing parameters to the method [`update_composition_hook`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCompositionHookParams {
     /// The SID of the CompositionHook resource to update.
@@ -382,7 +382,7 @@ pub struct UpdateCompositionHookParams {
     pub video_layout: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `update_room`
+/// struct for passing parameters to the method [`update_room`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRoomParams {
     /// The SID of the Room resource to update.
@@ -391,7 +391,7 @@ pub struct UpdateRoomParams {
     pub status: String
 }
 
-/// struct for passing parameters to the method `update_room_participant`
+/// struct for passing parameters to the method [`update_room_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRoomParticipantParams {
     /// The SID of the room with the participant to update.
@@ -402,7 +402,7 @@ pub struct UpdateRoomParticipantParams {
     pub status: Option<String>
 }
 
-/// struct for passing parameters to the method `update_room_participant_subscribe_rule`
+/// struct for passing parameters to the method [`update_room_participant_subscribe_rule`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRoomParticipantSubscribeRuleParams {
     /// The SID of the Room resource where the subscribe rules to update apply.
@@ -413,7 +413,7 @@ pub struct UpdateRoomParticipantSubscribeRuleParams {
     pub rules: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `update_room_recording_rule`
+/// struct for passing parameters to the method [`update_room_recording_rule`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRoomRecordingRuleParams {
     /// The SID of the Room resource where the recording rules to update apply.
@@ -423,7 +423,7 @@ pub struct UpdateRoomRecordingRuleParams {
 }
 
 
-/// struct for typed successes of method `create_composition`
+/// struct for typed successes of method [`create_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCompositionSuccess {
@@ -431,7 +431,7 @@ pub enum CreateCompositionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_composition_hook`
+/// struct for typed successes of method [`create_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCompositionHookSuccess {
@@ -439,7 +439,7 @@ pub enum CreateCompositionHookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_composition_settings`
+/// struct for typed successes of method [`create_composition_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCompositionSettingsSuccess {
@@ -447,7 +447,7 @@ pub enum CreateCompositionSettingsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_recording_settings`
+/// struct for typed successes of method [`create_recording_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRecordingSettingsSuccess {
@@ -455,7 +455,7 @@ pub enum CreateRecordingSettingsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_room`
+/// struct for typed successes of method [`create_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRoomSuccess {
@@ -463,7 +463,7 @@ pub enum CreateRoomSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_composition`
+/// struct for typed successes of method [`delete_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCompositionSuccess {
@@ -471,7 +471,7 @@ pub enum DeleteCompositionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_composition_hook`
+/// struct for typed successes of method [`delete_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCompositionHookSuccess {
@@ -479,7 +479,7 @@ pub enum DeleteCompositionHookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_recording`
+/// struct for typed successes of method [`delete_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingSuccess {
@@ -487,7 +487,7 @@ pub enum DeleteRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_room_recording`
+/// struct for typed successes of method [`delete_room_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRoomRecordingSuccess {
@@ -495,7 +495,7 @@ pub enum DeleteRoomRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_composition`
+/// struct for typed successes of method [`fetch_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCompositionSuccess {
@@ -503,7 +503,7 @@ pub enum FetchCompositionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_composition_hook`
+/// struct for typed successes of method [`fetch_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCompositionHookSuccess {
@@ -511,7 +511,7 @@ pub enum FetchCompositionHookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_composition_settings`
+/// struct for typed successes of method [`fetch_composition_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCompositionSettingsSuccess {
@@ -519,7 +519,7 @@ pub enum FetchCompositionSettingsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording`
+/// struct for typed successes of method [`fetch_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingSuccess {
@@ -527,7 +527,7 @@ pub enum FetchRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording_settings`
+/// struct for typed successes of method [`fetch_recording_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingSettingsSuccess {
@@ -535,7 +535,7 @@ pub enum FetchRecordingSettingsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room`
+/// struct for typed successes of method [`fetch_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomSuccess {
@@ -543,7 +543,7 @@ pub enum FetchRoomSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room_participant`
+/// struct for typed successes of method [`fetch_room_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantSuccess {
@@ -551,7 +551,7 @@ pub enum FetchRoomParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room_participant_published_track`
+/// struct for typed successes of method [`fetch_room_participant_published_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantPublishedTrackSuccess {
@@ -559,7 +559,7 @@ pub enum FetchRoomParticipantPublishedTrackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room_participant_subscribe_rule`
+/// struct for typed successes of method [`fetch_room_participant_subscribe_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantSubscribeRuleSuccess {
@@ -567,7 +567,7 @@ pub enum FetchRoomParticipantSubscribeRuleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room_participant_subscribed_track`
+/// struct for typed successes of method [`fetch_room_participant_subscribed_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantSubscribedTrackSuccess {
@@ -575,7 +575,7 @@ pub enum FetchRoomParticipantSubscribedTrackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room_recording`
+/// struct for typed successes of method [`fetch_room_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomRecordingSuccess {
@@ -583,7 +583,7 @@ pub enum FetchRoomRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_room_recording_rule`
+/// struct for typed successes of method [`fetch_room_recording_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomRecordingRuleSuccess {
@@ -591,7 +591,7 @@ pub enum FetchRoomRecordingRuleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_composition`
+/// struct for typed successes of method [`list_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCompositionSuccess {
@@ -599,7 +599,7 @@ pub enum ListCompositionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_composition_hook`
+/// struct for typed successes of method [`list_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCompositionHookSuccess {
@@ -607,7 +607,7 @@ pub enum ListCompositionHookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_recording`
+/// struct for typed successes of method [`list_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingSuccess {
@@ -615,7 +615,7 @@ pub enum ListRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_room`
+/// struct for typed successes of method [`list_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomSuccess {
@@ -623,7 +623,7 @@ pub enum ListRoomSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_room_participant`
+/// struct for typed successes of method [`list_room_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomParticipantSuccess {
@@ -631,7 +631,7 @@ pub enum ListRoomParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_room_participant_published_track`
+/// struct for typed successes of method [`list_room_participant_published_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomParticipantPublishedTrackSuccess {
@@ -639,7 +639,7 @@ pub enum ListRoomParticipantPublishedTrackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_room_participant_subscribed_track`
+/// struct for typed successes of method [`list_room_participant_subscribed_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomParticipantSubscribedTrackSuccess {
@@ -647,7 +647,7 @@ pub enum ListRoomParticipantSubscribedTrackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_room_recording`
+/// struct for typed successes of method [`list_room_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomRecordingSuccess {
@@ -655,7 +655,7 @@ pub enum ListRoomRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_composition_hook`
+/// struct for typed successes of method [`update_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCompositionHookSuccess {
@@ -663,7 +663,7 @@ pub enum UpdateCompositionHookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_room`
+/// struct for typed successes of method [`update_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomSuccess {
@@ -671,7 +671,7 @@ pub enum UpdateRoomSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_room_participant`
+/// struct for typed successes of method [`update_room_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomParticipantSuccess {
@@ -679,7 +679,7 @@ pub enum UpdateRoomParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_room_participant_subscribe_rule`
+/// struct for typed successes of method [`update_room_participant_subscribe_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomParticipantSubscribeRuleSuccess {
@@ -687,7 +687,7 @@ pub enum UpdateRoomParticipantSubscribeRuleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_room_recording_rule`
+/// struct for typed successes of method [`update_room_recording_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomRecordingRuleSuccess {
@@ -695,238 +695,238 @@ pub enum UpdateRoomRecordingRuleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_composition`
+/// struct for typed errors of method [`create_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCompositionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_composition_hook`
+/// struct for typed errors of method [`create_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCompositionHookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_composition_settings`
+/// struct for typed errors of method [`create_composition_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCompositionSettingsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_recording_settings`
+/// struct for typed errors of method [`create_recording_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRecordingSettingsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_room`
+/// struct for typed errors of method [`create_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateRoomError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_composition`
+/// struct for typed errors of method [`delete_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCompositionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_composition_hook`
+/// struct for typed errors of method [`delete_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCompositionHookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_recording`
+/// struct for typed errors of method [`delete_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_room_recording`
+/// struct for typed errors of method [`delete_room_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRoomRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_composition`
+/// struct for typed errors of method [`fetch_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCompositionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_composition_hook`
+/// struct for typed errors of method [`fetch_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCompositionHookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_composition_settings`
+/// struct for typed errors of method [`fetch_composition_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCompositionSettingsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording`
+/// struct for typed errors of method [`fetch_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording_settings`
+/// struct for typed errors of method [`fetch_recording_settings`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingSettingsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room`
+/// struct for typed errors of method [`fetch_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room_participant`
+/// struct for typed errors of method [`fetch_room_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room_participant_published_track`
+/// struct for typed errors of method [`fetch_room_participant_published_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantPublishedTrackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room_participant_subscribe_rule`
+/// struct for typed errors of method [`fetch_room_participant_subscribe_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantSubscribeRuleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room_participant_subscribed_track`
+/// struct for typed errors of method [`fetch_room_participant_subscribed_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomParticipantSubscribedTrackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room_recording`
+/// struct for typed errors of method [`fetch_room_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_room_recording_rule`
+/// struct for typed errors of method [`fetch_room_recording_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRoomRecordingRuleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_composition`
+/// struct for typed errors of method [`list_composition`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCompositionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_composition_hook`
+/// struct for typed errors of method [`list_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCompositionHookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_recording`
+/// struct for typed errors of method [`list_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_room`
+/// struct for typed errors of method [`list_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_room_participant`
+/// struct for typed errors of method [`list_room_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_room_participant_published_track`
+/// struct for typed errors of method [`list_room_participant_published_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomParticipantPublishedTrackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_room_participant_subscribed_track`
+/// struct for typed errors of method [`list_room_participant_subscribed_track`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomParticipantSubscribedTrackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_room_recording`
+/// struct for typed errors of method [`list_room_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRoomRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_composition_hook`
+/// struct for typed errors of method [`update_composition_hook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCompositionHookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_room`
+/// struct for typed errors of method [`update_room`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_room_participant`
+/// struct for typed errors of method [`update_room_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_room_participant_subscribe_rule`
+/// struct for typed errors of method [`update_room_participant_subscribe_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomParticipantSubscribeRuleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_room_recording_rule`
+/// struct for typed errors of method [`update_room_recording_rule`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRoomRecordingRuleError {

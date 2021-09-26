@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_assistant`
+/// struct for passing parameters to the method [`create_assistant`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateAssistantParams {
     /// Reserved.
@@ -33,7 +33,7 @@ pub struct CreateAssistantParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_field`
+/// struct for passing parameters to the method [`create_field`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFieldParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
@@ -46,7 +46,7 @@ pub struct CreateFieldParams {
     pub unique_name: String
 }
 
-/// struct for passing parameters to the method `create_field_type`
+/// struct for passing parameters to the method [`create_field_type`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFieldTypeParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
@@ -57,7 +57,7 @@ pub struct CreateFieldTypeParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_field_value`
+/// struct for passing parameters to the method [`create_field_value`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFieldValueParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the new resource.
@@ -72,7 +72,7 @@ pub struct CreateFieldValueParams {
     pub synonym_of: Option<String>
 }
 
-/// struct for passing parameters to the method `create_model_build`
+/// struct for passing parameters to the method [`create_model_build`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateModelBuildParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
@@ -83,7 +83,7 @@ pub struct CreateModelBuildParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_query`
+/// struct for passing parameters to the method [`create_query`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateQueryParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
@@ -98,7 +98,7 @@ pub struct CreateQueryParams {
     pub tasks: Option<String>
 }
 
-/// struct for passing parameters to the method `create_sample`
+/// struct for passing parameters to the method [`create_sample`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSampleParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
@@ -113,7 +113,7 @@ pub struct CreateSampleParams {
     pub source_channel: Option<String>
 }
 
-/// struct for passing parameters to the method `create_task`
+/// struct for passing parameters to the method [`create_task`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTaskParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
@@ -128,7 +128,7 @@ pub struct CreateTaskParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_webhook`
+/// struct for passing parameters to the method [`create_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateWebhookParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
@@ -143,14 +143,14 @@ pub struct CreateWebhookParams {
     pub webhook_method: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_assistant`
+/// struct for passing parameters to the method [`delete_assistant`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteAssistantParams {
     /// The Twilio-provided string that uniquely identifies the Assistant resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_field`
+/// struct for passing parameters to the method [`delete_field`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFieldParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to delete.
@@ -161,7 +161,7 @@ pub struct DeleteFieldParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_field_type`
+/// struct for passing parameters to the method [`delete_field_type`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFieldTypeParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to delete.
@@ -170,7 +170,7 @@ pub struct DeleteFieldTypeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_field_value`
+/// struct for passing parameters to the method [`delete_field_value`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFieldValueParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resources to delete.
@@ -181,7 +181,7 @@ pub struct DeleteFieldValueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_model_build`
+/// struct for passing parameters to the method [`delete_model_build`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteModelBuildParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to delete.
@@ -190,7 +190,7 @@ pub struct DeleteModelBuildParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_query`
+/// struct for passing parameters to the method [`delete_query`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteQueryParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to delete.
@@ -199,7 +199,7 @@ pub struct DeleteQueryParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sample`
+/// struct for passing parameters to the method [`delete_sample`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSampleParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to delete.
@@ -210,7 +210,7 @@ pub struct DeleteSampleParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_task`
+/// struct for passing parameters to the method [`delete_task`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTaskParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to delete.
@@ -219,7 +219,7 @@ pub struct DeleteTaskParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_webhook`
+/// struct for passing parameters to the method [`delete_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteWebhookParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to delete.
@@ -228,21 +228,21 @@ pub struct DeleteWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_assistant`
+/// struct for passing parameters to the method [`fetch_assistant`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAssistantParams {
     /// The Twilio-provided string that uniquely identifies the Assistant resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_defaults`
+/// struct for passing parameters to the method [`fetch_defaults`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDefaultsParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
     pub assistant_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_dialogue`
+/// struct for passing parameters to the method [`fetch_dialogue`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDialogueParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -251,7 +251,7 @@ pub struct FetchDialogueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_field`
+/// struct for passing parameters to the method [`fetch_field`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFieldParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to fetch.
@@ -262,7 +262,7 @@ pub struct FetchFieldParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_field_type`
+/// struct for passing parameters to the method [`fetch_field_type`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFieldTypeParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -271,7 +271,7 @@ pub struct FetchFieldTypeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_field_value`
+/// struct for passing parameters to the method [`fetch_field_value`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFieldValueParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resource to fetch.
@@ -282,7 +282,7 @@ pub struct FetchFieldValueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_model_build`
+/// struct for passing parameters to the method [`fetch_model_build`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchModelBuildParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -291,7 +291,7 @@ pub struct FetchModelBuildParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_query`
+/// struct for passing parameters to the method [`fetch_query`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchQueryParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -300,7 +300,7 @@ pub struct FetchQueryParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sample`
+/// struct for passing parameters to the method [`fetch_sample`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSampleParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to fetch.
@@ -311,14 +311,14 @@ pub struct FetchSampleParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_style_sheet`
+/// struct for passing parameters to the method [`fetch_style_sheet`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchStyleSheetParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
     pub assistant_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task`
+/// struct for passing parameters to the method [`fetch_task`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -327,7 +327,7 @@ pub struct FetchTaskParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task_actions`
+/// struct for passing parameters to the method [`fetch_task_actions`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskActionsParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task for which the task actions to fetch were defined.
@@ -336,7 +336,7 @@ pub struct FetchTaskActionsParams {
     pub task_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_task_statistics`
+/// struct for passing parameters to the method [`fetch_task_statistics`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTaskStatisticsParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -345,7 +345,7 @@ pub struct FetchTaskStatisticsParams {
     pub task_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_webhook`
+/// struct for passing parameters to the method [`fetch_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWebhookParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
@@ -354,14 +354,14 @@ pub struct FetchWebhookParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_assistant`
+/// struct for passing parameters to the method [`list_assistant`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAssistantParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_field`
+/// struct for passing parameters to the method [`list_field`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFieldParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to read.
@@ -372,7 +372,7 @@ pub struct ListFieldParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_field_type`
+/// struct for passing parameters to the method [`list_field_type`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFieldTypeParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to read.
@@ -381,7 +381,7 @@ pub struct ListFieldTypeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_field_value`
+/// struct for passing parameters to the method [`list_field_value`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFieldValueParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resources to read.
@@ -394,7 +394,7 @@ pub struct ListFieldValueParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_model_build`
+/// struct for passing parameters to the method [`list_model_build`]
 #[derive(Clone, Debug, Default)]
 pub struct ListModelBuildParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to read.
@@ -403,7 +403,7 @@ pub struct ListModelBuildParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_query`
+/// struct for passing parameters to the method [`list_query`]
 #[derive(Clone, Debug, Default)]
 pub struct ListQueryParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to read.
@@ -420,7 +420,7 @@ pub struct ListQueryParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sample`
+/// struct for passing parameters to the method [`list_sample`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSampleParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to read.
@@ -433,7 +433,7 @@ pub struct ListSampleParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_task`
+/// struct for passing parameters to the method [`list_task`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTaskParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to read.
@@ -442,7 +442,7 @@ pub struct ListTaskParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_webhook`
+/// struct for passing parameters to the method [`list_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWebhookParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resources to read.
@@ -451,7 +451,7 @@ pub struct ListWebhookParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_assistant`
+/// struct for passing parameters to the method [`update_assistant`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateAssistantParams {
     /// The Twilio-provided string that uniquely identifies the Assistant resource to update.
@@ -474,7 +474,7 @@ pub struct UpdateAssistantParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_defaults`
+/// struct for passing parameters to the method [`update_defaults`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateDefaultsParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
@@ -483,7 +483,7 @@ pub struct UpdateDefaultsParams {
     pub defaults: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `update_field_type`
+/// struct for passing parameters to the method [`update_field_type`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFieldTypeParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the to update.
@@ -496,7 +496,7 @@ pub struct UpdateFieldTypeParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_model_build`
+/// struct for passing parameters to the method [`update_model_build`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateModelBuildParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
@@ -507,7 +507,7 @@ pub struct UpdateModelBuildParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_query`
+/// struct for passing parameters to the method [`update_query`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateQueryParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
@@ -520,14 +520,14 @@ pub struct UpdateQueryParams {
     pub status: Option<String>
 }
 
-/// struct for passing parameters to the method `update_restore_assistant`
+/// struct for passing parameters to the method [`update_restore_assistant`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateRestoreAssistantParams {
     /// The Twilio-provided string that uniquely identifies the Assistant resource to restore.
     pub assistant: String
 }
 
-/// struct for passing parameters to the method `update_sample`
+/// struct for passing parameters to the method [`update_sample`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSampleParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to update.
@@ -544,7 +544,7 @@ pub struct UpdateSampleParams {
     pub tagged_text: Option<String>
 }
 
-/// struct for passing parameters to the method `update_style_sheet`
+/// struct for passing parameters to the method [`update_style_sheet`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateStyleSheetParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
@@ -553,7 +553,7 @@ pub struct UpdateStyleSheetParams {
     pub style_sheet: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `update_task`
+/// struct for passing parameters to the method [`update_task`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTaskParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
@@ -570,7 +570,7 @@ pub struct UpdateTaskParams {
     pub unique_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_task_actions`
+/// struct for passing parameters to the method [`update_task_actions`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTaskActionsParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task for which the task actions to update were defined.
@@ -581,7 +581,7 @@ pub struct UpdateTaskActionsParams {
     pub actions: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `update_webhook`
+/// struct for passing parameters to the method [`update_webhook`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWebhookParams {
     /// The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
@@ -599,7 +599,7 @@ pub struct UpdateWebhookParams {
 }
 
 
-/// struct for typed successes of method `create_assistant`
+/// struct for typed successes of method [`create_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAssistantSuccess {
@@ -607,7 +607,7 @@ pub enum CreateAssistantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_field`
+/// struct for typed successes of method [`create_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFieldSuccess {
@@ -615,7 +615,7 @@ pub enum CreateFieldSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_field_type`
+/// struct for typed successes of method [`create_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFieldTypeSuccess {
@@ -623,7 +623,7 @@ pub enum CreateFieldTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_field_value`
+/// struct for typed successes of method [`create_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFieldValueSuccess {
@@ -631,7 +631,7 @@ pub enum CreateFieldValueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_model_build`
+/// struct for typed successes of method [`create_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateModelBuildSuccess {
@@ -639,7 +639,7 @@ pub enum CreateModelBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_query`
+/// struct for typed successes of method [`create_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateQuerySuccess {
@@ -647,7 +647,7 @@ pub enum CreateQuerySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sample`
+/// struct for typed successes of method [`create_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSampleSuccess {
@@ -655,7 +655,7 @@ pub enum CreateSampleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_task`
+/// struct for typed successes of method [`create_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskSuccess {
@@ -663,7 +663,7 @@ pub enum CreateTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_webhook`
+/// struct for typed successes of method [`create_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWebhookSuccess {
@@ -671,7 +671,7 @@ pub enum CreateWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_assistant`
+/// struct for typed successes of method [`delete_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAssistantSuccess {
@@ -679,7 +679,7 @@ pub enum DeleteAssistantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_field`
+/// struct for typed successes of method [`delete_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFieldSuccess {
@@ -687,7 +687,7 @@ pub enum DeleteFieldSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_field_type`
+/// struct for typed successes of method [`delete_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFieldTypeSuccess {
@@ -695,7 +695,7 @@ pub enum DeleteFieldTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_field_value`
+/// struct for typed successes of method [`delete_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFieldValueSuccess {
@@ -703,7 +703,7 @@ pub enum DeleteFieldValueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_model_build`
+/// struct for typed successes of method [`delete_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteModelBuildSuccess {
@@ -711,7 +711,7 @@ pub enum DeleteModelBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_query`
+/// struct for typed successes of method [`delete_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteQuerySuccess {
@@ -719,7 +719,7 @@ pub enum DeleteQuerySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sample`
+/// struct for typed successes of method [`delete_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSampleSuccess {
@@ -727,7 +727,7 @@ pub enum DeleteSampleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_task`
+/// struct for typed successes of method [`delete_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskSuccess {
@@ -735,7 +735,7 @@ pub enum DeleteTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_webhook`
+/// struct for typed successes of method [`delete_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWebhookSuccess {
@@ -743,7 +743,7 @@ pub enum DeleteWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_assistant`
+/// struct for typed successes of method [`fetch_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAssistantSuccess {
@@ -751,7 +751,7 @@ pub enum FetchAssistantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_defaults`
+/// struct for typed successes of method [`fetch_defaults`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDefaultsSuccess {
@@ -759,7 +759,7 @@ pub enum FetchDefaultsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_dialogue`
+/// struct for typed successes of method [`fetch_dialogue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDialogueSuccess {
@@ -767,7 +767,7 @@ pub enum FetchDialogueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_field`
+/// struct for typed successes of method [`fetch_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFieldSuccess {
@@ -775,7 +775,7 @@ pub enum FetchFieldSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_field_type`
+/// struct for typed successes of method [`fetch_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFieldTypeSuccess {
@@ -783,7 +783,7 @@ pub enum FetchFieldTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_field_value`
+/// struct for typed successes of method [`fetch_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFieldValueSuccess {
@@ -791,7 +791,7 @@ pub enum FetchFieldValueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_model_build`
+/// struct for typed successes of method [`fetch_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchModelBuildSuccess {
@@ -799,7 +799,7 @@ pub enum FetchModelBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_query`
+/// struct for typed successes of method [`fetch_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchQuerySuccess {
@@ -807,7 +807,7 @@ pub enum FetchQuerySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sample`
+/// struct for typed successes of method [`fetch_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSampleSuccess {
@@ -815,7 +815,7 @@ pub enum FetchSampleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_style_sheet`
+/// struct for typed successes of method [`fetch_style_sheet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchStyleSheetSuccess {
@@ -823,7 +823,7 @@ pub enum FetchStyleSheetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task`
+/// struct for typed successes of method [`fetch_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskSuccess {
@@ -831,7 +831,7 @@ pub enum FetchTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_actions`
+/// struct for typed successes of method [`fetch_task_actions`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskActionsSuccess {
@@ -839,7 +839,7 @@ pub enum FetchTaskActionsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_task_statistics`
+/// struct for typed successes of method [`fetch_task_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskStatisticsSuccess {
@@ -847,7 +847,7 @@ pub enum FetchTaskStatisticsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_webhook`
+/// struct for typed successes of method [`fetch_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWebhookSuccess {
@@ -855,7 +855,7 @@ pub enum FetchWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_assistant`
+/// struct for typed successes of method [`list_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAssistantSuccess {
@@ -863,7 +863,7 @@ pub enum ListAssistantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_field`
+/// struct for typed successes of method [`list_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFieldSuccess {
@@ -871,7 +871,7 @@ pub enum ListFieldSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_field_type`
+/// struct for typed successes of method [`list_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFieldTypeSuccess {
@@ -879,7 +879,7 @@ pub enum ListFieldTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_field_value`
+/// struct for typed successes of method [`list_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFieldValueSuccess {
@@ -887,7 +887,7 @@ pub enum ListFieldValueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_model_build`
+/// struct for typed successes of method [`list_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListModelBuildSuccess {
@@ -895,7 +895,7 @@ pub enum ListModelBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_query`
+/// struct for typed successes of method [`list_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListQuerySuccess {
@@ -903,7 +903,7 @@ pub enum ListQuerySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sample`
+/// struct for typed successes of method [`list_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSampleSuccess {
@@ -911,7 +911,7 @@ pub enum ListSampleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_task`
+/// struct for typed successes of method [`list_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskSuccess {
@@ -919,7 +919,7 @@ pub enum ListTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_webhook`
+/// struct for typed successes of method [`list_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWebhookSuccess {
@@ -927,7 +927,7 @@ pub enum ListWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_assistant`
+/// struct for typed successes of method [`update_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAssistantSuccess {
@@ -935,7 +935,7 @@ pub enum UpdateAssistantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_defaults`
+/// struct for typed successes of method [`update_defaults`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDefaultsSuccess {
@@ -943,7 +943,7 @@ pub enum UpdateDefaultsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_field_type`
+/// struct for typed successes of method [`update_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFieldTypeSuccess {
@@ -951,7 +951,7 @@ pub enum UpdateFieldTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_model_build`
+/// struct for typed successes of method [`update_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateModelBuildSuccess {
@@ -959,7 +959,7 @@ pub enum UpdateModelBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_query`
+/// struct for typed successes of method [`update_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateQuerySuccess {
@@ -967,7 +967,7 @@ pub enum UpdateQuerySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_restore_assistant`
+/// struct for typed successes of method [`update_restore_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRestoreAssistantSuccess {
@@ -975,7 +975,7 @@ pub enum UpdateRestoreAssistantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sample`
+/// struct for typed successes of method [`update_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSampleSuccess {
@@ -983,7 +983,7 @@ pub enum UpdateSampleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_style_sheet`
+/// struct for typed successes of method [`update_style_sheet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateStyleSheetSuccess {
@@ -991,7 +991,7 @@ pub enum UpdateStyleSheetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_task`
+/// struct for typed successes of method [`update_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskSuccess {
@@ -999,7 +999,7 @@ pub enum UpdateTaskSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_task_actions`
+/// struct for typed successes of method [`update_task_actions`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskActionsSuccess {
@@ -1007,7 +1007,7 @@ pub enum UpdateTaskActionsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_webhook`
+/// struct for typed successes of method [`update_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWebhookSuccess {
@@ -1015,364 +1015,364 @@ pub enum UpdateWebhookSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_assistant`
+/// struct for typed errors of method [`create_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAssistantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_field`
+/// struct for typed errors of method [`create_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFieldError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_field_type`
+/// struct for typed errors of method [`create_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFieldTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_field_value`
+/// struct for typed errors of method [`create_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFieldValueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_model_build`
+/// struct for typed errors of method [`create_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateModelBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_query`
+/// struct for typed errors of method [`create_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateQueryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sample`
+/// struct for typed errors of method [`create_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSampleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_task`
+/// struct for typed errors of method [`create_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_webhook`
+/// struct for typed errors of method [`create_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_assistant`
+/// struct for typed errors of method [`delete_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAssistantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_field`
+/// struct for typed errors of method [`delete_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFieldError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_field_type`
+/// struct for typed errors of method [`delete_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFieldTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_field_value`
+/// struct for typed errors of method [`delete_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFieldValueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_model_build`
+/// struct for typed errors of method [`delete_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteModelBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_query`
+/// struct for typed errors of method [`delete_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteQueryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sample`
+/// struct for typed errors of method [`delete_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSampleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_task`
+/// struct for typed errors of method [`delete_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_webhook`
+/// struct for typed errors of method [`delete_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_assistant`
+/// struct for typed errors of method [`fetch_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAssistantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_defaults`
+/// struct for typed errors of method [`fetch_defaults`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDefaultsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_dialogue`
+/// struct for typed errors of method [`fetch_dialogue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDialogueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_field`
+/// struct for typed errors of method [`fetch_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFieldError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_field_type`
+/// struct for typed errors of method [`fetch_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFieldTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_field_value`
+/// struct for typed errors of method [`fetch_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFieldValueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_model_build`
+/// struct for typed errors of method [`fetch_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchModelBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_query`
+/// struct for typed errors of method [`fetch_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchQueryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sample`
+/// struct for typed errors of method [`fetch_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSampleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_style_sheet`
+/// struct for typed errors of method [`fetch_style_sheet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchStyleSheetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task`
+/// struct for typed errors of method [`fetch_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_actions`
+/// struct for typed errors of method [`fetch_task_actions`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskActionsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_task_statistics`
+/// struct for typed errors of method [`fetch_task_statistics`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTaskStatisticsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_webhook`
+/// struct for typed errors of method [`fetch_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_assistant`
+/// struct for typed errors of method [`list_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAssistantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_field`
+/// struct for typed errors of method [`list_field`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFieldError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_field_type`
+/// struct for typed errors of method [`list_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFieldTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_field_value`
+/// struct for typed errors of method [`list_field_value`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFieldValueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_model_build`
+/// struct for typed errors of method [`list_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListModelBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_query`
+/// struct for typed errors of method [`list_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListQueryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sample`
+/// struct for typed errors of method [`list_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSampleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_task`
+/// struct for typed errors of method [`list_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_webhook`
+/// struct for typed errors of method [`list_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWebhookError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_assistant`
+/// struct for typed errors of method [`update_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAssistantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_defaults`
+/// struct for typed errors of method [`update_defaults`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateDefaultsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_field_type`
+/// struct for typed errors of method [`update_field_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFieldTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_model_build`
+/// struct for typed errors of method [`update_model_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateModelBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_query`
+/// struct for typed errors of method [`update_query`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateQueryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_restore_assistant`
+/// struct for typed errors of method [`update_restore_assistant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateRestoreAssistantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sample`
+/// struct for typed errors of method [`update_sample`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSampleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_style_sheet`
+/// struct for typed errors of method [`update_style_sheet`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateStyleSheetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_task`
+/// struct for typed errors of method [`update_task`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_task_actions`
+/// struct for typed errors of method [`update_task_actions`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTaskActionsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_webhook`
+/// struct for typed errors of method [`update_webhook`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWebhookError {

@@ -14,14 +14,14 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_account`
+/// struct for passing parameters to the method [`create_account`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateAccountParams {
     /// A human readable description of the account to create, defaults to `SubAccount Created at {YYYY-MM-DD HH:MM meridian}`
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_address`
+/// struct for passing parameters to the method [`create_address`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateAddressParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Address resource.
@@ -46,7 +46,7 @@ pub struct CreateAddressParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_application`
+/// struct for passing parameters to the method [`create_application`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateApplicationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -83,7 +83,7 @@ pub struct CreateApplicationParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_call`
+/// struct for passing parameters to the method [`create_call`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCallParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -160,7 +160,7 @@ pub struct CreateCallParams {
     pub url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_call_feedback_summary`
+/// struct for passing parameters to the method [`create_call_feedback_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCallFeedbackSummaryParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -177,7 +177,7 @@ pub struct CreateCallFeedbackSummaryParams {
     pub status_callback_method: Option<String>
 }
 
-/// struct for passing parameters to the method `create_call_recording`
+/// struct for passing parameters to the method [`create_call_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCallRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -198,7 +198,7 @@ pub struct CreateCallRecordingParams {
     pub trim: Option<String>
 }
 
-/// struct for passing parameters to the method `create_incoming_phone_number`
+/// struct for passing parameters to the method [`create_incoming_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIncomingPhoneNumberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -253,7 +253,7 @@ pub struct CreateIncomingPhoneNumberParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_incoming_phone_number_assigned_add_on`
+/// struct for passing parameters to the method [`create_incoming_phone_number_assigned_add_on`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIncomingPhoneNumberAssignedAddOnParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -264,7 +264,7 @@ pub struct CreateIncomingPhoneNumberAssignedAddOnParams {
     pub installed_add_on_sid: String
 }
 
-/// struct for passing parameters to the method `create_incoming_phone_number_local`
+/// struct for passing parameters to the method [`create_incoming_phone_number_local`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIncomingPhoneNumberLocalParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -317,7 +317,7 @@ pub struct CreateIncomingPhoneNumberLocalParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_incoming_phone_number_mobile`
+/// struct for passing parameters to the method [`create_incoming_phone_number_mobile`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIncomingPhoneNumberMobileParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -370,7 +370,7 @@ pub struct CreateIncomingPhoneNumberMobileParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_incoming_phone_number_toll_free`
+/// struct for passing parameters to the method [`create_incoming_phone_number_toll_free`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateIncomingPhoneNumberTollFreeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -423,7 +423,7 @@ pub struct CreateIncomingPhoneNumberTollFreeParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_message`
+/// struct for passing parameters to the method [`create_message`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateMessageParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -462,7 +462,7 @@ pub struct CreateMessageParams {
     pub validity_period: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_message_feedback`
+/// struct for passing parameters to the method [`create_message_feedback`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateMessageFeedbackParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -473,7 +473,7 @@ pub struct CreateMessageFeedbackParams {
     pub outcome: Option<String>
 }
 
-/// struct for passing parameters to the method `create_new_key`
+/// struct for passing parameters to the method [`create_new_key`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNewKeyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
@@ -482,7 +482,7 @@ pub struct CreateNewKeyParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_new_signing_key`
+/// struct for passing parameters to the method [`create_new_signing_key`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateNewSigningKeyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
@@ -491,7 +491,7 @@ pub struct CreateNewSigningKeyParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `create_participant`
+/// struct for passing parameters to the method [`create_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateParticipantParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -578,7 +578,7 @@ pub struct CreateParticipantParams {
     pub wait_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_payments`
+/// struct for passing parameters to the method [`create_payments`]
 #[derive(Clone, Debug, Default)]
 pub struct CreatePaymentsParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -619,7 +619,7 @@ pub struct CreatePaymentsParams {
     pub valid_card_types: Option<String>
 }
 
-/// struct for passing parameters to the method `create_queue`
+/// struct for passing parameters to the method [`create_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateQueueParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -630,7 +630,7 @@ pub struct CreateQueueParams {
     pub max_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_sip_auth_calls_credential_list_mapping`
+/// struct for passing parameters to the method [`create_sip_auth_calls_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipAuthCallsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -641,7 +641,7 @@ pub struct CreateSipAuthCallsCredentialListMappingParams {
     pub credential_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`create_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipAuthCallsIpAccessControlListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -652,7 +652,7 @@ pub struct CreateSipAuthCallsIpAccessControlListMappingParams {
     pub ip_access_control_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_sip_auth_registrations_credential_list_mapping`
+/// struct for passing parameters to the method [`create_sip_auth_registrations_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipAuthRegistrationsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -663,7 +663,7 @@ pub struct CreateSipAuthRegistrationsCredentialListMappingParams {
     pub credential_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_sip_credential`
+/// struct for passing parameters to the method [`create_sip_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipCredentialParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -676,7 +676,7 @@ pub struct CreateSipCredentialParams {
     pub username: String
 }
 
-/// struct for passing parameters to the method `create_sip_credential_list`
+/// struct for passing parameters to the method [`create_sip_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipCredentialListParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -685,7 +685,7 @@ pub struct CreateSipCredentialListParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `create_sip_credential_list_mapping`
+/// struct for passing parameters to the method [`create_sip_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipCredentialListMappingParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -696,7 +696,7 @@ pub struct CreateSipCredentialListMappingParams {
     pub credential_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_sip_domain`
+/// struct for passing parameters to the method [`create_sip_domain`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipDomainParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -729,7 +729,7 @@ pub struct CreateSipDomainParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `create_sip_ip_access_control_list`
+/// struct for passing parameters to the method [`create_sip_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipIpAccessControlListParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -738,7 +738,7 @@ pub struct CreateSipIpAccessControlListParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `create_sip_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`create_sip_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipIpAccessControlListMappingParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -749,7 +749,7 @@ pub struct CreateSipIpAccessControlListMappingParams {
     pub ip_access_control_list_sid: String
 }
 
-/// struct for passing parameters to the method `create_sip_ip_address`
+/// struct for passing parameters to the method [`create_sip_ip_address`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSipIpAddressParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -764,7 +764,7 @@ pub struct CreateSipIpAddressParams {
     pub cidr_prefix_length: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_token`
+/// struct for passing parameters to the method [`create_token`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTokenParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -773,7 +773,7 @@ pub struct CreateTokenParams {
     pub ttl: Option<i32>
 }
 
-/// struct for passing parameters to the method `create_usage_trigger`
+/// struct for passing parameters to the method [`create_usage_trigger`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateUsageTriggerParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
@@ -794,7 +794,7 @@ pub struct CreateUsageTriggerParams {
     pub trigger_by: Option<String>
 }
 
-/// struct for passing parameters to the method `create_validation_request`
+/// struct for passing parameters to the method [`create_validation_request`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateValidationRequestParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for the new caller ID resource.
@@ -813,7 +813,7 @@ pub struct CreateValidationRequestParams {
     pub status_callback_method: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_address`
+/// struct for passing parameters to the method [`delete_address`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteAddressParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to delete.
@@ -822,7 +822,7 @@ pub struct DeleteAddressParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_application`
+/// struct for passing parameters to the method [`delete_application`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteApplicationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to delete.
@@ -831,7 +831,7 @@ pub struct DeleteApplicationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_call`
+/// struct for passing parameters to the method [`delete_call`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCallParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to delete.
@@ -840,7 +840,7 @@ pub struct DeleteCallParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_call_feedback_summary`
+/// struct for passing parameters to the method [`delete_call_feedback_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCallFeedbackSummaryParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -849,7 +849,7 @@ pub struct DeleteCallFeedbackSummaryParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_call_recording`
+/// struct for passing parameters to the method [`delete_call_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCallRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to delete.
@@ -860,7 +860,7 @@ pub struct DeleteCallRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_conference_recording`
+/// struct for passing parameters to the method [`delete_conference_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConferenceRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resources to delete.
@@ -871,7 +871,7 @@ pub struct DeleteConferenceRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_connect_app`
+/// struct for passing parameters to the method [`delete_connect_app`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteConnectAppParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resource to fetch.
@@ -880,7 +880,7 @@ pub struct DeleteConnectAppParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_incoming_phone_number`
+/// struct for passing parameters to the method [`delete_incoming_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteIncomingPhoneNumberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resources to delete.
@@ -889,7 +889,7 @@ pub struct DeleteIncomingPhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_incoming_phone_number_assigned_add_on`
+/// struct for passing parameters to the method [`delete_incoming_phone_number_assigned_add_on`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteIncomingPhoneNumberAssignedAddOnParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to delete.
@@ -900,7 +900,7 @@ pub struct DeleteIncomingPhoneNumberAssignedAddOnParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_key`
+/// struct for passing parameters to the method [`delete_key`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteKeyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resources to delete.
@@ -909,7 +909,7 @@ pub struct DeleteKeyParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_media`
+/// struct for passing parameters to the method [`delete_media`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteMediaParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Media resource(s) to delete.
@@ -920,7 +920,7 @@ pub struct DeleteMediaParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_message`
+/// struct for passing parameters to the method [`delete_message`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteMessageParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resources to delete.
@@ -929,7 +929,7 @@ pub struct DeleteMessageParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_outgoing_caller_id`
+/// struct for passing parameters to the method [`delete_outgoing_caller_id`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteOutgoingCallerIdParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to delete.
@@ -938,7 +938,7 @@ pub struct DeleteOutgoingCallerIdParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_participant`
+/// struct for passing parameters to the method [`delete_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteParticipantParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to delete.
@@ -949,7 +949,7 @@ pub struct DeleteParticipantParams {
     pub call_sid: String
 }
 
-/// struct for passing parameters to the method `delete_queue`
+/// struct for passing parameters to the method [`delete_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteQueueParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Queue resource to delete.
@@ -958,7 +958,7 @@ pub struct DeleteQueueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_recording`
+/// struct for passing parameters to the method [`delete_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to delete.
@@ -967,7 +967,7 @@ pub struct DeleteRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_recording_add_on_result`
+/// struct for passing parameters to the method [`delete_recording_add_on_result`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRecordingAddOnResultParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult resources to delete.
@@ -978,7 +978,7 @@ pub struct DeleteRecordingAddOnResultParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_recording_add_on_result_payload`
+/// struct for passing parameters to the method [`delete_recording_add_on_result_payload`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRecordingAddOnResultPayloadParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resources to delete.
@@ -991,7 +991,7 @@ pub struct DeleteRecordingAddOnResultPayloadParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_recording_transcription`
+/// struct for passing parameters to the method [`delete_recording_transcription`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteRecordingTranscriptionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resources to delete.
@@ -1002,14 +1002,14 @@ pub struct DeleteRecordingTranscriptionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_signing_key`
+/// struct for passing parameters to the method [`delete_signing_key`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSigningKeyParams {
     pub account_sid: String,
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_auth_calls_credential_list_mapping`
+/// struct for passing parameters to the method [`delete_sip_auth_calls_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipAuthCallsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to delete.
@@ -1020,7 +1020,7 @@ pub struct DeleteSipAuthCallsCredentialListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`delete_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipAuthCallsIpAccessControlListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resources to delete.
@@ -1031,7 +1031,7 @@ pub struct DeleteSipAuthCallsIpAccessControlListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_auth_registrations_credential_list_mapping`
+/// struct for passing parameters to the method [`delete_sip_auth_registrations_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipAuthRegistrationsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to delete.
@@ -1042,7 +1042,7 @@ pub struct DeleteSipAuthRegistrationsCredentialListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_credential`
+/// struct for passing parameters to the method [`delete_sip_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipCredentialParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -1053,7 +1053,7 @@ pub struct DeleteSipCredentialParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_credential_list`
+/// struct for passing parameters to the method [`delete_sip_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipCredentialListParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -1062,7 +1062,7 @@ pub struct DeleteSipCredentialListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_credential_list_mapping`
+/// struct for passing parameters to the method [`delete_sip_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipCredentialListMappingParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1073,7 +1073,7 @@ pub struct DeleteSipCredentialListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_domain`
+/// struct for passing parameters to the method [`delete_sip_domain`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipDomainParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resources to delete.
@@ -1082,7 +1082,7 @@ pub struct DeleteSipDomainParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_ip_access_control_list`
+/// struct for passing parameters to the method [`delete_sip_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipIpAccessControlListParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1091,7 +1091,7 @@ pub struct DeleteSipIpAccessControlListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`delete_sip_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipIpAccessControlListMappingParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -1102,7 +1102,7 @@ pub struct DeleteSipIpAccessControlListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_sip_ip_address`
+/// struct for passing parameters to the method [`delete_sip_ip_address`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSipIpAddressParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1113,7 +1113,7 @@ pub struct DeleteSipIpAddressParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_transcription`
+/// struct for passing parameters to the method [`delete_transcription`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTranscriptionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resources to delete.
@@ -1122,7 +1122,7 @@ pub struct DeleteTranscriptionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_usage_trigger`
+/// struct for passing parameters to the method [`delete_usage_trigger`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteUsageTriggerParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resources to delete.
@@ -1131,14 +1131,14 @@ pub struct DeleteUsageTriggerParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_account`
+/// struct for passing parameters to the method [`fetch_account`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAccountParams {
     /// The Account Sid that uniquely identifies the account to fetch
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_address`
+/// struct for passing parameters to the method [`fetch_address`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAddressParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to fetch.
@@ -1147,7 +1147,7 @@ pub struct FetchAddressParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_application`
+/// struct for passing parameters to the method [`fetch_application`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchApplicationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resource to fetch.
@@ -1156,7 +1156,7 @@ pub struct FetchApplicationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_authorized_connect_app`
+/// struct for passing parameters to the method [`fetch_authorized_connect_app`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAuthorizedConnectAppParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AuthorizedConnectApp resource to fetch.
@@ -1165,7 +1165,7 @@ pub struct FetchAuthorizedConnectAppParams {
     pub connect_app_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_available_phone_number_country`
+/// struct for passing parameters to the method [`fetch_available_phone_number_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAvailablePhoneNumberCountryParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the available phone number Country resource.
@@ -1174,14 +1174,14 @@ pub struct FetchAvailablePhoneNumberCountryParams {
     pub country_code: String
 }
 
-/// struct for passing parameters to the method `fetch_balance`
+/// struct for passing parameters to the method [`fetch_balance`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBalanceParams {
     /// The unique SID identifier of the Account.
     pub account_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_call`
+/// struct for passing parameters to the method [`fetch_call`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCallParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to fetch.
@@ -1190,7 +1190,7 @@ pub struct FetchCallParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_call_feedback`
+/// struct for passing parameters to the method [`fetch_call_feedback`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCallFeedbackParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1199,7 +1199,7 @@ pub struct FetchCallFeedbackParams {
     pub call_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_call_feedback_summary`
+/// struct for passing parameters to the method [`fetch_call_feedback_summary`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCallFeedbackSummaryParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1208,7 +1208,7 @@ pub struct FetchCallFeedbackSummaryParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_call_notification`
+/// struct for passing parameters to the method [`fetch_call_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCallNotificationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call Notification resource to fetch.
@@ -1219,7 +1219,7 @@ pub struct FetchCallNotificationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_call_recording`
+/// struct for passing parameters to the method [`fetch_call_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCallRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to fetch.
@@ -1230,7 +1230,7 @@ pub struct FetchCallRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conference`
+/// struct for passing parameters to the method [`fetch_conference`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConferenceParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to fetch.
@@ -1239,7 +1239,7 @@ pub struct FetchConferenceParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_conference_recording`
+/// struct for passing parameters to the method [`fetch_conference_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConferenceRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resource to fetch.
@@ -1250,7 +1250,7 @@ pub struct FetchConferenceRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_connect_app`
+/// struct for passing parameters to the method [`fetch_connect_app`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConnectAppParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resource to fetch.
@@ -1259,7 +1259,7 @@ pub struct FetchConnectAppParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_incoming_phone_number`
+/// struct for passing parameters to the method [`fetch_incoming_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchIncomingPhoneNumberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resource to fetch.
@@ -1268,7 +1268,7 @@ pub struct FetchIncomingPhoneNumberParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_incoming_phone_number_assigned_add_on`
+/// struct for passing parameters to the method [`fetch_incoming_phone_number_assigned_add_on`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchIncomingPhoneNumberAssignedAddOnParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resource to fetch.
@@ -1279,7 +1279,7 @@ pub struct FetchIncomingPhoneNumberAssignedAddOnParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_incoming_phone_number_assigned_add_on_extension`
+/// struct for passing parameters to the method [`fetch_incoming_phone_number_assigned_add_on_extension`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchIncomingPhoneNumberAssignedAddOnExtensionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resource to fetch.
@@ -1292,7 +1292,7 @@ pub struct FetchIncomingPhoneNumberAssignedAddOnExtensionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_key`
+/// struct for passing parameters to the method [`fetch_key`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchKeyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resource to fetch.
@@ -1301,7 +1301,7 @@ pub struct FetchKeyParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_media`
+/// struct for passing parameters to the method [`fetch_media`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchMediaParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Media resource(s) to fetch.
@@ -1312,7 +1312,7 @@ pub struct FetchMediaParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_member`
+/// struct for passing parameters to the method [`fetch_member`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchMemberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to fetch.
@@ -1323,7 +1323,7 @@ pub struct FetchMemberParams {
     pub call_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_message`
+/// struct for passing parameters to the method [`fetch_message`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchMessageParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resource to fetch.
@@ -1332,7 +1332,7 @@ pub struct FetchMessageParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_notification`
+/// struct for passing parameters to the method [`fetch_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchNotificationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Notification resource to fetch.
@@ -1341,7 +1341,7 @@ pub struct FetchNotificationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_outgoing_caller_id`
+/// struct for passing parameters to the method [`fetch_outgoing_caller_id`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchOutgoingCallerIdParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resource to fetch.
@@ -1350,7 +1350,7 @@ pub struct FetchOutgoingCallerIdParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_participant`
+/// struct for passing parameters to the method [`fetch_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchParticipantParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resource to fetch.
@@ -1361,7 +1361,7 @@ pub struct FetchParticipantParams {
     pub call_sid: String
 }
 
-/// struct for passing parameters to the method `fetch_queue`
+/// struct for passing parameters to the method [`fetch_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchQueueParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Queue resource to fetch.
@@ -1370,7 +1370,7 @@ pub struct FetchQueueParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_recording`
+/// struct for passing parameters to the method [`fetch_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to fetch.
@@ -1379,7 +1379,7 @@ pub struct FetchRecordingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_recording_add_on_result`
+/// struct for passing parameters to the method [`fetch_recording_add_on_result`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRecordingAddOnResultParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult resource to fetch.
@@ -1390,7 +1390,7 @@ pub struct FetchRecordingAddOnResultParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_recording_add_on_result_payload`
+/// struct for passing parameters to the method [`fetch_recording_add_on_result_payload`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRecordingAddOnResultPayloadParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resource to fetch.
@@ -1403,7 +1403,7 @@ pub struct FetchRecordingAddOnResultPayloadParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_recording_transcription`
+/// struct for passing parameters to the method [`fetch_recording_transcription`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRecordingTranscriptionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resource to fetch.
@@ -1414,7 +1414,7 @@ pub struct FetchRecordingTranscriptionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_short_code`
+/// struct for passing parameters to the method [`fetch_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchShortCodeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to fetch.
@@ -1423,14 +1423,14 @@ pub struct FetchShortCodeParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_signing_key`
+/// struct for passing parameters to the method [`fetch_signing_key`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSigningKeyParams {
     pub account_sid: String,
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_auth_calls_credential_list_mapping`
+/// struct for passing parameters to the method [`fetch_sip_auth_calls_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipAuthCallsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resource to fetch.
@@ -1441,7 +1441,7 @@ pub struct FetchSipAuthCallsCredentialListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`fetch_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipAuthCallsIpAccessControlListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resource to fetch.
@@ -1452,7 +1452,7 @@ pub struct FetchSipAuthCallsIpAccessControlListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_auth_registrations_credential_list_mapping`
+/// struct for passing parameters to the method [`fetch_sip_auth_registrations_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipAuthRegistrationsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resource to fetch.
@@ -1463,7 +1463,7 @@ pub struct FetchSipAuthRegistrationsCredentialListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_credential`
+/// struct for passing parameters to the method [`fetch_sip_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipCredentialParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -1474,7 +1474,7 @@ pub struct FetchSipCredentialParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_credential_list`
+/// struct for passing parameters to the method [`fetch_sip_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipCredentialListParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -1483,7 +1483,7 @@ pub struct FetchSipCredentialListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_credential_list_mapping`
+/// struct for passing parameters to the method [`fetch_sip_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipCredentialListMappingParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1494,7 +1494,7 @@ pub struct FetchSipCredentialListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_domain`
+/// struct for passing parameters to the method [`fetch_sip_domain`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipDomainParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resource to fetch.
@@ -1503,7 +1503,7 @@ pub struct FetchSipDomainParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_ip_access_control_list`
+/// struct for passing parameters to the method [`fetch_sip_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipIpAccessControlListParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1512,7 +1512,7 @@ pub struct FetchSipIpAccessControlListParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`fetch_sip_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipIpAccessControlListMappingParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -1523,7 +1523,7 @@ pub struct FetchSipIpAccessControlListMappingParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_sip_ip_address`
+/// struct for passing parameters to the method [`fetch_sip_ip_address`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSipIpAddressParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -1534,7 +1534,7 @@ pub struct FetchSipIpAddressParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_transcription`
+/// struct for passing parameters to the method [`fetch_transcription`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTranscriptionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resource to fetch.
@@ -1543,7 +1543,7 @@ pub struct FetchTranscriptionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_usage_trigger`
+/// struct for passing parameters to the method [`fetch_usage_trigger`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchUsageTriggerParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resource to fetch.
@@ -1552,7 +1552,7 @@ pub struct FetchUsageTriggerParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_account`
+/// struct for passing parameters to the method [`list_account`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAccountParams {
     /// Only return the Account resources with friendly names that exactly match this name.
@@ -1563,7 +1563,7 @@ pub struct ListAccountParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_address`
+/// struct for passing parameters to the method [`list_address`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAddressParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to read.
@@ -1578,7 +1578,7 @@ pub struct ListAddressParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_application`
+/// struct for passing parameters to the method [`list_application`]
 #[derive(Clone, Debug, Default)]
 pub struct ListApplicationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to read.
@@ -1589,7 +1589,7 @@ pub struct ListApplicationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_authorized_connect_app`
+/// struct for passing parameters to the method [`list_authorized_connect_app`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAuthorizedConnectAppParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AuthorizedConnectApp resources to read.
@@ -1598,7 +1598,7 @@ pub struct ListAuthorizedConnectAppParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_country`
+/// struct for passing parameters to the method [`list_available_phone_number_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberCountryParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the available phone number Country resources.
@@ -1607,7 +1607,7 @@ pub struct ListAvailablePhoneNumberCountryParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_local`
+/// struct for passing parameters to the method [`list_available_phone_number_local`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberLocalParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1654,7 +1654,7 @@ pub struct ListAvailablePhoneNumberLocalParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_machine_to_machine`
+/// struct for passing parameters to the method [`list_available_phone_number_machine_to_machine`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberMachineToMachineParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1701,7 +1701,7 @@ pub struct ListAvailablePhoneNumberMachineToMachineParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_mobile`
+/// struct for passing parameters to the method [`list_available_phone_number_mobile`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberMobileParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1748,7 +1748,7 @@ pub struct ListAvailablePhoneNumberMobileParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_national`
+/// struct for passing parameters to the method [`list_available_phone_number_national`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberNationalParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1795,7 +1795,7 @@ pub struct ListAvailablePhoneNumberNationalParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_shared_cost`
+/// struct for passing parameters to the method [`list_available_phone_number_shared_cost`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberSharedCostParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1842,7 +1842,7 @@ pub struct ListAvailablePhoneNumberSharedCostParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_toll_free`
+/// struct for passing parameters to the method [`list_available_phone_number_toll_free`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberTollFreeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1889,7 +1889,7 @@ pub struct ListAvailablePhoneNumberTollFreeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_available_phone_number_voip`
+/// struct for passing parameters to the method [`list_available_phone_number_voip`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAvailablePhoneNumberVoipParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the AvailablePhoneNumber resources.
@@ -1936,7 +1936,7 @@ pub struct ListAvailablePhoneNumberVoipParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_call`
+/// struct for passing parameters to the method [`list_call`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCallParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to read.
@@ -1965,7 +1965,7 @@ pub struct ListCallParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_call_event`
+/// struct for passing parameters to the method [`list_call_event`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCallEventParams {
     /// The unique SID identifier of the Account.
@@ -1976,7 +1976,7 @@ pub struct ListCallEventParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_call_notification`
+/// struct for passing parameters to the method [`list_call_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCallNotificationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call Notification resources to read.
@@ -1995,7 +1995,7 @@ pub struct ListCallNotificationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_call_recording`
+/// struct for passing parameters to the method [`list_call_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCallRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to read.
@@ -2012,7 +2012,7 @@ pub struct ListCallRecordingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_conference`
+/// struct for passing parameters to the method [`list_conference`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConferenceParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to read.
@@ -2037,7 +2037,7 @@ pub struct ListConferenceParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_conference_recording`
+/// struct for passing parameters to the method [`list_conference_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConferenceRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resources to read.
@@ -2054,7 +2054,7 @@ pub struct ListConferenceRecordingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_connect_app`
+/// struct for passing parameters to the method [`list_connect_app`]
 #[derive(Clone, Debug, Default)]
 pub struct ListConnectAppParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resources to read.
@@ -2063,7 +2063,7 @@ pub struct ListConnectAppParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_dependent_phone_number`
+/// struct for passing parameters to the method [`list_dependent_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDependentPhoneNumberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the DependentPhoneNumber resources to read.
@@ -2074,7 +2074,7 @@ pub struct ListDependentPhoneNumberParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_incoming_phone_number`
+/// struct for passing parameters to the method [`list_incoming_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIncomingPhoneNumberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resources to read.
@@ -2091,7 +2091,7 @@ pub struct ListIncomingPhoneNumberParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_incoming_phone_number_assigned_add_on`
+/// struct for passing parameters to the method [`list_incoming_phone_number_assigned_add_on`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIncomingPhoneNumberAssignedAddOnParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
@@ -2102,7 +2102,7 @@ pub struct ListIncomingPhoneNumberAssignedAddOnParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_incoming_phone_number_assigned_add_on_extension`
+/// struct for passing parameters to the method [`list_incoming_phone_number_assigned_add_on_extension`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIncomingPhoneNumberAssignedAddOnExtensionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
@@ -2115,7 +2115,7 @@ pub struct ListIncomingPhoneNumberAssignedAddOnExtensionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_incoming_phone_number_local`
+/// struct for passing parameters to the method [`list_incoming_phone_number_local`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIncomingPhoneNumberLocalParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
@@ -2132,7 +2132,7 @@ pub struct ListIncomingPhoneNumberLocalParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_incoming_phone_number_mobile`
+/// struct for passing parameters to the method [`list_incoming_phone_number_mobile`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIncomingPhoneNumberMobileParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
@@ -2149,7 +2149,7 @@ pub struct ListIncomingPhoneNumberMobileParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_incoming_phone_number_toll_free`
+/// struct for passing parameters to the method [`list_incoming_phone_number_toll_free`]
 #[derive(Clone, Debug, Default)]
 pub struct ListIncomingPhoneNumberTollFreeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
@@ -2166,7 +2166,7 @@ pub struct ListIncomingPhoneNumberTollFreeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_key`
+/// struct for passing parameters to the method [`list_key`]
 #[derive(Clone, Debug, Default)]
 pub struct ListKeyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resources to read.
@@ -2175,7 +2175,7 @@ pub struct ListKeyParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_media`
+/// struct for passing parameters to the method [`list_media`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMediaParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Media resource(s) to read.
@@ -2192,7 +2192,7 @@ pub struct ListMediaParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_member`
+/// struct for passing parameters to the method [`list_member`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMemberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to read.
@@ -2203,7 +2203,7 @@ pub struct ListMemberParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_message`
+/// struct for passing parameters to the method [`list_message`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMessageParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resources to read.
@@ -2222,7 +2222,7 @@ pub struct ListMessageParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_notification`
+/// struct for passing parameters to the method [`list_notification`]
 #[derive(Clone, Debug, Default)]
 pub struct ListNotificationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Notification resources to read.
@@ -2239,7 +2239,7 @@ pub struct ListNotificationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_outgoing_caller_id`
+/// struct for passing parameters to the method [`list_outgoing_caller_id`]
 #[derive(Clone, Debug, Default)]
 pub struct ListOutgoingCallerIdParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to read.
@@ -2252,7 +2252,7 @@ pub struct ListOutgoingCallerIdParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_participant`
+/// struct for passing parameters to the method [`list_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct ListParticipantParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to read.
@@ -2269,7 +2269,7 @@ pub struct ListParticipantParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_queue`
+/// struct for passing parameters to the method [`list_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct ListQueueParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Queue resources to read.
@@ -2278,7 +2278,7 @@ pub struct ListQueueParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_recording`
+/// struct for passing parameters to the method [`list_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to read.
@@ -2297,7 +2297,7 @@ pub struct ListRecordingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_recording_add_on_result`
+/// struct for passing parameters to the method [`list_recording_add_on_result`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRecordingAddOnResultParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult resources to read.
@@ -2308,7 +2308,7 @@ pub struct ListRecordingAddOnResultParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_recording_add_on_result_payload`
+/// struct for passing parameters to the method [`list_recording_add_on_result_payload`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRecordingAddOnResultPayloadParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resources to read.
@@ -2321,7 +2321,7 @@ pub struct ListRecordingAddOnResultPayloadParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_recording_transcription`
+/// struct for passing parameters to the method [`list_recording_transcription`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRecordingTranscriptionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resources to read.
@@ -2332,7 +2332,7 @@ pub struct ListRecordingTranscriptionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_short_code`
+/// struct for passing parameters to the method [`list_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct ListShortCodeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to read.
@@ -2345,7 +2345,7 @@ pub struct ListShortCodeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_signing_key`
+/// struct for passing parameters to the method [`list_signing_key`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSigningKeyParams {
     pub account_sid: String,
@@ -2353,7 +2353,7 @@ pub struct ListSigningKeyParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_auth_calls_credential_list_mapping`
+/// struct for passing parameters to the method [`list_sip_auth_calls_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipAuthCallsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to read.
@@ -2364,7 +2364,7 @@ pub struct ListSipAuthCallsCredentialListMappingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`list_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipAuthCallsIpAccessControlListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resources to read.
@@ -2375,7 +2375,7 @@ pub struct ListSipAuthCallsIpAccessControlListMappingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_auth_registrations_credential_list_mapping`
+/// struct for passing parameters to the method [`list_sip_auth_registrations_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipAuthRegistrationsCredentialListMappingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to read.
@@ -2386,7 +2386,7 @@ pub struct ListSipAuthRegistrationsCredentialListMappingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_credential`
+/// struct for passing parameters to the method [`list_sip_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipCredentialParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -2397,7 +2397,7 @@ pub struct ListSipCredentialParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_credential_list`
+/// struct for passing parameters to the method [`list_sip_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipCredentialListParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -2406,7 +2406,7 @@ pub struct ListSipCredentialListParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_credential_list_mapping`
+/// struct for passing parameters to the method [`list_sip_credential_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipCredentialListMappingParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -2417,7 +2417,7 @@ pub struct ListSipCredentialListMappingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_domain`
+/// struct for passing parameters to the method [`list_sip_domain`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipDomainParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resources to read.
@@ -2426,7 +2426,7 @@ pub struct ListSipDomainParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_ip_access_control_list`
+/// struct for passing parameters to the method [`list_sip_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipIpAccessControlListParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -2435,7 +2435,7 @@ pub struct ListSipIpAccessControlListParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_ip_access_control_list_mapping`
+/// struct for passing parameters to the method [`list_sip_ip_access_control_list_mapping`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipIpAccessControlListMappingParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -2446,7 +2446,7 @@ pub struct ListSipIpAccessControlListMappingParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_sip_ip_address`
+/// struct for passing parameters to the method [`list_sip_ip_address`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSipIpAddressParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -2457,7 +2457,7 @@ pub struct ListSipIpAddressParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_transcription`
+/// struct for passing parameters to the method [`list_transcription`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTranscriptionParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resources to read.
@@ -2466,7 +2466,7 @@ pub struct ListTranscriptionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record`
+/// struct for passing parameters to the method [`list_usage_record`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2483,7 +2483,7 @@ pub struct ListUsageRecordParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_all_time`
+/// struct for passing parameters to the method [`list_usage_record_all_time`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordAllTimeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2500,7 +2500,7 @@ pub struct ListUsageRecordAllTimeParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_daily`
+/// struct for passing parameters to the method [`list_usage_record_daily`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordDailyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2517,7 +2517,7 @@ pub struct ListUsageRecordDailyParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_last_month`
+/// struct for passing parameters to the method [`list_usage_record_last_month`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordLastMonthParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2534,7 +2534,7 @@ pub struct ListUsageRecordLastMonthParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_monthly`
+/// struct for passing parameters to the method [`list_usage_record_monthly`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordMonthlyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2551,7 +2551,7 @@ pub struct ListUsageRecordMonthlyParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_this_month`
+/// struct for passing parameters to the method [`list_usage_record_this_month`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordThisMonthParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2568,7 +2568,7 @@ pub struct ListUsageRecordThisMonthParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_today`
+/// struct for passing parameters to the method [`list_usage_record_today`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordTodayParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2585,7 +2585,7 @@ pub struct ListUsageRecordTodayParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_yearly`
+/// struct for passing parameters to the method [`list_usage_record_yearly`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordYearlyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2602,7 +2602,7 @@ pub struct ListUsageRecordYearlyParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_record_yesterday`
+/// struct for passing parameters to the method [`list_usage_record_yesterday`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageRecordYesterdayParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageRecord resources to read.
@@ -2619,7 +2619,7 @@ pub struct ListUsageRecordYesterdayParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_usage_trigger`
+/// struct for passing parameters to the method [`list_usage_trigger`]
 #[derive(Clone, Debug, Default)]
 pub struct ListUsageTriggerParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resources to read.
@@ -2634,7 +2634,7 @@ pub struct ListUsageTriggerParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_account`
+/// struct for passing parameters to the method [`update_account`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateAccountParams {
     /// The Account Sid that uniquely identifies the account to update
@@ -2645,7 +2645,7 @@ pub struct UpdateAccountParams {
     pub status: Option<String>
 }
 
-/// struct for passing parameters to the method `update_address`
+/// struct for passing parameters to the method [`update_address`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateAddressParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to update.
@@ -2670,7 +2670,7 @@ pub struct UpdateAddressParams {
     pub street: Option<String>
 }
 
-/// struct for passing parameters to the method `update_application`
+/// struct for passing parameters to the method [`update_application`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateApplicationParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Application resources to update.
@@ -2709,7 +2709,7 @@ pub struct UpdateApplicationParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_call`
+/// struct for passing parameters to the method [`update_call`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCallParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to update.
@@ -2736,7 +2736,7 @@ pub struct UpdateCallParams {
     pub url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_call_feedback`
+/// struct for passing parameters to the method [`update_call_feedback`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCallFeedbackParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -2749,7 +2749,7 @@ pub struct UpdateCallFeedbackParams {
     pub quality_score: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_call_recording`
+/// struct for passing parameters to the method [`update_call_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCallRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to update.
@@ -2764,7 +2764,7 @@ pub struct UpdateCallRecordingParams {
     pub pause_behavior: Option<String>
 }
 
-/// struct for passing parameters to the method `update_conference`
+/// struct for passing parameters to the method [`update_conference`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConferenceParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to update.
@@ -2779,7 +2779,7 @@ pub struct UpdateConferenceParams {
     pub status: Option<String>
 }
 
-/// struct for passing parameters to the method `update_conference_recording`
+/// struct for passing parameters to the method [`update_conference_recording`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConferenceRecordingParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resource to update.
@@ -2794,7 +2794,7 @@ pub struct UpdateConferenceRecordingParams {
     pub pause_behavior: Option<String>
 }
 
-/// struct for passing parameters to the method `update_connect_app`
+/// struct for passing parameters to the method [`update_connect_app`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateConnectAppParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resources to update.
@@ -2819,7 +2819,7 @@ pub struct UpdateConnectAppParams {
     pub permissions: Option<Vec<String>>
 }
 
-/// struct for passing parameters to the method `update_incoming_phone_number`
+/// struct for passing parameters to the method [`update_incoming_phone_number`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateIncomingPhoneNumberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resource to update.  For more information, see [Exchanging Numbers Between Subaccounts](https://www.twilio.com/docs/iam/api/subaccounts#exchanging-numbers).
@@ -2874,7 +2874,7 @@ pub struct UpdateIncomingPhoneNumberParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_key`
+/// struct for passing parameters to the method [`update_key`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateKeyParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resources to update.
@@ -2885,7 +2885,7 @@ pub struct UpdateKeyParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_member`
+/// struct for passing parameters to the method [`update_member`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateMemberParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to update.
@@ -2900,7 +2900,7 @@ pub struct UpdateMemberParams {
     pub method: Option<String>
 }
 
-/// struct for passing parameters to the method `update_message`
+/// struct for passing parameters to the method [`update_message`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateMessageParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Message resources to update.
@@ -2911,7 +2911,7 @@ pub struct UpdateMessageParams {
     pub body: Option<String>
 }
 
-/// struct for passing parameters to the method `update_outgoing_caller_id`
+/// struct for passing parameters to the method [`update_outgoing_caller_id`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateOutgoingCallerIdParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to update.
@@ -2922,7 +2922,7 @@ pub struct UpdateOutgoingCallerIdParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_participant`
+/// struct for passing parameters to the method [`update_participant`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateParticipantParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to update.
@@ -2957,7 +2957,7 @@ pub struct UpdateParticipantParams {
     pub wait_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_payments`
+/// struct for passing parameters to the method [`update_payments`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdatePaymentsParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will update the resource.
@@ -2976,7 +2976,7 @@ pub struct UpdatePaymentsParams {
     pub status: Option<String>
 }
 
-/// struct for passing parameters to the method `update_queue`
+/// struct for passing parameters to the method [`update_queue`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateQueueParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Queue resource to update.
@@ -2989,7 +2989,7 @@ pub struct UpdateQueueParams {
     pub max_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_short_code`
+/// struct for passing parameters to the method [`update_short_code`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateShortCodeParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to update.
@@ -3010,7 +3010,7 @@ pub struct UpdateShortCodeParams {
     pub sms_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_signing_key`
+/// struct for passing parameters to the method [`update_signing_key`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSigningKeyParams {
     pub account_sid: String,
@@ -3018,7 +3018,7 @@ pub struct UpdateSigningKeyParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_sip_credential`
+/// struct for passing parameters to the method [`update_sip_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSipCredentialParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -3031,7 +3031,7 @@ pub struct UpdateSipCredentialParams {
     pub password: Option<String>
 }
 
-/// struct for passing parameters to the method `update_sip_credential_list`
+/// struct for passing parameters to the method [`update_sip_credential_list`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSipCredentialListParams {
     /// The unique id of the Account that is responsible for this resource.
@@ -3042,7 +3042,7 @@ pub struct UpdateSipCredentialListParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `update_sip_domain`
+/// struct for passing parameters to the method [`update_sip_domain`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSipDomainParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resource to update.
@@ -3077,7 +3077,7 @@ pub struct UpdateSipDomainParams {
     pub voice_url: Option<String>
 }
 
-/// struct for passing parameters to the method `update_sip_ip_access_control_list`
+/// struct for passing parameters to the method [`update_sip_ip_access_control_list`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSipIpAccessControlListParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -3088,7 +3088,7 @@ pub struct UpdateSipIpAccessControlListParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `update_sip_ip_address`
+/// struct for passing parameters to the method [`update_sip_ip_address`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSipIpAddressParams {
     /// The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
@@ -3105,7 +3105,7 @@ pub struct UpdateSipIpAddressParams {
     pub ip_address: Option<String>
 }
 
-/// struct for passing parameters to the method `update_usage_trigger`
+/// struct for passing parameters to the method [`update_usage_trigger`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateUsageTriggerParams {
     /// The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resources to update.
@@ -3121,7 +3121,7 @@ pub struct UpdateUsageTriggerParams {
 }
 
 
-/// struct for typed successes of method `create_account`
+/// struct for typed successes of method [`create_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAccountSuccess {
@@ -3129,7 +3129,7 @@ pub enum CreateAccountSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_address`
+/// struct for typed successes of method [`create_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAddressSuccess {
@@ -3137,7 +3137,7 @@ pub enum CreateAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_application`
+/// struct for typed successes of method [`create_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateApplicationSuccess {
@@ -3145,7 +3145,7 @@ pub enum CreateApplicationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_call`
+/// struct for typed successes of method [`create_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCallSuccess {
@@ -3153,7 +3153,7 @@ pub enum CreateCallSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_call_feedback_summary`
+/// struct for typed successes of method [`create_call_feedback_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCallFeedbackSummarySuccess {
@@ -3161,7 +3161,7 @@ pub enum CreateCallFeedbackSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_call_recording`
+/// struct for typed successes of method [`create_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCallRecordingSuccess {
@@ -3169,7 +3169,7 @@ pub enum CreateCallRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_incoming_phone_number`
+/// struct for typed successes of method [`create_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberSuccess {
@@ -3177,7 +3177,7 @@ pub enum CreateIncomingPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_incoming_phone_number_assigned_add_on`
+/// struct for typed successes of method [`create_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberAssignedAddOnSuccess {
@@ -3185,7 +3185,7 @@ pub enum CreateIncomingPhoneNumberAssignedAddOnSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_incoming_phone_number_local`
+/// struct for typed successes of method [`create_incoming_phone_number_local`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberLocalSuccess {
@@ -3193,7 +3193,7 @@ pub enum CreateIncomingPhoneNumberLocalSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_incoming_phone_number_mobile`
+/// struct for typed successes of method [`create_incoming_phone_number_mobile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberMobileSuccess {
@@ -3201,7 +3201,7 @@ pub enum CreateIncomingPhoneNumberMobileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_incoming_phone_number_toll_free`
+/// struct for typed successes of method [`create_incoming_phone_number_toll_free`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberTollFreeSuccess {
@@ -3209,7 +3209,7 @@ pub enum CreateIncomingPhoneNumberTollFreeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_message`
+/// struct for typed successes of method [`create_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessageSuccess {
@@ -3217,7 +3217,7 @@ pub enum CreateMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_message_feedback`
+/// struct for typed successes of method [`create_message_feedback`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessageFeedbackSuccess {
@@ -3225,7 +3225,7 @@ pub enum CreateMessageFeedbackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_new_key`
+/// struct for typed successes of method [`create_new_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNewKeySuccess {
@@ -3233,7 +3233,7 @@ pub enum CreateNewKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_new_signing_key`
+/// struct for typed successes of method [`create_new_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNewSigningKeySuccess {
@@ -3241,7 +3241,7 @@ pub enum CreateNewSigningKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_participant`
+/// struct for typed successes of method [`create_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateParticipantSuccess {
@@ -3249,7 +3249,7 @@ pub enum CreateParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_payments`
+/// struct for typed successes of method [`create_payments`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePaymentsSuccess {
@@ -3257,7 +3257,7 @@ pub enum CreatePaymentsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_queue`
+/// struct for typed successes of method [`create_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateQueueSuccess {
@@ -3265,7 +3265,7 @@ pub enum CreateQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_auth_calls_credential_list_mapping`
+/// struct for typed successes of method [`create_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipAuthCallsCredentialListMappingSuccess {
@@ -3273,7 +3273,7 @@ pub enum CreateSipAuthCallsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed successes of method [`create_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipAuthCallsIpAccessControlListMappingSuccess {
@@ -3281,7 +3281,7 @@ pub enum CreateSipAuthCallsIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_auth_registrations_credential_list_mapping`
+/// struct for typed successes of method [`create_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipAuthRegistrationsCredentialListMappingSuccess {
@@ -3289,7 +3289,7 @@ pub enum CreateSipAuthRegistrationsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_credential`
+/// struct for typed successes of method [`create_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipCredentialSuccess {
@@ -3297,7 +3297,7 @@ pub enum CreateSipCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_credential_list`
+/// struct for typed successes of method [`create_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipCredentialListSuccess {
@@ -3305,7 +3305,7 @@ pub enum CreateSipCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_credential_list_mapping`
+/// struct for typed successes of method [`create_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipCredentialListMappingSuccess {
@@ -3313,7 +3313,7 @@ pub enum CreateSipCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_domain`
+/// struct for typed successes of method [`create_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipDomainSuccess {
@@ -3321,7 +3321,7 @@ pub enum CreateSipDomainSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_ip_access_control_list`
+/// struct for typed successes of method [`create_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipIpAccessControlListSuccess {
@@ -3329,7 +3329,7 @@ pub enum CreateSipIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_ip_access_control_list_mapping`
+/// struct for typed successes of method [`create_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipIpAccessControlListMappingSuccess {
@@ -3337,7 +3337,7 @@ pub enum CreateSipIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_sip_ip_address`
+/// struct for typed successes of method [`create_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipIpAddressSuccess {
@@ -3345,7 +3345,7 @@ pub enum CreateSipIpAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_token`
+/// struct for typed successes of method [`create_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTokenSuccess {
@@ -3353,7 +3353,7 @@ pub enum CreateTokenSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_usage_trigger`
+/// struct for typed successes of method [`create_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateUsageTriggerSuccess {
@@ -3361,7 +3361,7 @@ pub enum CreateUsageTriggerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_validation_request`
+/// struct for typed successes of method [`create_validation_request`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateValidationRequestSuccess {
@@ -3369,7 +3369,7 @@ pub enum CreateValidationRequestSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_address`
+/// struct for typed successes of method [`delete_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAddressSuccess {
@@ -3377,7 +3377,7 @@ pub enum DeleteAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_application`
+/// struct for typed successes of method [`delete_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteApplicationSuccess {
@@ -3385,7 +3385,7 @@ pub enum DeleteApplicationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_call`
+/// struct for typed successes of method [`delete_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCallSuccess {
@@ -3393,7 +3393,7 @@ pub enum DeleteCallSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_call_feedback_summary`
+/// struct for typed successes of method [`delete_call_feedback_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCallFeedbackSummarySuccess {
@@ -3401,7 +3401,7 @@ pub enum DeleteCallFeedbackSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_call_recording`
+/// struct for typed successes of method [`delete_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCallRecordingSuccess {
@@ -3409,7 +3409,7 @@ pub enum DeleteCallRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_conference_recording`
+/// struct for typed successes of method [`delete_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConferenceRecordingSuccess {
@@ -3417,7 +3417,7 @@ pub enum DeleteConferenceRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_connect_app`
+/// struct for typed successes of method [`delete_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConnectAppSuccess {
@@ -3425,7 +3425,7 @@ pub enum DeleteConnectAppSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_incoming_phone_number`
+/// struct for typed successes of method [`delete_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIncomingPhoneNumberSuccess {
@@ -3433,7 +3433,7 @@ pub enum DeleteIncomingPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_incoming_phone_number_assigned_add_on`
+/// struct for typed successes of method [`delete_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIncomingPhoneNumberAssignedAddOnSuccess {
@@ -3441,7 +3441,7 @@ pub enum DeleteIncomingPhoneNumberAssignedAddOnSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_key`
+/// struct for typed successes of method [`delete_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteKeySuccess {
@@ -3449,7 +3449,7 @@ pub enum DeleteKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_media`
+/// struct for typed successes of method [`delete_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteMediaSuccess {
@@ -3457,7 +3457,7 @@ pub enum DeleteMediaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_message`
+/// struct for typed successes of method [`delete_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteMessageSuccess {
@@ -3465,7 +3465,7 @@ pub enum DeleteMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_outgoing_caller_id`
+/// struct for typed successes of method [`delete_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteOutgoingCallerIdSuccess {
@@ -3473,7 +3473,7 @@ pub enum DeleteOutgoingCallerIdSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_participant`
+/// struct for typed successes of method [`delete_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteParticipantSuccess {
@@ -3481,7 +3481,7 @@ pub enum DeleteParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_queue`
+/// struct for typed successes of method [`delete_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteQueueSuccess {
@@ -3489,7 +3489,7 @@ pub enum DeleteQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_recording`
+/// struct for typed successes of method [`delete_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingSuccess {
@@ -3497,7 +3497,7 @@ pub enum DeleteRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_recording_add_on_result`
+/// struct for typed successes of method [`delete_recording_add_on_result`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingAddOnResultSuccess {
@@ -3505,7 +3505,7 @@ pub enum DeleteRecordingAddOnResultSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_recording_add_on_result_payload`
+/// struct for typed successes of method [`delete_recording_add_on_result_payload`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingAddOnResultPayloadSuccess {
@@ -3513,7 +3513,7 @@ pub enum DeleteRecordingAddOnResultPayloadSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_recording_transcription`
+/// struct for typed successes of method [`delete_recording_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingTranscriptionSuccess {
@@ -3521,7 +3521,7 @@ pub enum DeleteRecordingTranscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_signing_key`
+/// struct for typed successes of method [`delete_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSigningKeySuccess {
@@ -3529,7 +3529,7 @@ pub enum DeleteSigningKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_auth_calls_credential_list_mapping`
+/// struct for typed successes of method [`delete_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipAuthCallsCredentialListMappingSuccess {
@@ -3537,7 +3537,7 @@ pub enum DeleteSipAuthCallsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed successes of method [`delete_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipAuthCallsIpAccessControlListMappingSuccess {
@@ -3545,7 +3545,7 @@ pub enum DeleteSipAuthCallsIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_auth_registrations_credential_list_mapping`
+/// struct for typed successes of method [`delete_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipAuthRegistrationsCredentialListMappingSuccess {
@@ -3553,7 +3553,7 @@ pub enum DeleteSipAuthRegistrationsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_credential`
+/// struct for typed successes of method [`delete_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipCredentialSuccess {
@@ -3561,7 +3561,7 @@ pub enum DeleteSipCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_credential_list`
+/// struct for typed successes of method [`delete_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipCredentialListSuccess {
@@ -3569,7 +3569,7 @@ pub enum DeleteSipCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_credential_list_mapping`
+/// struct for typed successes of method [`delete_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipCredentialListMappingSuccess {
@@ -3577,7 +3577,7 @@ pub enum DeleteSipCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_domain`
+/// struct for typed successes of method [`delete_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipDomainSuccess {
@@ -3585,7 +3585,7 @@ pub enum DeleteSipDomainSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_ip_access_control_list`
+/// struct for typed successes of method [`delete_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipIpAccessControlListSuccess {
@@ -3593,7 +3593,7 @@ pub enum DeleteSipIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_ip_access_control_list_mapping`
+/// struct for typed successes of method [`delete_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipIpAccessControlListMappingSuccess {
@@ -3601,7 +3601,7 @@ pub enum DeleteSipIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_sip_ip_address`
+/// struct for typed successes of method [`delete_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipIpAddressSuccess {
@@ -3609,7 +3609,7 @@ pub enum DeleteSipIpAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_transcription`
+/// struct for typed successes of method [`delete_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTranscriptionSuccess {
@@ -3617,7 +3617,7 @@ pub enum DeleteTranscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_usage_trigger`
+/// struct for typed successes of method [`delete_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUsageTriggerSuccess {
@@ -3625,7 +3625,7 @@ pub enum DeleteUsageTriggerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_account`
+/// struct for typed successes of method [`fetch_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAccountSuccess {
@@ -3633,7 +3633,7 @@ pub enum FetchAccountSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_address`
+/// struct for typed successes of method [`fetch_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAddressSuccess {
@@ -3641,7 +3641,7 @@ pub enum FetchAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_application`
+/// struct for typed successes of method [`fetch_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchApplicationSuccess {
@@ -3649,7 +3649,7 @@ pub enum FetchApplicationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_authorized_connect_app`
+/// struct for typed successes of method [`fetch_authorized_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAuthorizedConnectAppSuccess {
@@ -3657,7 +3657,7 @@ pub enum FetchAuthorizedConnectAppSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_available_phone_number_country`
+/// struct for typed successes of method [`fetch_available_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAvailablePhoneNumberCountrySuccess {
@@ -3665,7 +3665,7 @@ pub enum FetchAvailablePhoneNumberCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_balance`
+/// struct for typed successes of method [`fetch_balance`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBalanceSuccess {
@@ -3673,7 +3673,7 @@ pub enum FetchBalanceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_call`
+/// struct for typed successes of method [`fetch_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallSuccess {
@@ -3681,7 +3681,7 @@ pub enum FetchCallSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_call_feedback`
+/// struct for typed successes of method [`fetch_call_feedback`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallFeedbackSuccess {
@@ -3689,7 +3689,7 @@ pub enum FetchCallFeedbackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_call_feedback_summary`
+/// struct for typed successes of method [`fetch_call_feedback_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallFeedbackSummarySuccess {
@@ -3697,7 +3697,7 @@ pub enum FetchCallFeedbackSummarySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_call_notification`
+/// struct for typed successes of method [`fetch_call_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallNotificationSuccess {
@@ -3705,7 +3705,7 @@ pub enum FetchCallNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_call_recording`
+/// struct for typed successes of method [`fetch_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallRecordingSuccess {
@@ -3713,7 +3713,7 @@ pub enum FetchCallRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conference`
+/// struct for typed successes of method [`fetch_conference`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConferenceSuccess {
@@ -3721,7 +3721,7 @@ pub enum FetchConferenceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_conference_recording`
+/// struct for typed successes of method [`fetch_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConferenceRecordingSuccess {
@@ -3729,7 +3729,7 @@ pub enum FetchConferenceRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_connect_app`
+/// struct for typed successes of method [`fetch_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConnectAppSuccess {
@@ -3737,7 +3737,7 @@ pub enum FetchConnectAppSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_incoming_phone_number`
+/// struct for typed successes of method [`fetch_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIncomingPhoneNumberSuccess {
@@ -3745,7 +3745,7 @@ pub enum FetchIncomingPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_incoming_phone_number_assigned_add_on`
+/// struct for typed successes of method [`fetch_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIncomingPhoneNumberAssignedAddOnSuccess {
@@ -3753,7 +3753,7 @@ pub enum FetchIncomingPhoneNumberAssignedAddOnSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_incoming_phone_number_assigned_add_on_extension`
+/// struct for typed successes of method [`fetch_incoming_phone_number_assigned_add_on_extension`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIncomingPhoneNumberAssignedAddOnExtensionSuccess {
@@ -3761,7 +3761,7 @@ pub enum FetchIncomingPhoneNumberAssignedAddOnExtensionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_key`
+/// struct for typed successes of method [`fetch_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchKeySuccess {
@@ -3769,7 +3769,7 @@ pub enum FetchKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_media`
+/// struct for typed successes of method [`fetch_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMediaSuccess {
@@ -3777,7 +3777,7 @@ pub enum FetchMediaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_member`
+/// struct for typed successes of method [`fetch_member`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMemberSuccess {
@@ -3785,7 +3785,7 @@ pub enum FetchMemberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_message`
+/// struct for typed successes of method [`fetch_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessageSuccess {
@@ -3793,7 +3793,7 @@ pub enum FetchMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_notification`
+/// struct for typed successes of method [`fetch_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNotificationSuccess {
@@ -3801,7 +3801,7 @@ pub enum FetchNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_outgoing_caller_id`
+/// struct for typed successes of method [`fetch_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchOutgoingCallerIdSuccess {
@@ -3809,7 +3809,7 @@ pub enum FetchOutgoingCallerIdSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_participant`
+/// struct for typed successes of method [`fetch_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchParticipantSuccess {
@@ -3817,7 +3817,7 @@ pub enum FetchParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_queue`
+/// struct for typed successes of method [`fetch_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchQueueSuccess {
@@ -3825,7 +3825,7 @@ pub enum FetchQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording`
+/// struct for typed successes of method [`fetch_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingSuccess {
@@ -3833,7 +3833,7 @@ pub enum FetchRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording_add_on_result`
+/// struct for typed successes of method [`fetch_recording_add_on_result`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingAddOnResultSuccess {
@@ -3841,7 +3841,7 @@ pub enum FetchRecordingAddOnResultSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording_add_on_result_payload`
+/// struct for typed successes of method [`fetch_recording_add_on_result_payload`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingAddOnResultPayloadSuccess {
@@ -3849,7 +3849,7 @@ pub enum FetchRecordingAddOnResultPayloadSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_recording_transcription`
+/// struct for typed successes of method [`fetch_recording_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingTranscriptionSuccess {
@@ -3857,7 +3857,7 @@ pub enum FetchRecordingTranscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_short_code`
+/// struct for typed successes of method [`fetch_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchShortCodeSuccess {
@@ -3865,7 +3865,7 @@ pub enum FetchShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_signing_key`
+/// struct for typed successes of method [`fetch_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSigningKeySuccess {
@@ -3873,7 +3873,7 @@ pub enum FetchSigningKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_auth_calls_credential_list_mapping`
+/// struct for typed successes of method [`fetch_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipAuthCallsCredentialListMappingSuccess {
@@ -3881,7 +3881,7 @@ pub enum FetchSipAuthCallsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed successes of method [`fetch_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipAuthCallsIpAccessControlListMappingSuccess {
@@ -3889,7 +3889,7 @@ pub enum FetchSipAuthCallsIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_auth_registrations_credential_list_mapping`
+/// struct for typed successes of method [`fetch_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipAuthRegistrationsCredentialListMappingSuccess {
@@ -3897,7 +3897,7 @@ pub enum FetchSipAuthRegistrationsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_credential`
+/// struct for typed successes of method [`fetch_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipCredentialSuccess {
@@ -3905,7 +3905,7 @@ pub enum FetchSipCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_credential_list`
+/// struct for typed successes of method [`fetch_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipCredentialListSuccess {
@@ -3913,7 +3913,7 @@ pub enum FetchSipCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_credential_list_mapping`
+/// struct for typed successes of method [`fetch_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipCredentialListMappingSuccess {
@@ -3921,7 +3921,7 @@ pub enum FetchSipCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_domain`
+/// struct for typed successes of method [`fetch_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipDomainSuccess {
@@ -3929,7 +3929,7 @@ pub enum FetchSipDomainSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_ip_access_control_list`
+/// struct for typed successes of method [`fetch_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipIpAccessControlListSuccess {
@@ -3937,7 +3937,7 @@ pub enum FetchSipIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_ip_access_control_list_mapping`
+/// struct for typed successes of method [`fetch_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipIpAccessControlListMappingSuccess {
@@ -3945,7 +3945,7 @@ pub enum FetchSipIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_sip_ip_address`
+/// struct for typed successes of method [`fetch_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipIpAddressSuccess {
@@ -3953,7 +3953,7 @@ pub enum FetchSipIpAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_transcription`
+/// struct for typed successes of method [`fetch_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTranscriptionSuccess {
@@ -3961,7 +3961,7 @@ pub enum FetchTranscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_usage_trigger`
+/// struct for typed successes of method [`fetch_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsageTriggerSuccess {
@@ -3969,7 +3969,7 @@ pub enum FetchUsageTriggerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_account`
+/// struct for typed successes of method [`list_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAccountSuccess {
@@ -3977,7 +3977,7 @@ pub enum ListAccountSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_address`
+/// struct for typed successes of method [`list_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAddressSuccess {
@@ -3985,7 +3985,7 @@ pub enum ListAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_application`
+/// struct for typed successes of method [`list_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListApplicationSuccess {
@@ -3993,7 +3993,7 @@ pub enum ListApplicationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_authorized_connect_app`
+/// struct for typed successes of method [`list_authorized_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAuthorizedConnectAppSuccess {
@@ -4001,7 +4001,7 @@ pub enum ListAuthorizedConnectAppSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_country`
+/// struct for typed successes of method [`list_available_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberCountrySuccess {
@@ -4009,7 +4009,7 @@ pub enum ListAvailablePhoneNumberCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_local`
+/// struct for typed successes of method [`list_available_phone_number_local`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberLocalSuccess {
@@ -4017,7 +4017,7 @@ pub enum ListAvailablePhoneNumberLocalSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_machine_to_machine`
+/// struct for typed successes of method [`list_available_phone_number_machine_to_machine`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberMachineToMachineSuccess {
@@ -4025,7 +4025,7 @@ pub enum ListAvailablePhoneNumberMachineToMachineSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_mobile`
+/// struct for typed successes of method [`list_available_phone_number_mobile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberMobileSuccess {
@@ -4033,7 +4033,7 @@ pub enum ListAvailablePhoneNumberMobileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_national`
+/// struct for typed successes of method [`list_available_phone_number_national`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberNationalSuccess {
@@ -4041,7 +4041,7 @@ pub enum ListAvailablePhoneNumberNationalSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_shared_cost`
+/// struct for typed successes of method [`list_available_phone_number_shared_cost`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberSharedCostSuccess {
@@ -4049,7 +4049,7 @@ pub enum ListAvailablePhoneNumberSharedCostSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_toll_free`
+/// struct for typed successes of method [`list_available_phone_number_toll_free`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberTollFreeSuccess {
@@ -4057,7 +4057,7 @@ pub enum ListAvailablePhoneNumberTollFreeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_available_phone_number_voip`
+/// struct for typed successes of method [`list_available_phone_number_voip`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberVoipSuccess {
@@ -4065,7 +4065,7 @@ pub enum ListAvailablePhoneNumberVoipSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_call`
+/// struct for typed successes of method [`list_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallSuccess {
@@ -4073,7 +4073,7 @@ pub enum ListCallSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_call_event`
+/// struct for typed successes of method [`list_call_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallEventSuccess {
@@ -4081,7 +4081,7 @@ pub enum ListCallEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_call_notification`
+/// struct for typed successes of method [`list_call_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallNotificationSuccess {
@@ -4089,7 +4089,7 @@ pub enum ListCallNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_call_recording`
+/// struct for typed successes of method [`list_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallRecordingSuccess {
@@ -4097,7 +4097,7 @@ pub enum ListCallRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conference`
+/// struct for typed successes of method [`list_conference`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConferenceSuccess {
@@ -4105,7 +4105,7 @@ pub enum ListConferenceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_conference_recording`
+/// struct for typed successes of method [`list_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConferenceRecordingSuccess {
@@ -4113,7 +4113,7 @@ pub enum ListConferenceRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_connect_app`
+/// struct for typed successes of method [`list_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConnectAppSuccess {
@@ -4121,7 +4121,7 @@ pub enum ListConnectAppSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_dependent_phone_number`
+/// struct for typed successes of method [`list_dependent_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDependentPhoneNumberSuccess {
@@ -4129,7 +4129,7 @@ pub enum ListDependentPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_incoming_phone_number`
+/// struct for typed successes of method [`list_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberSuccess {
@@ -4137,7 +4137,7 @@ pub enum ListIncomingPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_incoming_phone_number_assigned_add_on`
+/// struct for typed successes of method [`list_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberAssignedAddOnSuccess {
@@ -4145,7 +4145,7 @@ pub enum ListIncomingPhoneNumberAssignedAddOnSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_incoming_phone_number_assigned_add_on_extension`
+/// struct for typed successes of method [`list_incoming_phone_number_assigned_add_on_extension`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberAssignedAddOnExtensionSuccess {
@@ -4153,7 +4153,7 @@ pub enum ListIncomingPhoneNumberAssignedAddOnExtensionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_incoming_phone_number_local`
+/// struct for typed successes of method [`list_incoming_phone_number_local`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberLocalSuccess {
@@ -4161,7 +4161,7 @@ pub enum ListIncomingPhoneNumberLocalSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_incoming_phone_number_mobile`
+/// struct for typed successes of method [`list_incoming_phone_number_mobile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberMobileSuccess {
@@ -4169,7 +4169,7 @@ pub enum ListIncomingPhoneNumberMobileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_incoming_phone_number_toll_free`
+/// struct for typed successes of method [`list_incoming_phone_number_toll_free`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberTollFreeSuccess {
@@ -4177,7 +4177,7 @@ pub enum ListIncomingPhoneNumberTollFreeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_key`
+/// struct for typed successes of method [`list_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListKeySuccess {
@@ -4185,7 +4185,7 @@ pub enum ListKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_media`
+/// struct for typed successes of method [`list_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMediaSuccess {
@@ -4193,7 +4193,7 @@ pub enum ListMediaSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_member`
+/// struct for typed successes of method [`list_member`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMemberSuccess {
@@ -4201,7 +4201,7 @@ pub enum ListMemberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_message`
+/// struct for typed successes of method [`list_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessageSuccess {
@@ -4209,7 +4209,7 @@ pub enum ListMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_notification`
+/// struct for typed successes of method [`list_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNotificationSuccess {
@@ -4217,7 +4217,7 @@ pub enum ListNotificationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_outgoing_caller_id`
+/// struct for typed successes of method [`list_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListOutgoingCallerIdSuccess {
@@ -4225,7 +4225,7 @@ pub enum ListOutgoingCallerIdSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_participant`
+/// struct for typed successes of method [`list_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListParticipantSuccess {
@@ -4233,7 +4233,7 @@ pub enum ListParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_queue`
+/// struct for typed successes of method [`list_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListQueueSuccess {
@@ -4241,7 +4241,7 @@ pub enum ListQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_recording`
+/// struct for typed successes of method [`list_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingSuccess {
@@ -4249,7 +4249,7 @@ pub enum ListRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_recording_add_on_result`
+/// struct for typed successes of method [`list_recording_add_on_result`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingAddOnResultSuccess {
@@ -4257,7 +4257,7 @@ pub enum ListRecordingAddOnResultSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_recording_add_on_result_payload`
+/// struct for typed successes of method [`list_recording_add_on_result_payload`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingAddOnResultPayloadSuccess {
@@ -4265,7 +4265,7 @@ pub enum ListRecordingAddOnResultPayloadSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_recording_transcription`
+/// struct for typed successes of method [`list_recording_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingTranscriptionSuccess {
@@ -4273,7 +4273,7 @@ pub enum ListRecordingTranscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_short_code`
+/// struct for typed successes of method [`list_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListShortCodeSuccess {
@@ -4281,7 +4281,7 @@ pub enum ListShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_signing_key`
+/// struct for typed successes of method [`list_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSigningKeySuccess {
@@ -4289,7 +4289,7 @@ pub enum ListSigningKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_auth_calls_credential_list_mapping`
+/// struct for typed successes of method [`list_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipAuthCallsCredentialListMappingSuccess {
@@ -4297,7 +4297,7 @@ pub enum ListSipAuthCallsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed successes of method [`list_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipAuthCallsIpAccessControlListMappingSuccess {
@@ -4305,7 +4305,7 @@ pub enum ListSipAuthCallsIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_auth_registrations_credential_list_mapping`
+/// struct for typed successes of method [`list_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipAuthRegistrationsCredentialListMappingSuccess {
@@ -4313,7 +4313,7 @@ pub enum ListSipAuthRegistrationsCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_credential`
+/// struct for typed successes of method [`list_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipCredentialSuccess {
@@ -4321,7 +4321,7 @@ pub enum ListSipCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_credential_list`
+/// struct for typed successes of method [`list_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipCredentialListSuccess {
@@ -4329,7 +4329,7 @@ pub enum ListSipCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_credential_list_mapping`
+/// struct for typed successes of method [`list_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipCredentialListMappingSuccess {
@@ -4337,7 +4337,7 @@ pub enum ListSipCredentialListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_domain`
+/// struct for typed successes of method [`list_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipDomainSuccess {
@@ -4345,7 +4345,7 @@ pub enum ListSipDomainSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_ip_access_control_list`
+/// struct for typed successes of method [`list_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipIpAccessControlListSuccess {
@@ -4353,7 +4353,7 @@ pub enum ListSipIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_ip_access_control_list_mapping`
+/// struct for typed successes of method [`list_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipIpAccessControlListMappingSuccess {
@@ -4361,7 +4361,7 @@ pub enum ListSipIpAccessControlListMappingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_sip_ip_address`
+/// struct for typed successes of method [`list_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipIpAddressSuccess {
@@ -4369,7 +4369,7 @@ pub enum ListSipIpAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_transcription`
+/// struct for typed successes of method [`list_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTranscriptionSuccess {
@@ -4377,7 +4377,7 @@ pub enum ListTranscriptionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record`
+/// struct for typed successes of method [`list_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordSuccess {
@@ -4385,7 +4385,7 @@ pub enum ListUsageRecordSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_all_time`
+/// struct for typed successes of method [`list_usage_record_all_time`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordAllTimeSuccess {
@@ -4393,7 +4393,7 @@ pub enum ListUsageRecordAllTimeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_daily`
+/// struct for typed successes of method [`list_usage_record_daily`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordDailySuccess {
@@ -4401,7 +4401,7 @@ pub enum ListUsageRecordDailySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_last_month`
+/// struct for typed successes of method [`list_usage_record_last_month`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordLastMonthSuccess {
@@ -4409,7 +4409,7 @@ pub enum ListUsageRecordLastMonthSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_monthly`
+/// struct for typed successes of method [`list_usage_record_monthly`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordMonthlySuccess {
@@ -4417,7 +4417,7 @@ pub enum ListUsageRecordMonthlySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_this_month`
+/// struct for typed successes of method [`list_usage_record_this_month`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordThisMonthSuccess {
@@ -4425,7 +4425,7 @@ pub enum ListUsageRecordThisMonthSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_today`
+/// struct for typed successes of method [`list_usage_record_today`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordTodaySuccess {
@@ -4433,7 +4433,7 @@ pub enum ListUsageRecordTodaySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_yearly`
+/// struct for typed successes of method [`list_usage_record_yearly`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordYearlySuccess {
@@ -4441,7 +4441,7 @@ pub enum ListUsageRecordYearlySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_record_yesterday`
+/// struct for typed successes of method [`list_usage_record_yesterday`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordYesterdaySuccess {
@@ -4449,7 +4449,7 @@ pub enum ListUsageRecordYesterdaySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_usage_trigger`
+/// struct for typed successes of method [`list_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageTriggerSuccess {
@@ -4457,7 +4457,7 @@ pub enum ListUsageTriggerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_account`
+/// struct for typed successes of method [`update_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAccountSuccess {
@@ -4465,7 +4465,7 @@ pub enum UpdateAccountSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_address`
+/// struct for typed successes of method [`update_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAddressSuccess {
@@ -4473,7 +4473,7 @@ pub enum UpdateAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_application`
+/// struct for typed successes of method [`update_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateApplicationSuccess {
@@ -4481,7 +4481,7 @@ pub enum UpdateApplicationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_call`
+/// struct for typed successes of method [`update_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCallSuccess {
@@ -4489,7 +4489,7 @@ pub enum UpdateCallSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_call_feedback`
+/// struct for typed successes of method [`update_call_feedback`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCallFeedbackSuccess {
@@ -4497,7 +4497,7 @@ pub enum UpdateCallFeedbackSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_call_recording`
+/// struct for typed successes of method [`update_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCallRecordingSuccess {
@@ -4505,7 +4505,7 @@ pub enum UpdateCallRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_conference`
+/// struct for typed successes of method [`update_conference`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConferenceSuccess {
@@ -4513,7 +4513,7 @@ pub enum UpdateConferenceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_conference_recording`
+/// struct for typed successes of method [`update_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConferenceRecordingSuccess {
@@ -4521,7 +4521,7 @@ pub enum UpdateConferenceRecordingSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_connect_app`
+/// struct for typed successes of method [`update_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConnectAppSuccess {
@@ -4529,7 +4529,7 @@ pub enum UpdateConnectAppSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_incoming_phone_number`
+/// struct for typed successes of method [`update_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateIncomingPhoneNumberSuccess {
@@ -4537,7 +4537,7 @@ pub enum UpdateIncomingPhoneNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_key`
+/// struct for typed successes of method [`update_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateKeySuccess {
@@ -4545,7 +4545,7 @@ pub enum UpdateKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_member`
+/// struct for typed successes of method [`update_member`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateMemberSuccess {
@@ -4553,7 +4553,7 @@ pub enum UpdateMemberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_message`
+/// struct for typed successes of method [`update_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateMessageSuccess {
@@ -4561,7 +4561,7 @@ pub enum UpdateMessageSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_outgoing_caller_id`
+/// struct for typed successes of method [`update_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateOutgoingCallerIdSuccess {
@@ -4569,7 +4569,7 @@ pub enum UpdateOutgoingCallerIdSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_participant`
+/// struct for typed successes of method [`update_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateParticipantSuccess {
@@ -4577,7 +4577,7 @@ pub enum UpdateParticipantSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_payments`
+/// struct for typed successes of method [`update_payments`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdatePaymentsSuccess {
@@ -4585,7 +4585,7 @@ pub enum UpdatePaymentsSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_queue`
+/// struct for typed successes of method [`update_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateQueueSuccess {
@@ -4593,7 +4593,7 @@ pub enum UpdateQueueSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_short_code`
+/// struct for typed successes of method [`update_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateShortCodeSuccess {
@@ -4601,7 +4601,7 @@ pub enum UpdateShortCodeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_signing_key`
+/// struct for typed successes of method [`update_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSigningKeySuccess {
@@ -4609,7 +4609,7 @@ pub enum UpdateSigningKeySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sip_credential`
+/// struct for typed successes of method [`update_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipCredentialSuccess {
@@ -4617,7 +4617,7 @@ pub enum UpdateSipCredentialSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sip_credential_list`
+/// struct for typed successes of method [`update_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipCredentialListSuccess {
@@ -4625,7 +4625,7 @@ pub enum UpdateSipCredentialListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sip_domain`
+/// struct for typed successes of method [`update_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipDomainSuccess {
@@ -4633,7 +4633,7 @@ pub enum UpdateSipDomainSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sip_ip_access_control_list`
+/// struct for typed successes of method [`update_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipIpAccessControlListSuccess {
@@ -4641,7 +4641,7 @@ pub enum UpdateSipIpAccessControlListSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_sip_ip_address`
+/// struct for typed successes of method [`update_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipIpAddressSuccess {
@@ -4649,7 +4649,7 @@ pub enum UpdateSipIpAddressSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_usage_trigger`
+/// struct for typed successes of method [`update_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUsageTriggerSuccess {
@@ -4657,1344 +4657,1344 @@ pub enum UpdateUsageTriggerSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_account`
+/// struct for typed errors of method [`create_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAccountError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_address`
+/// struct for typed errors of method [`create_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_application`
+/// struct for typed errors of method [`create_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateApplicationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_call`
+/// struct for typed errors of method [`create_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCallError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_call_feedback_summary`
+/// struct for typed errors of method [`create_call_feedback_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCallFeedbackSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_call_recording`
+/// struct for typed errors of method [`create_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCallRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_incoming_phone_number`
+/// struct for typed errors of method [`create_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_incoming_phone_number_assigned_add_on`
+/// struct for typed errors of method [`create_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberAssignedAddOnError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_incoming_phone_number_local`
+/// struct for typed errors of method [`create_incoming_phone_number_local`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberLocalError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_incoming_phone_number_mobile`
+/// struct for typed errors of method [`create_incoming_phone_number_mobile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberMobileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_incoming_phone_number_toll_free`
+/// struct for typed errors of method [`create_incoming_phone_number_toll_free`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateIncomingPhoneNumberTollFreeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_message`
+/// struct for typed errors of method [`create_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_message_feedback`
+/// struct for typed errors of method [`create_message_feedback`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateMessageFeedbackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_new_key`
+/// struct for typed errors of method [`create_new_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNewKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_new_signing_key`
+/// struct for typed errors of method [`create_new_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateNewSigningKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_participant`
+/// struct for typed errors of method [`create_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_payments`
+/// struct for typed errors of method [`create_payments`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreatePaymentsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_queue`
+/// struct for typed errors of method [`create_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_auth_calls_credential_list_mapping`
+/// struct for typed errors of method [`create_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipAuthCallsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed errors of method [`create_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipAuthCallsIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_auth_registrations_credential_list_mapping`
+/// struct for typed errors of method [`create_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipAuthRegistrationsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_credential`
+/// struct for typed errors of method [`create_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_credential_list`
+/// struct for typed errors of method [`create_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_credential_list_mapping`
+/// struct for typed errors of method [`create_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_domain`
+/// struct for typed errors of method [`create_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipDomainError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_ip_access_control_list`
+/// struct for typed errors of method [`create_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_ip_access_control_list_mapping`
+/// struct for typed errors of method [`create_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_sip_ip_address`
+/// struct for typed errors of method [`create_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSipIpAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_token`
+/// struct for typed errors of method [`create_token`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTokenError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_usage_trigger`
+/// struct for typed errors of method [`create_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateUsageTriggerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_validation_request`
+/// struct for typed errors of method [`create_validation_request`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateValidationRequestError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_address`
+/// struct for typed errors of method [`delete_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_application`
+/// struct for typed errors of method [`delete_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteApplicationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_call`
+/// struct for typed errors of method [`delete_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCallError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_call_feedback_summary`
+/// struct for typed errors of method [`delete_call_feedback_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCallFeedbackSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_call_recording`
+/// struct for typed errors of method [`delete_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCallRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_conference_recording`
+/// struct for typed errors of method [`delete_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConferenceRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_connect_app`
+/// struct for typed errors of method [`delete_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteConnectAppError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_incoming_phone_number`
+/// struct for typed errors of method [`delete_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIncomingPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_incoming_phone_number_assigned_add_on`
+/// struct for typed errors of method [`delete_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteIncomingPhoneNumberAssignedAddOnError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_key`
+/// struct for typed errors of method [`delete_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_media`
+/// struct for typed errors of method [`delete_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteMediaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_message`
+/// struct for typed errors of method [`delete_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_outgoing_caller_id`
+/// struct for typed errors of method [`delete_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteOutgoingCallerIdError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_participant`
+/// struct for typed errors of method [`delete_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_queue`
+/// struct for typed errors of method [`delete_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_recording`
+/// struct for typed errors of method [`delete_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_recording_add_on_result`
+/// struct for typed errors of method [`delete_recording_add_on_result`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingAddOnResultError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_recording_add_on_result_payload`
+/// struct for typed errors of method [`delete_recording_add_on_result_payload`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingAddOnResultPayloadError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_recording_transcription`
+/// struct for typed errors of method [`delete_recording_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteRecordingTranscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_signing_key`
+/// struct for typed errors of method [`delete_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSigningKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_auth_calls_credential_list_mapping`
+/// struct for typed errors of method [`delete_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipAuthCallsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed errors of method [`delete_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipAuthCallsIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_auth_registrations_credential_list_mapping`
+/// struct for typed errors of method [`delete_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipAuthRegistrationsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_credential`
+/// struct for typed errors of method [`delete_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_credential_list`
+/// struct for typed errors of method [`delete_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_credential_list_mapping`
+/// struct for typed errors of method [`delete_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_domain`
+/// struct for typed errors of method [`delete_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipDomainError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_ip_access_control_list`
+/// struct for typed errors of method [`delete_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_ip_access_control_list_mapping`
+/// struct for typed errors of method [`delete_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_sip_ip_address`
+/// struct for typed errors of method [`delete_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSipIpAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_transcription`
+/// struct for typed errors of method [`delete_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTranscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_usage_trigger`
+/// struct for typed errors of method [`delete_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteUsageTriggerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_account`
+/// struct for typed errors of method [`fetch_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAccountError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_address`
+/// struct for typed errors of method [`fetch_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_application`
+/// struct for typed errors of method [`fetch_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchApplicationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_authorized_connect_app`
+/// struct for typed errors of method [`fetch_authorized_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAuthorizedConnectAppError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_available_phone_number_country`
+/// struct for typed errors of method [`fetch_available_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAvailablePhoneNumberCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_balance`
+/// struct for typed errors of method [`fetch_balance`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBalanceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_call`
+/// struct for typed errors of method [`fetch_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_call_feedback`
+/// struct for typed errors of method [`fetch_call_feedback`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallFeedbackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_call_feedback_summary`
+/// struct for typed errors of method [`fetch_call_feedback_summary`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallFeedbackSummaryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_call_notification`
+/// struct for typed errors of method [`fetch_call_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_call_recording`
+/// struct for typed errors of method [`fetch_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCallRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conference`
+/// struct for typed errors of method [`fetch_conference`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConferenceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_conference_recording`
+/// struct for typed errors of method [`fetch_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConferenceRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_connect_app`
+/// struct for typed errors of method [`fetch_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConnectAppError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_incoming_phone_number`
+/// struct for typed errors of method [`fetch_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIncomingPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_incoming_phone_number_assigned_add_on`
+/// struct for typed errors of method [`fetch_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIncomingPhoneNumberAssignedAddOnError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_incoming_phone_number_assigned_add_on_extension`
+/// struct for typed errors of method [`fetch_incoming_phone_number_assigned_add_on_extension`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchIncomingPhoneNumberAssignedAddOnExtensionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_key`
+/// struct for typed errors of method [`fetch_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_media`
+/// struct for typed errors of method [`fetch_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMediaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_member`
+/// struct for typed errors of method [`fetch_member`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMemberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_message`
+/// struct for typed errors of method [`fetch_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_notification`
+/// struct for typed errors of method [`fetch_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_outgoing_caller_id`
+/// struct for typed errors of method [`fetch_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchOutgoingCallerIdError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_participant`
+/// struct for typed errors of method [`fetch_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_queue`
+/// struct for typed errors of method [`fetch_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording`
+/// struct for typed errors of method [`fetch_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording_add_on_result`
+/// struct for typed errors of method [`fetch_recording_add_on_result`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingAddOnResultError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording_add_on_result_payload`
+/// struct for typed errors of method [`fetch_recording_add_on_result_payload`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingAddOnResultPayloadError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_recording_transcription`
+/// struct for typed errors of method [`fetch_recording_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRecordingTranscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_short_code`
+/// struct for typed errors of method [`fetch_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_signing_key`
+/// struct for typed errors of method [`fetch_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSigningKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_auth_calls_credential_list_mapping`
+/// struct for typed errors of method [`fetch_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipAuthCallsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed errors of method [`fetch_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipAuthCallsIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_auth_registrations_credential_list_mapping`
+/// struct for typed errors of method [`fetch_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipAuthRegistrationsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_credential`
+/// struct for typed errors of method [`fetch_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_credential_list`
+/// struct for typed errors of method [`fetch_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_credential_list_mapping`
+/// struct for typed errors of method [`fetch_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_domain`
+/// struct for typed errors of method [`fetch_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipDomainError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_ip_access_control_list`
+/// struct for typed errors of method [`fetch_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_ip_access_control_list_mapping`
+/// struct for typed errors of method [`fetch_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_sip_ip_address`
+/// struct for typed errors of method [`fetch_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSipIpAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_transcription`
+/// struct for typed errors of method [`fetch_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTranscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_usage_trigger`
+/// struct for typed errors of method [`fetch_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchUsageTriggerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_account`
+/// struct for typed errors of method [`list_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAccountError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_address`
+/// struct for typed errors of method [`list_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_application`
+/// struct for typed errors of method [`list_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListApplicationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_authorized_connect_app`
+/// struct for typed errors of method [`list_authorized_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAuthorizedConnectAppError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_country`
+/// struct for typed errors of method [`list_available_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_local`
+/// struct for typed errors of method [`list_available_phone_number_local`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberLocalError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_machine_to_machine`
+/// struct for typed errors of method [`list_available_phone_number_machine_to_machine`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberMachineToMachineError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_mobile`
+/// struct for typed errors of method [`list_available_phone_number_mobile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberMobileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_national`
+/// struct for typed errors of method [`list_available_phone_number_national`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberNationalError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_shared_cost`
+/// struct for typed errors of method [`list_available_phone_number_shared_cost`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberSharedCostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_toll_free`
+/// struct for typed errors of method [`list_available_phone_number_toll_free`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberTollFreeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_available_phone_number_voip`
+/// struct for typed errors of method [`list_available_phone_number_voip`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAvailablePhoneNumberVoipError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_call`
+/// struct for typed errors of method [`list_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_call_event`
+/// struct for typed errors of method [`list_call_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_call_notification`
+/// struct for typed errors of method [`list_call_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_call_recording`
+/// struct for typed errors of method [`list_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCallRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conference`
+/// struct for typed errors of method [`list_conference`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConferenceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_conference_recording`
+/// struct for typed errors of method [`list_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConferenceRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_connect_app`
+/// struct for typed errors of method [`list_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListConnectAppError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_dependent_phone_number`
+/// struct for typed errors of method [`list_dependent_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDependentPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_incoming_phone_number`
+/// struct for typed errors of method [`list_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_incoming_phone_number_assigned_add_on`
+/// struct for typed errors of method [`list_incoming_phone_number_assigned_add_on`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberAssignedAddOnError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_incoming_phone_number_assigned_add_on_extension`
+/// struct for typed errors of method [`list_incoming_phone_number_assigned_add_on_extension`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberAssignedAddOnExtensionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_incoming_phone_number_local`
+/// struct for typed errors of method [`list_incoming_phone_number_local`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberLocalError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_incoming_phone_number_mobile`
+/// struct for typed errors of method [`list_incoming_phone_number_mobile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberMobileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_incoming_phone_number_toll_free`
+/// struct for typed errors of method [`list_incoming_phone_number_toll_free`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListIncomingPhoneNumberTollFreeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_key`
+/// struct for typed errors of method [`list_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_media`
+/// struct for typed errors of method [`list_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMediaError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_member`
+/// struct for typed errors of method [`list_member`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMemberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_message`
+/// struct for typed errors of method [`list_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_notification`
+/// struct for typed errors of method [`list_notification`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListNotificationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_outgoing_caller_id`
+/// struct for typed errors of method [`list_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListOutgoingCallerIdError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_participant`
+/// struct for typed errors of method [`list_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_queue`
+/// struct for typed errors of method [`list_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_recording`
+/// struct for typed errors of method [`list_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_recording_add_on_result`
+/// struct for typed errors of method [`list_recording_add_on_result`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingAddOnResultError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_recording_add_on_result_payload`
+/// struct for typed errors of method [`list_recording_add_on_result_payload`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingAddOnResultPayloadError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_recording_transcription`
+/// struct for typed errors of method [`list_recording_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRecordingTranscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_short_code`
+/// struct for typed errors of method [`list_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_signing_key`
+/// struct for typed errors of method [`list_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSigningKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_auth_calls_credential_list_mapping`
+/// struct for typed errors of method [`list_sip_auth_calls_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipAuthCallsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_auth_calls_ip_access_control_list_mapping`
+/// struct for typed errors of method [`list_sip_auth_calls_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipAuthCallsIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_auth_registrations_credential_list_mapping`
+/// struct for typed errors of method [`list_sip_auth_registrations_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipAuthRegistrationsCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_credential`
+/// struct for typed errors of method [`list_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_credential_list`
+/// struct for typed errors of method [`list_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_credential_list_mapping`
+/// struct for typed errors of method [`list_sip_credential_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipCredentialListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_domain`
+/// struct for typed errors of method [`list_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipDomainError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_ip_access_control_list`
+/// struct for typed errors of method [`list_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_ip_access_control_list_mapping`
+/// struct for typed errors of method [`list_sip_ip_access_control_list_mapping`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipIpAccessControlListMappingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_sip_ip_address`
+/// struct for typed errors of method [`list_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSipIpAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_transcription`
+/// struct for typed errors of method [`list_transcription`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTranscriptionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record`
+/// struct for typed errors of method [`list_usage_record`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_all_time`
+/// struct for typed errors of method [`list_usage_record_all_time`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordAllTimeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_daily`
+/// struct for typed errors of method [`list_usage_record_daily`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordDailyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_last_month`
+/// struct for typed errors of method [`list_usage_record_last_month`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordLastMonthError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_monthly`
+/// struct for typed errors of method [`list_usage_record_monthly`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordMonthlyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_this_month`
+/// struct for typed errors of method [`list_usage_record_this_month`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordThisMonthError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_today`
+/// struct for typed errors of method [`list_usage_record_today`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordTodayError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_yearly`
+/// struct for typed errors of method [`list_usage_record_yearly`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordYearlyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_record_yesterday`
+/// struct for typed errors of method [`list_usage_record_yesterday`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageRecordYesterdayError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_usage_trigger`
+/// struct for typed errors of method [`list_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListUsageTriggerError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_account`
+/// struct for typed errors of method [`update_account`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAccountError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_address`
+/// struct for typed errors of method [`update_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_application`
+/// struct for typed errors of method [`update_application`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateApplicationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_call`
+/// struct for typed errors of method [`update_call`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCallError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_call_feedback`
+/// struct for typed errors of method [`update_call_feedback`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCallFeedbackError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_call_recording`
+/// struct for typed errors of method [`update_call_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCallRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_conference`
+/// struct for typed errors of method [`update_conference`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConferenceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_conference_recording`
+/// struct for typed errors of method [`update_conference_recording`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConferenceRecordingError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_connect_app`
+/// struct for typed errors of method [`update_connect_app`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateConnectAppError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_incoming_phone_number`
+/// struct for typed errors of method [`update_incoming_phone_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateIncomingPhoneNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_key`
+/// struct for typed errors of method [`update_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_member`
+/// struct for typed errors of method [`update_member`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateMemberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_message`
+/// struct for typed errors of method [`update_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateMessageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_outgoing_caller_id`
+/// struct for typed errors of method [`update_outgoing_caller_id`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateOutgoingCallerIdError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_participant`
+/// struct for typed errors of method [`update_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateParticipantError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_payments`
+/// struct for typed errors of method [`update_payments`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdatePaymentsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_queue`
+/// struct for typed errors of method [`update_queue`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateQueueError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_short_code`
+/// struct for typed errors of method [`update_short_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateShortCodeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_signing_key`
+/// struct for typed errors of method [`update_signing_key`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSigningKeyError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sip_credential`
+/// struct for typed errors of method [`update_sip_credential`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipCredentialError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sip_credential_list`
+/// struct for typed errors of method [`update_sip_credential_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipCredentialListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sip_domain`
+/// struct for typed errors of method [`update_sip_domain`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipDomainError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sip_ip_access_control_list`
+/// struct for typed errors of method [`update_sip_ip_access_control_list`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipIpAccessControlListError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_sip_ip_address`
+/// struct for typed errors of method [`update_sip_ip_address`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSipIpAddressError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_usage_trigger`
+/// struct for typed errors of method [`update_usage_trigger`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateUsageTriggerError {

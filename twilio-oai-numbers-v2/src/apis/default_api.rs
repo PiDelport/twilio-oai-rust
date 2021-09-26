@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_bundle`
+/// struct for passing parameters to the method [`create_bundle`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateBundleParams {
     /// The email address that will receive updates when the Bundle resource changes status.
@@ -33,7 +33,7 @@ pub struct CreateBundleParams {
     pub status_callback: Option<String>
 }
 
-/// struct for passing parameters to the method `create_end_user`
+/// struct for passing parameters to the method [`create_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateEndUserParams {
     /// The string that you assigned to describe the resource.
@@ -44,14 +44,14 @@ pub struct CreateEndUserParams {
     pub attributes: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_evaluation`
+/// struct for passing parameters to the method [`create_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateEvaluationParams {
     /// The unique string that identifies the Bundle resource.
     pub bundle_sid: String
 }
 
-/// struct for passing parameters to the method `create_item_assignment`
+/// struct for passing parameters to the method [`create_item_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateItemAssignmentParams {
     /// The unique string that we created to identify the Bundle resource.
@@ -60,7 +60,7 @@ pub struct CreateItemAssignmentParams {
     pub object_sid: String
 }
 
-/// struct for passing parameters to the method `create_supporting_document`
+/// struct for passing parameters to the method [`create_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSupportingDocumentParams {
     /// The string that you assigned to describe the resource.
@@ -71,21 +71,21 @@ pub struct CreateSupportingDocumentParams {
     pub attributes: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `delete_bundle`
+/// struct for passing parameters to the method [`delete_bundle`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteBundleParams {
     /// The unique string that we created to identify the Bundle resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_end_user`
+/// struct for passing parameters to the method [`delete_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteEndUserParams {
     /// The unique string created by Twilio to identify the End User resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_item_assignment`
+/// struct for passing parameters to the method [`delete_item_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteItemAssignmentParams {
     /// The unique string that we created to identify the Bundle resource.
@@ -94,35 +94,35 @@ pub struct DeleteItemAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_supporting_document`
+/// struct for passing parameters to the method [`delete_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSupportingDocumentParams {
     /// The unique string created by Twilio to identify the Supporting Document resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_bundle`
+/// struct for passing parameters to the method [`fetch_bundle`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBundleParams {
     /// The unique string that we created to identify the Bundle resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_end_user`
+/// struct for passing parameters to the method [`fetch_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEndUserParams {
     /// The unique string created by Twilio to identify the End User resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_end_user_type`
+/// struct for passing parameters to the method [`fetch_end_user_type`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEndUserTypeParams {
     /// The unique string that identifies the End-User Type resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_evaluation`
+/// struct for passing parameters to the method [`fetch_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEvaluationParams {
     /// The unique string that we created to identify the Bundle resource.
@@ -131,7 +131,7 @@ pub struct FetchEvaluationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_item_assignment`
+/// struct for passing parameters to the method [`fetch_item_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchItemAssignmentParams {
     /// The unique string that we created to identify the Bundle resource.
@@ -140,28 +140,28 @@ pub struct FetchItemAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_regulation`
+/// struct for passing parameters to the method [`fetch_regulation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchRegulationParams {
     /// The unique string that identifies the Regulation resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_supporting_document`
+/// struct for passing parameters to the method [`fetch_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSupportingDocumentParams {
     /// The unique string created by Twilio to identify the Supporting Document resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_supporting_document_type`
+/// struct for passing parameters to the method [`fetch_supporting_document_type`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSupportingDocumentTypeParams {
     /// The unique string that identifies the Supporting Document Type resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_bundle`
+/// struct for passing parameters to the method [`list_bundle`]
 #[derive(Clone, Debug, Default)]
 pub struct ListBundleParams {
     /// The verification status of the Bundle resource.
@@ -178,21 +178,21 @@ pub struct ListBundleParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_end_user`
+/// struct for passing parameters to the method [`list_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEndUserParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_end_user_type`
+/// struct for passing parameters to the method [`list_end_user_type`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEndUserTypeParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_evaluation`
+/// struct for passing parameters to the method [`list_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEvaluationParams {
     /// The unique string that identifies the Bundle resource.
@@ -201,7 +201,7 @@ pub struct ListEvaluationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_item_assignment`
+/// struct for passing parameters to the method [`list_item_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListItemAssignmentParams {
     /// The unique string that we created to identify the Bundle resource.
@@ -210,7 +210,7 @@ pub struct ListItemAssignmentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_regulation`
+/// struct for passing parameters to the method [`list_regulation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListRegulationParams {
     /// The type of End User the regulation requires - can be `individual` or `business`.
@@ -223,21 +223,21 @@ pub struct ListRegulationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_supporting_document`
+/// struct for passing parameters to the method [`list_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSupportingDocumentParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_supporting_document_type`
+/// struct for passing parameters to the method [`list_supporting_document_type`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSupportingDocumentTypeParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_bundle`
+/// struct for passing parameters to the method [`update_bundle`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateBundleParams {
     /// The unique string that we created to identify the Bundle resource.
@@ -252,7 +252,7 @@ pub struct UpdateBundleParams {
     pub status_callback: Option<String>
 }
 
-/// struct for passing parameters to the method `update_end_user`
+/// struct for passing parameters to the method [`update_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateEndUserParams {
     /// The unique string created by Twilio to identify the End User resource.
@@ -263,7 +263,7 @@ pub struct UpdateEndUserParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_supporting_document`
+/// struct for passing parameters to the method [`update_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSupportingDocumentParams {
     /// The unique string created by Twilio to identify the Supporting Document resource.
@@ -275,7 +275,7 @@ pub struct UpdateSupportingDocumentParams {
 }
 
 
-/// struct for typed successes of method `create_bundle`
+/// struct for typed successes of method [`create_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBundleSuccess {
@@ -283,7 +283,7 @@ pub enum CreateBundleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_end_user`
+/// struct for typed successes of method [`create_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEndUserSuccess {
@@ -291,7 +291,7 @@ pub enum CreateEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_evaluation`
+/// struct for typed successes of method [`create_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEvaluationSuccess {
@@ -299,7 +299,7 @@ pub enum CreateEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_item_assignment`
+/// struct for typed successes of method [`create_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateItemAssignmentSuccess {
@@ -307,7 +307,7 @@ pub enum CreateItemAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_supporting_document`
+/// struct for typed successes of method [`create_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSupportingDocumentSuccess {
@@ -315,7 +315,7 @@ pub enum CreateSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_bundle`
+/// struct for typed successes of method [`delete_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBundleSuccess {
@@ -323,7 +323,7 @@ pub enum DeleteBundleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_end_user`
+/// struct for typed successes of method [`delete_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEndUserSuccess {
@@ -331,7 +331,7 @@ pub enum DeleteEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_item_assignment`
+/// struct for typed successes of method [`delete_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteItemAssignmentSuccess {
@@ -339,7 +339,7 @@ pub enum DeleteItemAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_supporting_document`
+/// struct for typed successes of method [`delete_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSupportingDocumentSuccess {
@@ -347,7 +347,7 @@ pub enum DeleteSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_bundle`
+/// struct for typed successes of method [`fetch_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBundleSuccess {
@@ -355,7 +355,7 @@ pub enum FetchBundleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_end_user`
+/// struct for typed successes of method [`fetch_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserSuccess {
@@ -363,7 +363,7 @@ pub enum FetchEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_end_user_type`
+/// struct for typed successes of method [`fetch_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserTypeSuccess {
@@ -371,7 +371,7 @@ pub enum FetchEndUserTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_evaluation`
+/// struct for typed successes of method [`fetch_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEvaluationSuccess {
@@ -379,7 +379,7 @@ pub enum FetchEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_item_assignment`
+/// struct for typed successes of method [`fetch_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchItemAssignmentSuccess {
@@ -387,7 +387,7 @@ pub enum FetchItemAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_regulation`
+/// struct for typed successes of method [`fetch_regulation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRegulationSuccess {
@@ -395,7 +395,7 @@ pub enum FetchRegulationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_supporting_document`
+/// struct for typed successes of method [`fetch_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentSuccess {
@@ -403,7 +403,7 @@ pub enum FetchSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_supporting_document_type`
+/// struct for typed successes of method [`fetch_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentTypeSuccess {
@@ -411,7 +411,7 @@ pub enum FetchSupportingDocumentTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_bundle`
+/// struct for typed successes of method [`list_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBundleSuccess {
@@ -419,7 +419,7 @@ pub enum ListBundleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_end_user`
+/// struct for typed successes of method [`list_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserSuccess {
@@ -427,7 +427,7 @@ pub enum ListEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_end_user_type`
+/// struct for typed successes of method [`list_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserTypeSuccess {
@@ -435,7 +435,7 @@ pub enum ListEndUserTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_evaluation`
+/// struct for typed successes of method [`list_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEvaluationSuccess {
@@ -443,7 +443,7 @@ pub enum ListEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_item_assignment`
+/// struct for typed successes of method [`list_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListItemAssignmentSuccess {
@@ -451,7 +451,7 @@ pub enum ListItemAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_regulation`
+/// struct for typed successes of method [`list_regulation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRegulationSuccess {
@@ -459,7 +459,7 @@ pub enum ListRegulationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_supporting_document`
+/// struct for typed successes of method [`list_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentSuccess {
@@ -467,7 +467,7 @@ pub enum ListSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_supporting_document_type`
+/// struct for typed successes of method [`list_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentTypeSuccess {
@@ -475,7 +475,7 @@ pub enum ListSupportingDocumentTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_bundle`
+/// struct for typed successes of method [`update_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateBundleSuccess {
@@ -483,7 +483,7 @@ pub enum UpdateBundleSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_end_user`
+/// struct for typed successes of method [`update_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateEndUserSuccess {
@@ -491,7 +491,7 @@ pub enum UpdateEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_supporting_document`
+/// struct for typed successes of method [`update_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSupportingDocumentSuccess {
@@ -499,196 +499,196 @@ pub enum UpdateSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_bundle`
+/// struct for typed errors of method [`create_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBundleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_end_user`
+/// struct for typed errors of method [`create_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_evaluation`
+/// struct for typed errors of method [`create_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_item_assignment`
+/// struct for typed errors of method [`create_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateItemAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_supporting_document`
+/// struct for typed errors of method [`create_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_bundle`
+/// struct for typed errors of method [`delete_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBundleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_end_user`
+/// struct for typed errors of method [`delete_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_item_assignment`
+/// struct for typed errors of method [`delete_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteItemAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_supporting_document`
+/// struct for typed errors of method [`delete_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_bundle`
+/// struct for typed errors of method [`fetch_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBundleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_end_user`
+/// struct for typed errors of method [`fetch_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_end_user_type`
+/// struct for typed errors of method [`fetch_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_evaluation`
+/// struct for typed errors of method [`fetch_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_item_assignment`
+/// struct for typed errors of method [`fetch_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchItemAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_regulation`
+/// struct for typed errors of method [`fetch_regulation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchRegulationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_supporting_document`
+/// struct for typed errors of method [`fetch_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_supporting_document_type`
+/// struct for typed errors of method [`fetch_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_bundle`
+/// struct for typed errors of method [`list_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBundleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_end_user`
+/// struct for typed errors of method [`list_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_end_user_type`
+/// struct for typed errors of method [`list_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_evaluation`
+/// struct for typed errors of method [`list_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_item_assignment`
+/// struct for typed errors of method [`list_item_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListItemAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_regulation`
+/// struct for typed errors of method [`list_regulation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListRegulationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_supporting_document`
+/// struct for typed errors of method [`list_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_supporting_document_type`
+/// struct for typed errors of method [`list_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_bundle`
+/// struct for typed errors of method [`update_bundle`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateBundleError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_end_user`
+/// struct for typed errors of method [`update_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_supporting_document`
+/// struct for typed errors of method [`update_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSupportingDocumentError {

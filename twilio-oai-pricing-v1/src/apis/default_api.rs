@@ -14,49 +14,49 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `fetch_messaging_country`
+/// struct for passing parameters to the method [`fetch_messaging_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchMessagingCountryParams {
     /// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
     pub iso_country: String
 }
 
-/// struct for passing parameters to the method `fetch_phone_number_country`
+/// struct for passing parameters to the method [`fetch_phone_number_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchPhoneNumberCountryParams {
     /// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
     pub iso_country: String
 }
 
-/// struct for passing parameters to the method `fetch_voice_country`
+/// struct for passing parameters to the method [`fetch_voice_country`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVoiceCountryParams {
     /// The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
     pub iso_country: String
 }
 
-/// struct for passing parameters to the method `fetch_voice_number`
+/// struct for passing parameters to the method [`fetch_voice_number`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVoiceNumberParams {
     /// The phone number to fetch.
     pub number: String
 }
 
-/// struct for passing parameters to the method `list_messaging_country`
+/// struct for passing parameters to the method [`list_messaging_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListMessagingCountryParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_phone_number_country`
+/// struct for passing parameters to the method [`list_phone_number_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListPhoneNumberCountryParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_voice_country`
+/// struct for passing parameters to the method [`list_voice_country`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVoiceCountryParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
@@ -64,7 +64,7 @@ pub struct ListVoiceCountryParams {
 }
 
 
-/// struct for typed successes of method `fetch_messaging_country`
+/// struct for typed successes of method [`fetch_messaging_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessagingCountrySuccess {
@@ -72,7 +72,7 @@ pub enum FetchMessagingCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_phone_number_country`
+/// struct for typed successes of method [`fetch_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberCountrySuccess {
@@ -80,7 +80,7 @@ pub enum FetchPhoneNumberCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_voice_country`
+/// struct for typed successes of method [`fetch_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceCountrySuccess {
@@ -88,7 +88,7 @@ pub enum FetchVoiceCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_voice_number`
+/// struct for typed successes of method [`fetch_voice_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceNumberSuccess {
@@ -96,7 +96,7 @@ pub enum FetchVoiceNumberSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_messaging_country`
+/// struct for typed successes of method [`list_messaging_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessagingCountrySuccess {
@@ -104,7 +104,7 @@ pub enum ListMessagingCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_phone_number_country`
+/// struct for typed successes of method [`list_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberCountrySuccess {
@@ -112,7 +112,7 @@ pub enum ListPhoneNumberCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_voice_country`
+/// struct for typed successes of method [`list_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVoiceCountrySuccess {
@@ -120,49 +120,49 @@ pub enum ListVoiceCountrySuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_messaging_country`
+/// struct for typed errors of method [`fetch_messaging_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchMessagingCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_phone_number_country`
+/// struct for typed errors of method [`fetch_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPhoneNumberCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_voice_country`
+/// struct for typed errors of method [`fetch_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_voice_number`
+/// struct for typed errors of method [`fetch_voice_number`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVoiceNumberError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_messaging_country`
+/// struct for typed errors of method [`list_messaging_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListMessagingCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_phone_number_country`
+/// struct for typed errors of method [`list_phone_number_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPhoneNumberCountryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_voice_country`
+/// struct for typed errors of method [`list_voice_country`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVoiceCountryError {
