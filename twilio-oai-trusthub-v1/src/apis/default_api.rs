@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_customer_profile`
+/// struct for passing parameters to the method [`create_customer_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCustomerProfileParams {
     /// The email address that will receive updates when the Customer-Profile resource changes status.
@@ -27,7 +27,7 @@ pub struct CreateCustomerProfileParams {
     pub status_callback: Option<String>
 }
 
-/// struct for passing parameters to the method `create_customer_profile_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`create_customer_profile_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCustomerProfileChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -38,7 +38,7 @@ pub struct CreateCustomerProfileChannelEndpointAssignmentParams {
     pub channel_endpoint_type: String
 }
 
-/// struct for passing parameters to the method `create_customer_profile_entity_assignment`
+/// struct for passing parameters to the method [`create_customer_profile_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCustomerProfileEntityAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -47,7 +47,7 @@ pub struct CreateCustomerProfileEntityAssignmentParams {
     pub object_sid: String
 }
 
-/// struct for passing parameters to the method `create_customer_profile_evaluation`
+/// struct for passing parameters to the method [`create_customer_profile_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCustomerProfileEvaluationParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -56,7 +56,7 @@ pub struct CreateCustomerProfileEvaluationParams {
     pub policy_sid: String
 }
 
-/// struct for passing parameters to the method `create_end_user`
+/// struct for passing parameters to the method [`create_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateEndUserParams {
     /// The string that you assigned to describe the resource.
@@ -67,7 +67,7 @@ pub struct CreateEndUserParams {
     pub attributes: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_supporting_document`
+/// struct for passing parameters to the method [`create_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateSupportingDocumentParams {
     /// The string that you assigned to describe the resource.
@@ -78,7 +78,7 @@ pub struct CreateSupportingDocumentParams {
     pub attributes: Option<serde_json::Value>
 }
 
-/// struct for passing parameters to the method `create_trust_product`
+/// struct for passing parameters to the method [`create_trust_product`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTrustProductParams {
     /// The email address that will receive updates when the Customer-Profile resource changes status.
@@ -91,7 +91,7 @@ pub struct CreateTrustProductParams {
     pub status_callback: Option<String>
 }
 
-/// struct for passing parameters to the method `create_trust_product_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`create_trust_product_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTrustProductChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -102,7 +102,7 @@ pub struct CreateTrustProductChannelEndpointAssignmentParams {
     pub channel_endpoint_type: String
 }
 
-/// struct for passing parameters to the method `create_trust_product_entity_assignment`
+/// struct for passing parameters to the method [`create_trust_product_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTrustProductEntityAssignmentParams {
     /// The unique string that we created to identify the TrustProduct resource.
@@ -111,7 +111,7 @@ pub struct CreateTrustProductEntityAssignmentParams {
     pub object_sid: String
 }
 
-/// struct for passing parameters to the method `create_trust_product_evaluation`
+/// struct for passing parameters to the method [`create_trust_product_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateTrustProductEvaluationParams {
     /// The unique string that we created to identify the trust_product resource.
@@ -120,14 +120,14 @@ pub struct CreateTrustProductEvaluationParams {
     pub policy_sid: String
 }
 
-/// struct for passing parameters to the method `delete_customer_profile`
+/// struct for passing parameters to the method [`delete_customer_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCustomerProfileParams {
     /// The unique string that we created to identify the Customer-Profile resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_customer_profile_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`delete_customer_profile_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCustomerProfileChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -136,7 +136,7 @@ pub struct DeleteCustomerProfileChannelEndpointAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_customer_profile_entity_assignment`
+/// struct for passing parameters to the method [`delete_customer_profile_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteCustomerProfileEntityAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -145,28 +145,28 @@ pub struct DeleteCustomerProfileEntityAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_end_user`
+/// struct for passing parameters to the method [`delete_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteEndUserParams {
     /// The unique string created by Twilio to identify the End User resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_supporting_document`
+/// struct for passing parameters to the method [`delete_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteSupportingDocumentParams {
     /// The unique string created by Twilio to identify the Supporting Document resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_trust_product`
+/// struct for passing parameters to the method [`delete_trust_product`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTrustProductParams {
     /// The unique string that we created to identify the Customer-Profile resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_trust_product_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`delete_trust_product_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTrustProductChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -175,7 +175,7 @@ pub struct DeleteTrustProductChannelEndpointAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_trust_product_entity_assignment`
+/// struct for passing parameters to the method [`delete_trust_product_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteTrustProductEntityAssignmentParams {
     /// The unique string that we created to identify the TrustProduct resource.
@@ -184,14 +184,14 @@ pub struct DeleteTrustProductEntityAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_customer_profile`
+/// struct for passing parameters to the method [`fetch_customer_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCustomerProfileParams {
     /// The unique string that we created to identify the Customer-Profile resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_customer_profile_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`fetch_customer_profile_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCustomerProfileChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -200,7 +200,7 @@ pub struct FetchCustomerProfileChannelEndpointAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_customer_profile_entity_assignment`
+/// struct for passing parameters to the method [`fetch_customer_profile_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCustomerProfileEntityAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -209,7 +209,7 @@ pub struct FetchCustomerProfileEntityAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_customer_profile_evaluation`
+/// struct for passing parameters to the method [`fetch_customer_profile_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchCustomerProfileEvaluationParams {
     /// The unique string that we created to identify the customer_profile resource.
@@ -218,49 +218,49 @@ pub struct FetchCustomerProfileEvaluationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_end_user`
+/// struct for passing parameters to the method [`fetch_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEndUserParams {
     /// The unique string created by Twilio to identify the End User resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_end_user_type`
+/// struct for passing parameters to the method [`fetch_end_user_type`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEndUserTypeParams {
     /// The unique string that identifies the End-User Type resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_policies`
+/// struct for passing parameters to the method [`fetch_policies`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchPoliciesParams {
     /// The unique string that identifies the Policy resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_supporting_document`
+/// struct for passing parameters to the method [`fetch_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSupportingDocumentParams {
     /// The unique string created by Twilio to identify the Supporting Document resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_supporting_document_type`
+/// struct for passing parameters to the method [`fetch_supporting_document_type`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchSupportingDocumentTypeParams {
     /// The unique string that identifies the Supporting Document Type resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_trust_product`
+/// struct for passing parameters to the method [`fetch_trust_product`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrustProductParams {
     /// The unique string that we created to identify the Customer-Profile resource.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_trust_product_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`fetch_trust_product_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrustProductChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -269,7 +269,7 @@ pub struct FetchTrustProductChannelEndpointAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_trust_product_entity_assignment`
+/// struct for passing parameters to the method [`fetch_trust_product_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrustProductEntityAssignmentParams {
     /// The unique string that we created to identify the TrustProduct resource.
@@ -278,7 +278,7 @@ pub struct FetchTrustProductEntityAssignmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_trust_product_evaluation`
+/// struct for passing parameters to the method [`fetch_trust_product_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchTrustProductEvaluationParams {
     /// The unique string that we created to identify the trust_product resource.
@@ -287,7 +287,7 @@ pub struct FetchTrustProductEvaluationParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_customer_profile`
+/// struct for passing parameters to the method [`list_customer_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCustomerProfileParams {
     /// The verification status of the Customer-Profile resource.
@@ -300,7 +300,7 @@ pub struct ListCustomerProfileParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_customer_profile_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`list_customer_profile_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCustomerProfileChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -313,7 +313,7 @@ pub struct ListCustomerProfileChannelEndpointAssignmentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_customer_profile_entity_assignment`
+/// struct for passing parameters to the method [`list_customer_profile_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCustomerProfileEntityAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -322,7 +322,7 @@ pub struct ListCustomerProfileEntityAssignmentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_customer_profile_evaluation`
+/// struct for passing parameters to the method [`list_customer_profile_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListCustomerProfileEvaluationParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -331,42 +331,42 @@ pub struct ListCustomerProfileEvaluationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_end_user`
+/// struct for passing parameters to the method [`list_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEndUserParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_end_user_type`
+/// struct for passing parameters to the method [`list_end_user_type`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEndUserTypeParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_policies`
+/// struct for passing parameters to the method [`list_policies`]
 #[derive(Clone, Debug, Default)]
 pub struct ListPoliciesParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_supporting_document`
+/// struct for passing parameters to the method [`list_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSupportingDocumentParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_supporting_document_type`
+/// struct for passing parameters to the method [`list_supporting_document_type`]
 #[derive(Clone, Debug, Default)]
 pub struct ListSupportingDocumentTypeParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_trust_product`
+/// struct for passing parameters to the method [`list_trust_product`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTrustProductParams {
     /// The verification status of the Customer-Profile resource.
@@ -379,7 +379,7 @@ pub struct ListTrustProductParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_trust_product_channel_endpoint_assignment`
+/// struct for passing parameters to the method [`list_trust_product_channel_endpoint_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTrustProductChannelEndpointAssignmentParams {
     /// The unique string that we created to identify the CustomerProfile resource.
@@ -392,7 +392,7 @@ pub struct ListTrustProductChannelEndpointAssignmentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_trust_product_entity_assignment`
+/// struct for passing parameters to the method [`list_trust_product_entity_assignment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTrustProductEntityAssignmentParams {
     /// The unique string that we created to identify the TrustProduct resource.
@@ -401,7 +401,7 @@ pub struct ListTrustProductEntityAssignmentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_trust_product_evaluation`
+/// struct for passing parameters to the method [`list_trust_product_evaluation`]
 #[derive(Clone, Debug, Default)]
 pub struct ListTrustProductEvaluationParams {
     /// The unique string that we created to identify the trust_product resource.
@@ -410,7 +410,7 @@ pub struct ListTrustProductEvaluationParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_customer_profile`
+/// struct for passing parameters to the method [`update_customer_profile`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateCustomerProfileParams {
     /// The unique string that we created to identify the Customer-Profile resource.
@@ -425,7 +425,7 @@ pub struct UpdateCustomerProfileParams {
     pub status_callback: Option<String>
 }
 
-/// struct for passing parameters to the method `update_end_user`
+/// struct for passing parameters to the method [`update_end_user`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateEndUserParams {
     /// The unique string created by Twilio to identify the End User resource.
@@ -436,7 +436,7 @@ pub struct UpdateEndUserParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_supporting_document`
+/// struct for passing parameters to the method [`update_supporting_document`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateSupportingDocumentParams {
     /// The unique string created by Twilio to identify the Supporting Document resource.
@@ -447,7 +447,7 @@ pub struct UpdateSupportingDocumentParams {
     pub friendly_name: Option<String>
 }
 
-/// struct for passing parameters to the method `update_trust_product`
+/// struct for passing parameters to the method [`update_trust_product`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateTrustProductParams {
     /// The unique string that we created to identify the Customer-Profile resource.
@@ -463,7 +463,7 @@ pub struct UpdateTrustProductParams {
 }
 
 
-/// struct for typed successes of method `create_customer_profile`
+/// struct for typed successes of method [`create_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileSuccess {
@@ -471,7 +471,7 @@ pub enum CreateCustomerProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_customer_profile_channel_endpoint_assignment`
+/// struct for typed successes of method [`create_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileChannelEndpointAssignmentSuccess {
@@ -479,7 +479,7 @@ pub enum CreateCustomerProfileChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_customer_profile_entity_assignment`
+/// struct for typed successes of method [`create_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileEntityAssignmentSuccess {
@@ -487,7 +487,7 @@ pub enum CreateCustomerProfileEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_customer_profile_evaluation`
+/// struct for typed successes of method [`create_customer_profile_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileEvaluationSuccess {
@@ -495,7 +495,7 @@ pub enum CreateCustomerProfileEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_end_user`
+/// struct for typed successes of method [`create_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEndUserSuccess {
@@ -503,7 +503,7 @@ pub enum CreateEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_supporting_document`
+/// struct for typed successes of method [`create_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSupportingDocumentSuccess {
@@ -511,7 +511,7 @@ pub enum CreateSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_trust_product`
+/// struct for typed successes of method [`create_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductSuccess {
@@ -519,7 +519,7 @@ pub enum CreateTrustProductSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_trust_product_channel_endpoint_assignment`
+/// struct for typed successes of method [`create_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductChannelEndpointAssignmentSuccess {
@@ -527,7 +527,7 @@ pub enum CreateTrustProductChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_trust_product_entity_assignment`
+/// struct for typed successes of method [`create_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductEntityAssignmentSuccess {
@@ -535,7 +535,7 @@ pub enum CreateTrustProductEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_trust_product_evaluation`
+/// struct for typed successes of method [`create_trust_product_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductEvaluationSuccess {
@@ -543,7 +543,7 @@ pub enum CreateTrustProductEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_customer_profile`
+/// struct for typed successes of method [`delete_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCustomerProfileSuccess {
@@ -551,7 +551,7 @@ pub enum DeleteCustomerProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_customer_profile_channel_endpoint_assignment`
+/// struct for typed successes of method [`delete_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCustomerProfileChannelEndpointAssignmentSuccess {
@@ -559,7 +559,7 @@ pub enum DeleteCustomerProfileChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_customer_profile_entity_assignment`
+/// struct for typed successes of method [`delete_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCustomerProfileEntityAssignmentSuccess {
@@ -567,7 +567,7 @@ pub enum DeleteCustomerProfileEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_end_user`
+/// struct for typed successes of method [`delete_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEndUserSuccess {
@@ -575,7 +575,7 @@ pub enum DeleteEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_supporting_document`
+/// struct for typed successes of method [`delete_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSupportingDocumentSuccess {
@@ -583,7 +583,7 @@ pub enum DeleteSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_trust_product`
+/// struct for typed successes of method [`delete_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrustProductSuccess {
@@ -591,7 +591,7 @@ pub enum DeleteTrustProductSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_trust_product_channel_endpoint_assignment`
+/// struct for typed successes of method [`delete_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrustProductChannelEndpointAssignmentSuccess {
@@ -599,7 +599,7 @@ pub enum DeleteTrustProductChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_trust_product_entity_assignment`
+/// struct for typed successes of method [`delete_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrustProductEntityAssignmentSuccess {
@@ -607,7 +607,7 @@ pub enum DeleteTrustProductEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_customer_profile`
+/// struct for typed successes of method [`fetch_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileSuccess {
@@ -615,7 +615,7 @@ pub enum FetchCustomerProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_customer_profile_channel_endpoint_assignment`
+/// struct for typed successes of method [`fetch_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileChannelEndpointAssignmentSuccess {
@@ -623,7 +623,7 @@ pub enum FetchCustomerProfileChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_customer_profile_entity_assignment`
+/// struct for typed successes of method [`fetch_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileEntityAssignmentSuccess {
@@ -631,7 +631,7 @@ pub enum FetchCustomerProfileEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_customer_profile_evaluation`
+/// struct for typed successes of method [`fetch_customer_profile_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileEvaluationSuccess {
@@ -639,7 +639,7 @@ pub enum FetchCustomerProfileEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_end_user`
+/// struct for typed successes of method [`fetch_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserSuccess {
@@ -647,7 +647,7 @@ pub enum FetchEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_end_user_type`
+/// struct for typed successes of method [`fetch_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserTypeSuccess {
@@ -655,7 +655,7 @@ pub enum FetchEndUserTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_policies`
+/// struct for typed successes of method [`fetch_policies`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPoliciesSuccess {
@@ -663,7 +663,7 @@ pub enum FetchPoliciesSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_supporting_document`
+/// struct for typed successes of method [`fetch_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentSuccess {
@@ -671,7 +671,7 @@ pub enum FetchSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_supporting_document_type`
+/// struct for typed successes of method [`fetch_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentTypeSuccess {
@@ -679,7 +679,7 @@ pub enum FetchSupportingDocumentTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_trust_product`
+/// struct for typed successes of method [`fetch_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductSuccess {
@@ -687,7 +687,7 @@ pub enum FetchTrustProductSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_trust_product_channel_endpoint_assignment`
+/// struct for typed successes of method [`fetch_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductChannelEndpointAssignmentSuccess {
@@ -695,7 +695,7 @@ pub enum FetchTrustProductChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_trust_product_entity_assignment`
+/// struct for typed successes of method [`fetch_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductEntityAssignmentSuccess {
@@ -703,7 +703,7 @@ pub enum FetchTrustProductEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_trust_product_evaluation`
+/// struct for typed successes of method [`fetch_trust_product_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductEvaluationSuccess {
@@ -711,7 +711,7 @@ pub enum FetchTrustProductEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_customer_profile`
+/// struct for typed successes of method [`list_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileSuccess {
@@ -719,7 +719,7 @@ pub enum ListCustomerProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_customer_profile_channel_endpoint_assignment`
+/// struct for typed successes of method [`list_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileChannelEndpointAssignmentSuccess {
@@ -727,7 +727,7 @@ pub enum ListCustomerProfileChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_customer_profile_entity_assignment`
+/// struct for typed successes of method [`list_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileEntityAssignmentSuccess {
@@ -735,7 +735,7 @@ pub enum ListCustomerProfileEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_customer_profile_evaluation`
+/// struct for typed successes of method [`list_customer_profile_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileEvaluationSuccess {
@@ -743,7 +743,7 @@ pub enum ListCustomerProfileEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_end_user`
+/// struct for typed successes of method [`list_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserSuccess {
@@ -751,7 +751,7 @@ pub enum ListEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_end_user_type`
+/// struct for typed successes of method [`list_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserTypeSuccess {
@@ -759,7 +759,7 @@ pub enum ListEndUserTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_policies`
+/// struct for typed successes of method [`list_policies`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPoliciesSuccess {
@@ -767,7 +767,7 @@ pub enum ListPoliciesSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_supporting_document`
+/// struct for typed successes of method [`list_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentSuccess {
@@ -775,7 +775,7 @@ pub enum ListSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_supporting_document_type`
+/// struct for typed successes of method [`list_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentTypeSuccess {
@@ -783,7 +783,7 @@ pub enum ListSupportingDocumentTypeSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_trust_product`
+/// struct for typed successes of method [`list_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductSuccess {
@@ -791,7 +791,7 @@ pub enum ListTrustProductSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_trust_product_channel_endpoint_assignment`
+/// struct for typed successes of method [`list_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductChannelEndpointAssignmentSuccess {
@@ -799,7 +799,7 @@ pub enum ListTrustProductChannelEndpointAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_trust_product_entity_assignment`
+/// struct for typed successes of method [`list_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductEntityAssignmentSuccess {
@@ -807,7 +807,7 @@ pub enum ListTrustProductEntityAssignmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_trust_product_evaluation`
+/// struct for typed successes of method [`list_trust_product_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductEvaluationSuccess {
@@ -815,7 +815,7 @@ pub enum ListTrustProductEvaluationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_customer_profile`
+/// struct for typed successes of method [`update_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCustomerProfileSuccess {
@@ -823,7 +823,7 @@ pub enum UpdateCustomerProfileSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_end_user`
+/// struct for typed successes of method [`update_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateEndUserSuccess {
@@ -831,7 +831,7 @@ pub enum UpdateEndUserSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_supporting_document`
+/// struct for typed successes of method [`update_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSupportingDocumentSuccess {
@@ -839,7 +839,7 @@ pub enum UpdateSupportingDocumentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_trust_product`
+/// struct for typed successes of method [`update_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTrustProductSuccess {
@@ -847,336 +847,336 @@ pub enum UpdateTrustProductSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_customer_profile`
+/// struct for typed errors of method [`create_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_customer_profile_channel_endpoint_assignment`
+/// struct for typed errors of method [`create_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_customer_profile_entity_assignment`
+/// struct for typed errors of method [`create_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_customer_profile_evaluation`
+/// struct for typed errors of method [`create_customer_profile_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateCustomerProfileEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_end_user`
+/// struct for typed errors of method [`create_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_supporting_document`
+/// struct for typed errors of method [`create_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_trust_product`
+/// struct for typed errors of method [`create_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_trust_product_channel_endpoint_assignment`
+/// struct for typed errors of method [`create_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_trust_product_entity_assignment`
+/// struct for typed errors of method [`create_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_trust_product_evaluation`
+/// struct for typed errors of method [`create_trust_product_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateTrustProductEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_customer_profile`
+/// struct for typed errors of method [`delete_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCustomerProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_customer_profile_channel_endpoint_assignment`
+/// struct for typed errors of method [`delete_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCustomerProfileChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_customer_profile_entity_assignment`
+/// struct for typed errors of method [`delete_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteCustomerProfileEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_end_user`
+/// struct for typed errors of method [`delete_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_supporting_document`
+/// struct for typed errors of method [`delete_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_trust_product`
+/// struct for typed errors of method [`delete_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrustProductError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_trust_product_channel_endpoint_assignment`
+/// struct for typed errors of method [`delete_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrustProductChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_trust_product_entity_assignment`
+/// struct for typed errors of method [`delete_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteTrustProductEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_customer_profile`
+/// struct for typed errors of method [`fetch_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_customer_profile_channel_endpoint_assignment`
+/// struct for typed errors of method [`fetch_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_customer_profile_entity_assignment`
+/// struct for typed errors of method [`fetch_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_customer_profile_evaluation`
+/// struct for typed errors of method [`fetch_customer_profile_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchCustomerProfileEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_end_user`
+/// struct for typed errors of method [`fetch_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_end_user_type`
+/// struct for typed errors of method [`fetch_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEndUserTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_policies`
+/// struct for typed errors of method [`fetch_policies`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchPoliciesError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_supporting_document`
+/// struct for typed errors of method [`fetch_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_supporting_document_type`
+/// struct for typed errors of method [`fetch_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchSupportingDocumentTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trust_product`
+/// struct for typed errors of method [`fetch_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trust_product_channel_endpoint_assignment`
+/// struct for typed errors of method [`fetch_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trust_product_entity_assignment`
+/// struct for typed errors of method [`fetch_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_trust_product_evaluation`
+/// struct for typed errors of method [`fetch_trust_product_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchTrustProductEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_customer_profile`
+/// struct for typed errors of method [`list_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_customer_profile_channel_endpoint_assignment`
+/// struct for typed errors of method [`list_customer_profile_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_customer_profile_entity_assignment`
+/// struct for typed errors of method [`list_customer_profile_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_customer_profile_evaluation`
+/// struct for typed errors of method [`list_customer_profile_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListCustomerProfileEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_end_user`
+/// struct for typed errors of method [`list_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_end_user_type`
+/// struct for typed errors of method [`list_end_user_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEndUserTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_policies`
+/// struct for typed errors of method [`list_policies`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListPoliciesError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_supporting_document`
+/// struct for typed errors of method [`list_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_supporting_document_type`
+/// struct for typed errors of method [`list_supporting_document_type`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListSupportingDocumentTypeError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_trust_product`
+/// struct for typed errors of method [`list_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_trust_product_channel_endpoint_assignment`
+/// struct for typed errors of method [`list_trust_product_channel_endpoint_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductChannelEndpointAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_trust_product_entity_assignment`
+/// struct for typed errors of method [`list_trust_product_entity_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductEntityAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_trust_product_evaluation`
+/// struct for typed errors of method [`list_trust_product_evaluation`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListTrustProductEvaluationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_customer_profile`
+/// struct for typed errors of method [`update_customer_profile`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateCustomerProfileError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_end_user`
+/// struct for typed errors of method [`update_end_user`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateEndUserError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_supporting_document`
+/// struct for typed errors of method [`update_supporting_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateSupportingDocumentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_trust_product`
+/// struct for typed errors of method [`update_trust_product`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateTrustProductError {

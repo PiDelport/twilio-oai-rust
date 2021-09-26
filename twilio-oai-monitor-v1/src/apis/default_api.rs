@@ -14,21 +14,21 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `fetch_alert`
+/// struct for passing parameters to the method [`fetch_alert`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAlertParams {
     /// The SID of the Alert resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_event`
+/// struct for passing parameters to the method [`fetch_event`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEventParams {
     /// The SID of the Event resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_alert`
+/// struct for passing parameters to the method [`list_alert`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAlertParams {
     /// Only show alerts for this log-level.  Can be: `error`, `warning`, `notice`, or `debug`.
@@ -41,7 +41,7 @@ pub struct ListAlertParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_event`
+/// struct for passing parameters to the method [`list_event`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEventParams {
     /// Only include events initiated by this Actor. Useful for auditing actions taken by specific users or API credentials.
@@ -61,7 +61,7 @@ pub struct ListEventParams {
 }
 
 
-/// struct for typed successes of method `fetch_alert`
+/// struct for typed successes of method [`fetch_alert`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAlertSuccess {
@@ -69,7 +69,7 @@ pub enum FetchAlertSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_event`
+/// struct for typed successes of method [`fetch_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEventSuccess {
@@ -77,7 +77,7 @@ pub enum FetchEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_alert`
+/// struct for typed successes of method [`list_alert`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAlertSuccess {
@@ -85,7 +85,7 @@ pub enum ListAlertSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_event`
+/// struct for typed successes of method [`list_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventSuccess {
@@ -93,28 +93,28 @@ pub enum ListEventSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_alert`
+/// struct for typed errors of method [`fetch_alert`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAlertError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_event`
+/// struct for typed errors of method [`fetch_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEventError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_alert`
+/// struct for typed errors of method [`list_alert`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAlertError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_event`
+/// struct for typed errors of method [`list_event`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEventError {

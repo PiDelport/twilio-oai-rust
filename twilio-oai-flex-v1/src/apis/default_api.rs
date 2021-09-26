@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_channel`
+/// struct for passing parameters to the method [`create_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateChannelParams {
     /// The chat channel's friendly name.
@@ -39,7 +39,7 @@ pub struct CreateChannelParams {
     pub task_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_flex_flow`
+/// struct for passing parameters to the method [`create_flex_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFlexFlowParams {
     /// The channel type. Can be: `web`, `facebook`, `sms`, `whatsapp`, `line` or `custom`.
@@ -78,7 +78,7 @@ pub struct CreateFlexFlowParams {
     pub long_lived: Option<bool>
 }
 
-/// struct for passing parameters to the method `create_web_channel`
+/// struct for passing parameters to the method [`create_web_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateWebChannelParams {
     /// The chat channel's friendly name.
@@ -95,63 +95,63 @@ pub struct CreateWebChannelParams {
     pub pre_engagement_data: Option<String>
 }
 
-/// struct for passing parameters to the method `delete_channel`
+/// struct for passing parameters to the method [`delete_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteChannelParams {
     /// The SID of the Flex chat channel resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_flex_flow`
+/// struct for passing parameters to the method [`delete_flex_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFlexFlowParams {
     /// The SID of the Flex Flow resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_web_channel`
+/// struct for passing parameters to the method [`delete_web_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteWebChannelParams {
     /// The SID of the WebChannel resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_channel`
+/// struct for passing parameters to the method [`fetch_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchChannelParams {
     /// The SID of the Flex chat channel resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_configuration`
+/// struct for passing parameters to the method [`fetch_configuration`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchConfigurationParams {
     /// The Pinned UI version of the Configuration resource to fetch.
     pub ui_version: Option<String>
 }
 
-/// struct for passing parameters to the method `fetch_flex_flow`
+/// struct for passing parameters to the method [`fetch_flex_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFlexFlowParams {
     /// The SID of the Flex Flow resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_web_channel`
+/// struct for passing parameters to the method [`fetch_web_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchWebChannelParams {
     /// The SID of the WebChannel resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_channel`
+/// struct for passing parameters to the method [`list_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct ListChannelParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_flex_flow`
+/// struct for passing parameters to the method [`list_flex_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFlexFlowParams {
     /// The `friendly_name` of the Flex Flow resources to read.
@@ -160,14 +160,14 @@ pub struct ListFlexFlowParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_web_channel`
+/// struct for passing parameters to the method [`list_web_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct ListWebChannelParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_flex_flow`
+/// struct for passing parameters to the method [`update_flex_flow`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFlexFlowParams {
     /// The SID of the Flex Flow resource to update.
@@ -208,7 +208,7 @@ pub struct UpdateFlexFlowParams {
     pub long_lived: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_web_channel`
+/// struct for passing parameters to the method [`update_web_channel`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateWebChannelParams {
     /// The SID of the WebChannel resource to update.
@@ -220,7 +220,7 @@ pub struct UpdateWebChannelParams {
 }
 
 
-/// struct for typed successes of method `create_channel`
+/// struct for typed successes of method [`create_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateChannelSuccess {
@@ -228,7 +228,7 @@ pub enum CreateChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_flex_flow`
+/// struct for typed successes of method [`create_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFlexFlowSuccess {
@@ -236,7 +236,7 @@ pub enum CreateFlexFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_web_channel`
+/// struct for typed successes of method [`create_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWebChannelSuccess {
@@ -244,7 +244,7 @@ pub enum CreateWebChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_channel`
+/// struct for typed successes of method [`delete_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteChannelSuccess {
@@ -252,7 +252,7 @@ pub enum DeleteChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_flex_flow`
+/// struct for typed successes of method [`delete_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFlexFlowSuccess {
@@ -260,7 +260,7 @@ pub enum DeleteFlexFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_web_channel`
+/// struct for typed successes of method [`delete_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWebChannelSuccess {
@@ -268,7 +268,7 @@ pub enum DeleteWebChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_channel`
+/// struct for typed successes of method [`fetch_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchChannelSuccess {
@@ -276,7 +276,7 @@ pub enum FetchChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_configuration`
+/// struct for typed successes of method [`fetch_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConfigurationSuccess {
@@ -284,7 +284,7 @@ pub enum FetchConfigurationSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_flex_flow`
+/// struct for typed successes of method [`fetch_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFlexFlowSuccess {
@@ -292,7 +292,7 @@ pub enum FetchFlexFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_web_channel`
+/// struct for typed successes of method [`fetch_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWebChannelSuccess {
@@ -300,7 +300,7 @@ pub enum FetchWebChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_channel`
+/// struct for typed successes of method [`list_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListChannelSuccess {
@@ -308,7 +308,7 @@ pub enum ListChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_flex_flow`
+/// struct for typed successes of method [`list_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFlexFlowSuccess {
@@ -316,7 +316,7 @@ pub enum ListFlexFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_web_channel`
+/// struct for typed successes of method [`list_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWebChannelSuccess {
@@ -324,7 +324,7 @@ pub enum ListWebChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_flex_flow`
+/// struct for typed successes of method [`update_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFlexFlowSuccess {
@@ -332,7 +332,7 @@ pub enum UpdateFlexFlowSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_web_channel`
+/// struct for typed successes of method [`update_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWebChannelSuccess {
@@ -340,105 +340,105 @@ pub enum UpdateWebChannelSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_channel`
+/// struct for typed errors of method [`create_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_flex_flow`
+/// struct for typed errors of method [`create_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFlexFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_web_channel`
+/// struct for typed errors of method [`create_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateWebChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_channel`
+/// struct for typed errors of method [`delete_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_flex_flow`
+/// struct for typed errors of method [`delete_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFlexFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_web_channel`
+/// struct for typed errors of method [`delete_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteWebChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_channel`
+/// struct for typed errors of method [`fetch_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_configuration`
+/// struct for typed errors of method [`fetch_configuration`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchConfigurationError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_flex_flow`
+/// struct for typed errors of method [`fetch_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFlexFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_web_channel`
+/// struct for typed errors of method [`fetch_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchWebChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_channel`
+/// struct for typed errors of method [`list_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_flex_flow`
+/// struct for typed errors of method [`list_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFlexFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_web_channel`
+/// struct for typed errors of method [`list_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListWebChannelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_flex_flow`
+/// struct for typed errors of method [`update_flex_flow`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFlexFlowError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_web_channel`
+/// struct for typed errors of method [`update_web_channel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateWebChannelError {

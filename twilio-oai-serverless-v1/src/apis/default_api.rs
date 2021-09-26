@@ -14,7 +14,7 @@ use reqwest;
 use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
-/// struct for passing parameters to the method `create_asset`
+/// struct for passing parameters to the method [`create_asset`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateAssetParams {
     /// The SID of the Service to create the Asset resource under.
@@ -23,7 +23,7 @@ pub struct CreateAssetParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `create_build`
+/// struct for passing parameters to the method [`create_build`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateBuildParams {
     /// The SID of the Service to create the Build resource under.
@@ -38,7 +38,7 @@ pub struct CreateBuildParams {
     pub runtime: Option<String>
 }
 
-/// struct for passing parameters to the method `create_deployment`
+/// struct for passing parameters to the method [`create_deployment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateDeploymentParams {
     /// The SID of the Service to create the Deployment resource under.
@@ -49,7 +49,7 @@ pub struct CreateDeploymentParams {
     pub build_sid: Option<String>
 }
 
-/// struct for passing parameters to the method `create_environment`
+/// struct for passing parameters to the method [`create_environment`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateEnvironmentParams {
     /// The SID of the Service to create the Environment resource under.
@@ -60,7 +60,7 @@ pub struct CreateEnvironmentParams {
     pub domain_suffix: Option<String>
 }
 
-/// struct for passing parameters to the method `create_function`
+/// struct for passing parameters to the method [`create_function`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateFunctionParams {
     /// The SID of the Service to create the Function resource under.
@@ -69,7 +69,7 @@ pub struct CreateFunctionParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `create_service`
+/// struct for passing parameters to the method [`create_service`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateServiceParams {
     /// A descriptive string that you create to describe the Service resource. It can be a maximum of 255 characters.
@@ -82,7 +82,7 @@ pub struct CreateServiceParams {
     pub ui_editable: Option<bool>
 }
 
-/// struct for passing parameters to the method `create_variable`
+/// struct for passing parameters to the method [`create_variable`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateVariableParams {
     /// The SID of the Service to create the Variable resource under.
@@ -95,7 +95,7 @@ pub struct CreateVariableParams {
     pub value: String
 }
 
-/// struct for passing parameters to the method `delete_asset`
+/// struct for passing parameters to the method [`delete_asset`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteAssetParams {
     /// The SID of the Service to delete the Asset resource from.
@@ -104,7 +104,7 @@ pub struct DeleteAssetParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_build`
+/// struct for passing parameters to the method [`delete_build`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteBuildParams {
     /// The SID of the Service to delete the Build resource from.
@@ -113,7 +113,7 @@ pub struct DeleteBuildParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_environment`
+/// struct for passing parameters to the method [`delete_environment`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteEnvironmentParams {
     /// The SID of the Service to delete the Environment resource from.
@@ -122,7 +122,7 @@ pub struct DeleteEnvironmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_function`
+/// struct for passing parameters to the method [`delete_function`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteFunctionParams {
     /// The SID of the Service to delete the Function resource from.
@@ -131,14 +131,14 @@ pub struct DeleteFunctionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_service`
+/// struct for passing parameters to the method [`delete_service`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteServiceParams {
     /// The `sid` or `unique_name` of the Service resource to delete.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `delete_variable`
+/// struct for passing parameters to the method [`delete_variable`]
 #[derive(Clone, Debug, Default)]
 pub struct DeleteVariableParams {
     /// The SID of the Service to delete the Variable resource from.
@@ -149,7 +149,7 @@ pub struct DeleteVariableParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_asset`
+/// struct for passing parameters to the method [`fetch_asset`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAssetParams {
     /// The SID of the Service to fetch the Asset resource from.
@@ -158,7 +158,7 @@ pub struct FetchAssetParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_asset_version`
+/// struct for passing parameters to the method [`fetch_asset_version`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchAssetVersionParams {
     /// The SID of the Service to fetch the Asset Version resource from.
@@ -169,7 +169,7 @@ pub struct FetchAssetVersionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_build`
+/// struct for passing parameters to the method [`fetch_build`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBuildParams {
     /// The SID of the Service to fetch the Build resource from.
@@ -178,7 +178,7 @@ pub struct FetchBuildParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_build_status`
+/// struct for passing parameters to the method [`fetch_build_status`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchBuildStatusParams {
     /// The SID of the Service to fetch the Build resource from.
@@ -187,7 +187,7 @@ pub struct FetchBuildStatusParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_deployment`
+/// struct for passing parameters to the method [`fetch_deployment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchDeploymentParams {
     /// The SID of the Service to fetch the Deployment resource from.
@@ -198,7 +198,7 @@ pub struct FetchDeploymentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_environment`
+/// struct for passing parameters to the method [`fetch_environment`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchEnvironmentParams {
     /// The SID of the Service to fetch the Environment resource from.
@@ -207,7 +207,7 @@ pub struct FetchEnvironmentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_function`
+/// struct for passing parameters to the method [`fetch_function`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFunctionParams {
     /// The SID of the Service to fetch the Function resource from.
@@ -216,7 +216,7 @@ pub struct FetchFunctionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_function_version`
+/// struct for passing parameters to the method [`fetch_function_version`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFunctionVersionParams {
     /// The SID of the Service to fetch the Function Version resource from.
@@ -227,7 +227,7 @@ pub struct FetchFunctionVersionParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_function_version_content`
+/// struct for passing parameters to the method [`fetch_function_version_content`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchFunctionVersionContentParams {
     /// The SID of the Service to fetch the Function Version content from.
@@ -238,7 +238,7 @@ pub struct FetchFunctionVersionContentParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_log`
+/// struct for passing parameters to the method [`fetch_log`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchLogParams {
     /// The SID of the Service to fetch the Log resource from.
@@ -249,14 +249,14 @@ pub struct FetchLogParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_service`
+/// struct for passing parameters to the method [`fetch_service`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchServiceParams {
     /// The `sid` or `unique_name` of the Service resource to fetch.
     pub sid: String
 }
 
-/// struct for passing parameters to the method `fetch_variable`
+/// struct for passing parameters to the method [`fetch_variable`]
 #[derive(Clone, Debug, Default)]
 pub struct FetchVariableParams {
     /// The SID of the Service to fetch the Variable resource from.
@@ -267,7 +267,7 @@ pub struct FetchVariableParams {
     pub sid: String
 }
 
-/// struct for passing parameters to the method `list_asset`
+/// struct for passing parameters to the method [`list_asset`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAssetParams {
     /// The SID of the Service to read the Asset resources from.
@@ -276,7 +276,7 @@ pub struct ListAssetParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_asset_version`
+/// struct for passing parameters to the method [`list_asset_version`]
 #[derive(Clone, Debug, Default)]
 pub struct ListAssetVersionParams {
     /// The SID of the Service to read the Asset Version resource from.
@@ -287,7 +287,7 @@ pub struct ListAssetVersionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_build`
+/// struct for passing parameters to the method [`list_build`]
 #[derive(Clone, Debug, Default)]
 pub struct ListBuildParams {
     /// The SID of the Service to read the Build resources from.
@@ -296,7 +296,7 @@ pub struct ListBuildParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_deployment`
+/// struct for passing parameters to the method [`list_deployment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListDeploymentParams {
     /// The SID of the Service to read the Deployment resources from.
@@ -307,7 +307,7 @@ pub struct ListDeploymentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_environment`
+/// struct for passing parameters to the method [`list_environment`]
 #[derive(Clone, Debug, Default)]
 pub struct ListEnvironmentParams {
     /// The SID of the Service to read the Environment resources from.
@@ -316,7 +316,7 @@ pub struct ListEnvironmentParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_function`
+/// struct for passing parameters to the method [`list_function`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFunctionParams {
     /// The SID of the Service to read the Function resources from.
@@ -325,7 +325,7 @@ pub struct ListFunctionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_function_version`
+/// struct for passing parameters to the method [`list_function_version`]
 #[derive(Clone, Debug, Default)]
 pub struct ListFunctionVersionParams {
     /// The SID of the Service to read the Function Version resources from.
@@ -336,7 +336,7 @@ pub struct ListFunctionVersionParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_log`
+/// struct for passing parameters to the method [`list_log`]
 #[derive(Clone, Debug, Default)]
 pub struct ListLogParams {
     /// The SID of the Service to read the Log resource from.
@@ -353,14 +353,14 @@ pub struct ListLogParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_service`
+/// struct for passing parameters to the method [`list_service`]
 #[derive(Clone, Debug, Default)]
 pub struct ListServiceParams {
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `list_variable`
+/// struct for passing parameters to the method [`list_variable`]
 #[derive(Clone, Debug, Default)]
 pub struct ListVariableParams {
     /// The SID of the Service to read the Variable resources from.
@@ -371,7 +371,7 @@ pub struct ListVariableParams {
     pub page_size: Option<i32>
 }
 
-/// struct for passing parameters to the method `update_asset`
+/// struct for passing parameters to the method [`update_asset`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateAssetParams {
     /// The SID of the Service to update the Asset resource from.
@@ -382,7 +382,7 @@ pub struct UpdateAssetParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `update_function`
+/// struct for passing parameters to the method [`update_function`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateFunctionParams {
     /// The SID of the Service to update the Function resource from.
@@ -393,7 +393,7 @@ pub struct UpdateFunctionParams {
     pub friendly_name: String
 }
 
-/// struct for passing parameters to the method `update_service`
+/// struct for passing parameters to the method [`update_service`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateServiceParams {
     /// The `sid` or `unique_name` of the Service resource to update.
@@ -406,7 +406,7 @@ pub struct UpdateServiceParams {
     pub ui_editable: Option<bool>
 }
 
-/// struct for passing parameters to the method `update_variable`
+/// struct for passing parameters to the method [`update_variable`]
 #[derive(Clone, Debug, Default)]
 pub struct UpdateVariableParams {
     /// The SID of the Service to update the Variable resource under.
@@ -422,7 +422,7 @@ pub struct UpdateVariableParams {
 }
 
 
-/// struct for typed successes of method `create_asset`
+/// struct for typed successes of method [`create_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAssetSuccess {
@@ -430,7 +430,7 @@ pub enum CreateAssetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_build`
+/// struct for typed successes of method [`create_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBuildSuccess {
@@ -438,7 +438,7 @@ pub enum CreateBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_deployment`
+/// struct for typed successes of method [`create_deployment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateDeploymentSuccess {
@@ -446,7 +446,7 @@ pub enum CreateDeploymentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_environment`
+/// struct for typed successes of method [`create_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEnvironmentSuccess {
@@ -454,7 +454,7 @@ pub enum CreateEnvironmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_function`
+/// struct for typed successes of method [`create_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFunctionSuccess {
@@ -462,7 +462,7 @@ pub enum CreateFunctionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_service`
+/// struct for typed successes of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceSuccess {
@@ -470,7 +470,7 @@ pub enum CreateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `create_variable`
+/// struct for typed successes of method [`create_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateVariableSuccess {
@@ -478,7 +478,7 @@ pub enum CreateVariableSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_asset`
+/// struct for typed successes of method [`delete_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAssetSuccess {
@@ -486,7 +486,7 @@ pub enum DeleteAssetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_build`
+/// struct for typed successes of method [`delete_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBuildSuccess {
@@ -494,7 +494,7 @@ pub enum DeleteBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_environment`
+/// struct for typed successes of method [`delete_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEnvironmentSuccess {
@@ -502,7 +502,7 @@ pub enum DeleteEnvironmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_function`
+/// struct for typed successes of method [`delete_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFunctionSuccess {
@@ -510,7 +510,7 @@ pub enum DeleteFunctionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_service`
+/// struct for typed successes of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceSuccess {
@@ -518,7 +518,7 @@ pub enum DeleteServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `delete_variable`
+/// struct for typed successes of method [`delete_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteVariableSuccess {
@@ -526,7 +526,7 @@ pub enum DeleteVariableSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_asset`
+/// struct for typed successes of method [`fetch_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAssetSuccess {
@@ -534,7 +534,7 @@ pub enum FetchAssetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_asset_version`
+/// struct for typed successes of method [`fetch_asset_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAssetVersionSuccess {
@@ -542,7 +542,7 @@ pub enum FetchAssetVersionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_build`
+/// struct for typed successes of method [`fetch_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBuildSuccess {
@@ -550,7 +550,7 @@ pub enum FetchBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_build_status`
+/// struct for typed successes of method [`fetch_build_status`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBuildStatusSuccess {
@@ -558,7 +558,7 @@ pub enum FetchBuildStatusSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_deployment`
+/// struct for typed successes of method [`fetch_deployment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDeploymentSuccess {
@@ -566,7 +566,7 @@ pub enum FetchDeploymentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_environment`
+/// struct for typed successes of method [`fetch_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEnvironmentSuccess {
@@ -574,7 +574,7 @@ pub enum FetchEnvironmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_function`
+/// struct for typed successes of method [`fetch_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFunctionSuccess {
@@ -582,7 +582,7 @@ pub enum FetchFunctionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_function_version`
+/// struct for typed successes of method [`fetch_function_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFunctionVersionSuccess {
@@ -590,7 +590,7 @@ pub enum FetchFunctionVersionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_function_version_content`
+/// struct for typed successes of method [`fetch_function_version_content`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFunctionVersionContentSuccess {
@@ -598,7 +598,7 @@ pub enum FetchFunctionVersionContentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_log`
+/// struct for typed successes of method [`fetch_log`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchLogSuccess {
@@ -606,7 +606,7 @@ pub enum FetchLogSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_service`
+/// struct for typed successes of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceSuccess {
@@ -614,7 +614,7 @@ pub enum FetchServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `fetch_variable`
+/// struct for typed successes of method [`fetch_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVariableSuccess {
@@ -622,7 +622,7 @@ pub enum FetchVariableSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_asset`
+/// struct for typed successes of method [`list_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAssetSuccess {
@@ -630,7 +630,7 @@ pub enum ListAssetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_asset_version`
+/// struct for typed successes of method [`list_asset_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAssetVersionSuccess {
@@ -638,7 +638,7 @@ pub enum ListAssetVersionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_build`
+/// struct for typed successes of method [`list_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBuildSuccess {
@@ -646,7 +646,7 @@ pub enum ListBuildSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_deployment`
+/// struct for typed successes of method [`list_deployment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDeploymentSuccess {
@@ -654,7 +654,7 @@ pub enum ListDeploymentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_environment`
+/// struct for typed successes of method [`list_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEnvironmentSuccess {
@@ -662,7 +662,7 @@ pub enum ListEnvironmentSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_function`
+/// struct for typed successes of method [`list_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFunctionSuccess {
@@ -670,7 +670,7 @@ pub enum ListFunctionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_function_version`
+/// struct for typed successes of method [`list_function_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFunctionVersionSuccess {
@@ -678,7 +678,7 @@ pub enum ListFunctionVersionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_log`
+/// struct for typed successes of method [`list_log`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListLogSuccess {
@@ -686,7 +686,7 @@ pub enum ListLogSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_service`
+/// struct for typed successes of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceSuccess {
@@ -694,7 +694,7 @@ pub enum ListServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `list_variable`
+/// struct for typed successes of method [`list_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVariableSuccess {
@@ -702,7 +702,7 @@ pub enum ListVariableSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_asset`
+/// struct for typed successes of method [`update_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAssetSuccess {
@@ -710,7 +710,7 @@ pub enum UpdateAssetSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_function`
+/// struct for typed successes of method [`update_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFunctionSuccess {
@@ -718,7 +718,7 @@ pub enum UpdateFunctionSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_service`
+/// struct for typed successes of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceSuccess {
@@ -726,7 +726,7 @@ pub enum UpdateServiceSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed successes of method `update_variable`
+/// struct for typed successes of method [`update_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateVariableSuccess {
@@ -734,273 +734,273 @@ pub enum UpdateVariableSuccess {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_asset`
+/// struct for typed errors of method [`create_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateAssetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_build`
+/// struct for typed errors of method [`create_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_deployment`
+/// struct for typed errors of method [`create_deployment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateDeploymentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_environment`
+/// struct for typed errors of method [`create_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateEnvironmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_function`
+/// struct for typed errors of method [`create_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateFunctionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_service`
+/// struct for typed errors of method [`create_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `create_variable`
+/// struct for typed errors of method [`create_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreateVariableError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_asset`
+/// struct for typed errors of method [`delete_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteAssetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_build`
+/// struct for typed errors of method [`delete_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_environment`
+/// struct for typed errors of method [`delete_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteEnvironmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_function`
+/// struct for typed errors of method [`delete_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteFunctionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_service`
+/// struct for typed errors of method [`delete_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `delete_variable`
+/// struct for typed errors of method [`delete_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DeleteVariableError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_asset`
+/// struct for typed errors of method [`fetch_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAssetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_asset_version`
+/// struct for typed errors of method [`fetch_asset_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchAssetVersionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_build`
+/// struct for typed errors of method [`fetch_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_build_status`
+/// struct for typed errors of method [`fetch_build_status`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchBuildStatusError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_deployment`
+/// struct for typed errors of method [`fetch_deployment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchDeploymentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_environment`
+/// struct for typed errors of method [`fetch_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchEnvironmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_function`
+/// struct for typed errors of method [`fetch_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFunctionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_function_version`
+/// struct for typed errors of method [`fetch_function_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFunctionVersionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_function_version_content`
+/// struct for typed errors of method [`fetch_function_version_content`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchFunctionVersionContentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_log`
+/// struct for typed errors of method [`fetch_log`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchLogError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_service`
+/// struct for typed errors of method [`fetch_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `fetch_variable`
+/// struct for typed errors of method [`fetch_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum FetchVariableError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_asset`
+/// struct for typed errors of method [`list_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAssetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_asset_version`
+/// struct for typed errors of method [`list_asset_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListAssetVersionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_build`
+/// struct for typed errors of method [`list_build`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListBuildError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_deployment`
+/// struct for typed errors of method [`list_deployment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListDeploymentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_environment`
+/// struct for typed errors of method [`list_environment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListEnvironmentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_function`
+/// struct for typed errors of method [`list_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFunctionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_function_version`
+/// struct for typed errors of method [`list_function_version`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListFunctionVersionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_log`
+/// struct for typed errors of method [`list_log`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListLogError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_service`
+/// struct for typed errors of method [`list_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `list_variable`
+/// struct for typed errors of method [`list_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListVariableError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_asset`
+/// struct for typed errors of method [`update_asset`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateAssetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_function`
+/// struct for typed errors of method [`update_function`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateFunctionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_service`
+/// struct for typed errors of method [`update_service`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateServiceError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method `update_variable`
+/// struct for typed errors of method [`update_variable`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum UpdateVariableError {
