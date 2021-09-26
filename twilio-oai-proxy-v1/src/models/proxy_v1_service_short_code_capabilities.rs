@@ -10,8 +10,6 @@
 
 /// ProxyV1ServiceShortCodeCapabilities : The capabilities of the short code
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ProxyV1ServiceShortCodeCapabilities {
     #[serde(rename = "fax", skip_serializing_if = "Option::is_none")]
@@ -35,5 +33,3 @@ impl ProxyV1ServiceShortCodeCapabilities {
         }
     }
 }
-
-

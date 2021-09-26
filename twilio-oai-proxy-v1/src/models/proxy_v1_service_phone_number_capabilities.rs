@@ -10,8 +10,6 @@
 
 /// ProxyV1ServicePhoneNumberCapabilities : The capabilities of the phone number
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ProxyV1ServicePhoneNumberCapabilities {
     #[serde(rename = "fax", skip_serializing_if = "Option::is_none")]
@@ -35,5 +33,3 @@ impl ProxyV1ServicePhoneNumberCapabilities {
         }
     }
 }
-
-

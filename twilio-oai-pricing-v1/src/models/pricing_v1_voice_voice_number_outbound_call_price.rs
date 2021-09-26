@@ -10,8 +10,6 @@
 
 /// PricingV1VoiceVoiceNumberOutboundCallPrice : The OutboundCallPrice record
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct PricingV1VoiceVoiceNumberOutboundCallPrice {
     #[serde(rename = "base_price", skip_serializing_if = "Option::is_none")]
@@ -29,5 +27,3 @@ impl PricingV1VoiceVoiceNumberOutboundCallPrice {
         }
     }
 }
-
-
