@@ -10,8 +10,6 @@
 
 /// ApiV2010AccountIncomingPhoneNumberCapabilities : Indicate if a phone can receive calls or messages
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ApiV2010AccountIncomingPhoneNumberCapabilities {
     #[serde(rename = "fax", skip_serializing_if = "Option::is_none")]
@@ -35,5 +33,3 @@ impl ApiV2010AccountIncomingPhoneNumberCapabilities {
         }
     }
 }
-
-

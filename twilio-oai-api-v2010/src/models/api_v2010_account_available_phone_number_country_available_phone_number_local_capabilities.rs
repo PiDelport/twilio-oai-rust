@@ -10,8 +10,6 @@
 
 /// ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities : Whether a phone number can receive calls or messages
 
-
-
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities {
     #[serde(rename = "fax", skip_serializing_if = "Option::is_none")]
@@ -26,7 +24,8 @@ pub struct ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCa
 
 impl ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities {
     /// Whether a phone number can receive calls or messages
-    pub fn new() -> ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities {
+    pub fn new() -> ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities
+    {
         ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabilities {
             fax: None,
             mms: None,
@@ -35,5 +34,3 @@ impl ApiV2010AccountAvailablePhoneNumberCountryAvailablePhoneNumberLocalCapabili
         }
     }
 }
-
-

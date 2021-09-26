@@ -43,4 +43,6 @@ for spec_file in "$@"; do
     sed --in-place "$sed_crate_version" "${name}/Cargo.toml"
     sed --in-place "$sed_readme_version" "${name}/README.md"
     sed --in-place "$sed_readme_trim_docs" "${name}/README.md"
+
+    (cd "${name}" && cargo fmt)
 done
