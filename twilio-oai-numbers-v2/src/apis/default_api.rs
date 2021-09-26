@@ -38,7 +38,7 @@ pub struct CreateEndUserParams {
     /// The string that you assigned to describe the resource.
     pub friendly_name: String,
     /// The type of end user of the Bundle resource - can be `individual` or `business`.
-    pub _type: String,
+    pub type_: String,
     /// The set of parameters that are the attributes of the End User resource which are derived End User Types.
     pub attributes: Option<serde_json::Value>,
 }
@@ -65,7 +65,7 @@ pub struct CreateSupportingDocumentParams {
     /// The string that you assigned to describe the resource.
     pub friendly_name: String,
     /// The type of the Supporting Document.
-    pub _type: String,
+    pub type_: String,
     /// The set of parameters that are the attributes of the Supporting Documents resource which are derived Supporting Document Types.
     pub attributes: Option<serde_json::Value>,
 }
@@ -784,7 +784,7 @@ pub async fn create_end_user(
 
     // unbox the parameters
     let friendly_name = params.friendly_name;
-    let _type = params._type;
+    let type_ = params.type_;
     let attributes = params.attributes;
 
     let local_var_client = &local_var_configuration.client;
@@ -811,7 +811,7 @@ pub async fn create_end_user(
         local_var_form_params.insert("Attributes", local_var_param_value.to_string());
     }
     local_var_form_params.insert("FriendlyName", friendly_name.to_string());
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -971,7 +971,7 @@ pub async fn create_supporting_document(
 
     // unbox the parameters
     let friendly_name = params.friendly_name;
-    let _type = params._type;
+    let type_ = params.type_;
     let attributes = params.attributes;
 
     let local_var_client = &local_var_configuration.client;
@@ -998,7 +998,7 @@ pub async fn create_supporting_document(
         local_var_form_params.insert("Attributes", local_var_param_value.to_string());
     }
     local_var_form_params.insert("FriendlyName", friendly_name.to_string());
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;

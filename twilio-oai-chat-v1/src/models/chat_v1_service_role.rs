@@ -33,7 +33,7 @@ pub struct ChatV1ServiceRole {
     pub sid: Option<String>,
     /// The type of role
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// The absolute URL of the Role resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -49,7 +49,7 @@ impl ChatV1ServiceRole {
             permissions: None,
             service_sid: None,
             sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

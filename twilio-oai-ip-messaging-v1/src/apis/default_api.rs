@@ -19,14 +19,14 @@ pub struct CreateChannelParams {
     pub service_sid: String,
     pub attributes: Option<String>,
     pub friendly_name: Option<String>,
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     pub unique_name: Option<String>,
 }
 
 /// struct for passing parameters to the method [`create_credential`]
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialParams {
-    pub _type: String,
+    pub type_: String,
     pub api_key: Option<String>,
     pub certificate: Option<String>,
     pub friendly_name: Option<String>,
@@ -69,7 +69,7 @@ pub struct CreateRoleParams {
     pub service_sid: String,
     pub friendly_name: String,
     pub permission: Vec<String>,
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`create_service`]
@@ -206,7 +206,7 @@ pub struct FetchUserParams {
 #[derive(Clone, Debug, Default)]
 pub struct ListChannelParams {
     pub service_sid: String,
-    pub _type: Option<Vec<String>>,
+    pub type_: Option<Vec<String>>,
     /// How many resources to return in each list page. The default is 50, and the maximum is 1000.
     pub page_size: Option<i32>,
 }
@@ -1010,7 +1010,7 @@ pub async fn create_channel(
     let service_sid = params.service_sid;
     let attributes = params.attributes;
     let friendly_name = params.friendly_name;
-    let _type = params._type;
+    let type_ = params.type_;
     let unique_name = params.unique_name;
 
     let local_var_client = &local_var_configuration.client;
@@ -1040,7 +1040,7 @@ pub async fn create_channel(
     if let Some(local_var_param_value) = friendly_name {
         local_var_form_params.insert("FriendlyName", local_var_param_value.to_string());
     }
-    if let Some(local_var_param_value) = _type {
+    if let Some(local_var_param_value) = type_ {
         local_var_form_params.insert("Type", local_var_param_value.to_string());
     }
     if let Some(local_var_param_value) = unique_name {
@@ -1082,7 +1082,7 @@ pub async fn create_credential(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let _type = params._type;
+    let type_ = params.type_;
     let api_key = params.api_key;
     let certificate = params.certificate;
     let friendly_name = params.friendly_name;
@@ -1125,7 +1125,7 @@ pub async fn create_credential(
     if let Some(local_var_param_value) = secret {
         local_var_form_params.insert("Secret", local_var_param_value.to_string());
     }
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -1370,7 +1370,7 @@ pub async fn create_role(
     let service_sid = params.service_sid;
     let friendly_name = params.friendly_name;
     let permission = params.permission;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -1403,7 +1403,7 @@ pub async fn create_role(
             .join(",")
             .to_string(),
     );
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -2518,7 +2518,7 @@ pub async fn list_channel(
 
     // unbox the parameters
     let service_sid = params.service_sid;
-    let _type = params._type;
+    let type_ = params.type_;
     let page_size = params.page_size;
 
     let local_var_client = &local_var_configuration.client;
@@ -2531,7 +2531,7 @@ pub async fn list_channel(
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
-    if let Some(ref local_var_str) = _type {
+    if let Some(ref local_var_str) = type_ {
         local_var_req_builder = local_var_req_builder.query(&[(
             "Type",
             &local_var_str

@@ -45,7 +45,7 @@ pub struct ApiV2010AccountRecordingRecordingTranscription {
     pub transcription_text: Option<String>,
     /// The transcription type
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// The URI of the resource, relative to `https://api.twilio.com`
     #[serde(rename = "uri", skip_serializing_if = "Option::is_none")]
     pub uri: Option<String>,
@@ -65,7 +65,7 @@ impl ApiV2010AccountRecordingRecordingTranscription {
             sid: None,
             status: None,
             transcription_text: None,
-            _type: None,
+            type_: None,
             uri: None,
         }
     }

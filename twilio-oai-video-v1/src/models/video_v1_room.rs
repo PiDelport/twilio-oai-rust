@@ -66,7 +66,7 @@ pub struct VideoV1Room {
     pub status_callback_method: Option<StatusCallbackMethod>,
     /// The type of room
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// An application-defined string that uniquely identifies the resource
     #[serde(rename = "unique_name", skip_serializing_if = "Option::is_none")]
     pub unique_name: Option<String>,
@@ -96,7 +96,7 @@ impl VideoV1Room {
             status: None,
             status_callback: None,
             status_callback_method: None,
-            _type: None,
+            type_: None,
             unique_name: None,
             url: None,
             video_codecs: None,

@@ -33,7 +33,7 @@ pub struct ConversationsV1Role {
     pub sid: Option<String>,
     /// The type of role
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// An absolute URL for this user role.
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -49,7 +49,7 @@ impl ConversationsV1Role {
             friendly_name: None,
             permissions: None,
             sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

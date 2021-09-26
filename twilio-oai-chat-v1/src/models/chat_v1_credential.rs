@@ -30,7 +30,7 @@ pub struct ChatV1Credential {
     pub sid: Option<String>,
     /// The type of push-notification service the credential is for
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// The absolute URL of the Credential resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -45,7 +45,7 @@ impl ChatV1Credential {
             friendly_name: None,
             sandbox: None,
             sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

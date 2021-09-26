@@ -36,7 +36,7 @@ pub struct ApiV2010Account {
     pub subresource_uris: Option<serde_json::Value>,
     /// The type of this account
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Type>,
+    pub type_: Option<Type>,
     /// The URI for this resource, relative to `https://api.twilio.com`
     #[serde(rename = "uri", skip_serializing_if = "Option::is_none")]
     pub uri: Option<String>,
@@ -53,7 +53,7 @@ impl ApiV2010Account {
             sid: None,
             status: None,
             subresource_uris: None,
-            _type: None,
+            type_: None,
             uri: None,
         }
     }

@@ -109,7 +109,7 @@ pub struct CreateConversationScopedWebhookParams {
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialParams {
     /// The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.
-    pub _type: String,
+    pub type_: String,
     /// [GCM only] The API key for the project that was obtained from the Google Developer console for your GCM Service application credential.
     pub api_key: Option<String>,
     /// [APN only] The URL encoded representation of the certificate. For example,  `-----BEGIN CERTIFICATE----- MIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEF.....A== -----END CERTIFICATE-----`.
@@ -132,7 +132,7 @@ pub struct CreateRoleParams {
     /// A permission that you grant to the new role. Only one permission can be granted per parameter. To assign more than one permission, repeat this parameter for each permission value. The values for this parameter depend on the role's `type`.
     pub permission: Vec<String>,
     /// The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) roles.
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`create_service`]
@@ -252,7 +252,7 @@ pub struct CreateServiceRoleParams {
     /// A permission that you grant to the new role. Only one permission can be granted per parameter. To assign more than one permission, repeat this parameter for each permission value. The values for this parameter depend on the role's `type`.
     pub permission: Vec<String>,
     /// The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) roles.
-    pub _type: String,
+    pub type_: String,
 }
 
 /// struct for passing parameters to the method [`create_service_user`]
@@ -992,7 +992,7 @@ pub struct UpdateCredentialParams {
     /// [FCM only] The **Server key** of your project from the Firebase console, found under Settings / Cloud messaging.
     pub secret: Option<String>,
     /// The type of push-notification service the credential is for. Can be: `fcm`, `gcm`, or `apn`.
-    pub _type: Option<String>,
+    pub type_: Option<String>,
 }
 
 /// struct for passing parameters to the method [`update_role`]
@@ -3068,7 +3068,7 @@ pub async fn create_credential(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let _type = params._type;
+    let type_ = params.type_;
     let api_key = params.api_key;
     let certificate = params.certificate;
     let friendly_name = params.friendly_name;
@@ -3111,7 +3111,7 @@ pub async fn create_credential(
     if let Some(local_var_param_value) = secret {
         local_var_form_params.insert("Secret", local_var_param_value.to_string());
     }
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -3151,7 +3151,7 @@ pub async fn create_role(
     // unbox the parameters
     let friendly_name = params.friendly_name;
     let permission = params.permission;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -3180,7 +3180,7 @@ pub async fn create_role(
             .join(",")
             .to_string(),
     );
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -3701,7 +3701,7 @@ pub async fn create_service_role(
     let chat_service_sid = params.chat_service_sid;
     let friendly_name = params.friendly_name;
     let permission = params.permission;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -3734,7 +3734,7 @@ pub async fn create_service_role(
             .join(",")
             .to_string(),
     );
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;
@@ -8374,7 +8374,7 @@ pub async fn update_credential(
     let private_key = params.private_key;
     let sandbox = params.sandbox;
     let secret = params.secret;
-    let _type = params._type;
+    let type_ = params.type_;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -8415,7 +8415,7 @@ pub async fn update_credential(
     if let Some(local_var_param_value) = secret {
         local_var_form_params.insert("Secret", local_var_param_value.to_string());
     }
-    if let Some(local_var_param_value) = _type {
+    if let Some(local_var_param_value) = type_ {
         local_var_form_params.insert("Type", local_var_param_value.to_string());
     }
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);

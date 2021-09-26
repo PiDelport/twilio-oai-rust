@@ -21,7 +21,7 @@ pub struct FetchPhoneNumberParams {
     /// The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the phone number to fetch. This is used to specify the country when the phone number is provided in a national format.
     pub country_code: Option<String>,
     /// The type of information to return. Can be: `carrier` or `caller-name`. The default is null.  Carrier information costs $0.005 per phone number looked up.  Caller Name information is currently available only in the US and costs $0.01 per phone number looked up.  To retrieve both types on information, specify this parameter twice; once with `carrier` and once with `caller-name` as the value.
-    pub _type: Option<Vec<String>>,
+    pub type_: Option<Vec<String>>,
     /// The `unique_name` of an Add-on you would like to invoke. Can be the `unique_name` of an Add-on that is installed on your account. You can specify multiple instances of this parameter to invoke multiple Add-ons. For more information about  Add-ons, see the [Add-ons documentation](https://www.twilio.com/docs/add-ons).
     pub add_ons: Option<Vec<String>>,
     /// Data specific to the add-on you would like to invoke. The content and format of this value depends on the add-on.
@@ -52,7 +52,7 @@ pub async fn fetch_phone_number(
     // unbox the parameters
     let phone_number = params.phone_number;
     let country_code = params.country_code;
-    let _type = params._type;
+    let type_ = params.type_;
     let add_ons = params.add_ons;
     let add_ons_data = params.add_ons_data;
 
@@ -70,7 +70,7 @@ pub async fn fetch_phone_number(
         local_var_req_builder =
             local_var_req_builder.query(&[("CountryCode", &local_var_str.to_string())]);
     }
-    if let Some(ref local_var_str) = _type {
+    if let Some(ref local_var_str) = type_ {
         local_var_req_builder = local_var_req_builder.query(&[(
             "Type",
             &local_var_str

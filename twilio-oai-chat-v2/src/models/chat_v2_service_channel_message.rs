@@ -51,7 +51,7 @@ pub struct ChatV2ServiceChannelMessage {
     pub to: Option<String>,
     /// The Message type
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// The absolute URL of the Message resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -76,7 +76,7 @@ impl ChatV2ServiceChannelMessage {
             service_sid: None,
             sid: None,
             to: None,
-            _type: None,
+            type_: None,
             url: None,
             was_edited: None,
         }

@@ -30,7 +30,7 @@ pub struct TrusthubV1EndUser {
     pub sid: Option<String>,
     /// The type of end user of the Bundle resource
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// The absolute URL of the End User resource
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -45,7 +45,7 @@ impl TrusthubV1EndUser {
             date_updated: None,
             friendly_name: None,
             sid: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }

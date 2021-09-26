@@ -113,7 +113,7 @@ pub struct CreateRoomParams {
     /// The HTTP method we should use to call `status_callback`. Can be `POST` or `GET`.
     pub status_callback_method: Option<String>,
     /// The type of room. Can be: `go`, `peer-to-peer`, `group-small`, or `group`. The default value is `group`.
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// An application-defined string that uniquely identifies the resource. It can be used as a `room_sid` in place of the resource's `sid` in the URL to address the resource. This value is unique for `in-progress` rooms. SDK clients can use this name to connect to the room. REST API clients can use this name in place of the Room SID to interact with the room as long as the room is `in-progress`.
     pub unique_name: Option<String>,
     /// An array of the video codecs that are supported when publishing a track in the room.  Can be: `VP8` and `H264`.  ***This feature is not available in `peer-to-peer` rooms***
@@ -1316,7 +1316,7 @@ pub async fn create_room(
     let recording_rules = params.recording_rules;
     let status_callback = params.status_callback;
     let status_callback_method = params.status_callback_method;
-    let _type = params._type;
+    let type_ = params.type_;
     let unique_name = params.unique_name;
     let video_codecs = params.video_codecs;
 
@@ -1361,7 +1361,7 @@ pub async fn create_room(
     if let Some(local_var_param_value) = status_callback_method {
         local_var_form_params.insert("StatusCallbackMethod", local_var_param_value.to_string());
     }
-    if let Some(local_var_param_value) = _type {
+    if let Some(local_var_param_value) = type_ {
         local_var_form_params.insert("Type", local_var_param_value.to_string());
     }
     if let Some(local_var_param_value) = unique_name {

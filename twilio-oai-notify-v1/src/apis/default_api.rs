@@ -38,7 +38,7 @@ pub struct CreateBindingParams {
 #[derive(Clone, Debug, Default)]
 pub struct CreateCredentialParams {
     /// The Credential type. Can be: `gcm`, `fcm`, or `apn`.
-    pub _type: String,
+    pub type_: String,
     /// [GCM only] The `Server key` of your project from Firebase console under Settings / Cloud messaging.
     pub api_key: Option<String>,
     /// [APN only] The URL-encoded representation of the certificate. Strip everything outside of the headers, e.g. `-----BEGIN CERTIFICATE-----MIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEFBQAwgZYxCzAJBgNV.....A==-----END CERTIFICATE-----`
@@ -586,7 +586,7 @@ pub async fn create_credential(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let _type = params._type;
+    let type_ = params.type_;
     let api_key = params.api_key;
     let certificate = params.certificate;
     let friendly_name = params.friendly_name;
@@ -629,7 +629,7 @@ pub async fn create_credential(
     if let Some(local_var_param_value) = secret {
         local_var_form_params.insert("Secret", local_var_param_value.to_string());
     }
-    local_var_form_params.insert("Type", _type.to_string());
+    local_var_form_params.insert("Type", type_.to_string());
     local_var_req_builder = local_var_req_builder.form(&local_var_form_params);
 
     let local_var_req = local_var_req_builder.build()?;

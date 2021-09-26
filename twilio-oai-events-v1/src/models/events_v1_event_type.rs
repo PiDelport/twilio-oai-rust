@@ -26,7 +26,7 @@ pub struct EventsV1EventType {
     pub schema_id: Option<String>,
     /// The Event Type identifier.
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<String>,
+    pub type_: Option<String>,
     /// The URL of this resource.
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -40,7 +40,7 @@ impl EventsV1EventType {
             description: None,
             links: None,
             schema_id: None,
-            _type: None,
+            type_: None,
             url: None,
         }
     }
